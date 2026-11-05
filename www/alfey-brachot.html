@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0b5f7a">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="SDVD">
+<title>אלפי ברכות | ברכה על כל מאכל</title>
+<style>
+@font-face{font-family:'Dvdai2';src:url(data:font/ttf;base64,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BgcGFRQWFxYzMjc+ATU0JzYzMhYXHgEUBgcGIhUUFhcWFRQjIicuATU0NzY1JyLJFBgZKAcEEhYUBREaFwuABS0cGhQVCwwXIz5YExoPBAwsfBgTAQYBuBMqJRoGExIFBBAOFBsoRgkMFhYcPhsVIAcMVwcLCQcCCKo1GS4oAgEAAQAxAJEBUQH7ACcAABMmNTQzMhcWFxYVFCMiNTQmJy4BIyIVFBcWFRQGBwYjIicmNz4BNTSIAwoLMUsoEwgKHw0QPxIGAQIcIx0MBgULCjQhAc8SChAgMlwrWykGHYQdIUArGxEmD0FCExAFCwMUQVRaAAAAABAAxgABAAAAAAABAAYAAAABAAAAAAACAAcABgABAAAAAAADACkADQABAAAAAAAEAA4ANgABAAAAAAAFAA8ARAABAAAAAAAGAA4AUwABAAAAAAAKABwAYQADAAEECQABAAwAfQADAAEECQACAA4AiQADAAEECQADAFIAlwADAAEECQAEABwA6QADAAEECQAFAB4BBQADAAEECQAGABwBIwADAAEECQAKADgBPwADAAEECQAQAAwAfQADAAEECQARAA4AiUR2ZGFpMlJlZ3VsYXJDYWxsaWdyYXBociA6IER2ZGFpMiBSZWd1bGFyIDogMTMtMTAtMjAyNkR2ZGFpMiBSZWd1bGFyVmVyc2lvbiAwMDEuMDAyRHZkYWkyLVJlZ3VsYXJDcmVhdGVkIHdpdGggQ2FsbGlncmFwaHIuY29tAEQAdgBkAGEAaQAyAFIAZQBnAHUAbABhAHIAQwBhAGwAbABpAGcAcgBhAHAAaAByACAAOgAgAEQAdgBkAGEAaQAyACAAUgBlAGcAdQBsAGEAcgAgADoAIAAxADMALQAxADAALQAyADAAMgA2AEQAdgBkAGEAaQAyACAAUgBlAGcAdQBsAGEAcgBWAGUAcgBzAGkAbwBuACAAMAAwADEALgAwADAAMgBEAHYAZABhAGkAMgAtAFIAZQBnAHUAbABhAHIAQwByAGUAYQB0AGUAZAAgAHcAaQB0AGgAIABDAGEAbABsAGkAZwByAGEAcABoAHIALgBjAG8AbQAAAAACAAAAAAAA/7UAMgAAAAAAAAAAAAAAAAAAAAAAAAAAADwAAAABAAIBAgADAAQABQAIAAkACgALAAwADgAPABAAEQASABMAFAAVABYAFwAYABkAGgAbABwAHQAeACAAIgAjAQMBBAEFAQYBBwEIAQkBCgELAQwBDQEOAQ8BEAERARIBEwEUARUBFgEXARgBGQEaARsBHAEdAR4CQ1IEbmJzcAlhZmlpNTc2NjQJYWZpaTU3NjY1CWFmaWk1NzY2NglhZmlpNTc2NjcJYWZpaTU3NjY4CWFmaWk1NzY2OQlhZmlpNTc2NzAJYWZpaTU3NjcxCWFmaWk1NzY3MglhZmlpNTc2NzMJYWZpaTU3Njc0CWFmaWk1NzY3NQlhZmlpNTc2NzYJYWZpaTU3Njc3CWFmaWk1NzY3OAlhZmlpNTc2NzkJYWZpaTU3NjgwCWFmaWk1NzY4MQlhZmlpNTc2ODIJYWZpaTU3NjgzCWFmaWk1NzY4NAlhZmlpNTc2ODUJYWZpaTU3Njg2CWFmaWk1NzY4NwlhZmlpNTc2ODgJYWZpaTU3Njg5CWFmaWk1NzY5MAABAAH//wAP) format('truetype');font-weight:100 900;font-style:normal;font-display:block;}
+@font-face{font-family:'DvdaiLatin';src:local('Arial'),local('ArialMT'),local('Helvetica Neue'),local('Helvetica'),local('Roboto'),local('Liberation Sans'),local('Segoe UI');size-adjust:60%;unicode-range:U+0041-005A;}
+@font-face{font-family:'DvdaiLatin';src:local('Arial'),local('ArialMT'),local('Helvetica Neue'),local('Helvetica'),local('Roboto'),local('Liberation Sans'),local('Segoe UI');size-adjust:70%;unicode-range:U+0061-007A;}
+
+:root {
+  --bg-deep:#eef3f8;--bg-surface:#ffffff;--bg-card:#ffffff;--bg-card2:#f6f9fc;--bg-modal:#ffffff;
+  --cyan:#0098b8;--cyan-dim:#007a94;--cyan-glow:rgba(0,152,184,0.14);--cyan-glow-sm:rgba(0,152,184,0.07);--cyan-bright:#00b4d8;
+  --blue:#1d4ed8;--blue-mid:#2563eb;--blue-dim:rgba(29,78,216,0.08);
+  --gold:#b8860b;--gold-dim:#9a7209;--gold-bright:#d4a017;--gold-glow:rgba(184,134,11,0.12);
+  --white-bright:#0c1a2b;--white-mid:#2b3e52;--white-dim:#6b7d90;
+  --purple:#6d28d9;--purple-glow:rgba(109,40,217,0.1);
+  --border-cyan:1px solid rgba(0,152,184,0.22);--border-gold:1px solid rgba(184,134,11,0.28);--border-blue:1px solid rgba(29,78,216,0.22);
+  --font-hebrew:'Frank Ruhl Libre','Noto Serif Hebrew',serif;--font-mono:'Share Tech Mono',monospace;
+  --radius-sm:4px;--radius-md:8px;--radius-lg:16px;--sidebar-w:290px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+body{background-color:var(--bg-deep);background-image:radial-gradient(ellipse 80% 60% at 50% -10%,rgba(29,78,216,0.05) 0%,transparent 60%),radial-gradient(ellipse 60% 40% at 80% 80%,rgba(0,152,184,0.05) 0%,transparent 50%),radial-gradient(ellipse 40% 30% at 10% 90%,rgba(184,134,11,0.05) 0%,transparent 50%);background-attachment:fixed;font-family:var(--font-hebrew);color:var(--white-mid);min-height:100vh;display:flex;}
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,152,184,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,152,184,0.03) 1px,transparent 1px);background-size:48px 48px;pointer-events:none;z-index:0;}
+body::after{content:'';position:fixed;top:-2px;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent 0%,var(--gold-bright) 50%,transparent 100%);opacity:0.35;animation:scanLine 14s linear infinite;pointer-events:none;z-index:9999;}
+@keyframes scanLine{from{top:-2px}to{top:100vh}}
+
+/* SIDEBAR */
+.sidebar{width:var(--sidebar-w);min-width:var(--sidebar-w);height:100vh;position:sticky;top:0;background:var(--bg-surface);border-left:var(--border-cyan);display:flex;flex-direction:column;z-index:10;box-shadow:-2px 0 20px rgba(0,152,184,0.06);}
+.sidebar-header{padding:20px 16px 16px;border-bottom:var(--border-gold);}
+.sidebar-logo{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+.sidebar-logo svg{width:42px;height:42px;flex-shrink:0;filter:drop-shadow(0 0 6px rgba(184,134,11,0.35));}
+.sidebar-logo-title{font-family:var(--font-hebrew);font-size:calc(1.05rem * var(--fs-scale));font-weight:900;color:var(--gold-dim);letter-spacing:1px;display:block;}
+.sidebar-logo-sub{font-family:var(--font-mono);font-size:max(1rem, calc(0.5rem * var(--fs-scale)));color:var(--white-dim);letter-spacing:2.5px;text-transform:uppercase;display:block;}
+.sidebar-search{width:100%;padding:10px 14px;background:var(--bg-card2);border:var(--border-cyan);border-radius:22px;font-family:var(--font-hebrew);font-size:max(1rem, calc(0.86rem * var(--fs-scale)));color:var(--white-bright);outline:none;text-align:right;transition:border-color .2s,box-shadow .2s;}
+.sidebar-search:focus{border-color:var(--cyan-bright);box-shadow:0 0 0 2px rgba(0,152,184,0.1);}
+.sidebar-section-label{font-family:var(--font-mono);font-size:max(1rem, calc(0.56rem * var(--fs-scale)));letter-spacing:3.5px;color:var(--white-dim);text-transform:uppercase;padding:14px 16px 6px;opacity:0.75;}
+.cat-list{padding:2px 10px;display:flex;flex-direction:column;gap:4px;}
+.cat-item{padding:9px 12px;border-radius:var(--radius-sm);cursor:pointer;display:flex;align-items:center;gap:8px;transition:background .18s,color .18s;font-size:max(1rem, calc(0.82rem * var(--fs-scale)));color:var(--white-mid);}
+.cat-item:hover{background:var(--cyan-glow-sm);}
+.cat-item.active{background:var(--cyan-glow);border:var(--border-cyan);color:var(--cyan-dim);font-weight:700;}
+.cat-item .cnt{margin-right:auto;font-family:var(--font-mono);font-size:max(1rem, calc(0.62rem * var(--fs-scale)));color:var(--white-dim);opacity:.75;}
+.sidebar-footer{padding:14px 12px;border-top:var(--border-gold);display:flex;flex-direction:column;gap:8px;}
+.blessings-sidebar-btn{width:100%;padding:11px 14px;background:linear-gradient(135deg,var(--gold-bright),var(--gold));border:none;border-radius:var(--radius-md);color:#fff;font-family:var(--font-hebrew);font-size:max(1rem, calc(0.86rem * var(--fs-scale)));font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:all .2s;box-shadow:0 2px 12px rgba(184,134,11,0.28);}
+.blessings-sidebar-btn:hover{box-shadow:0 4px 20px rgba(184,134,11,0.4);transform:translateY(-1px);}
+.stat-line{font-family:var(--font-mono);font-size:max(1rem, calc(0.58rem * var(--fs-scale)));color:var(--white-dim);text-align:center;letter-spacing:1px;opacity:.8;}
+
+/* MAIN */
+.main-area{flex:1;display:flex;flex-direction:column;min-height:100vh;position:relative;z-index:1;min-width:0;}
+.topbar{padding:16px 26px;border-bottom:1px dashed rgba(184,134,11,0.22);display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;}
+.topbar-title{font-family:var(--font-hebrew);font-weight:900;font-size:calc(1.25rem * var(--fs-scale));background:linear-gradient(135deg,var(--gold-bright),var(--cyan-bright));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.topbar-sub{font-family:var(--font-mono);font-size:max(1rem, calc(0.62rem * var(--fs-scale)));color:var(--white-dim);letter-spacing:2px;}
+.main-search-wrap{padding:22px 26px 6px;}
+.main-search{display:flex;align-items:center;gap:10px;background:var(--bg-surface);border:var(--border-gold);border-radius:28px;padding:8px 8px 8px 16px;box-shadow:0 4px 24px rgba(184,134,11,0.10),0 0 0 1px rgba(184,134,11,0.05);transition:box-shadow .3s,border-color .3s;max-width:640px;}
+.main-search:focus-within{border-color:var(--gold-bright);box-shadow:0 4px 30px rgba(184,134,11,0.2);}
+.main-search input{flex:1;background:transparent;border:none;outline:none;font-family:var(--font-hebrew);font-size:calc(1rem * var(--fs-scale));color:var(--white-bright);text-align:right;}
+.main-search input::placeholder{color:var(--white-dim);opacity:.7;}
+.main-search button{padding:10px 20px;background:linear-gradient(135deg,var(--gold-bright),var(--gold));border:none;border-radius:22px;color:#fff;font-family:var(--font-hebrew);font-size:max(1rem, calc(0.88rem * var(--fs-scale)));font-weight:700;cursor:pointer;white-space:nowrap;transition:all .2s;}
+.main-search button:hover{box-shadow:0 3px 14px rgba(184,134,11,0.4);transform:translateY(-1px);}
+
+.content-area{flex:1;padding:18px 26px 40px;overflow-y:auto;}
+
+/* WELCOME */
+.welcome-screen{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 20px;animation:fadeIn .6s ease;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.welcome-logo{width:92px;height:92px;margin-bottom:20px;filter:drop-shadow(0 0 14px rgba(184,134,11,.4));animation:logoPulse 4s ease-in-out infinite;}
+@keyframes logoPulse{0%,100%{filter:drop-shadow(0 0 10px rgba(184,134,11,.35)) drop-shadow(0 0 22px rgba(0,152,184,.18))}50%{filter:drop-shadow(0 0 18px rgba(184,134,11,.55)) drop-shadow(0 0 36px rgba(0,152,184,.28))}}
+.welcome-title{font-family:var(--font-hebrew);font-size:calc(clamp(1.4rem,3.2vw,2.1rem) * var(--fs-lg));font-weight:900;color:var(--white-bright);line-height:1.3;margin-bottom:8px;}
+.welcome-sub{font-family:var(--font-hebrew);font-size:max(1rem, calc(0.92rem * var(--fs-scale)));color:var(--white-dim);max-width:560px;line-height:1.7;margin-bottom:26px;}
+.welcome-chips{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;max-width:640px;}
+.welcome-chip{padding:8px 15px;background:var(--bg-surface);border:var(--border-cyan);border-radius:22px;font-family:var(--font-hebrew);font-size:max(1rem, calc(0.8rem * var(--fs-scale)));color:var(--cyan-dim);cursor:pointer;transition:all .2s;}
+.welcome-chip:hover{background:var(--cyan-glow);border-color:var(--cyan-bright);color:var(--blue);transform:translateY(-2px);}
+
+/* GRID + CARDS */
+.section-heading{display:flex;align-items:center;gap:10px;margin:18px 0 12px;}
+.section-heading h2{font-family:var(--font-hebrew);font-size:calc(1.05rem * var(--fs-scale));color:var(--gold-dim);font-weight:700;}
+.section-heading .line{flex:1;height:1px;background:rgba(184,134,11,.2);}
+.results-count{font-family:var(--font-mono);font-size:max(1rem, calc(0.6rem * var(--fs-scale)));color:var(--white-dim);letter-spacing:1.5px;}
+
+.food-grid{display:flex;flex-wrap:wrap;gap:9px;}
+.food-chip{padding:9px 15px;background:var(--bg-surface);border:var(--border-cyan);border-radius:20px;font-family:var(--font-hebrew);font-size:max(1rem, calc(0.84rem * var(--fs-scale)));color:var(--white-bright);cursor:pointer;transition:all .18s;box-shadow:0 2px 6px rgba(0,152,184,.06);display:flex;align-items:center;gap:6px;}
+.food-chip .badge{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+.food-chip:hover{background:var(--cyan-glow);border-color:var(--cyan-bright);color:var(--cyan-dim);transform:translateY(-2px);box-shadow:0 4px 14px rgba(0,152,184,.18);}
+
+.no-results{font-family:var(--font-hebrew);font-size:max(1rem, calc(0.92rem * var(--fs-scale)));color:var(--white-dim);font-style:italic;padding:20px 4px;}
+
+/* CARD MODAL (bracha result) */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(20,35,55,.55);z-index:200;overflow-y:auto;padding:40px 16px;backdrop-filter:blur(6px);}
+.modal-overlay.open{display:flex;align-items:flex-start;justify-content:center;}
+.modal-box{max-width:620px;width:100%;margin:auto;background:var(--bg-modal);border:var(--border-gold);border-radius:var(--radius-lg);box-shadow:0 0 0 1px rgba(184,134,11,.06),0 0 50px rgba(184,134,11,.1),0 30px 90px rgba(20,35,55,.25);position:relative;padding:44px 38px 40px;animation:modalIn .35s cubic-bezier(.16,1,.3,1) forwards;}
+@keyframes modalIn{from{opacity:0;transform:scale(.95) translateY(16px)}to{opacity:1;transform:scale(1) translateY(0)}}
+.modal-box::before{content:'';position:absolute;top:14px;right:14px;width:36px;height:36px;border-top:2px solid var(--gold-bright);border-right:2px solid var(--gold-bright);border-radius:0 var(--radius-md) 0 0;opacity:.45;}
+.modal-box::after{content:'';position:absolute;bottom:14px;left:14px;width:36px;height:36px;border-bottom:2px solid var(--gold-bright);border-left:2px solid var(--gold-bright);border-radius:0 0 0 var(--radius-md);opacity:.45;}
+.modal-close{position:absolute;top:16px;left:18px;background:var(--bg-card2);border:var(--border-gold);border-radius:var(--radius-sm);color:var(--gold-dim);font-family:var(--font-mono);font-size:calc(1rem * var(--fs-scale));width:32px;height:32px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;z-index:2;}
+.modal-close:hover{background:var(--gold-bright);color:#fff;}
+.card-cat-label{font-family:var(--font-mono);font-size:max(1rem, calc(0.6rem * var(--fs-scale)));letter-spacing:3px;color:var(--gold-dim);text-transform:uppercase;margin-bottom:6px;text-align:center;}
+.card-food-title{font-family:var(--font-hebrew);font-size:calc(clamp(1.4rem,3.5vw,1.9rem) * var(--fs-lg));font-weight:900;text-align:center;margin-bottom:22px;color:var(--white-bright);}
+.card-block{margin-bottom:18px;padding-bottom:16px;border-bottom:1px dashed rgba(184,134,11,.2);}
+.card-block:last-child{border-bottom:none;margin-bottom:0;}
+.card-block h4{font-family:var(--font-mono);font-size:max(1rem, calc(0.62rem * var(--fs-scale)));letter-spacing:2.5px;color:var(--cyan-dim);text-transform:uppercase;margin-bottom:9px;display:flex;align-items:center;gap:8px;}
+.card-block h4::after{content:'';flex:1;height:1px;background:rgba(0,152,184,.18);}
+.card-bracha-text{font-family:var(--font-hebrew);font-size:calc(1.15rem * var(--fs-scale));line-height:2;color:var(--white-bright);text-align:center;direction:rtl;}
+.card-achrona-type{font-family:var(--font-hebrew);font-size:max(1rem, calc(0.95rem * var(--fs-scale)));color:var(--gold-dim);text-align:center;font-weight:700;margin-bottom:8px;}
+.card-note{font-family:var(--font-hebrew);font-size:max(1rem, calc(0.82rem * var(--fs-scale)));color:var(--white-dim);line-height:1.7;background:var(--bg-card2);border-radius:var(--radius-md);padding:12px 14px;}
+.card-open-siddur{display:block;margin:14px auto 0;padding:9px 18px;background:var(--bg-card2);border:var(--border-cyan);border-radius:20px;font-family:var(--font-hebrew);font-size:max(1rem, calc(0.8rem * var(--fs-scale)));color:var(--cyan-dim);cursor:pointer;transition:all .2s;}
+.card-open-siddur:hover{background:var(--cyan-glow);border-color:var(--cyan-bright);}
+
+/* BLESSINGS SIDDUR MODAL */
+.blessings-modal-overlay{display:none;position:fixed;inset:0;background:rgba(20,35,55,.55);z-index:600;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(6px);}
+.blessings-modal-overlay.open{display:flex;}
+.blessings-box{max-width:700px;width:100%;max-height:88vh;overflow-y:auto;background:var(--bg-modal);border:var(--border-gold);border-radius:var(--radius-lg);box-shadow:0 30px 90px rgba(20,35,55,.3);position:relative;padding:46px 42px 50px;scrollbar-width:thin;scrollbar-color:rgba(184,134,11,.3) transparent;}
+.blessings-close{position:absolute;top:16px;left:18px;background:var(--bg-card2);border:var(--border-gold);border-radius:var(--radius-sm);color:var(--gold-dim);font-family:var(--font-mono);font-size:calc(1rem * var(--fs-scale));width:32px;height:32px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;z-index:2;}
+.blessings-close:hover{background:var(--gold-bright);color:#fff;}
+.blessings-title{font-family:var(--font-hebrew);font-size:calc(1.5rem * var(--fs-scale));font-weight:900;text-align:center;margin-bottom:20px;background:linear-gradient(135deg,var(--gold-bright),var(--cyan-bright));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.blessings-edot-toggle{display:flex;gap:8px;margin-bottom:16px;border-bottom:1px dashed rgba(184,134,11,.25);padding-bottom:14px;}
+.edot-btn{flex:1;padding:10px 14px;border-radius:var(--radius-md);border:var(--border-gold);background:var(--bg-card2);color:var(--gold-dim);font-family:var(--font-hebrew);font-size:max(1rem, calc(0.85rem * var(--fs-scale)));font-weight:700;cursor:pointer;transition:all .2s;text-align:center;}
+.edot-btn.active{background:linear-gradient(135deg,var(--gold-bright),var(--gold));color:#fff;border-color:transparent;box-shadow:0 2px 12px rgba(184,134,11,.3);}
+.edot-btn:hover:not(.active){background:var(--gold-glow);}
+.toc-row{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:22px;}
+.toc-btn{padding:6px 11px;background:var(--bg-card2);border:var(--border-cyan);border-radius:14px;font-family:var(--font-hebrew);font-size:max(1rem, calc(0.7rem * var(--fs-scale)));color:var(--cyan-dim);cursor:pointer;transition:all .15s;}
+.toc-btn:hover{background:var(--cyan-glow);}
+.blessings-content{display:none;}
+.blessings-content.active{display:block;}
+.blessing-section{margin-bottom:20px;padding-bottom:16px;border-bottom:1px dashed rgba(184,134,11,.2);}
+.blessing-section:last-child{border-bottom:none;margin-bottom:0;}
+.blessing-section h3{font-family:var(--font-mono);font-size:max(1rem, calc(0.65rem * var(--fs-scale)));letter-spacing:3px;color:var(--gold-dim);text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+.blessing-section h3::after{content:'';flex:1;height:1px;background:rgba(184,134,11,.2);}
+.blessing-text{font-family:var(--font-hebrew);font-size:calc(1.05rem * var(--fs-scale));line-height:2.1;color:var(--white-bright);text-align:center;direction:rtl;}
+.blessing-small{font-family:var(--font-hebrew);font-size:max(1rem, calc(0.82rem * var(--fs-scale)));color:var(--white-dim);text-align:center;line-height:1.8;margin-top:8px;font-style:italic;}
+
+@media(max-width:760px){.blessings-box{padding:30px 18px 36px;}.modal-box{padding:32px 18px 34px;}}
+
+/* ===== גופן, גודל, קריאות ורספונסיביות ===== */
+:root{--fs-scale:1.7;--fs-lg:calc(1 + (var(--fs-scale) - 1) * 0.5);}
+*,*::before,*::after,input,button,textarea,select,option{font-family:'Dvdai2','DvdaiLatin','Arial Hebrew',Arial,sans-serif !important;}
+*,*::before,*::after,input::placeholder{-webkit-text-stroke:0.45px;text-shadow:none !important;}
+.topbar-title,.blessings-title{-webkit-text-stroke:0;}
+html{-webkit-text-size-adjust:100%%;}
+.scrollx,.chat-area,.fridge-area,.modal-overlay,.categories,.category-bar{-webkit-overflow-scrolling:touch;}
+@media(max-width:1100px){:root{--fs-scale:1.55;}}
+@media(max-width:640px){:root{--fs-scale:1.4;}*{letter-spacing:.5px !important;}}
+@media(prefers-reduced-motion:reduce){*{animation:none !important;}}
+
+:root{--white-bright:#000;--white-mid:#0b0f14;--white-dim:#1c2530;--cyan-dim:#005468;--gold-dim:#634800;--blue:#1738a8;}
+.sidebar-section-label,.cat-item .cnt{opacity:1 !important;}
+.main-search input::placeholder,.sidebar-search::placeholder{color:#3a4654;opacity:1 !important;}
+html,body{height:100%;}
+@supports(height:100dvh){.sidebar{height:100dvh;}.main-area{min-height:100dvh;}}
+.menu-btn{display:none;flex:0 0 auto;width:48px;height:48px;border-radius:var(--radius-md);border:var(--border-cyan);background:var(--bg-card2);color:var(--cyan-dim);font-size:1.4rem;cursor:pointer;align-items:center;justify-content:center;-webkit-text-stroke:0 !important;}
+.sidebar-backdrop{display:none;}
+.cat-list,.content-area,.modal-overlay,.blessings-box{-webkit-overflow-scrolling:touch;overscroll-behavior:contain;}
+@media(min-width:1101px){.topbar,.main-search-wrap,.content-area{padding-inline:max(26px,calc((100% - 1000px)/2));}}
+@media(max-width:900px){
+  .menu-btn{display:flex;}
+  .topbar{flex-wrap:nowrap;padding:12px 14px;}
+  .sidebar{position:fixed;top:0;right:0;bottom:0;width:min(88vw,340px);min-width:0;transform:translateX(105%);transition:transform .28s ease;z-index:400;box-shadow:-8px 0 40px rgba(0,0,0,.25);padding-top:env(safe-area-inset-top);}
+  body.sidebar-open .sidebar{transform:none;}
+  .sidebar-backdrop{display:block;position:fixed;inset:0;background:rgba(20,35,55,.5);z-index:350;opacity:0;pointer-events:none;transition:opacity .28s;}
+  body.sidebar-open .sidebar-backdrop{opacity:1;pointer-events:auto;}
+}
+@media(max-width:640px){
+  *{letter-spacing:.4px !important;}
+  .topbar-sub{display:none;}
+  .main-search-wrap{padding:14px 12px 4px;}
+  .content-area{padding:12px 12px calc(30px + env(safe-area-inset-bottom));}
+  .modal-overlay{padding:0;}
+  .modal-box{border-radius:0;min-height:100%;padding:56px 16px 36px !important;}
+  .blessings-modal-overlay{padding:10px;}
+  .blessings-box{padding:40px 16px 22px !important;max-height:92dvh;}
+}
+
+
+/* ===== PWA: כפתור חזרה לתפריט (רק כשהאתר מותקן כאפליקציה) ===== */
+.pwa-home{display:none;position:fixed;left:0;top:50%;transform:translateY(-50%);z-index:9000;width:calc(30px + env(safe-area-inset-left));height:64px;padding-left:env(safe-area-inset-left);border-radius:0 16px 16px 0;background:rgba(11,95,122,.88);color:#fff;font-size:18px;align-items:center;justify-content:center;text-decoration:none;box-shadow:2px 2px 12px rgba(0,0,0,.2);-webkit-text-stroke:0 !important;}
+@media (display-mode:standalone){.pwa-home{display:flex;}}
+html.standalone .pwa-home{display:flex;}
+</style>
+</head>
+<body>
+
+<div class="sidebar-backdrop"></div>
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-logo">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="lg1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#d4a017"/><stop offset="100%" stop-color="#00b4d8"/></linearGradient></defs>
+        <polygon points="50,15 80,65 20,65" fill="none" stroke="url(#lg1)" stroke-width="3" opacity="0.9"/>
+        <polygon points="50,85 20,35 80,35" fill="none" stroke="url(#lg1)" stroke-width="3" opacity="0.9"/>
+      </svg>
+      <div>
+        <span class="sidebar-logo-title">אלפי ברכות</span>
+        <span class="sidebar-logo-sub">ברכה על כל מאכל</span>
+      </div>
+    </div>
+    <input class="sidebar-search" id="sideSearch" type="text" placeholder="חפשו מאכל..." oninput="onSearchInput(this.value)">
+  </div>
+  <div class="sidebar-section-label">קטגוריות ברכה ראשונה</div>
+  <div class="cat-list" id="catList"></div>
+  <div style="flex:1"></div>
+  <div class="sidebar-footer">
+    <div class="stat-line" id="statLine"></div>
+    <button class="blessings-sidebar-btn" onclick="openBlessings()">✡ ברכת המזון וסדר הסעודה</button>
+  </div>
+</aside>
+
+<main class="main-area">
+  <div class="topbar">
+    <button class="menu-btn" onclick="toggleSidebar()" aria-label="תפריט">☰</button>
+    <div style="flex:1;min-width:0">
+      <div class="topbar-title">✡ אלפי ברכות — כל מאכל וברכתו</div>
+      <div class="topbar-sub">חיפוש הברכה הנכונה לפני ואחרי האכילה • נוסח עדות המזרח ואשכנז</div>
+    </div>
+  </div>
+  <div class="main-search-wrap">
+    <div class="main-search">
+      <input id="mainSearch" type="text" placeholder="הקלידו שם מאכל, לדוגמה: תפוח, אורז, יין..." oninput="onSearchInput(this.value)" onkeydown="if(event.key==='Enter'){this.blur()}">
+      <button onclick="focusFirstResult()">חיפוש</button>
+    </div>
+  </div>
+  <div class="content-area" id="contentArea"></div>
+</main>
+
+<!-- FOOD RESULT MODAL -->
+<div class="modal-overlay" id="foodModal" onclick="if(event.target===this)closeFoodModal()">
+  <div class="modal-box" id="foodModalBox"></div>
+</div>
+
+<!-- BLESSINGS / SIDDUR MODAL -->
+<div class="blessings-modal-overlay" id="blessingsModal" onclick="if(event.target===this)closeBlessings()">
+  <div class="blessings-box">
+    <button class="blessings-close" onclick="closeBlessings()">✕</button>
+    <div class="blessings-title">✡ ברכת המזון וסדר ברכות הסעודה</div>
+
+    <div class="blessings-edot-toggle">
+      <button class="edot-btn active" data-edot="mizrachi" onclick="switchEdot('mizrachi')">🕌 עדות המזרח</button>
+      <button class="edot-btn" data-edot="ashkenaz" onclick="switchEdot('ashkenaz')">🕍 אשכנז</button>
+    </div>
+
+    <div class="toc-row">
+  <div class="toc-btn" onclick="scrollToSection('sec_zimun')">הזימון</div>
+  <div class="toc-btn" onclick="scrollToSection('sec_b1')">ברכה א׳</div>
+  <div class="toc-btn" onclick="scrollToSection('sec_b2')">ברכה ב׳</div>
+  <div class="toc-btn" onclick="scrollToSection('sec_b3')">ברכה ג׳</div>
+  <div class="toc-btn" onclick="scrollToSection('sec_b4')">ברכה ד׳</div>
+  <div class="toc-btn" onclick="scrollToSection('sec_harachaman')">הרחמן</div>
+  <div class="toc-btn" onclick="scrollToSection('sec_meein')">מעין שלוש</div>
+  <div class="toc-btn" onclick="scrollToSection('sec_nefashot')">בורא נפשות</div>
+  <div class="toc-btn" onclick="scrollToSection('sec_shulchan')">ברכות השולחן</div>
+  <div class="toc-btn" onclick="scrollToSection('sec_netilat')">נטילת ידיים</div>
+  <div class="toc-btn" onclick="scrollToSection('sec_asher')">אשר יצר</div>
+</div>
+
+    <!-- ══════ עדות המזרח ══════ -->
+    <div class="blessings-content active" id="blessings_mizrachi">
+      
+<div class="blessing-section" id="sec_zimun">
+  <h3>הזימון — כשסועדים שלושה ויותר</h3>
+  <div class="blessing-text">
+    רַבּוֹתַי נְבָרֵךְ<br>
+    <span style="font-size:.82em;color:var(--white-dim)">(המסובים:)</span> יְהִי שֵׁם ה' מְבֹרָךְ מֵעַתָּה וְעַד עוֹלָם<br>
+    בִּרְשׁוּת מָרָנָן וְרַבּוֹתַי נְבָרֵךְ (אֱלֹהֵינוּ) שֶׁאָכַלְנוּ מִשֶּׁלּוֹ<br>
+    <span style="font-size:.82em;color:var(--white-dim)">(המסובים:)</span> בָּרוּךְ (אֱלֹהֵינוּ) שֶׁאָכַלְנוּ מִשֶּׁלּוֹ וּבְטוּבוֹ חָיִינוּ
+  </div>
+  <div class="blessing-small">בעשרה מוסיפים תיבת "אֱלֹהֵינוּ". במאה — "ה' אֱלֹהֵינוּ", ובאלף — "ה' אֱלֹהֵי יִשְׂרָאֵל אֱלֹהֵי הַצְּבָאוֹת".</div>
+</div>
+
+<div class="blessing-section" id="sec_b1">
+  <h3>ברכה א׳ — הַזָּן</h3>
+  <div class="blessing-text">
+    בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם<br>
+    הַזָּן אֶת הָעוֹלָם כֻּלּוֹ בְּטוּבוֹ<br>
+    בְּחֵן בְּחֶסֶד וּבְרַחֲמִים<br>
+    הוּא נוֹתֵן לֶחֶם לְכָל בָּשָׂר כִּי לְעוֹלָם חַסְדּוֹ<br>
+    וּבְטוּבוֹ הַגָּדוֹל תָּמִיד לֹא חָסַר לָנוּ<br>
+    וְאַל יֶחְסַר לָנוּ מָזוֹן לְעוֹלָם וָעֶד<br>
+    בַּעֲבוּר שְׁמוֹ הַגָּדוֹל<br>
+    כִּי הוּא אֵל זָן וּמְפַרְנֵס לַכֹּל<br>
+    וּמֵטִיב לַכֹּל וּמֵכִין מָזוֹן לְכָל בְּרִיּוֹתָיו אֲשֶׁר בָּרָא<br>
+    בָּרוּךְ אַתָּה ה' הַזָּן אֶת הַכֹּל
+  </div>
+</div>
+
+<div class="blessing-section" id="sec_b2">
+  <h3>ברכה ב׳ — נוֹדֶה לְּךָ (ברכת הארץ)</h3>
+  <div class="blessing-text">
+    נוֹדֶה לְּךָ ה' אֱלֹהֵינוּ עַל שֶׁהִנְחַלְתָּ לַאֲבוֹתֵינוּ<br>
+    אֶרֶץ חֶמְדָּה טוֹבָה וּרְחָבָה<br>
+    וְעַל שֶׁהוֹצֵאתָנוּ מֵאֶרֶץ מִצְרַיִם<br>
+    וּפְדִיתָנוּ מִבֵּית עֲבָדִים<br>
+    וְעַל בְּרִיתְךָ שֶׁחָתַמְתָּ בִּבְשָׂרֵנוּ<br>
+    וְעַל תּוֹרָתְךָ שֶׁלִּמַּדְתָּנוּ<br>
+    וְעַל חֻקֶּיךָ שֶׁהוֹדַעְתָּנוּ<br>
+    וְעַל חַיִּים חֵן וָחֶסֶד שֶׁחוֹנַנְתָּנוּ<br>
+    וְעַל אֲכִילַת מָזוֹן שָׁאַתָּה זָן וּמְפַרְנֵס אוֹתָנוּ תָּמִיד<br>
+    בְּכָל יוֹם וּבְכָל עֵת וּבְכָל שָׁעָה<br>
+    וְעַל הַכֹּל ה' אֱלֹהֵינוּ אֲנַחְנוּ מוֹדִים לָךְ וּמְבָרְכִים אוֹתָךְ<br>
+    יִתְבָּרַךְ שִׁמְךָ בְּפִי כָּל חַי תָּמִיד לְעוֹלָם וָעֶד<br>
+    כַּכָּתוּב: וְאָכַלְתָּ וְשָׂבָעְתָּ וּבֵרַכְתָּ אֶת ה' אֱלֹהֶיךָ<br>
+    עַל הָאָרֶץ הַטֹּבָה אֲשֶׁר נָתַן לָךְ<br>
+    בָּרוּךְ אַתָּה ה' עַל הָאָרֶץ וְעַל הַמָּזוֹן
+  </div>
+</div>
+
+<div class="blessing-section" id="sec_b3">
+  <h3>ברכה ג׳ — בּוֹנֵה יְרוּשָׁלַיִם</h3>
+  <div class="blessing-text">
+    רַחֵם נָא ה' אֱלֹהֵינוּ עַל יִשְׂרָאֵל עַמֶּךָ<br>
+    וְעַל יְרוּשָׁלַיִם עִירֶךָ וְעַל צִיּוֹן מִשְׁכַּן כְּבוֹדֶךָ<br>
+    וְעַל מַלְכוּת בֵּית דָּוִד מְשִׁיחֶךָ<br>
+    וְעַל הַבַּיִת הַגָּדוֹל וְהַקָּדוֹשׁ שֶׁנִּקְרָא שִׁמְךָ עָלָיו<br>
+    אֱלֹהֵינוּ אָבִינוּ רְעֵנוּ זוּנֵנוּ פַּרְנְסֵנוּ וְכַלְכְּלֵנוּ<br>
+    וְהַרְוִיחֵנוּ וְהַרְוַח לָנוּ מְהֵרָה מִכָּל צָרוֹתֵינוּ<br>
+    וְנָא אַל תַּצְרִיכֵנוּ לֹא לִידֵי מַתְּנַת בָּשָׂר וָדָם<br>
+    וְלֹא לִידֵי הַלְוָאָתָם<br>
+    כִּי אִם לְיָדְךָ הַמְּלֵאָה הַפְּתוּחָה הַקְּדוֹשָׁה וְהָרְחָבָה<br>
+    שֶׁלֹּא נֵבוֹשׁ וְלֹא נִכָּלֵם לְעוֹלָם וָעֶד<br><br>
+    <span style="font-size:.82em;color:var(--gold-dim)">(בשבת מוסיפים:)</span><br>
+    רְצֵה וְהַחֲלִיצֵנוּ ה' אֱלֹהֵינוּ בְּמִצְוֹתֶיךָ<br>
+    וּבְמִצְוַת יוֹם הַשְּׁבִיעִי הַשַּׁבָּת הַגָּדוֹל וְהַקָּדוֹשׁ הַזֶּה<br>
+    כִּי יוֹם זֶה גָּדוֹל וְקָדוֹשׁ הוּא לְפָנֶיךָ<br>
+    לִשְׁבָּת בּוֹ וְלָנוּחַ בּוֹ בְּאַהֲבָה כְּמִצְוַת רְצוֹנֶךָ<br><br>
+    <span style="font-size:.82em;color:var(--gold-dim)">(בראש חודש ובחול המועד מוסיפים יעלה ויבוא:)</span><br>
+    אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ, יַעֲלֶה וְיָבֹא, וְיַגִּיעַ, וְיֵרָאֶה וְיֵרָצֶה וְיִשָּׁמַע, וְיִפָּקֵד וְיִזָּכֵר זִכְרוֹנֵנוּ וּפִקְדוֹנֵנוּ... בְּיוֹם רֹאשׁ הַחֹדֶשׁ הַזֶּה. זָכְרֵנוּ ה' אֱלֹהֵינוּ בּוֹ לְטוֹבָה, וּפָקְדֵנוּ בוֹ לִבְרָכָה, וְהוֹשִׁיעֵנוּ בוֹ לְחַיִּים<br><br>
+    וּבְנֵה יְרוּשָׁלַיִם עִיר הַקֹּדֶשׁ בִּמְהֵרָה בְיָמֵינוּ<br>
+    בָּרוּךְ אַתָּה ה' בּוֹנֵה בְרַחֲמָיו יְרוּשָׁלָיִם אָמֵן
+  </div>
+</div>
+
+<div class="blessing-section" id="sec_b4">
+  <h3>ברכה ד׳ — הַטּוֹב וְהַמֵּטִיב</h3>
+  <div class="blessing-text">
+    בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם<br>
+    הָאֵל אָבִינוּ מַלְכֵּנוּ אַדִּירֵנוּ בּוֹרְאֵנוּ גֹּאֲלֵנוּ<br>
+    יוֹצְרֵנוּ קְדוֹשֵׁנוּ קְדוֹשׁ יַעֲקֹב<br>
+    רוֹעֵנוּ רוֹעֵה יִשְׂרָאֵל<br>
+    הַמֶּלֶךְ הַטּוֹב וְהַמֵּטִיב לַכֹּל<br>
+    שֶׁבְּכָל יוֹם וָיוֹם הוּא הֵטִיב הוּא מֵטִיב הוּא יֵיטִיב לָנוּ<br>
+    הוּא גְמָלָנוּ הוּא גוֹמְלֵנוּ הוּא יִגְמְלֵנוּ לָעַד<br>
+    לְחֵן וּלְחֶסֶד וּלְרַחֲמִים וּלְרֶוַח<br>
+    הַצָּלָה וְהַצְלָחָה בְּרָכָה וִישׁוּעָה נֶחָמָה<br>
+    פַּרְנָסָה וְכַלְכָּלָה וְרַחֲמִים וְחַיִּים וְשָׁלוֹם וְכָל טוֹב<br>
+    וּמִכָּל טוּב לְעוֹלָם אַל יְחַסְּרֵנוּ
+  </div>
+</div>
+
+<div class="blessing-section" id="sec_harachaman">
+  <h3>הָרַחֲמָן — בקשות</h3>
+  <div class="blessing-text">
+    הָרַחֲמָן הוּא יִמְלֹךְ עָלֵינוּ לְעוֹלָם וָעֶד<br>
+    הָרַחֲמָן הוּא יִתְבָּרַךְ בַּשָּׁמַיִם וּבָאָרֶץ<br>
+    הָרַחֲמָן הוּא יִשְׁתַּבַּח לְדוֹר דּוֹרִים<br>
+    וְיִתְפָּאַר בָּנוּ לָעַד וּלְנֵצַח נְצָחִים<br>
+    הָרַחֲמָן הוּא יְפַרְנְסֵנוּ בְּכָבוֹד<br>
+    הָרַחֲמָן הוּא יִשְׁבֹּר עֻלֵּנוּ מֵעַל צַוָּארֵנוּ<br>
+    וְהוּא יוֹלִיכֵנוּ קוֹמְמִיּוּת לְאַרְצֵנוּ<br>
+    הָרַחֲמָן הוּא יִשְׁלַח בְּרָכָה מְרֻבָּה בַּבַּיִת הַזֶּה<br>
+    וְעַל שֻׁלְחָן זֶה שֶׁאָכַלְנוּ עָלָיו<br>
+    הָרַחֲמָן הוּא יִשְׁלַח לָנוּ אֶת אֵלִיָּהוּ הַנָּבִיא זָכוּר לַטּוֹב<br>
+    וִיבַשֶּׂר לָנוּ בְּשׂוֹרוֹת טוֹבוֹת יְשׁוּעוֹת וְנֶחָמוֹת<br>
+    הָרַחֲמָן הוּא יְבָרֵךְ אֶת כָּל הַמְּסֻבִּים כָּאן<br>
+    אוֹתָנוּ וְאֶת כָּל אֲשֶׁר לָנוּ<br>
+    כְּמוֹ שֶׁנִּתְבָּרְכוּ אֲבוֹתֵינוּ אַבְרָהָם יִצְחָק וְיַעֲקֹב<br>
+    בַּכֹּל מִכֹּל כֹּל כֵּן יְבָרֵךְ אוֹתָנוּ כֻּלָּנוּ יַחַד<br>
+    בִּבְרָכָה שְׁלֵמָה וְנֹאמַר אָמֵן
+  </div>
+  <div class="blessing-small">בבית ההורים מוסיפים "אֶת אָבִי מוֹרִי... וְאֶת אִמִּי מוֹרָתִי", ובביתו מוסיף "אוֹתִי וְאֶת אִשְׁתִּי וְאֶת זַרְעִי וְאֶת כָּל אֲשֶׁר לִי".</div>
+</div>
+
+<div class="blessing-section" id="sec_meein">
+  <h3>מעין שלוש — נוסח מזרחי (על המחיה)</h3>
+  <div class="blessing-text">
+    בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם<br>
+    עַל הַמִּחְיָה וְעַל הַכַּלְכָּלָה<br>
+    וְעַל תְּנוּבַת הַשָּׂדֶה<br>
+    וְעַל אֶרֶץ חֶמְדָּה טוֹבָה וּרְחָבָה<br>
+    שֶׁרָצִיתָ וְהִנְחַלְתָּ לַאֲבוֹתֵינוּ לֶאֱכֹל מִפִּרְיָהּ וְלִשְׂבֹּעַ מִטּוּבָהּ<br>
+    רַחֵם נָא ה' אֱלֹהֵינוּ עַל יִשְׂרָאֵל עַמֶּךָ<br>
+    וְעַל יְרוּשָׁלַיִם עִירֶךָ<br>
+    וְעַל צִיּוֹן מִשְׁכַּן כְּבוֹדֶךָ<br>
+    וְעַל מִזְבַּחֶךָ וְעַל הֵיכָלֶךָ<br>
+    וּבְנֵה יְרוּשָׁלַיִם עִיר הַקֹּדֶשׁ בִּמְהֵרָה בְיָמֵינוּ<br>
+    וְהַעֲלֵנוּ לְתוֹכָהּ וְשַׂמְּחֵנוּ בְּבִנְיָנָהּ<br>
+    וְנֹאכַל מִפִּרְיָהּ וְנִשְׂבַּע מִטּוּבָהּ וּנְבָרֶכְךָ עָלֶיהָ בִּקְדֻשָּׁה וּבְטָהֳרָה<br>
+    <span style="font-size:.82em;color:var(--gold-dim)">(בשבת:)</span> וּרְצֵה וְהַחֲלִיצֵנוּ בְּיוֹם הַשַּׁבָּת הַזֶּה<br>
+    כִּי אַתָּה ה' טוֹב וּמֵטִיב לַכֹּל וְנוֹדֶה לְּךָ עַל הָאָרֶץ<br>
+    בָּרוּךְ אַתָּה ה' עַל הָאָרֶץ וְעַל הַמִּחְיָה
+  </div>
+  <div class="blessing-small">באותה מטבע משתנה הפתיחה והחתימה לפי סוג המאכל: "עַל הָעֵץ וְעַל פְּרִי הָעֵץ...וְעַל הַפֵּרוֹת" לפירות משבעת המינים, ו"עַל הַגֶּפֶן וְעַל פְּרִי הַגֶּפֶן...וְעַל פְּרִי הַגָּפֶן" ליין ומיץ ענבים.</div>
+</div>
+
+<div class="blessing-section" id="sec_nefashot">
+  <h3>בורא נפשות רבות</h3>
+  <div class="blessing-text">
+    בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם<br>
+    בּוֹרֵא נְפָשׁוֹת רַבּוֹת וְחֶסְרוֹנָן<br>
+    עַל כָּל מַה שֶּׁבָּרָאתָ לְהַחֲיוֹת בָּהֶם נֶפֶשׁ כָּל חָי<br>
+    בָּרוּךְ חֵי הָעוֹלָמִים
+  </div>
+  <div class="blessing-small">מברכים לאחר אכילת פירות וירקות (שאינם משבעת המינים), בשר, דגים, ביצים, מוצרי חלב, ממתקים ורוב המשקאות, בשיעור המחייב ברכה אחרונה.</div>
+</div>
+
+<div class="blessing-section" id="sec_shulchan">
+  <h3>ברכות השולחן — ברכות ראשונות</h3>
+  <div class="blessing-text"><strong>המוציא לחם מן הארץ:</strong><br>בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם הַמּוֹצִיא לֶחֶם מִן הָאָרֶץ</div>
+  <div class="blessing-text" style="margin-top:10px"><strong>בורא פרי הגפן:</strong><br>בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם בּוֹרֵא פְּרִי הַגָּפֶן</div>
+  <div class="blessing-text" style="margin-top:10px"><strong>בורא מיני מזונות:</strong><br>בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם בּוֹרֵא מִינֵי מְזוֹנוֹת</div>
+  <div class="blessing-text" style="margin-top:10px"><strong>על פירות העץ:</strong><br>בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם בּוֹרֵא פְּרִי הָעֵץ</div>
+  <div class="blessing-text" style="margin-top:10px"><strong>על פירות האדמה:</strong><br>בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם בּוֹרֵא פְּרִי הָאֲדָמָה</div>
+  <div class="blessing-text" style="margin-top:10px"><strong>שהכל נהיה בדברו:</strong><br>בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם שֶׁהַכֹּל נִהְיָה בִּדְבָרוֹ</div>
+</div>
+
+<div class="blessing-section" id="sec_netilat">
+  <h3>נטילת ידיים לסעודה</h3>
+  <div class="blessing-text">
+    בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם<br>
+    אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ עַל נְטִילַת יָדָיִם
+  </div>
+  <div class="blessing-small">נוטלים מים על הידיים לפני ברכת המוציא, ואין מדברים משעת הנטילה ועד לאחר ברכת המוציא.</div>
+</div>
+
+<div class="blessing-section" id="sec_asher">
+  <h3>אשר יצר — לאחר יציאה מהשירותים</h3>
+  <div class="blessing-text">
+    בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם<br>
+    אֲשֶׁר יָצַר אֶת הָאָדָם בְּחָכְמָה<br>
+    וּבָרָא בוֹ נְקָבִים נְקָבִים חֲלוּלִים חֲלוּלִים<br>
+    גָּלוּי וְיָדוּעַ לִפְנֵי כִסֵּא כְבוֹדֶךָ<br>
+    שֶׁאִם יִסָּתֵם אֶחָד מֵהֶם אוֹ אִם יִפָּתֵחַ אֶחָד מֵהֶם<br>
+    אִי אֶפְשָׁר לְהִתְקַיֵּם וְלַעֲמוֹד לְפָנֶיךָ אֲפִילוּ שָׁעָה אֶחָת<br>
+    בָּרוּךְ אַתָּה ה' רוֹפֵא כָל בָּשָׂר וּמַפְלִיא לַעֲשׂוֹת
+  </div>
+</div>
+
+<div class="blessing-section">
+  <h3>שהחיינו — על פרי חדש או שמחה</h3>
+  <div class="blessing-text">
+    בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם<br>
+    שֶׁהֶחֱיָנוּ וְקִיְּמָנוּ וְהִגִּיעָנוּ לַזְּמַן הַזֶּה
+  </div>
+</div>
+
+<div class="blessing-section">
+  <h3>תפילה לפני הבישול</h3>
+  <div class="blessing-text">
+    יְהִי רָצוֹן מִלְּפָנֶיךָ ה' אֱלֹהֵינוּ<br>
+    שֶׁיִּתְבָּרֵךְ מַעֲשֵׂה יָדַי<br>
+    וְיִהְיֶה הַמָּזוֹן לְבָרָכָה וּלְשָׂבְעָה<br>
+    וְלֹא לְקַלְקָלָה וְלֹא לְחֶסְרוֹן<br>
+    אָמֵן
+  </div>
+</div>
+
+    </div>
+
+    <!-- ══════ אשכנז ══════ -->
+    <div class="blessings-content" id="blessings_ashkenaz">
+      
+<div class="blessing-section" id="sec_zimun">
+  <h3>הזימון — כשסועדים שלושה ויותר</h3>
+  <div class="blessing-text">
+    רַבּוֹתַי מִיר וֶועלֶן בֶּענְטְשֶׁן<br>
+    <span style="font-size:.82em;color:var(--white-dim)">(המסובים:)</span> יְהִי שֵׁם ה' מְבֹרָךְ מֵעַתָּה וְעַד עוֹלָם<br>
+    בִּרְשׁוּת מָרָנָן וְרַבּוֹתַי<br>
+    נְבָרֵךְ (אֱלֹהֵינוּ) שֶׁאָכַלְנוּ מִשֶּׁלּוֹ<br>
+    <span style="font-size:.82em;color:var(--white-dim)">(המסובים:)</span> בָּרוּךְ (אֱלֹהֵינוּ) שֶׁאָכַלְנוּ מִשֶּׁלּוֹ וּבְטוּבוֹ חָיִינוּ
+  </div>
+  <div class="blessing-small">בעשרה מוסיפים תיבת "אֱלֹהֵינוּ".</div>
+</div>
+
+<div class="blessing-section" id="sec_b1">
+  <h3>ברכה א׳ — הַזָּן</h3>
+  <div class="blessing-text">
+    בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם<br>
+    הַזָּן אֶת הָעוֹלָם כֻּלּוֹ בְּטוּבוֹ<br>
+    בְּחֵן בְּחֶסֶד וּבְרַחֲמִים<br>
+    הוּא נוֹתֵן לֶחֶם לְכָל בָּשָׂר כִּי לְעוֹלָם חַסְדּוֹ<br>
+    וּבְטוּבוֹ הַגָּדוֹל תָּמִיד לֹא חָסַר לָנוּ<br>
+    וְאַל יֶחְסַר לָנוּ מָזוֹן לְעוֹלָם וָעֶד<br>
+    בַּעֲבוּר שְׁמוֹ הַגָּדוֹל<br>
+    כִּי הוּא אֵל זָן וּמְפַרְנֵס לַכֹּל<br>
+    וּמֵטִיב לַכֹּל וּמֵכִין מָזוֹן לְכָל בְּרִיּוֹתָיו אֲשֶׁר בָּרָא<br>
+    בָּרוּךְ אַתָּה ה' הַזָּן אֶת הַכֹּל
+  </div>
+</div>
+
+<div class="blessing-section" id="sec_b2">
+  <h3>ברכה ב׳ — נוֹדֶה לְּךָ (ברכת הארץ)</h3>
+  <div class="blessing-text">
+    נוֹדֶה לְּךָ ה' אֱלֹהֵינוּ וּנְבָרֵךְ אֶת שִׁמְךָ<br>
+    עַל שֶׁהִנְחַלְתָּ לַאֲבוֹתֵינוּ אֶרֶץ חֶמְדָּה טוֹבָה וּרְחָבָה<br>
+    וְעַל שֶׁהוֹצֵאתָנוּ מֵאֶרֶץ מִצְרַיִם<br>
+    וּפְדִיתָנוּ מִבֵּית עֲבָדִים<br>
+    וְעַל בְּרִיתְךָ שֶׁחָתַמְתָּ בִּבְשָׂרֵנוּ<br>
+    וְעַל תּוֹרָתְךָ שֶׁלִּמַּדְתָּנוּ וְעַל חֻקֶּיךָ שֶׁהוֹדַעְתָּנוּ<br>
+    וְעַל חַיִּים חֵן וָחֶסֶד שֶׁחוֹנַנְתָּנוּ<br>
+    וְעַל אֲכִילַת מָזוֹן שָׁאַתָּה זָן וּמְפַרְנֵס אוֹתָנוּ תָּמִיד<br>
+    בְּכָל יוֹם וּבְכָל עֵת וּבְכָל שָׁעָה<br>
+    וְעַל הַכֹּל ה' אֱלֹהֵינוּ אֲנַחְנוּ מוֹדִים לָךְ וּמְבָרְכִים אוֹתָךְ<br>
+    יִתְבָּרַךְ שִׁמְךָ בְּפִי כָל חַי תָּמִיד לְעוֹלָם וָעֶד<br>
+    כַּכָּתוּב: וְאָכַלְתָּ וְשָׂבָעְתָּ וּבֵרַכְתָּ אֶת ה' אֱלֹהֶיךָ<br>
+    עַל הָאָרֶץ הַטֹּבָה אֲשֶׁר נָתַן לָךְ<br>
+    בָּרוּךְ אַתָּה ה' עַל הָאָרֶץ וְעַל הַמָּזוֹן
+  </div>
+</div>
+
+<div class="blessing-section" id="sec_b3">
+  <h3>ברכה ג׳ — בּוֹנֵה יְרוּשָׁלַיִם</h3>
+  <div class="blessing-text">
+    רַחֵם נָא ה' אֱלֹהֵינוּ עַל יִשְׂרָאֵל עַמֶּךָ<br>
+    וְעַל יְרוּשָׁלַיִם עִירֶךָ וְעַל צִיּוֹן מִשְׁכַּן כְּבוֹדֶךָ<br>
+    וְעַל מַלְכוּת בֵּית דָּוִד מְשִׁיחֶךָ<br>
+    וְעַל הַבַּיִת הַגָּדוֹל וְהַקָּדוֹשׁ שֶׁנִּקְרָא שִׁמְךָ עָלָיו<br>
+    אֱלֹהֵינוּ אָבִינוּ רְעֵנוּ זוּנֵנוּ פַּרְנְסֵנוּ וְכַלְכְּלֵנוּ<br>
+    וְהַרְוִיחֵנוּ וְהַרְוַח לָנוּ מְהֵרָה מִכָּל צָרוֹתֵינוּ<br>
+    וְנָא אַל תַּצְרִיכֵנוּ לֹא לִידֵי מַתְּנַת בָּשָׂר וָדָם<br>
+    כִּי אִם לְיָדְךָ הַמְּלֵאָה הַפְּתוּחָה הַקְּדוֹשָׁה וְהָרְחָבָה<br>
+    שֶׁלֹּא נֵבוֹשׁ וְלֹא נִכָּלֵם לְעוֹלָם וָעֶד<br><br>
+    <span style="font-size:.82em;color:var(--gold-dim)">(בשבת מוסיפים:)</span><br>
+    רְצֵה וְהַחֲלִיצֵנוּ ה' אֱלֹהֵינוּ בְּמִצְוֹתֶיךָ<br>
+    וּבְמִצְוַת יוֹם הַשְּׁבִיעִי הַשַּׁבָּת הַגָּדוֹל וְהַקָּדוֹשׁ הַזֶּה<br>
+    כִּי יוֹם זֶה גָּדוֹל וְקָדוֹשׁ הוּא לְפָנֶיךָ<br>
+    לִשְׁבָּת בּוֹ וְלָנוּחַ בּוֹ בְּאַהֲבָה כְּמִצְוַת רְצוֹנֶךָ<br>
+    וּבִרְצוֹנְךָ הָנִיחַ לָנוּ שֶׁלֹּא תְהֵא צָרָה וְיָגוֹן בְּיוֹם מְנוּחָתֵנוּ<br>
+    וְהַרְאֵנוּ בְּנֶחָמַת צִיּוֹן עִירֶךָ וּבְבִנְיַן יְרוּשָׁלַיִם עִיר קָדְשֶׁךָ<br><br>
+    <span style="font-size:.82em;color:var(--gold-dim)">(בראש חודש ובחול המועד מוסיפים יעלה ויבוא:)</span><br>
+    אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ, יַעֲלֶה וְיָבֹא... בְּיוֹם רֹאשׁ הַחֹדֶשׁ הַזֶּה. זָכְרֵנוּ ה' אֱלֹהֵינוּ בּוֹ לְטוֹבָה<br><br>
+    וּבְנֵה יְרוּשָׁלַיִם עִיר הַקֹּדֶשׁ בִּמְהֵרָה בְיָמֵינוּ<br>
+    בָּרוּךְ אַתָּה ה' בּוֹנֵה בְרַחֲמָיו יְרוּשָׁלָיִם אָמֵן
+  </div>
+</div>
+
+<div class="blessing-section" id="sec_b4">
+  <h3>ברכה ד׳ — הַטּוֹב וְהַמֵּטִיב</h3>
+  <div class="blessing-text">
+    בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם<br>
+    הָאֵל אָבִינוּ מַלְכֵּנוּ אַדִּירֵנוּ בּוֹרְאֵנוּ גֹּאֲלֵנוּ<br>
+    יוֹצְרֵנוּ קְדוֹשֵׁנוּ קְדוֹשׁ יַעֲקֹב רוֹעֵנוּ רוֹעֵה יִשְׂרָאֵל<br>
+    הַמֶּלֶךְ הַטּוֹב וְהַמֵּטִיב לַכֹּל<br>
+    שֶׁבְּכָל יוֹם וָיוֹם הוּא הֵטִיב הוּא מֵטִיב הוּא יֵיטִיב לָנוּ<br>
+    הוּא גְמָלָנוּ הוּא גוֹמְלֵנוּ הוּא יִגְמְלֵנוּ לָעַד<br>
+    לְחֵן וּלְחֶסֶד וּלְרַחֲמִים וּלְרֶוַח<br>
+    הַצָּלָה וְהַצְלָחָה בְּרָכָה וִישׁוּעָה נֶחָמָה<br>
+    פַּרְנָסָה וְכַלְכָּלָה וְרַחֲמִים וְחַיִּים וְשָׁלוֹם וְכָל טוֹב<br>
+    וּמִכָּל טוּב לְעוֹלָם אַל יְחַסְּרֵנוּ
+  </div>
+</div>
+
+<div class="blessing-section" id="sec_harachaman">
+  <h3>הָרַחֲמָן — בקשות</h3>
+  <div class="blessing-text">
+    הָרַחֲמָן הוּא יִמְלֹךְ עָלֵינוּ לְעוֹלָם וָעֶד<br>
+    הָרַחֲמָן הוּא יִתְבָּרַךְ בַּשָּׁמַיִם וּבָאָרֶץ<br>
+    הָרַחֲמָן הוּא יִשְׁתַּבַּח לְדוֹר דּוֹרִים<br>
+    וְיִתְפָּאַר בָּנוּ לָעַד וּלְנֵצַח נְצָחִים<br>
+    הָרַחֲמָן הוּא יְפַרְנְסֵנוּ בְּכָבוֹד<br>
+    הָרַחֲמָן הוּא יִשְׁבֹּר עֻלֵּנוּ מֵעַל צַוָּארֵנוּ<br>
+    וְהוּא יוֹלִיכֵנוּ קוֹמְמִיּוּת לְאַרְצֵנוּ<br>
+    הָרַחֲמָן הוּא יִשְׁלַח בְּרָכָה מְרֻבָּה בַּבַּיִת הַזֶּה<br>
+    וְעַל שֻׁלְחָן זֶה שֶׁאָכַלְנוּ עָלָיו<br>
+    הָרַחֲמָן הוּא יִשְׁלַח לָנוּ אֶת אֵלִיָּהוּ הַנָּבִיא זָכוּר לַטּוֹב<br>
+    וִיבַשֶּׂר לָנוּ בְּשׂוֹרוֹת טוֹבוֹת יְשׁוּעוֹת וְנֶחָמוֹת<br>
+    הָרַחֲמָן הוּא יְבָרֵךְ אֶת כָּל הַמְּסֻבִּים כָּאן<br>
+    אוֹתָנוּ וְאֶת כָּל אֲשֶׁר לָנוּ<br>
+    כְּמוֹ שֶׁנִּתְבָּרְכוּ אֲבוֹתֵינוּ אַבְרָהָם יִצְחָק וְיַעֲקֹב<br>
+    בַּכֹּל מִכֹּל כֹּל כֵּן יְבָרֵךְ אוֹתָנוּ כֻּלָּנוּ יַחַד<br>
+    בִּבְרָכָה שְׁלֵמָה וְנֹאמַר אָמֵן
+  </div>
+</div>
+
+<div class="blessing-section" id="sec_meein">
+  <h3>מעין שלוש — נוסח אשכנז (על המחיה)</h3>
+  <div class="blessing-text">
+    בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם<br>
+    עַל הַמִּחְיָה וְעַל הַכַּלְכָּלָה<br>
+    וְעַל תְּנוּבַת הַשָּׂדֶה וְעַל אֶרֶץ חֶמְדָּה טוֹבָה וּרְחָבָה<br>
+    שֶׁרָצִיתָ וְהִנְחַלְתָּ לַאֲבוֹתֵינוּ לֶאֱכֹל מִפִּרְיָהּ וְלִשְׂבֹּעַ מִטּוּבָהּ<br>
+    רַחֵם ה' אֱלֹהֵינוּ עַל יִשְׂרָאֵל עַמֶּךָ<br>
+    וְעַל יְרוּשָׁלַיִם עִירֶךָ וְעַל צִיּוֹן מִשְׁכַּן כְּבוֹדֶךָ<br>
+    וְעַל מִזְבַּחֶךָ וְעַל הֵיכָלֶךָ<br>
+    וּבְנֵה יְרוּשָׁלַיִם עִיר הַקֹּדֶשׁ בִּמְהֵרָה בְיָמֵינוּ<br>
+    וְהַעֲלֵנוּ לְתוֹכָהּ וְשַׂמְּחֵנוּ בְּבִנְיָנָהּ<br>
+    וְנֹאכַל מִפִּרְיָהּ וְנִשְׂבַּע מִטּוּבָהּ<br>
+    וּנְבָרֶכְךָ עָלֶיהָ בִּקְדֻשָּׁה וּבְטָהֳרָה<br>
+    <span style="font-size:.82em;color:var(--gold-dim)">(בשבת:)</span> וּרְצֵה וְהַחֲלִיצֵנוּ בְּיוֹם הַשַּׁבָּת הַזֶּה<br>
+    כִּי אַתָּה ה' טוֹב וּמֵטִיב לַכֹּל<br>
+    בָּרוּךְ אַתָּה ה' עַל הָאָרֶץ וְעַל הַמִּחְיָה
+  </div>
+  <div class="blessing-small">כנוסח המזרחי — הפתיחה והחתימה משתנות בין "עַל הַמִּחְיָה" (מזונות), "עַל הַגֶּפֶן" (יין) ו"עַל הָעֵץ" (פירות משבעת המינים).</div>
+</div>
+
+<div class="blessing-section" id="sec_nefashot">
+  <h3>בורא נפשות רבות</h3>
+  <div class="blessing-text">
+    בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם<br>
+    בּוֹרֵא נְפָשׁוֹת רַבּוֹת וְחֶסְרוֹנָן<br>
+    עַל כָּל מַה שֶּׁבָּרָאתָ לְהַחֲיוֹת בָּהֶם נֶפֶשׁ כָּל חָי<br>
+    בָּרוּךְ חֵי הָעוֹלָמִים
+  </div>
+  <div class="blessing-small">מברכים לאחר אכילת פירות וירקות (שאינם משבעת המינים), בשר, דגים, ביצים, מוצרי חלב, ממתקים ורוב המשקאות.</div>
+</div>
+
+<div class="blessing-section">
+  <h3>קידוש לשבת — נוסח אשכנז</h3>
+  <div class="blessing-text">
+    <span style="font-size:.82em;color:var(--gold-dim)">(ערב שבת:)</span><br>
+    יוֹם הַשִּׁשִּׁי<br>
+    וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ וְכָל צְבָאָם<br>
+    וַיְכַל אֱלֹהִים בַּיּוֹם הַשְּׁבִיעִי מְלַאכְתּוֹ אֲשֶׁר עָשָׂה<br>
+    וַיִּשְׁבֹּת בַּיּוֹם הַשְּׁבִיעִי מִכָּל מְלַאכְתּוֹ אֲשֶׁר עָשָׂה<br>
+    וַיְבָרֶךְ אֱלֹהִים אֶת יוֹם הַשְּׁבִיעִי וַיְקַדֵּשׁ אֹתוֹ<br>
+    כִּי בוֹ שָׁבַת מִכָּל מְלַאכְתּוֹ אֲשֶׁר בָּרָא אֱלֹהִים לַעֲשׂוֹת<br><br>
+    סַבְרִי מָרָנָן וְרַבָּנָן וְרַבּוֹתַי<br>
+    בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם בּוֹרֵא פְּרִי הַגָּפֶן
+  </div>
+</div>
+
+<div class="blessing-section" id="sec_shulchan">
+  <h3>ברכות השולחן — ברכות ראשונות</h3>
+  <div class="blessing-text"><strong>המוציא לחם מן הארץ:</strong><br>בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם הַמּוֹצִיא לֶחֶם מִן הָאָרֶץ</div>
+  <div class="blessing-text" style="margin-top:10px"><strong>בורא פרי הגפן:</strong><br>בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם בּוֹרֵא פְּרִי הַגָּפֶן</div>
+  <div class="blessing-text" style="margin-top:10px"><strong>בורא מיני מזונות:</strong><br>בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם בּוֹרֵא מִינֵי מְזוֹנוֹת</div>
+  <div class="blessing-text" style="margin-top:10px"><strong>על פירות העץ:</strong><br>בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם בּוֹרֵא פְּרִי הָעֵץ</div>
+  <div class="blessing-text" style="margin-top:10px"><strong>על פירות האדמה:</strong><br>בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם בּוֹרֵא פְּרִי הָאֲדָמָה</div>
+  <div class="blessing-text" style="margin-top:10px"><strong>שהכל נהיה בדברו:</strong><br>בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם שֶׁהַכֹּל נִהְיָה בִּדְבָרוֹ</div>
+</div>
+
+<div class="blessing-section" id="sec_netilat">
+  <h3>נטילת ידיים לסעודה</h3>
+  <div class="blessing-text">
+    בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם<br>
+    אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ עַל נְטִילַת יָדָיִם
+  </div>
+</div>
+
+<div class="blessing-section" id="sec_asher">
+  <h3>אשר יצר — לאחר יציאה מהשירותים</h3>
+  <div class="blessing-text">
+    בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם<br>
+    אֲשֶׁר יָצַר אֶת הָאָדָם בְּחָכְמָה<br>
+    וּבָרָא בוֹ נְקָבִים נְקָבִים חֲלוּלִים חֲלוּלִים<br>
+    גָּלוּי וְיָדוּעַ לִפְנֵי כִסֵּא כְבוֹדֶךָ<br>
+    שֶׁאִם יִסָּתֵם אֶחָד מֵהֶם אוֹ אִם יִפָּתֵחַ אֶחָד מֵהֶם<br>
+    אִי אֶפְשָׁר לְהִתְקַיֵּם וְלַעֲמוֹד לְפָנֶיךָ אֲפִילוּ שָׁעָה אֶחָת<br>
+    בָּרוּךְ אַתָּה ה' רוֹפֵא כָל בָּשָׂר וּמַפְלִיא לַעֲשׂוֹת
+  </div>
+</div>
+
+<div class="blessing-section">
+  <h3>שהחיינו — על פרי חדש או שמחה</h3>
+  <div class="blessing-text">
+    בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם<br>
+    שֶׁהֶחֱיָנוּ וְקִיְּמָנוּ וְהִגִּיעָנוּ לַזְּמַן הַזֶּה
+  </div>
+</div>
+
+<div class="blessing-section">
+  <h3>תפילה לפני הבישול</h3>
+  <div class="blessing-text">
+    יְהִי רָצוֹן מִלְּפָנֶיךָ ה' אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ<br>
+    שֶׁתִּשְׁלַח בְּרָכָה וְהַצְלָחָה בְּמַעֲשֵׂה יָדֵינוּ<br>
+    וְיִהְיֶה הַמָּזוֹן לְבָרָכָה וְלִרְפוּאָה<br>
+    וּלְשָׂבְעָה לְכָל הַסְּעֻדִּים עָלָיו<br>
+    אָמֵן
+  </div>
+</div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+const DB = {"categories": {"hamotzi": {"label": "פת — לחם ומאפי בצק עיקריים", "icon": "🍞", "rishona": "בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, הַמּוֹצִיא לֶחֶם מִן הָאָרֶץ", "achrona_type": "בִּרְכַּת הַמָּזוֹן (בזימון או ביחיד — שלוש ברכות מהתורה/מדרבנן וברכה רביעית)", "achrona_text": null, "note": "כשאוכלים לחם כדי קביעת סעודה — נוטלים ידיים בברכה, מברכים המוציא, ולבסוף מברכים ברכת המזון השלמה (ראו לשונית 'ברכות ותפילות')."}, "mezonot": {"label": "מיני דגן — עוגות, פסטה ומאפים", "icon": "🥐", "rishona": "בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, בּוֹרֵא מִינֵי מְזוֹנוֹת", "achrona_type": "עַל הַמִּחְיָה (מעין שלוש)", "achrona_text": "AL_HAMICHYAH", "note": "אם אכלו כשיעור כזית בתוך כדי אכילת פרס — מברכים על המחיה. פחות משיעור זה — אין ברכה אחרונה."}, "hagafen": {"label": "יין ומיץ ענבים", "icon": "🍷", "rishona": "בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, בּוֹרֵא פְּרִי הַגָּפֶן", "achrona_type": "עַל הַגֶּפֶן (מעין שלוש)", "achrona_text": "AL_HAGEFEN", "note": "בשיעור רביעית (כ-86 מ״ל) — מברכים על הגפן. פחות מכך — אין ברכה אחרונה."}, "etz7": {"label": "פירות משבעת המינים (עץ)", "icon": "🫒", "rishona": "בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, בּוֹרֵא פְּרִי הָעֵץ", "achrona_type": "עַל הָעֵץ (מעין שלוש)", "achrona_text": "AL_HAETZ", "note": "מחמשת מיני הפירות שנשתבחה בהם ארץ ישראל (ענבים, תאנה, רימון, זית, תמר) — בשיעור כזית מברכים על העץ."}, "etz_other": {"label": "שאר פירות העץ", "icon": "🍎", "rishona": "בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, בּוֹרֵא פְּרִי הָעֵץ", "achrona_type": "בּוֹרֵא נְפָשׁוֹת רַבּוֹת", "achrona_text": "BOREI_NEFASHOT", "note": "פרי הגדל על עץ שאינו משבעת המינים — ברכה ראשונה בורא פרי העץ, ולאחריו בורא נפשות רבות."}, "adama": {"label": "ירקות, קטניות ופירות אדמה", "icon": "🥕", "rishona": "בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, בּוֹרֵא פְּרִי הָאֲדָמָה", "achrona_type": "בּוֹרֵא נְפָשׁוֹת רַבּוֹת", "achrona_text": "BOREI_NEFASHOT", "note": "כולל ירקות, קטניות, תבלינים טריים, וכן פירות הגדלים על שיח נמוך שאינו עץ קבוע (כגון בננה, אננס, תות שדה, אבטיח ומלון)."}, "shehakol": {"label": "שהכל — בשר, דגים, ביצים, חלב, ממתקים ומשקאות", "icon": "🍽️", "rishona": "בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, שֶׁהַכֹּל נִהְיָה בִּדְבָרוֹ", "achrona_type": "בּוֹרֵא נְפָשׁוֹת רַבּוֹת", "achrona_text": "BOREI_NEFASHOT", "note": "כל מה שאינו נכלל בברכות האחרות — בשר, עוף, דגים, ביצים, מוצרי חלב, פטריות, ממתקים, תבלינים יבשים ורוב המשקאות."}}, "items": [{"n": "לחם לבן", "c": "hamotzi", "note": ""}, {"n": "לחם אחיד", "c": "hamotzi", "note": ""}, {"n": "לחם מלא", "c": "hamotzi", "note": ""}, {"n": "לחם שיפון", "c": "hamotzi", "note": ""}, {"n": "לחם כוסמין", "c": "hamotzi", "note": ""}, {"n": "לחם כוסמין מלא", "c": "hamotzi", "note": ""}, {"n": "חלה", "c": "hamotzi", "note": ""}, {"n": "חלת שבת", "c": "hamotzi", "note": ""}, {"n": "חלה מתוקה", "c": "hamotzi", "note": ""}, {"n": "חלת דבש", "c": "hamotzi", "note": ""}, {"n": "פיתה", "c": "hamotzi", "note": ""}, {"n": "פיתה מלאה", "c": "hamotzi", "note": ""}, {"n": "לאפה", "c": "hamotzi", "note": ""}, {"n": "בגט צרפתי", "c": "hamotzi", "note": ""}, {"n": "לחמניה", "c": "hamotzi", "note": ""}, {"n": "לחמניה מלאה", "c": "hamotzi", "note": ""}, {"n": "לחמניית המבורגר", "c": "hamotzi", "note": ""}, {"n": "לחמניית נקניקייה", "c": "hamotzi", "note": ""}, {"n": "בייגל", "c": "hamotzi", "note": ""}, {"n": "בייגל ניו יורק", "c": "hamotzi", "note": ""}, {"n": "טורטייה עבה במילוי סעודה", "c": "hamotzi", "note": ""}, {"n": "לחם שוודי", "c": "hamotzi", "note": ""}, {"n": "לחם אנגלי", "c": "hamotzi", "note": ""}, {"n": "פוקאצ'ה", "c": "hamotzi", "note": ""}, {"n": "לחם קוקוס תימני", "c": "hamotzi", "note": ""}, {"n": "לחם יווני", "c": "hamotzi", "note": ""}, {"n": "מצה בפסח", "c": "hamotzi", "note": ""}, {"n": "מצה שמורה", "c": "hamotzi", "note": ""}, {"n": "לחם קיבוץ", "c": "hamotzi", "note": ""}, {"n": "לחם צ'יאבטה", "c": "hamotzi", "note": ""}, {"n": "פריזיאן", "c": "hamotzi", "note": ""}, {"n": "לחם קוואטרו", "c": "hamotzi", "note": ""}, {"n": "לחם שום", "c": "hamotzi", "note": ""}, {"n": "לחם זיתים", "c": "hamotzi", "note": ""}, {"n": "לחם שיפון כהה", "c": "hamotzi", "note": ""}, {"n": "פראטה", "c": "hamotzi", "note": ""}, {"n": "נאן הודי", "c": "hamotzi", "note": ""}, {"n": "לחם פוקאסה איטלקי", "c": "hamotzi", "note": ""}, {"n": "לחם מחמצת", "c": "hamotzi", "note": ""}, {"n": "סורדו", "c": "hamotzi", "note": ""}, {"n": "לחם קוקוס", "c": "hamotzi", "note": ""}, {"n": "לחם תירס עם קמח חיטה עיקרי", "c": "hamotzi", "note": ""}, {"n": "לחמניית בראוני חלה", "c": "hamotzi", "note": ""}, {"n": "לחם צימוקים", "c": "hamotzi", "note": ""}, {"n": "פיתה עיראקית", "c": "hamotzi", "note": ""}, {"n": "עוגת שוקולד", "c": "mezonot", "note": ""}, {"n": "עוגת גבינה", "c": "mezonot", "note": ""}, {"n": "עוגת תפוחים", "c": "mezonot", "note": ""}, {"n": "עוגת דבש", "c": "mezonot", "note": ""}, {"n": "עוגת שיש", "c": "mezonot", "note": ""}, {"n": "עוגת גזר", "c": "mezonot", "note": ""}, {"n": "עוגת בננה", "c": "mezonot", "note": ""}, {"n": "עוגת לימון", "c": "mezonot", "note": ""}, {"n": "עוגת תפוזים", "c": "mezonot", "note": ""}, {"n": "עוגיות שוקולד צ'יפס", "c": "mezonot", "note": ""}, {"n": "עוגיות חמאה", "c": "mezonot", "note": ""}, {"n": "עוגיות שיבולת שועל", "c": "mezonot", "note": ""}, {"n": "עוגיות קינמון", "c": "mezonot", "note": ""}, {"n": "ביסקוויטים", "c": "mezonot", "note": ""}, {"n": "ביסקוויטי פטיפור", "c": "mezonot", "note": ""}, {"n": "וופלים", "c": "mezonot", "note": ""}, {"n": "בלינצ'ס", "c": "mezonot", "note": ""}, {"n": "פנקייק", "c": "mezonot", "note": ""}, {"n": "קרפ", "c": "mezonot", "note": ""}, {"n": "קרואסון", "c": "mezonot", "note": "בצק עתיר שמן וסוכר הנאפה בצורת מאפה (ולא כלחם רגיל) — לרוב הפוסקים דינו כ'פת הבאה בכיסנין' ומברכים עליו מזונות, אלא אם נקבעה עליו סעודה בשיעור גדול."}, {"n": "קרואסון שוקולד", "c": "mezonot", "note": "כנ״ל — לרוב הפוסקים דינו מזונות."}, {"n": "בורקס תפוחי אדמה", "c": "mezonot", "note": ""}, {"n": "בורקס גבינה", "c": "mezonot", "note": ""}, {"n": "בורקס תרד", "c": "mezonot", "note": ""}, {"n": "רוגלך", "c": "mezonot", "note": ""}, {"n": "רוגלך שוקולד", "c": "mezonot", "note": ""}, {"n": "בייגלה", "c": "mezonot", "note": ""}, {"n": "קרקר", "c": "mezonot", "note": ""}, {"n": "קרקר מלוח", "c": "mezonot", "note": ""}, {"n": "ביסלי", "c": "mezonot", "note": ""}, {"n": "נודלס", "c": "mezonot", "note": ""}, {"n": "אטריות ביצים", "c": "mezonot", "note": ""}, {"n": "ספגטי", "c": "mezonot", "note": ""}, {"n": "פנה", "c": "mezonot", "note": ""}, {"n": "פוזילי", "c": "mezonot", "note": ""}, {"n": "פטוצ'יני", "c": "mezonot", "note": ""}, {"n": "לינגוויני", "c": "mezonot", "note": ""}, {"n": "טליאטלה", "c": "mezonot", "note": ""}, {"n": "לזניה", "c": "mezonot", "note": ""}, {"n": "ניוקי", "c": "mezonot", "note": ""}, {"n": "קוסקוס", "c": "mezonot", "note": ""}, {"n": "בורגול", "c": "mezonot", "note": ""}, {"n": "טוסט קטן", "c": "mezonot", "note": ""}, {"n": "מצה עשירה", "c": "mezonot", "note": ""}, {"n": "סופגניה", "c": "mezonot", "note": "מאחר שהיא מטוגנת ולא אפויה כלחם, ברכתה מזונות לרוב הפוסקים."}, {"n": "אוזני המן", "c": "mezonot", "note": ""}, {"n": "עוגת שמרים", "c": "mezonot", "note": ""}, {"n": "שטרודל תפוחים", "c": "mezonot", "note": ""}, {"n": "בקלאווה", "c": "mezonot", "note": ""}, {"n": "קדאיף", "c": "mezonot", "note": ""}, {"n": "מלאווח", "c": "mezonot", "note": ""}, {"n": "ג'חנון", "c": "mezonot", "note": ""}, {"n": "קובה בורגול", "c": "mezonot", "note": "מורכב מקליפת בורגול (מזונות) ומילוי בשר; מאחר שהקליפה היא העיקר מבחינת המאכל, נהוג לברך מזונות עליה."}, {"n": "גרנולה", "c": "mezonot", "note": ""}, {"n": "גרנולה בר", "c": "mezonot", "note": ""}, {"n": "דייסת שיבולת שועל", "c": "mezonot", "note": ""}, {"n": "פתיתים", "c": "mezonot", "note": ""}, {"n": "אטריות סיניות מחיטה", "c": "mezonot", "note": ""}, {"n": "קיש לוריין", "c": "mezonot", "note": "הבצק הוא העיקר ההלכתי במאפה זה, ולכן ברכתו מזונות (אלא אם נקבעה עליו סעודה של ממש)."}, {"n": "פשטידת תפוחי אדמה עם קרום בצק", "c": "mezonot", "note": ""}, {"n": "פסטיל", "c": "mezonot", "note": ""}, {"n": "קניידלך", "c": "mezonot", "note": ""}, {"n": "פלטשינטע", "c": "mezonot", "note": ""}, {"n": "פסטה פנה ברוטב עגבניות (בעיקר הפסטה)", "c": "mezonot", "note": ""}, {"n": "טורטלוני", "c": "mezonot", "note": ""}, {"n": "רביולי", "c": "mezonot", "note": ""}, {"n": "קרפצ'ו בצק (בלינצ'ס גבינה)", "c": "mezonot", "note": ""}, {"n": "עוגת בראוני", "c": "mezonot", "note": ""}, {"n": "מאפין שוקולד", "c": "mezonot", "note": ""}, {"n": "מאפין אוכמניות", "c": "mezonot", "note": ""}, {"n": "דונאט", "c": "mezonot", "note": ""}, {"n": "פריכיות חיטה מלאה", "c": "mezonot", "note": ""}, {"n": "פתי בר חיטה", "c": "mezonot", "note": ""}, {"n": "ביסקוטי", "c": "mezonot", "note": ""}, {"n": "מקרון (על בסיס שקדים - שהכל בעצם", "c": "mezonot", "note": ""}, {"n": "אך נהוג כמזונות אם עם קמח)", "c": "mezonot", "note": ""}, {"n": "מלוואח תימני", "c": "mezonot", "note": ""}, {"n": "פילו ממולא תרד", "c": "mezonot", "note": ""}, {"n": "בורקס בשר (הבצק עיקר)", "c": "mezonot", "note": ""}, {"n": "עוגת אננס הפוכה (בסיס בצק)", "c": "mezonot", "note": ""}, {"n": "עוגת שוקולד לבה", "c": "mezonot", "note": ""}, {"n": "קרמבו הביסקוויט התחתון", "c": "mezonot", "note": ""}, {"n": "וופל בלגי", "c": "mezonot", "note": ""}, {"n": "פודינג לחם", "c": "mezonot", "note": ""}, {"n": "טוסט צרפתי", "c": "mezonot", "note": ""}, {"n": "בלינצ'ס גבינה", "c": "mezonot", "note": ""}, {"n": "כופתאות בצק אסייתיות (דמפלינגס)", "c": "mezonot", "note": ""}, {"n": "ורניקעס", "c": "mezonot", "note": ""}, {"n": "פלמייר", "c": "mezonot", "note": ""}, {"n": "שקדיה (מאפה עלים)", "c": "mezonot", "note": ""}, {"n": "עוגת קוקוס", "c": "mezonot", "note": ""}, {"n": "לחמית מתוקה", "c": "mezonot", "note": ""}, {"n": "בורקס דלעת", "c": "mezonot", "note": ""}, {"n": "פשטידת פסטה", "c": "mezonot", "note": ""}, {"n": "אטריות אורז מקמח חיטה", "c": "mezonot", "note": ""}, {"n": "פריכיות מזונות", "c": "mezonot", "note": ""}, {"n": "קרואסון שקדים", "c": "mezonot", "note": ""}, {"n": "בבקה שוקולד", "c": "mezonot", "note": ""}, {"n": "עוגת עוגיות אוראו", "c": "mezonot", "note": ""}, {"n": "טארט פירות (בסיס בצק)", "c": "mezonot", "note": ""}, {"n": "פאי תפוחים", "c": "mezonot", "note": ""}, {"n": "פאי דלעת", "c": "mezonot", "note": ""}, {"n": "קיש ירקות", "c": "mezonot", "note": ""}, {"n": "יין אדום", "c": "hagafen", "note": ""}, {"n": "יין לבן", "c": "hagafen", "note": ""}, {"n": "יין ורוד", "c": "hagafen", "note": ""}, {"n": "יין מתוק לקידוש", "c": "hagafen", "note": ""}, {"n": "יין יבש", "c": "hagafen", "note": ""}, {"n": "יין חצי יבש", "c": "hagafen", "note": ""}, {"n": "יין מבעבע", "c": "hagafen", "note": ""}, {"n": "שמפניה כשרה", "c": "hagafen", "note": ""}, {"n": "קאווה", "c": "hagafen", "note": ""}, {"n": "פרוסקו כשר", "c": "hagafen", "note": ""}, {"n": "מיץ ענבים אדום", "c": "hagafen", "note": ""}, {"n": "מיץ ענבים לבן", "c": "hagafen", "note": ""}, {"n": "יי\"ש ענבים", "c": "hagafen", "note": ""}, {"n": "יין קינמון תפוזים (מבוסס יין)", "c": "hagafen", "note": ""}, {"n": "יין דסרט", "c": "hagafen", "note": ""}, {"n": "פורט וויין כשר", "c": "hagafen", "note": ""}, {"n": "ענבים אדומים", "c": "etz7", "note": ""}, {"n": "ענבים ירוקים", "c": "etz7", "note": ""}, {"n": "ענבים שחורים", "c": "etz7", "note": ""}, {"n": "ענבים ללא גרעינים", "c": "etz7", "note": ""}, {"n": "צימוקים", "c": "etz7", "note": ""}, {"n": "צימוקים כהים", "c": "etz7", "note": ""}, {"n": "צימוקים זהובים", "c": "etz7", "note": ""}, {"n": "תאנים טריות", "c": "etz7", "note": ""}, {"n": "תאנים מיובשות", "c": "etz7", "note": ""}, {"n": "תאנים שחורות", "c": "etz7", "note": ""}, {"n": "תאנים ירוקות", "c": "etz7", "note": ""}, {"n": "זיתים ירוקים", "c": "etz7", "note": ""}, {"n": "זיתים שחורים", "c": "etz7", "note": ""}, {"n": "זיתים כבושים", "c": "etz7", "note": ""}, {"n": "זיתים ממולאים", "c": "etz7", "note": ""}, {"n": "רימון", "c": "etz7", "note": ""}, {"n": "גרגירי רימון", "c": "etz7", "note": ""}, {"n": "מיץ רימונים טהור", "c": "etz7", "note": ""}, {"n": "תמר מג'הול", "c": "etz7", "note": ""}, {"n": "תמר דגלת נור", "c": "etz7", "note": ""}, {"n": "תמר חלאווי", "c": "etz7", "note": ""}, {"n": "תמר ברהי", "c": "etz7", "note": ""}, {"n": "תמר עמרי", "c": "etz7", "note": ""}, {"n": "סילאן טהור מתמרים", "c": "etz7", "note": ""}, {"n": "ריבת תמרים טהורה", "c": "etz7", "note": ""}, {"n": "ממרח תמרים טהור", "c": "etz7", "note": ""}, {"n": "תפוח עץ אדום", "c": "etz_other", "note": ""}, {"n": "תפוח עץ ירוק", "c": "etz_other", "note": ""}, {"n": "תפוח עץ צהוב", "c": "etz_other", "note": ""}, {"n": "תפוח גרני סמית", "c": "etz_other", "note": ""}, {"n": "אגס", "c": "etz_other", "note": ""}, {"n": "אגס אסייתי", "c": "etz_other", "note": ""}, {"n": "אפרסק", "c": "etz_other", "note": ""}, {"n": "אפרסק שטוח", "c": "etz_other", "note": ""}, {"n": "נקטרינה", "c": "etz_other", "note": ""}, {"n": "משמש", "c": "etz_other", "note": ""}, {"n": "שזיף אדום", "c": "etz_other", "note": ""}, {"n": "שזיף שחור", "c": "etz_other", "note": ""}, {"n": "שזיף צהוב", "c": "etz_other", "note": ""}, {"n": "דובדבן", "c": "etz_other", "note": ""}, {"n": "דובדבן שחור", "c": "etz_other", "note": ""}, {"n": "גויאבה", "c": "etz_other", "note": ""}, {"n": "תפוז", "c": "etz_other", "note": ""}, {"n": "תפוז דם", "c": "etz_other", "note": ""}, {"n": "קלמנטינה", "c": "etz_other", "note": ""}, {"n": "מנדרינה", "c": "etz_other", "note": ""}, {"n": "אשכולית", "c": "etz_other", "note": ""}, {"n": "אשכולית ורודה", "c": "etz_other", "note": ""}, {"n": "לימון", "c": "etz_other", "note": ""}, {"n": "ליים", "c": "etz_other", "note": ""}, {"n": "פומלה", "c": "etz_other", "note": ""}, {"n": "קומקווט", "c": "etz_other", "note": ""}, {"n": "מנגו", "c": "etz_other", "note": ""}, {"n": "קיווי", "c": "etz_other", "note": ""}, {"n": "קיווי זהוב", "c": "etz_other", "note": ""}, {"n": "ליצ'י", "c": "etz_other", "note": ""}, {"n": "פסיפלורה", "c": "etz_other", "note": ""}, {"n": "קרמבולה", "c": "etz_other", "note": ""}, {"n": "שסק", "c": "etz_other", "note": ""}, {"n": "אפרסמון", "c": "etz_other", "note": ""}, {"n": "אבוקדו", "c": "etz_other", "note": "המנהג הרווח לברך בורא פרי העץ, אף שיש מן הפוסקים שדנו בכך מחמת אופן גידולו."}, {"n": "שקדים", "c": "etz_other", "note": ""}, {"n": "שקדים קלויים", "c": "etz_other", "note": ""}, {"n": "אגוזי מלך", "c": "etz_other", "note": ""}, {"n": "אגוזי לוז", "c": "etz_other", "note": ""}, {"n": "פיסטוקים", "c": "etz_other", "note": ""}, {"n": "קשיו", "c": "etz_other", "note": ""}, {"n": "פקאן", "c": "etz_other", "note": ""}, {"n": "אגוזי ברזיל", "c": "etz_other", "note": ""}, {"n": "אגוזי מקדמיה", "c": "etz_other", "note": ""}, {"n": "אגוזי אורן", "c": "etz_other", "note": ""}, {"n": "קוקוס טרי", "c": "etz_other", "note": ""}, {"n": "שבבי קוקוס יבשים", "c": "etz_other", "note": ""}, {"n": "פרי כוכב", "c": "etz_other", "note": ""}, {"n": "פומלית", "c": "etz_other", "note": ""}, {"n": "נקטרינה צהובה", "c": "etz_other", "note": ""}, {"n": "אגוזי פקאן מסוכרים", "c": "etz_other", "note": ""}, {"n": "שקד מריר", "c": "etz_other", "note": ""}, {"n": "אגוז קולה", "c": "etz_other", "note": ""}, {"n": "פרי הדרים סיני (יוזו)", "c": "etz_other", "note": ""}, {"n": "פרי דרקון (על עץ נמוך - נהוג כעץ)", "c": "etz_other", "note": ""}, {"n": "טמרילו", "c": "etz_other", "note": ""}, {"n": "בננה", "c": "adama", "note": "יש הסוברים שברכתה בורא פרי העץ, אך המנהג הרווח כיום — ובפרט על פי הבן איש חי — לברך בורא פרי האדמה, מאחר שעץ הבננה אינו נחשב 'עץ' של קיימא במובן ההלכתי."}, {"n": "בננה ירוקה", "c": "adama", "note": ""}, {"n": "אננס", "c": "adama", "note": "האננס גדל על שיח נמוך ולא על עץ, ולכן ברכתו בורא פרי האדמה."}, {"n": "תות שדה", "c": "adama", "note": "התות גדל על שיח נמוך הקרוב לקרקע, ולכן ברכתו בורא פרי האדמה."}, {"n": "מלון גלית", "c": "adama", "note": ""}, {"n": "מלון עוגן", "c": "adama", "note": ""}, {"n": "אבטיח", "c": "adama", "note": ""}, {"n": "אבטיח ללא גרעינים", "c": "adama", "note": ""}, {"n": "פפאיה", "c": "adama", "note": ""}, {"n": "תפוח אדמה", "c": "adama", "note": ""}, {"n": "תפוח אדמה אפוי", "c": "adama", "note": ""}, {"n": "תפוח אדמה מבושל", "c": "adama", "note": ""}, {"n": "בטטה", "c": "adama", "note": ""}, {"n": "בטטה כתומה", "c": "adama", "note": ""}, {"n": "גזר", "c": "adama", "note": ""}, {"n": "גזר סגול", "c": "adama", "note": ""}, {"n": "סלק", "c": "adama", "note": ""}, {"n": "סלק לבן", "c": "adama", "note": ""}, {"n": "צנונית", "c": "adama", "note": ""}, {"n": "צנון יפני", "c": "adama", "note": ""}, {"n": "לפת", "c": "adama", "note": ""}, {"n": "קולורבי", "c": "adama", "note": ""}, {"n": "בצל לבן", "c": "adama", "note": ""}, {"n": "בצל אדום", "c": "adama", "note": ""}, {"n": "בצל ירוק", "c": "adama", "note": ""}, {"n": "שום", "c": "adama", "note": ""}, {"n": "שום שחור", "c": "adama", "note": ""}, {"n": "כרישה", "c": "adama", "note": ""}, {"n": "שאלוט", "c": "adama", "note": ""}, {"n": "עגבנייה", "c": "adama", "note": "אף שמבחינה בוטנית העגבנייה היא פרי, לעניין ברכות היא נחשבת כירק ומברכים עליה בורא פרי האדמה."}, {"n": "עגבניית שרי", "c": "adama", "note": "כמו עגבנייה רגילה — בורא פרי האדמה."}, {"n": "עגבנייה מיובשת", "c": "adama", "note": ""}, {"n": "מלפפון", "c": "adama", "note": ""}, {"n": "מלפפון בייבי", "c": "adama", "note": ""}, {"n": "פלפל אדום", "c": "adama", "note": ""}, {"n": "פלפל ירוק", "c": "adama", "note": ""}, {"n": "פלפל צהוב", "c": "adama", "note": ""}, {"n": "פלפל כתום", "c": "adama", "note": ""}, {"n": "חציל", "c": "adama", "note": ""}, {"n": "חציל סיני", "c": "adama", "note": ""}, {"n": "קישוא", "c": "adama", "note": ""}, {"n": "קישוא צהוב", "c": "adama", "note": ""}, {"n": "דלעת", "c": "adama", "note": ""}, {"n": "דלורית", "c": "adama", "note": ""}, {"n": "דלעת חלל", "c": "adama", "note": ""}, {"n": "כרובית", "c": "adama", "note": ""}, {"n": "כרובית סגולה", "c": "adama", "note": ""}, {"n": "ברוקולי", "c": "adama", "note": ""}, {"n": "ברוקוליני", "c": "adama", "note": ""}, {"n": "כרוב לבן", "c": "adama", "note": ""}, {"n": "כרוב סגול", "c": "adama", "note": ""}, {"n": "כרוב סיני", "c": "adama", "note": ""}, {"n": "כרוב ניצנים", "c": "adama", "note": ""}, {"n": "חסה איסברג", "c": "adama", "note": ""}, {"n": "חסה רומאית", "c": "adama", "note": ""}, {"n": "סלרי עלים", "c": "adama", "note": ""}, {"n": "סלרי שורש", "c": "adama", "note": ""}, {"n": "ארטישוק", "c": "adama", "note": ""}, {"n": "לב ארטישוק", "c": "adama", "note": ""}, {"n": "אספרגוס", "c": "adama", "note": ""}, {"n": "שעועית ירוקה", "c": "adama", "note": ""}, {"n": "שעועית צהובה", "c": "adama", "note": ""}, {"n": "אפונה ירוקה", "c": "adama", "note": ""}, {"n": "תירס טרי", "c": "adama", "note": ""}, {"n": "תירס קלוי", "c": "adama", "note": ""}, {"n": "פול ירוק", "c": "adama", "note": ""}, {"n": "תרד", "c": "adama", "note": ""}, {"n": "מנגולד", "c": "adama", "note": ""}, {"n": "ארוגולה", "c": "adama", "note": ""}, {"n": "בייבי ספינץ'", "c": "adama", "note": ""}, {"n": "חוביזה", "c": "adama", "note": ""}, {"n": "עולש", "c": "adama", "note": ""}, {"n": "סחלב (שורש)", "c": "adama", "note": ""}, {"n": "עדשים כתומות מבושלות", "c": "adama", "note": ""}, {"n": "עדשים ירוקות מבושלות", "c": "adama", "note": ""}, {"n": "עדשים שחורות מבושלות", "c": "adama", "note": ""}, {"n": "חומוס מבושל", "c": "adama", "note": ""}, {"n": "חומוס גרגירים", "c": "adama", "note": ""}, {"n": "שעועית לבנה מבושלת", "c": "adama", "note": ""}, {"n": "שעועית אדומה מבושלת", "c": "adama", "note": ""}, {"n": "שעועית שחורה מבושלת", "c": "adama", "note": ""}, {"n": "אפונה יבשה מבושלת", "c": "adama", "note": ""}, {"n": "פול מבושל", "c": "adama", "note": ""}, {"n": "בוטנים קלויים", "c": "adama", "note": ""}, {"n": "בוטנים חיים", "c": "adama", "note": ""}, {"n": "גרעיני חמנייה", "c": "adama", "note": ""}, {"n": "גרעיני דלעת", "c": "adama", "note": ""}, {"n": "קינואה מבושלת", "c": "adama", "note": "המנהג המקובל לברך בורא פרי האדמה, שכן אינה נחשבת לדגן משבעת המינים; יש מהאחרונים שהשוו אותה לאורז."}, {"n": "טופו", "c": "adama", "note": "עשוי מפולי סויה, ולכן ברכתו בורא פרי האדמה."}, {"n": "טמפה", "c": "adama", "note": "עשוי מפולי סויה מותססים, ולכן ברכתו בורא פרי האדמה."}, {"n": "אדממה", "c": "adama", "note": ""}, {"n": "צ'יפס תפוחי אדמה", "c": "adama", "note": ""}, {"n": "פטרוזיליה טרייה", "c": "adama", "note": ""}, {"n": "כוסברה טרייה", "c": "adama", "note": ""}, {"n": "נענע טרייה", "c": "adama", "note": ""}, {"n": "בזיליקום טרי", "c": "adama", "note": ""}, {"n": "שמיר טרי", "c": "adama", "note": ""}, {"n": "עירית טרייה", "c": "adama", "note": ""}, {"n": "רוזמרין טרי", "c": "adama", "note": ""}, {"n": "טימין טרי", "c": "adama", "note": ""}, {"n": "אורגנו טרי", "c": "adama", "note": ""}, {"n": "מרווה טרייה", "c": "adama", "note": ""}, {"n": "ג'ינג'ר טרי", "c": "adama", "note": ""}, {"n": "חזרת טחונה טרייה", "c": "adama", "note": ""}, {"n": "כרוב כבוש", "c": "adama", "note": ""}, {"n": "מלפפון חמוץ", "c": "adama", "note": ""}, {"n": "פלפל חריף טרי", "c": "adama", "note": ""}, {"n": "פלפל צ'ילי טרי", "c": "adama", "note": ""}, {"n": "זנגביל טרי", "c": "adama", "note": ""}, {"n": "סלק כבוש", "c": "adama", "note": ""}, {"n": "פלאפל", "c": "adama", "note": "עשוי מקטניות (חומוס) ולא מדגן, ולכן ברכתו בורא פרי האדמה."}, {"n": "טחינה גולמית ממש (שומשום טחון בלבד)", "c": "adama", "note": ""}, {"n": "בטטה מיובשת", "c": "adama", "note": ""}, {"n": "אצות ים טריות", "c": "adama", "note": ""}, {"n": "שורש זרעפרן טרי", "c": "adama", "note": ""}, {"n": "שורש כורכום טרי", "c": "adama", "note": ""}, {"n": "בצל שלוט", "c": "adama", "note": ""}, {"n": "כרוב ברוקסל", "c": "adama", "note": ""}, {"n": "ירוקי חרדל", "c": "adama", "note": ""}, {"n": "קייל", "c": "adama", "note": ""}, {"n": "בוק צ'וי", "c": "adama", "note": ""}, {"n": "בשר בקר", "c": "shehakol", "note": ""}, {"n": "סטייק אנטריקוט", "c": "shehakol", "note": ""}, {"n": "סטייק פילה", "c": "shehakol", "note": ""}, {"n": "המבורגר בשרי", "c": "shehakol", "note": ""}, {"n": "בשר טלה", "c": "shehakol", "note": ""}, {"n": "בשר כבש", "c": "shehakol", "note": ""}, {"n": "כתף כבש", "c": "shehakol", "note": ""}, {"n": "צלעות בקר", "c": "shehakol", "note": ""}, {"n": "בשר צלוי", "c": "shehakol", "note": ""}, {"n": "עוף שלם", "c": "shehakol", "note": ""}, {"n": "שניצל עוף", "c": "shehakol", "note": ""}, {"n": "חזה עוף", "c": "shehakol", "note": ""}, {"n": "שוקי עוף", "c": "shehakol", "note": ""}, {"n": "כנפי עוף", "c": "shehakol", "note": ""}, {"n": "הודו", "c": "shehakol", "note": ""}, {"n": "חזה הודו", "c": "shehakol", "note": ""}, {"n": "נקניקיות בקר", "c": "shehakol", "note": ""}, {"n": "נקניקיות עוף", "c": "shehakol", "note": ""}, {"n": "נקניק מעושן", "c": "shehakol", "note": ""}, {"n": "פסטרמה", "c": "shehakol", "note": ""}, {"n": "קבב", "c": "shehakol", "note": ""}, {"n": "המבורגר טלה", "c": "shehakol", "note": ""}, {"n": "בשר טחון", "c": "shehakol", "note": ""}, {"n": "כבד עוף", "c": "shehakol", "note": ""}, {"n": "כבד בקר", "c": "shehakol", "note": ""}, {"n": "לב עוף", "c": "shehakol", "note": ""}, {"n": "דג סלמון", "c": "shehakol", "note": ""}, {"n": "דג טונה", "c": "shehakol", "note": ""}, {"n": "דג בקלה", "c": "shehakol", "note": ""}, {"n": "דג פורל", "c": "shehakol", "note": ""}, {"n": "דג הרינג מלוח", "c": "shehakol", "note": ""}, {"n": "דג מושט", "c": "shehakol", "note": ""}, {"n": "דג דניס", "c": "shehakol", "note": ""}, {"n": "דג לברק", "c": "shehakol", "note": ""}, {"n": "דג בורי", "c": "shehakol", "note": ""}, {"n": "דג מקרל", "c": "shehakol", "note": ""}, {"n": "פילה דג", "c": "shehakol", "note": ""}, {"n": "ביצת תרנגולת קשה", "c": "shehakol", "note": ""}, {"n": "ביצה רכה", "c": "shehakol", "note": ""}, {"n": "ביצת עין", "c": "shehakol", "note": ""}, {"n": "חביתה", "c": "shehakol", "note": ""}, {"n": "ביצת שליו", "c": "shehakol", "note": ""}, {"n": "ביצת ברווז", "c": "shehakol", "note": ""}, {"n": "גבינה צהובה", "c": "shehakol", "note": ""}, {"n": "גבינת עמק", "c": "shehakol", "note": ""}, {"n": "גבינת מוצרלה", "c": "shehakol", "note": ""}, {"n": "גבינת פרמזן", "c": "shehakol", "note": ""}, {"n": "גבינת רוקפור", "c": "shehakol", "note": ""}, {"n": "גבינת פטה", "c": "shehakol", "note": ""}, {"n": "גבינה בולגרית", "c": "shehakol", "note": ""}, {"n": "גבינת קוטג'", "c": "shehakol", "note": ""}, {"n": "גבינת שמנת", "c": "shehakol", "note": ""}, {"n": "גבינת שמנת לבישול", "c": "shehakol", "note": ""}, {"n": "יוגורט טבעי", "c": "shehakol", "note": ""}, {"n": "יוגורט פירות", "c": "shehakol", "note": ""}, {"n": "לבן", "c": "shehakol", "note": ""}, {"n": "לבנה", "c": "shehakol", "note": ""}, {"n": "חלב פרה", "c": "shehakol", "note": ""}, {"n": "חלב עיזים", "c": "shehakol", "note": ""}, {"n": "חלב סויה", "c": "shehakol", "note": ""}, {"n": "חלב שקדים", "c": "shehakol", "note": ""}, {"n": "שמנת מתוקה", "c": "shehakol", "note": ""}, {"n": "שמנת חמוצה", "c": "shehakol", "note": ""}, {"n": "חמאה", "c": "shehakol", "note": ""}, {"n": "גלידת וניל", "c": "shehakol", "note": ""}, {"n": "גלידת שוקולד", "c": "shehakol", "note": ""}, {"n": "שוקולד חלב", "c": "shehakol", "note": ""}, {"n": "שוקולד מריר", "c": "shehakol", "note": ""}, {"n": "שוקולד לבן", "c": "shehakol", "note": ""}, {"n": "פרלינים", "c": "shehakol", "note": ""}, {"n": "ממתקי סוכר", "c": "shehakol", "note": ""}, {"n": "סוכריות ג'לי", "c": "shehakol", "note": ""}, {"n": "מרשמלו", "c": "shehakol", "note": ""}, {"n": "דבש דבורים", "c": "shehakol", "note": ""}, {"n": "דבש קנילון", "c": "shehakol", "note": ""}, {"n": "סוכר לבן", "c": "shehakol", "note": ""}, {"n": "סוכר חום", "c": "shehakol", "note": ""}, {"n": "סוכר קנים", "c": "shehakol", "note": ""}, {"n": "קפה שחור", "c": "shehakol", "note": ""}, {"n": "קפה הפוך", "c": "shehakol", "note": ""}, {"n": "אספרסו", "c": "shehakol", "note": ""}, {"n": "תה שחור", "c": "shehakol", "note": ""}, {"n": "תה ירוק", "c": "shehakol", "note": ""}, {"n": "תה צמחים", "c": "shehakol", "note": ""}, {"n": "מים מינרלים", "c": "shehakol", "note": ""}, {"n": "מים מוגזים", "c": "shehakol", "note": ""}, {"n": "סודה", "c": "shehakol", "note": ""}, {"n": "קולה", "c": "shehakol", "note": ""}, {"n": "ספרייט", "c": "shehakol", "note": ""}, {"n": "לימונדה", "c": "shehakol", "note": ""}, {"n": "בירה", "c": "shehakol", "note": ""}, {"n": "וויסקי", "c": "shehakol", "note": ""}, {"n": "וודקה", "c": "shehakol", "note": ""}, {"n": "ג'ין", "c": "shehakol", "note": ""}, {"n": "רום", "c": "shehakol", "note": ""}, {"n": "ליקר", "c": "shehakol", "note": ""}, {"n": "קוניאק", "c": "shehakol", "note": ""}, {"n": "מיץ תפוזים", "c": "shehakol", "note": ""}, {"n": "מיץ תפוחים", "c": "shehakol", "note": ""}, {"n": "מיץ אשכוליות", "c": "shehakol", "note": ""}, {"n": "מיץ גזר", "c": "shehakol", "note": ""}, {"n": "מיץ ירקות מעורב", "c": "shehakol", "note": ""}, {"n": "סמופי פירות מעורב", "c": "shehakol", "note": ""}, {"n": "פטריות שמפיניון", "c": "shehakol", "note": "אף שהפטרייה גדלה מהקרקע, אינה יונקת ממנה כשאר הצמחים אלא מהאוויר, ולכן ברכתה שהכל ולא בורא פרי האדמה."}, {"n": "פטריות פורטבלו", "c": "shehakol", "note": "ברכתן שהכל, מאותו טעם שבפטריות שמפיניון."}, {"n": "פטריות שיטאקי", "c": "shehakol", "note": "ברכתן שהכל, מאותו טעם שבפטריות שמפיניון."}, {"n": "פטריות טריפל", "c": "shehakol", "note": "ברכתן שהכל, מאותו טעם שבפטריות שמפיניון."}, {"n": "פטריות צדפה", "c": "shehakol", "note": "ברכתן שהכל, מאותו טעם שבפטריות שמפיניון."}, {"n": "אורז לבן מבושל", "c": "shehakol", "note": "יש מחלוקת: לפי מנהג האשכנזים אורז מבושל מברכים עליו שהכל, ואילו לפי חלק מפוסקי עדות המזרח (ובהם הרב עובדיה יוסף) מברכים על אורז מבושל בורא מיני מזונות. יש לנהוג כמנהג המקום או כהוראת מורה הוראה."}, {"n": "אורז מלא מבושל", "c": "shehakol", "note": "כמו אורז לבן — מחלוקת בין מנהג אשכנז (שהכל) לחלק מפוסקי עדות המזרח (מזונות)."}, {"n": "אורז בסמטי מבושל", "c": "shehakol", "note": "כמו אורז לבן — מחלוקת בין מנהג אשכנז (שהכל) לחלק מפוסקי עדות המזרח (מזונות)."}, {"n": "אורז יסמין מבושל", "c": "shehakol", "note": "כמו אורז לבן — מחלוקת בין מנהג אשכנז (שהכל) לחלק מפוסקי עדות המזרח (מזונות)."}, {"n": "פסטת אורז", "c": "shehakol", "note": ""}, {"n": "פופקורן", "c": "shehakol", "note": ""}, {"n": "קורנפלקס", "c": "shehakol", "note": ""}, {"n": "פתיתי תירס", "c": "shehakol", "note": ""}, {"n": "קרקר אורז מנופח", "c": "shehakol", "note": ""}, {"n": "ג'לי קינוח", "c": "shehakol", "note": ""}, {"n": "חלבה", "c": "shehakol", "note": ""}, {"n": "מיונז", "c": "shehakol", "note": ""}, {"n": "קטשופ", "c": "shehakol", "note": ""}, {"n": "חרדל", "c": "shehakol", "note": ""}, {"n": "רוטב סויה", "c": "shehakol", "note": ""}, {"n": "רוטב צ'ילי", "c": "shehakol", "note": ""}, {"n": "חומץ", "c": "shehakol", "note": ""}, {"n": "שמן זית כנוזל", "c": "shehakol", "note": ""}, {"n": "שמן קנולה", "c": "shehakol", "note": ""}, {"n": "מלח בישול", "c": "shehakol", "note": ""}, {"n": "פלפל שחור טחון", "c": "shehakol", "note": ""}, {"n": "פפריקה טחונה", "c": "shehakol", "note": ""}, {"n": "כמון טחון", "c": "shehakol", "note": ""}, {"n": "קינמון טחון", "c": "shehakol", "note": ""}, {"n": "ציפורן טחון", "c": "shehakol", "note": ""}, {"n": "אגוז מוסקט טחון", "c": "shehakol", "note": ""}, {"n": "כורכום טחון", "c": "shehakol", "note": ""}, {"n": "זעפרן יבש", "c": "shehakol", "note": ""}, {"n": "הל טחון", "c": "shehakol", "note": ""}, {"n": "ג'ינג'ר יבש טחון", "c": "shehakol", "note": ""}, {"n": "אבקת שום", "c": "shehakol", "note": ""}, {"n": "אבקת בצל", "c": "shehakol", "note": ""}, {"n": "סומאק טחון", "c": "shehakol", "note": ""}, {"n": "זעתר תערובת", "c": "shehakol", "note": ""}, {"n": "פלפל אנגלי", "c": "shehakol", "note": ""}, {"n": "אניס כוכב", "c": "shehakol", "note": ""}, {"n": "שקדים בציפוי שוקולד", "c": "shehakol", "note": ""}, {"n": "בוטנים בציפוי שוקולד", "c": "shehakol", "note": ""}, {"n": "פיצוחים מלוחים בציפוי", "c": "shehakol", "note": ""}, {"n": "וופלים מצופי שוקולד", "c": "shehakol", "note": ""}, {"n": "חטיף אנרגיה (בעיקר סוכר ושוקולד)", "c": "shehakol", "note": ""}, {"n": "נקניקיית טופו (מעובד מאוד)", "c": "shehakol", "note": ""}, {"n": "חלב קוקוס", "c": "shehakol", "note": ""}, {"n": "שמנת קוקוס", "c": "shehakol", "note": ""}, {"n": "קרם קרמל", "c": "shehakol", "note": ""}, {"n": "פודינג שוקולד", "c": "shehakol", "note": ""}, {"n": "מוס שוקולד", "c": "shehakol", "note": ""}, {"n": "טירמיסו (המרכיב העיקרי קפה ומסקרפונה)", "c": "shehakol", "note": ""}, {"n": "פנקוטה", "c": "shehakol", "note": ""}, {"n": "קסטרד", "c": "shehakol", "note": ""}, {"n": "סורבה פירות", "c": "shehakol", "note": ""}, {"n": "ג'לטו", "c": "shehakol", "note": ""}, {"n": "מלבי", "c": "shehakol", "note": ""}, {"n": "כנאפה (הגבינה בפנים - הקליפה קדאיף מזונות", "c": "shehakol", "note": ""}, {"n": "אך התוכן העיקרי גבינה מתוקה - סוגיה מורכבת", "c": "shehakol", "note": ""}, {"n": "יש להתייעץ)", "c": "shehakol", "note": ""}, {"n": "נשנוש שוקולד ואגוזים", "c": "shehakol", "note": ""}, {"n": "חלבת פיסטוק", "c": "shehakol", "note": ""}, {"n": "חלבה בטעם שוקולד", "c": "shehakol", "note": ""}, {"n": "קרמל נוזלי", "c": "shehakol", "note": ""}, {"n": "סירופ מייפל", "c": "shehakol", "note": ""}, {"n": "סירופ תמרים מעובד עם סוכר תעשייתי", "c": "shehakol", "note": ""}, {"n": "מלח ים גס", "c": "shehakol", "note": ""}, {"n": "פלפל לבן טחון", "c": "shehakol", "note": ""}, {"n": "אבקת קארי", "c": "shehakol", "note": ""}, {"n": "ציר עוף", "c": "shehakol", "note": ""}, {"n": "ציר בשר", "c": "shehakol", "note": ""}, {"n": "מרק עוף צלול (ללא אטריות/אורז)", "c": "shehakol", "note": ""}, {"n": "מרק ירקות צלול", "c": "shehakol", "note": ""}, {"n": "לחם שיפון שוודי", "c": "hamotzi", "note": ""}, {"n": "לחם מחמצת כפרי", "c": "hamotzi", "note": ""}, {"n": "פוקאצ'ה זיתים", "c": "hamotzi", "note": ""}, {"n": "פוקאצ'ה עגבניות מיובשות", "c": "hamotzi", "note": ""}, {"n": "לחם חיטה מלאה גרעינים", "c": "hamotzi", "note": ""}, {"n": "לחם שומשום", "c": "hamotzi", "note": ""}, {"n": "לחם פרג", "c": "hamotzi", "note": ""}, {"n": "חלה עגולה לראש השנה", "c": "hamotzi", "note": ""}, {"n": "חלה עם דבש", "c": "hamotzi", "note": ""}, {"n": "פיתה עיראקית דקה", "c": "hamotzi", "note": ""}, {"n": "לאפה תימנית", "c": "hamotzi", "note": ""}, {"n": "קובנה (לחם ארגנטינאי)", "c": "hamotzi", "note": ""}, {"n": "צ'לה רוסית", "c": "hamotzi", "note": ""}, {"n": "בריוש צרפתי", "c": "hamotzi", "note": ""}, {"n": "פאן דה קמפו ספרדי", "c": "hamotzi", "note": ""}, {"n": "לחם אנג'רה (טף) אתיופי", "c": "hamotzi", "note": ""}, {"n": "לחם שיפון בלגי", "c": "hamotzi", "note": ""}, {"n": "בטון לחם איטלקי", "c": "hamotzi", "note": ""}, {"n": "לחם וינה", "c": "hamotzi", "note": ""}, {"n": "לחם קונכיה", "c": "hamotzi", "note": ""}, {"n": "פרנזלה", "c": "hamotzi", "note": ""}, {"n": "קייזר לחמנייה", "c": "hamotzi", "note": ""}, {"n": "פרטיק לחמנייה גרמנית", "c": "hamotzi", "note": ""}, {"n": "לחם קלוש", "c": "hamotzi", "note": ""}, {"n": "מטפוצ'ה תימנית", "c": "hamotzi", "note": ""}, {"n": "לחם צימוקים ואגוזים", "c": "hamotzi", "note": ""}, {"n": "לחם דגנים מלא", "c": "hamotzi", "note": ""}, {"n": "פיתה לבנונית עבה", "c": "hamotzi", "note": ""}, {"n": "עוגת רד velvet", "c": "mezonot", "note": ""}, {"n": "עוגת טירמיסו", "c": "mezonot", "note": ""}, {"n": "עוגת אופרה", "c": "mezonot", "note": ""}, {"n": "עוגת שחור יער", "c": "mezonot", "note": ""}, {"n": "עוגת גאטו שוקולד", "c": "mezonot", "note": ""}, {"n": "פאי לימון מרנג", "c": "mezonot", "note": ""}, {"n": "פאי אגסים", "c": "mezonot", "note": ""}, {"n": "פאי פקאן", "c": "mezonot", "note": ""}, {"n": "טארט תפוחים צרפתי", "c": "mezonot", "note": ""}, {"n": "טארט לימון", "c": "mezonot", "note": ""}, {"n": "קלאפוטי דובדבנים (בסיס בצק-ביצים)", "c": "mezonot", "note": ""}, {"n": "מדלן צרפתי", "c": "mezonot", "note": ""}, {"n": "קנלה צרפתי", "c": "mezonot", "note": ""}, {"n": "פרופיטרול", "c": "mezonot", "note": ""}, {"n": "אקלר שוקולד", "c": "mezonot", "note": ""}, {"n": "מיל פיי", "c": "mezonot", "note": ""}, {"n": "גאלט ברטונית", "c": "mezonot", "note": ""}, {"n": "בריוש מתוק", "c": "mezonot", "note": ""}, {"n": "פנטונה איטלקי", "c": "mezonot", "note": ""}, {"n": "סטולן גרמני", "c": "mezonot", "note": ""}, {"n": "בבקה תפוחים", "c": "mezonot", "note": ""}, {"n": "רוגלעך אגוזים", "c": "mezonot", "note": ""}, {"n": "שטרודל דובדבנים", "c": "mezonot", "note": ""}, {"n": "בקלאווה פיסטוק", "c": "mezonot", "note": ""}, {"n": "בקלאווה אגוזי מלך", "c": "mezonot", "note": ""}, {"n": "קטאיף גבינה (בהתחשב בקליפה)", "c": "mezonot", "note": ""}, {"n": "חלווה קדאיף", "c": "mezonot", "note": ""}, {"n": "פסטה אורזו", "c": "mezonot", "note": ""}, {"n": "פסטה קונכיליה", "c": "mezonot", "note": ""}, {"n": "פסטה טורטליני", "c": "mezonot", "note": ""}, {"n": "פסטה קפלטי", "c": "mezonot", "note": ""}, {"n": "פסטה אורקיאטה", "c": "mezonot", "note": ""}, {"n": "פסטה בוקטיני", "c": "mezonot", "note": ""}, {"n": "פסטה ריגטוני", "c": "mezonot", "note": ""}, {"n": "פסטה פרפרים", "c": "mezonot", "note": ""}, {"n": "פסטה קפלינטי", "c": "mezonot", "note": ""}, {"n": "פסטה טאליארינה", "c": "mezonot", "note": ""}, {"n": "פסטה מלפחת ג'נובזית", "c": "mezonot", "note": ""}, {"n": "לחמניית פרג'ר בננה (בסיס בצק)", "c": "mezonot", "note": ""}, {"n": "פנקייק אמריקאי", "c": "mezonot", "note": ""}, {"n": "פנקייק תפוחים", "c": "mezonot", "note": ""}, {"n": "ופל בלגי ליאז'", "c": "mezonot", "note": ""}, {"n": "כריך פריכיות מזונות", "c": "mezonot", "note": ""}, {"n": "לחמית תמרים (על בסיס בצק)", "c": "mezonot", "note": ""}, {"n": "עוגיות ג'ינג'ר", "c": "mezonot", "note": ""}, {"n": "עוגיות לימון", "c": "mezonot", "note": ""}, {"n": "ביסקוטי שקדים", "c": "mezonot", "note": ""}, {"n": "ביסקוטי פיסטוק", "c": "mezonot", "note": ""}, {"n": "קרקר חיטה מלאה", "c": "mezonot", "note": ""}, {"n": "קרקר שיפון", "c": "mezonot", "note": ""}, {"n": "פריכיות תירס-חיטה (עיקר חיטה)", "c": "mezonot", "note": ""}, {"n": "לזניה ירקות (בסיס פסטה)", "c": "mezonot", "note": ""}, {"n": "קנלוני", "c": "mezonot", "note": ""}, {"n": "מקרוני וגבינה (עיקר פסטה)", "c": "mezonot", "note": ""}, {"n": "נודלס אודון", "c": "mezonot", "note": ""}, {"n": "כופתאות בצק פולניות (פירוגי)", "c": "mezonot", "note": ""}, {"n": "ורניקעס תפוחי אדמה", "c": "mezonot", "note": ""}, {"n": "מנטי טורקי (הבצק)", "c": "mezonot", "note": ""}, {"n": "פלטשקינטע פירות", "c": "mezonot", "note": ""}, {"n": "בורקס פטריות", "c": "mezonot", "note": ""}, {"n": "בורקס תרד וגבינה", "c": "mezonot", "note": ""}, {"n": "פשטידת אטריות", "c": "mezonot", "note": ""}, {"n": "קניידלך מצה", "c": "mezonot", "note": ""}, {"n": "מצה עם שוקולד", "c": "mezonot", "note": ""}, {"n": "פריכיות אורז-חיטה", "c": "mezonot", "note": ""}, {"n": "יין קברנה סוביניון", "c": "hagafen", "note": ""}, {"n": "יין מרלו", "c": "hagafen", "note": ""}, {"n": "יין שיראז", "c": "hagafen", "note": ""}, {"n": "יין פינו נואר", "c": "hagafen", "note": ""}, {"n": "יין שרדונה", "c": "hagafen", "note": ""}, {"n": "יין ריזלינג", "c": "hagafen", "note": ""}, {"n": "יין מוסקטו", "c": "hagafen", "note": ""}, {"n": "יין רוזה יבש", "c": "hagafen", "note": ""}, {"n": "יין קידוש מתוק אדום", "c": "hagafen", "note": ""}, {"n": "יין קידוש מתוק לבן", "c": "hagafen", "note": ""}, {"n": "מיץ ענבים לבן טבעי", "c": "hagafen", "note": ""}, {"n": "מיץ ענבים אדום מרוכז", "c": "hagafen", "note": ""}, {"n": "קאווה יווני (יין שרוף - יש לבדוק הרכב)", "c": "hagafen", "note": ""}, {"n": "פורט טאוני כשר", "c": "hagafen", "note": ""}, {"n": "שרי כשר", "c": "hagafen", "note": ""}, {"n": "תמר ח'לאס", "c": "etz7", "note": ""}, {"n": "תמר סוכרי", "c": "etz7", "note": ""}, {"n": "תמר בארהי צהוב", "c": "etz7", "note": ""}, {"n": "תמר זהידי", "c": "etz7", "note": ""}, {"n": "ריבת תאנים", "c": "etz7", "note": ""}, {"n": "ריבת רימונים", "c": "etz7", "note": ""}, {"n": "ריבת זיתים (נדיר)", "c": "etz7", "note": ""}, {"n": "מולסה רימונים", "c": "etz7", "note": ""}, {"n": "תמצית רימון מרוכזת", "c": "etz7", "note": ""}, {"n": "תאנים ממולאות אגוזים", "c": "etz7", "note": ""}, {"n": "זיתי קלמטה", "c": "etz7", "note": ""}, {"n": "זיתי ניסואז", "c": "etz7", "note": ""}, {"n": "זיתי מנזנילה", "c": "etz7", "note": ""}, {"n": "זיתים ממולאים פלפל", "c": "etz7", "note": ""}, {"n": "תפוח פוג'י", "c": "etz_other", "note": ""}, {"n": "תפוח גאלה", "c": "etz_other", "note": ""}, {"n": "תפוח הனינקרופט", "c": "etz_other", "note": ""}, {"n": "תפוח אמברוזיה", "c": "etz_other", "note": ""}, {"n": "אגס וויליאמס", "c": "etz_other", "note": ""}, {"n": "אגס בוסק", "c": "etz_other", "note": ""}, {"n": "אפרסק לבן", "c": "etz_other", "note": ""}, {"n": "שזיף איטלקי", "c": "etz_other", "note": ""}, {"n": "דובדבן ביגארו", "c": "etz_other", "note": ""}, {"n": "דובדבן מוראלו", "c": "etz_other", "note": ""}, {"n": "תפוז וולנסיה", "c": "etz_other", "note": ""}, {"n": "תפוז יפו", "c": "etz_other", "note": ""}, {"n": "תפוז דם סיציליאני", "c": "etz_other", "note": ""}, {"n": "אשכולית פומלית", "c": "etz_other", "note": ""}, {"n": "לימון מאיר", "c": "etz_other", "note": ""}, {"n": "לימון ורדים", "c": "etz_other", "note": ""}, {"n": "ליים כאפיר", "c": "etz_other", "note": ""}, {"n": "מנגו קיסר", "c": "etz_other", "note": ""}, {"n": "מנגו טומי אטקינס", "c": "etz_other", "note": ""}, {"n": "קיווי גולד", "c": "etz_other", "note": ""}, {"n": "ליצ'י טרי קפוא", "c": "etz_other", "note": ""}, {"n": "פסיפלורה סגולה", "c": "etz_other", "note": ""}, {"n": "אפרסמון שרון", "c": "etz_other", "note": ""}, {"n": "אפרסמון פויאט", "c": "etz_other", "note": ""}, {"n": "שקד מרוקאי", "c": "etz_other", "note": ""}, {"n": "אגוז מלך קליפורני", "c": "etz_other", "note": ""}, {"n": "פיסטוק איראני", "c": "etz_other", "note": ""}, {"n": "קשיו הודי", "c": "etz_other", "note": ""}, {"n": "פקאן אמריקאי", "c": "etz_other", "note": ""}, {"n": "אגוז ברזיל", "c": "etz_other", "note": ""}, {"n": "אגוז מקדמיה אוסטרלי", "c": "etz_other", "note": ""}, {"n": "אגוז אורן איטלקי", "c": "etz_other", "note": ""}, {"n": "קוקוס טחון", "c": "etz_other", "note": ""}, {"n": "שבבי קוקוס קלויים", "c": "etz_other", "note": ""}, {"n": "גויאבה ורודה", "c": "etz_other", "note": ""}, {"n": "קרמבולה צהובה", "c": "etz_other", "note": ""}, {"n": "שסק ישראלי", "c": "etz_other", "note": ""}, {"n": "פרי דרקון אדום", "c": "etz_other", "note": ""}, {"n": "פרי דרקון לבן", "c": "etz_other", "note": ""}, {"n": "פומלית סינית", "c": "etz_other", "note": ""}, {"n": "לונגן", "c": "etz_other", "note": ""}, {"n": "רמבוטן", "c": "etz_other", "note": ""}, {"n": "מנגוסטין", "c": "etz_other", "note": ""}, {"n": "דוריאן", "c": "etz_other", "note": ""}, {"n": "ג'קפרוט", "c": "etz_other", "note": ""}, {"n": "סאפוטה", "c": "etz_other", "note": ""}, {"n": "משמש טורקי מיובש", "c": "etz_other", "note": ""}, {"n": "שזיף מיובש (שזיפית)", "c": "etz_other", "note": ""}, {"n": "תמרינד (עץ - נהוג עץ)", "c": "etz_other", "note": ""}, {"n": "תפוח אדמה חדש", "c": "adama", "note": ""}, {"n": "תפוח אדמה אדום", "c": "adama", "note": ""}, {"n": "בטטה סגולה", "c": "adama", "note": ""}, {"n": "גזר בייבי", "c": "adama", "note": ""}, {"n": "גזר לבן", "c": "adama", "note": ""}, {"n": "סלק אדום", "c": "adama", "note": ""}, {"n": "סלק צהוב", "c": "adama", "note": ""}, {"n": "צנונית וואטרמלון", "c": "adama", "note": ""}, {"n": "לפת סגול", "c": "adama", "note": ""}, {"n": "קולורבי ירוק", "c": "adama", "note": ""}, {"n": "בצל פנינה", "c": "adama", "note": ""}, {"n": "בצל שאלוט צרפתי", "c": "adama", "note": ""}, {"n": "שום עלים (שום ירוק)", "c": "adama", "note": ""}, {"n": "כרישה בייבי", "c": "adama", "note": ""}, {"n": "עגבנייה שחורה", "c": "adama", "note": ""}, {"n": "עגבניית בקר", "c": "adama", "note": ""}, {"n": "עגבנייה צהובה", "c": "adama", "note": ""}, {"n": "מלפפון ליבנוני", "c": "adama", "note": ""}, {"n": "מלפפון ארמני", "c": "adama", "note": ""}, {"n": "פלפל חלפיניו", "c": "adama", "note": ""}, {"n": "פלפל הבנרו", "c": "adama", "note": ""}, {"n": "פלפל קאיין טרי", "c": "adama", "note": ""}, {"n": "פלפל שאמי", "c": "adama", "note": ""}, {"n": "חציל בייבי", "c": "adama", "note": ""}, {"n": "קישוא כדורי", "c": "adama", "note": ""}, {"n": "דלעת באטרנט", "c": "adama", "note": ""}, {"n": "דלעת ספגטי", "c": "adama", "note": ""}, {"n": "דלעת עכוז", "c": "adama", "note": ""}, {"n": "כרובית ירוקה (רומנסקו)", "c": "adama", "note": ""}, {"n": "כרוב קייל סגול", "c": "adama", "note": ""}, {"n": "חסה חופנים", "c": "adama", "note": ""}, {"n": "חסה חמאה", "c": "adama", "note": ""}, {"n": "ארוגולה בייבי", "c": "adama", "note": ""}, {"n": "בייבי קייל", "c": "adama", "note": ""}, {"n": "תרד בייבי", "c": "adama", "note": ""}, {"n": "מנגולד צבעוני", "c": "adama", "note": ""}, {"n": "עולש בלגי", "c": "adama", "note": ""}, {"n": "עולש אדום", "c": "adama", "note": ""}, {"n": "פנל (שומר)", "c": "adama", "note": ""}, {"n": "חמנית שורש", "c": "adama", "note": ""}, {"n": "ג'יקאמה", "c": "adama", "note": ""}, {"n": "טארו", "c": "adama", "note": ""}, {"n": "קסבה", "c": "adama", "note": ""}, {"n": "יאם", "c": "adama", "note": ""}, {"n": "נבטי חמנייה", "c": "adama", "note": ""}, {"n": "נבטי חסה", "c": "adama", "note": ""}, {"n": "נבטי ברוקולי", "c": "adama", "note": ""}, {"n": "נבטי אלפאלפא", "c": "adama", "note": ""}, {"n": "עדשים אדומות מבושלות", "c": "adama", "note": ""}, {"n": "עדשים בלוטיות מבושלות", "c": "adama", "note": ""}, {"n": "שעועית פינטו מבושלת", "c": "adama", "note": ""}, {"n": "שעועית עדסים ירוקה", "c": "adama", "note": ""}, {"n": "שעועית קנלליני", "c": "adama", "note": ""}, {"n": "אפונת נזירים", "c": "adama", "note": ""}, {"n": "בוטנים בקליפה", "c": "adama", "note": ""}, {"n": "גרעיני מלון", "c": "adama", "note": ""}, {"n": "גרעיני צ'יה (זרעים - נהוג אדמה)", "c": "adama", "note": ""}, {"n": "זרעי פשתן", "c": "adama", "note": ""}, {"n": "זרעי כוסברה טריים", "c": "adama", "note": ""}, {"n": "זרעי שומר", "c": "adama", "note": ""}, {"n": "פטרוזיליה שורש", "c": "adama", "note": ""}, {"n": "כוסברה מקסיקנית", "c": "adama", "note": ""}, {"n": "נענע מרוקאית", "c": "adama", "note": ""}, {"n": "בזיליקום תאילנדי", "c": "adama", "note": ""}, {"n": "שמיר גינה", "c": "adama", "note": ""}, {"n": "עירית סינית", "c": "adama", "note": ""}, {"n": "טרגון טרי", "c": "adama", "note": ""}, {"n": "אזוב טרי", "c": "adama", "note": ""}, {"n": "לואיזה טרייה", "c": "adama", "note": ""}, {"n": "לואיזה לימונית", "c": "adama", "note": ""}, {"n": "ג'ינג'ר צהוב", "c": "adama", "note": ""}, {"n": "כורכום טרי שורש", "c": "adama", "note": ""}, {"n": "חזרת לבנה טרייה", "c": "adama", "note": ""}, {"n": "כרוב אדום כבוש", "c": "adama", "note": ""}, {"n": "מלפפון כבוש חמוץ-מתוק", "c": "adama", "note": ""}, {"n": "פלפל חריף כבוש", "c": "adama", "note": ""}, {"n": "זיתי אדמה (בוטנים אדמה - בוטנים)", "c": "adama", "note": ""}, {"n": "אצת וואקמה טרייה", "c": "adama", "note": ""}, {"n": "אצת קומבו טרייה", "c": "adama", "note": ""}, {"n": "בצל ים (סחלב)", "c": "adama", "note": ""}, {"n": "שורש ג'ינסנג טרי", "c": "adama", "note": ""}, {"n": "אנטריקוט בקר", "c": "shehakol", "note": ""}, {"n": "פילה בקר", "c": "shehakol", "note": ""}, {"n": "סינטה", "c": "shehakol", "note": ""}, {"n": "אצבעות אנטריקוט", "c": "shehakol", "note": ""}, {"n": "צלעות טלה", "c": "shehakol", "note": ""}, {"n": "כתף טלה", "c": "shehakol", "note": ""}, {"n": "שוקי טלה", "c": "shehakol", "note": ""}, {"n": "כבש שלם", "c": "shehakol", "note": ""}, {"n": "בשר עגל", "c": "shehakol", "note": ""}, {"n": "שניצל הודו", "c": "shehakol", "note": ""}, {"n": "כרעי עוף", "c": "shehakol", "note": ""}, {"n": "כנפי עוף חריפות", "c": "shehakol", "note": ""}, {"n": "קורקבן עוף", "c": "shehakol", "note": ""}, {"n": "כבד אווז", "c": "shehakol", "note": ""}, {"n": "פטה דה גרא", "c": "shehakol", "note": ""}, {"n": "נקניק סלמי", "c": "shehakol", "note": ""}, {"n": "פסטרמה הודו", "c": "shehakol", "note": ""}, {"n": "סלמון מעושן", "c": "shehakol", "note": ""}, {"n": "סלמון נורווגי", "c": "shehakol", "note": ""}, {"n": "טונה אדומה", "c": "shehakol", "note": ""}, {"n": "טונה לבנה", "c": "shehakol", "note": ""}, {"n": "בקלה נורווגי", "c": "shehakol", "note": ""}, {"n": "פורל קשת", "c": "shehakol", "note": ""}, {"n": "מושט טרי", "c": "shehakol", "note": ""}, {"n": "דניס ים תיכוני", "c": "shehakol", "note": ""}, {"n": "לברק", "c": "shehakol", "note": ""}, {"n": "בורי", "c": "shehakol", "note": ""}, {"n": "מקרל", "c": "shehakol", "note": ""}, {"n": "סרדינים בשמן", "c": "shehakol", "note": ""}, {"n": "אנשובי", "c": "shehakol", "note": ""}, {"n": "בקלה מיובש (סטוקפיש)", "c": "shehakol", "note": ""}, {"n": "דג קרפיון", "c": "shehakol", "note": ""}, {"n": "דג אמנון", "c": "shehakol", "note": ""}, {"n": "ביצת אווז", "c": "shehakol", "note": ""}, {"n": "ביצת יען", "c": "shehakol", "note": ""}, {"n": "ביצת חלפה", "c": "shehakol", "note": ""}, {"n": "גבינת שמנת פילדלפיה", "c": "shehakol", "note": ""}, {"n": "גבינת גאודה", "c": "shehakol", "note": ""}, {"n": "גבינת אמנטל", "c": "shehakol", "note": ""}, {"n": "גבינת שוויצרית", "c": "shehakol", "note": ""}, {"n": "גבינת צ'דר", "c": "shehakol", "note": ""}, {"n": "גבינת ברי", "c": "shehakol", "note": ""}, {"n": "גבינת קממבר", "c": "shehakol", "note": ""}, {"n": "גבינת מוצרלה טרייה", "c": "shehakol", "note": ""}, {"n": "גבינת בורסין", "c": "shehakol", "note": ""}, {"n": "גבינת הלומי", "c": "shehakol", "note": ""}, {"n": "גבינת פטה יוונית", "c": "shehakol", "note": ""}, {"n": "גבינה בולגרית מלוחה", "c": "shehakol", "note": ""}, {"n": "לבנה סורית", "c": "shehakol", "note": ""}, {"n": "יוגורט יווני", "c": "shehakol", "note": ""}, {"n": "יוגורט טבעי דל שומן", "c": "shehakol", "note": ""}, {"n": "קפיר", "c": "shehakol", "note": ""}, {"n": "חלב כבשים", "c": "shehakol", "note": ""}, {"n": "שמנת מתוקה 38%", "c": "shehakol", "note": ""}, {"n": "שמנת חמוצה 15%", "c": "shehakol", "note": ""}, {"n": "חמאה מלוחה", "c": "shehakol", "note": ""}, {"n": "חמאה ללא מלח", "c": "shehakol", "note": ""}, {"n": "גהי (חמאה מזוקקת)", "c": "shehakol", "note": ""}, {"n": "גלידת פיסטוק", "c": "shehakol", "note": ""}, {"n": "גלידת תות", "c": "shehakol", "note": ""}, {"n": "גלידת קפה", "c": "shehakol", "note": ""}, {"n": "סורבה לימון", "c": "shehakol", "note": ""}, {"n": "ג'לטו איטלקי", "c": "shehakol", "note": ""}, {"n": "שוקולד 70% מריר", "c": "shehakol", "note": ""}, {"n": "שוקולד חלב עם אגוזים", "c": "shehakol", "note": ""}, {"n": "פרלין בלגי", "c": "shehakol", "note": ""}, {"n": "טראפל שוקולד", "c": "shehakol", "note": ""}, {"n": "ממתק קרמל", "c": "shehakol", "note": ""}, {"n": "ממתק טופי", "c": "shehakol", "note": ""}, {"n": "מרשמלו וניל", "c": "shehakol", "note": ""}, {"n": "דבש אקליפטוס", "c": "shehakol", "note": ""}, {"n": "דבש הדרים", "c": "shehakol", "note": ""}, {"n": "דבש בר", "c": "shehakol", "note": ""}, {"n": "סוכר דמררה", "c": "shehakol", "note": ""}, {"n": "סוכר קוקוס", "c": "shehakol", "note": ""}, {"n": "סטיוויה", "c": "shehakol", "note": ""}, {"n": "קפה טורקי", "c": "shehakol", "note": ""}, {"n": "קפה נס", "c": "shehakol", "note": ""}, {"n": "אספרסו כפול", "c": "shehakol", "note": ""}, {"n": "לאטה", "c": "shehakol", "note": ""}, {"n": "קפוצ'ינו", "c": "shehakol", "note": ""}, {"n": "תה קמומיל", "c": "shehakol", "note": ""}, {"n": "תה נענע", "c": "shehakol", "note": ""}, {"n": "תה הל", "c": "shehakol", "note": ""}, {"n": "תה שחור עם חלב", "c": "shehakol", "note": ""}, {"n": "מים בטעם", "c": "shehakol", "note": ""}, {"n": "מים קוקוס (למעשה שהכל)", "c": "shehakol", "note": ""}, {"n": "סודה לימון", "c": "shehakol", "note": ""}, {"n": "קולה זירו", "c": "shehakol", "note": ""}, {"n": "בירה שחורה", "c": "shehakol", "note": ""}, {"n": "בירה חיטה (בירה - שהכל אף שיש חיטה)", "c": "shehakol", "note": ""}, {"n": "אלכוהול ערק", "c": "shehakol", "note": ""}, {"n": "טקילה", "c": "shehakol", "note": ""}, {"n": "גרפה", "c": "shehakol", "note": ""}, {"n": "ליקר קפה", "c": "shehakol", "note": ""}, {"n": "ליקר שקדים", "c": "shehakol", "note": ""}, {"n": "מיץ רימונים מרוכז עם סוכר", "c": "shehakol", "note": ""}, {"n": "מיץ מלפפון", "c": "shehakol", "note": ""}, {"n": "מיץ סלרי", "c": "shehakol", "note": ""}, {"n": "מיץ עגבניות", "c": "shehakol", "note": ""}, {"n": "פטריות כמהין שחורות", "c": "shehakol", "note": ""}, {"n": "פטריות ערמונים", "c": "shehakol", "note": ""}, {"n": "פטריות מלך צדפה", "c": "shehakol", "note": ""}, {"n": "אורז שחור מבושל", "c": "shehakol", "note": ""}, {"n": "אורז ארבוריו (ריזוטו)", "c": "shehakol", "note": ""}, {"n": "אורז יסמין תאילנדי", "c": "shehakol", "note": ""}, {"n": "פסטה אורז (נודלס אורז)", "c": "shehakol", "note": ""}, {"n": "פופקורן קרמל", "c": "shehakol", "note": ""}, {"n": "פתיתי בורנטי", "c": "shehakol", "note": ""}, {"n": "קרקר אורז יפני", "c": "shehakol", "note": ""}, {"n": "ג'לי ענבים", "c": "shehakol", "note": ""}, {"n": "ג'לי תות", "c": "shehakol", "note": ""}, {"n": "חלבה וניל", "c": "shehakol", "note": ""}, {"n": "חלבה שוקולד", "c": "shehakol", "note": ""}, {"n": "מיונז לייט", "c": "shehakol", "note": ""}, {"n": "קטשופ ללא סוכר", "c": "shehakol", "note": ""}, {"n": "חרדל דיז'ון", "c": "shehakol", "note": ""}, {"n": "חרדל גרגירים", "c": "shehakol", "note": ""}, {"n": "רוטב סויה קל", "c": "shehakol", "note": ""}, {"n": "רוטב הוישין", "c": "shehakol", "note": ""}, {"n": "רוטב טריאקי", "c": "shehakol", "note": ""}, {"n": "חומץ בלסמי", "c": "shehakol", "note": ""}, {"n": "חומץ יין", "c": "shehakol", "note": ""}, {"n": "חומץ תפוחים", "c": "shehakol", "note": ""}, {"n": "שמן קוקוס", "c": "shehakol", "note": ""}, {"n": "שמן שומשום", "c": "shehakol", "note": ""}, {"n": "שמן חמניות", "c": "shehakol", "note": ""}, {"n": "מלח הימלאיה", "c": "shehakol", "note": ""}, {"n": "מלח ים אטלנטי", "c": "shehakol", "note": ""}, {"n": "פלפל שחור גרגירים", "c": "shehakol", "note": ""}, {"n": "פפריקה מתוקה", "c": "shehakol", "note": ""}, {"n": "פפריקה חריפה", "c": "shehakol", "note": ""}, {"n": "כמון שלם", "c": "shehakol", "note": ""}, {"n": "קינמון מקל", "c": "shehakol", "note": ""}, {"n": "ציפורן שלם", "c": "shehakol", "note": ""}, {"n": "אגוז מוסקט שלם", "c": "shehakol", "note": ""}, {"n": "כורכום יבש", "c": "shehakol", "note": ""}, {"n": "זעפרן איראני", "c": "shehakol", "note": ""}, {"n": "הל ירוק", "c": "shehakol", "note": ""}, {"n": "הל שחור", "c": "shehakol", "note": ""}, {"n": "ג'ינג'ר טחון יבש", "c": "shehakol", "note": ""}, {"n": "אבקת שום יבשה", "c": "shehakol", "note": ""}, {"n": "אבקת בצל יבשה", "c": "shehakol", "note": ""}, {"n": "סומאק חלבי", "c": "shehakol", "note": ""}, {"n": "זעתר ירדני", "c": "shehakol", "note": ""}, {"n": "פלפל אנגלי שלם", "c": "shehakol", "note": ""}, {"n": "אניס כוכב שלם", "c": "shehakol", "note": ""}, {"n": "קארי צהוב", "c": "shehakol", "note": ""}, {"n": "קארי אדום", "c": "shehakol", "note": ""}, {"n": "גרם מסאלה", "c": "shehakol", "note": ""}, {"n": "רס אל חנות", "c": "shehakol", "note": ""}, {"n": "חלבת פיסטוק ירוקה", "c": "shehakol", "note": ""}, {"n": "פודינג וניל", "c": "shehakol", "note": ""}, {"n": "מוס לימון", "c": "shehakol", "note": ""}, {"n": "פנקוטה וניל", "c": "shehakol", "note": ""}, {"n": "קרם ברולה", "c": "shehakol", "note": ""}, {"n": "מלבי ורדים", "c": "shehakol", "note": ""}, {"n": "כנאפה גבינה (המילוי)", "c": "shehakol", "note": ""}, {"n": "טירמיסו קפה (העיקר)", "c": "shehakol", "note": ""}, {"n": "פחלוואה עם דבש", "c": "shehakol", "note": ""}, {"n": "חלבה עם שוקולד", "c": "shehakol", "note": ""}, {"n": "חטיף חלבון", "c": "shehakol", "note": ""}, {"n": "אבקת חלבון מי גבינה", "c": "shehakol", "note": ""}, {"n": "משקה איזוטוני", "c": "shehakol", "note": ""}, {"n": "אנרג'י דרינק", "c": "shehakol", "note": ""}, {"n": "ציר ירקות", "c": "shehakol", "note": ""}, {"n": "ציר דגים", "c": "shehakol", "note": ""}, {"n": "מרק פטריות קרם", "c": "shehakol", "note": ""}, {"n": "מרק עגבניות צלול", "c": "shehakol", "note": ""}, {"n": "לחם שיפון כפרי גרמני", "c": "hamotzi", "note": ""}, {"n": "לחם מולטigrain", "c": "hamotzi", "note": ""}, {"n": "פיתה קפריסאית", "c": "hamotzi", "note": ""}, {"n": "לחם בריוש חמאה", "c": "hamotzi", "note": ""}, {"n": "לחם צימוקים קינמון", "c": "hamotzi", "note": ""}, {"n": "לחם דגנים נבטים", "c": "hamotzi", "note": ""}, {"n": "לחם חיטת בר", "c": "hamotzi", "note": ""}, {"n": "לחם תבואות מלאות ארוזות", "c": "hamotzi", "note": ""}, {"n": "עוגת אגוזי לוז", "c": "mezonot", "note": ""}, {"n": "עוגת שקדים טחונים (עם קמח)", "c": "mezonot", "note": ""}, {"n": "פאי אוכמניות", "c": "mezonot", "note": ""}, {"n": "טארט אגסים", "c": "mezonot", "note": ""}, {"n": "קרמבל תפוחים (בסיס שיבולת שועל וקמח)", "c": "mezonot", "note": ""}, {"n": "פסטה קפלוני", "c": "mezonot", "note": ""}, {"n": "פסטה מזרוני", "c": "mezonot", "note": ""}, {"n": "וופל ליאז' בלגי מסוכר", "c": "mezonot", "note": ""}, {"n": "בורקס בטטה", "c": "mezonot", "note": ""}, {"n": "לחמית שזיפים", "c": "mezonot", "note": ""}, {"n": "יין נטו מלבן", "c": "hagafen", "note": ""}, {"n": "יין קברנה פרנק", "c": "hagafen", "note": ""}, {"n": "מיץ ענבים סחוט קר", "c": "hagafen", "note": ""}, {"n": "תמר סאפרי", "c": "etz7", "note": ""}, {"n": "תמר תות (מיובש)", "c": "etz7", "note": ""}, {"n": "זיתי קלמטה סגולים", "c": "etz7", "note": ""}, {"n": "תפוח אמברוסיה זהוב", "c": "etz_other", "note": ""}, {"n": "אגס קומיס", "c": "etz_other", "note": ""}, {"n": "מנגו אלפונסו", "c": "etz_other", "note": ""}, {"n": "קיווי בייבי", "c": "etz_other", "note": ""}, {"n": "אשכולית מלקה", "c": "etz_other", "note": ""}, {"n": "גזר סגול מיובש", "c": "adama", "note": ""}, {"n": "בטטה יפנית לבנה", "c": "adama", "note": ""}, {"n": "פלפל שישיטו", "c": "adama", "note": ""}, {"n": "חסה פריזה", "c": "adama", "note": ""}, {"n": "כרוב סבוי", "c": "adama", "note": ""}, {"n": "תרד ניו זילנד", "c": "adama", "note": ""}, {"n": "ארטישוק ירושלמי", "c": "adama", "note": ""}, {"n": "שורש פטרוזיליה", "c": "adama", "note": ""}, {"n": "עדשים צהובות מבושלות", "c": "adama", "note": ""}, {"n": "שעועית אדוקי מבושלת", "c": "adama", "note": ""}, {"n": "אנטריקוט וואגיו", "c": "shehakol", "note": ""}, {"n": "נתח כתף מדומה", "c": "shehakol", "note": ""}, {"n": "המבורגר טלה ובקר", "c": "shehakol", "note": ""}, {"n": "נקניקיית מרגז", "c": "shehakol", "note": ""}, {"n": "דג בורי מעושן", "c": "shehakol", "note": ""}, {"n": "גבינת מנצ'גו ספרדית", "c": "shehakol", "note": ""}, {"n": "גבינת פרובולונה", "c": "shehakol", "note": ""}, {"n": "יוגורט סויה", "c": "shehakol", "note": ""}, {"n": "גלידת מנגו", "c": "shehakol", "note": ""}, {"n": "שוקולד רובי", "c": "shehakol", "note": ""}, {"n": "קפה קר", "c": "shehakol", "note": ""}, {"n": "תה אדום רויבוש", "c": "shehakol", "note": ""}, {"n": "בירה אייל", "c": "shehakol", "note": ""}, {"n": "ליקר אמרטו", "c": "shehakol", "note": ""}, {"n": "פטריות שימג'י", "c": "shehakol", "note": ""}, {"n": "אורז ג'סמין שחור", "c": "shehakol", "note": ""}, {"n": "קרקר כוסמת (שהכל)", "c": "shehakol", "note": ""}, {"n": "חלבה פיסטוק ירוקה", "c": "shehakol", "note": ""}, {"n": "פודינג צ'יה (הזרעים)", "c": "shehakol", "note": ""}]};
+
+const AL_HAMICHYAH_M = `בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם<br>עַל הַמִּחְיָה וְעַל הַכַּלְכָּלָה<br>וְעַל תְּנוּבַת הַשָּׂדֶה<br>וְעַל אֶרֶץ חֶמְדָּה טוֹבָה וּרְחָבָה<br>שֶׁרָצִיתָ וְהִנְחַלְתָּ לַאֲבוֹתֵינוּ לֶאֱכֹל מִפִּרְיָהּ וְלִשְׂבֹּעַ מִטּוּבָהּ<br>רַחֵם נָא ה' אֱלֹהֵינוּ עַל יִשְׂרָאֵל עַמֶּךָ<br>וְעַל יְרוּשָׁלַיִם עִירֶךָ וְעַל צִיּוֹן מִשְׁכַּן כְּבוֹדֶךָ<br>וְעַל מִזְבַּחֶךָ וְעַל הֵיכָלֶךָ<br>וּבְנֵה יְרוּשָׁלַיִם עִיר הַקֹּדֶשׁ בִּמְהֵרָה בְיָמֵינוּ<br>וְהַעֲלֵנוּ לְתוֹכָהּ וְשַׂמְּחֵנוּ בְּבִנְיָנָהּ<br>וְנֹאכַל מִפִּרְיָהּ וְנִשְׂבַּע מִטּוּבָהּ וּנְבָרֶכְךָ עָלֶיהָ בִּקְדֻשָּׁה וּבְטָהֳרָה<br><span style="font-size:.82em;color:var(--gold-dim)">(בשבת:)</span> וּרְצֵה וְהַחֲלִיצֵנוּ בְּיוֹם הַשַּׁבָּת הַזֶּה<br>כִּי אַתָּה ה' טוֹב וּמֵטִיב לַכֹּל וְנוֹדֶה לְּךָ עַל הָאָרֶץ<br>בָּרוּךְ אַתָּה ה' עַל הָאָרֶץ וְעַל הַמִּחְיָה`;
+
+const AL_HAGEFEN_M = `בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם<br>עַל הַגֶּפֶן וְעַל פְּרִי הַגֶּפֶן<br>וְעַל תְּנוּבַת הַשָּׂדֶה<br>וְעַל אֶרֶץ חֶמְדָּה טוֹבָה וּרְחָבָה<br>שֶׁרָצִיתָ וְהִנְחַלְתָּ לַאֲבוֹתֵינוּ לֶאֱכֹל מִפִּרְיָהּ וְלִשְׂבֹּעַ מִטּוּבָהּ<br>רַחֵם נָא ה' אֱלֹהֵינוּ עַל יִשְׂרָאֵל עַמֶּךָ<br>וְעַל יְרוּשָׁלַיִם עִירֶךָ וְעַל צִיּוֹן מִשְׁכַּן כְּבוֹדֶךָ<br>וְעַל מִזְבַּחֶךָ וְעַל הֵיכָלֶךָ<br>וּבְנֵה יְרוּשָׁלַיִם עִיר הַקֹּדֶשׁ בִּמְהֵרָה בְיָמֵינוּ<br>וְהַעֲלֵנוּ לְתוֹכָהּ וְשַׂמְּחֵנוּ בְּבִנְיָנָהּ<br>וְנֹאכַל מִפִּרְיָהּ וְנִשְׂבַּע מִטּוּבָהּ וּנְבָרֶכְךָ עָלֶיהָ בִּקְדֻשָּׁה וּבְטָהֳרָה<br><span style="font-size:.82em;color:var(--gold-dim)">(בשבת:)</span> וּרְצֵה וְהַחֲלִיצֵנוּ בְּיוֹם הַשַּׁבָּת הַזֶּה<br>כִּי אַתָּה ה' טוֹב וּמֵטִיב לַכֹּל וְנוֹדֶה לְּךָ עַל הָאָרֶץ<br>בָּרוּךְ אַתָּה ה' עַל הָאָרֶץ וְעַל פְּרִי הַגָּפֶן`;
+
+const AL_HAETZ_M = `בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם<br>עַל הָעֵץ וְעַל פְּרִי הָעֵץ<br>וְעַל תְּנוּבַת הַשָּׂדֶה<br>וְעַל אֶרֶץ חֶמְדָּה טוֹבָה וּרְחָבָה<br>שֶׁרָצִיתָ וְהִנְחַלְתָּ לַאֲבוֹתֵינוּ לֶאֱכֹל מִפִּרְיָהּ וְלִשְׂבֹּעַ מִטּוּבָהּ<br>רַחֵם נָא ה' אֱלֹהֵינוּ עַל יִשְׂרָאֵל עַמֶּךָ<br>וְעַל יְרוּשָׁלַיִם עִירֶךָ וְעַל צִיּוֹן מִשְׁכַּן כְּבוֹדֶךָ<br>וְעַל מִזְבַּחֶךָ וְעַל הֵיכָלֶךָ<br>וּבְנֵה יְרוּשָׁלַיִם עִיר הַקֹּדֶשׁ בִּמְהֵרָה בְיָמֵינוּ<br>וְהַעֲלֵנוּ לְתוֹכָהּ וְשַׂמְּחֵנוּ בְּבִנְיָנָהּ<br>וְנֹאכַל מִפִּרְיָהּ וְנִשְׂבַּע מִטּוּבָהּ וּנְבָרֶכְךָ עָלֶיהָ בִּקְדֻשָּׁה וּבְטָהֳרָה<br><span style="font-size:.82em;color:var(--gold-dim)">(בשבת:)</span> וּרְצֵה וְהַחֲלִיצֵנוּ בְּיוֹם הַשַּׁבָּת הַזֶּה<br>כִּי אַתָּה ה' טוֹב וּמֵטִיב לַכֹּל וְנוֹדֶה לְּךָ עַל הָאָרֶץ<br>בָּרוּךְ אַתָּה ה' עַל הָאָרֶץ וְעַל הַפֵּרוֹת`;
+
+const BOREI_NEFASHOT = `בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם<br>בּוֹרֵא נְפָשׁוֹת רַבּוֹת וְחֶסְרוֹנָן<br>עַל כָּל מַה שֶּׁבָּרָאתָ לְהַחֲיוֹת בָּהֶם נֶפֶשׁ כָּל חָי<br>בָּרוּךְ חֵי הָעוֹלָמִים`;
+
+const ACHRONA_LOOKUP = {AL_HAMICHYAH: AL_HAMICHYAH_M, AL_HAGEFEN: AL_HAGEFEN_M, AL_HAETZ: AL_HAETZ_M, BOREI_NEFASHOT: BOREI_NEFASHOT};
+
+const CAT_COLORS = {hamotzi:'#b8860b', mezonot:'#d4a017', hagafen:'#6d28d9', etz7:'#0098b8', etz_other:'#16a34a', adama:'#2563eb', shehakol:'#dc2626'};
+const CAT_ORDER = ['hamotzi','mezonot','hagafen','etz7','etz_other','adama','shehakol'];
+
+function escapeHtml(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function escapeAttr(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');}
+
+document.getElementById('contentArea').addEventListener('click', function(e){
+  const chip = e.target.closest('.food-chip');
+  if(chip && chip.dataset.food) openFoodCard(chip.dataset.food);
+});
+
+let currentCat = null;
+let currentQuery = '';
+
+function renderSidebarCats(){
+  const el = document.getElementById('catList');
+  const counts = {};
+  DB.items.forEach(it=>counts[it.c]=(counts[it.c]||0)+1);
+  let html = `<div class="cat-item ${currentCat===null?'active':''}" onclick="selectCategory(null)"><span>🔎</span><span>הכל</span><span class="cnt">${DB.items.length}</span></div>`;
+  CAT_ORDER.forEach(k=>{
+    const c = DB.categories[k];
+    html += `<div class="cat-item ${currentCat===k?'active':''}" onclick="selectCategory('${k}')"><span>${c.icon}</span><span>${c.label}</span><span class="cnt">${counts[k]||0}</span></div>`;
+  });
+  el.innerHTML = html;
+  document.getElementById('statLine').textContent = `מסד נתונים: ${DB.items.length} מאכלים · 7 סוגי ברכות`;
+}
+
+function selectCategory(k){
+  currentCat = k;
+  renderSidebarCats();
+  renderContent();
+}
+
+function onSearchInput(v){
+  currentQuery = v.trim();
+  document.getElementById('sideSearch').value = v;
+  document.getElementById('mainSearch').value = v;
+  renderContent();
+}
+
+function matchItems(){
+  let list = DB.items;
+  if(currentCat) list = list.filter(it=>it.c===currentCat);
+  if(currentQuery) list = list.filter(it=>it.n.includes(currentQuery));
+  return list;
+}
+
+function renderContent(){
+  const area = document.getElementById('contentArea');
+  const list = matchItems();
+
+  if(!currentQuery && !currentCat){
+    area.innerHTML = `
+      <div class="welcome-screen">
+        ${WELCOME_SVG}
+        <div class="welcome-title">איזו ברכה מברכים על המאכל שלפניכם?</div>
+        <div class="welcome-sub">מסד נתונים של למעלה מ-1000 מאכלים, מסודרים לפי שבע קטגוריות הברכה ההלכתיות. הקלידו שם מאכל בחיפוש, או בחרו קטגוריה מהתפריט, ותקבלו את הברכה הראשונה, הברכה האחרונה, וההסבר ההלכתי הקצר.</div>
+        <div class="welcome-chips">
+          ${['תפוח','לחם','יין','אורז','בננה','שוקולד','עגבנייה','תמר','עוגה','קפה'].map(w=>`<div class="welcome-chip" onclick="onSearchInput('${w}')">${w}</div>`).join('')}
+        </div>
+      </div>`;
+    return;
+  }
+
+  let heading = currentCat ? DB.categories[currentCat].label : 'תוצאות חיפוש';
+  if(currentQuery) heading = `תוצאות עבור "${currentQuery}"`;
+
+  let html = `<div class="section-heading"><h2>${heading}</h2><div class="line"></div><span class="results-count">${list.length} תוצאות</span></div>`;
+
+  if(list.length===0){
+    html += `<div class="no-results">לא נמצאו מאכלים תואמים. נסו לחפש שם מקוצר יותר, לדוגמה "תפוח" במקום "תפוח עץ אדום".</div>`;
+  } else {
+    html += `<div class="food-grid">` + list.map(it=>{
+      return `<div class="food-chip" data-food="${escapeAttr(it.n)}"><span class="badge" style="background:${CAT_COLORS[it.c]}"></span>${escapeHtml(it.n)}</div>`;
+    }).join('') + `</div>`;
+  }
+  area.innerHTML = html;
+}
+
+function focusFirstResult(){
+  const list = matchItems();
+  if(list.length>0) openFoodCard(list[0].n);
+}
+
+function openFoodCard(name){
+  const it = DB.items.find(x=>x.n===name);
+  if(!it) return;
+  const cat = DB.categories[it.c];
+  const box = document.getElementById('foodModalBox');
+
+  let achronaHTML = '';
+  if(it.c==='hamotzi'){
+    achronaHTML = `<div class="card-achrona-type">${cat.achrona_type}</div>
+      <div class="card-note">אכילת לחם בשיעור קביעת סעודה מחייבת נטילת ידיים בברכה, ברכת המוציא, ובסיום — ברכת המזון המלאה על שלל ברכותיה. לחצו למטה לפתיחת הנוסח המלא.</div>
+      <button class="card-open-siddur" onclick="closeFoodModal();openBlessings();">פתחו את ברכת המזון המלאה ←</button>`;
+  } else {
+    const achronaText = ACHRONA_LOOKUP[cat.achrona_text] || '';
+    achronaHTML = `<div class="card-achrona-type">${cat.achrona_type}</div><div class="card-bracha-text">${achronaText}</div>`;
+  }
+
+  box.innerHTML = `
+    <button class="modal-close" onclick="closeFoodModal()">✕</button>
+    <div class="card-cat-label">${cat.icon} ${cat.label}</div>
+    <div class="card-food-title">${it.n}</div>
+    <div class="card-block">
+      <h4>ברכה ראשונה</h4>
+      <div class="card-bracha-text">${cat.rishona}</div>
+    </div>
+    <div class="card-block">
+      <h4>ברכה אחרונה</h4>
+      ${achronaHTML}
+    </div>
+    ${it.note ? `<div class="card-block"><h4>הערה הלכתית</h4><div class="card-note">${it.note}</div></div>` : ''}
+  `;
+  document.getElementById('foodModal').classList.add('open');
+}
+function closeFoodModal(){ document.getElementById('foodModal').classList.remove('open'); }
+
+function openBlessings(){ document.getElementById('blessingsModal').classList.add('open'); }
+function closeBlessings(){ document.getElementById('blessingsModal').classList.remove('open'); }
+function switchEdot(edot){
+  document.querySelectorAll('.edot-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelector('.edot-btn[data-edot="'+edot+'"]').classList.add('active');
+  document.querySelectorAll('.blessings-content').forEach(c=>c.classList.remove('active'));
+  document.getElementById('blessings_'+edot).classList.add('active');
+}
+function scrollToSection(id){
+  const el = document.getElementById(id);
+  if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+document.addEventListener('keydown', e=>{
+  if(e.key==='Escape'){ closeBlessings(); closeFoodModal(); }
+});
+
+const WELCOME_SVG = `<svg class="welcome-logo" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="wgR" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#d4a017"/><stop offset="50%" stop-color="#1565ff"/><stop offset="100%" stop-color="#00e5ff"/></linearGradient><filter id="wg2R"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+  <circle cx="80" cy="80" r="76" fill="none" stroke="url(#wgR)" stroke-width="1.5" opacity="0.5"/>
+  <polygon points="80,30 115,90 45,90" fill="none" stroke="url(#wgR)" stroke-width="2" opacity="0.9" filter="url(#wg2R)"/>
+  <polygon points="80,130 45,70 115,70" fill="none" stroke="url(#wgR)" stroke-width="2" opacity="0.9" filter="url(#wg2R)"/>
+  <circle cx="80" cy="80" r="14" fill="rgba(212,160,23,0.1)" stroke="#d4a017" stroke-width="1"/>
+</svg>`;
+
+renderSidebarCats();
+renderContent();
+</script>
+<script>
+function toggleSidebar(){document.body.classList.toggle('sidebar-open');}
+function closeSidebar(){document.body.classList.remove('sidebar-open');}
+document.querySelector('.sidebar-backdrop').addEventListener('click',closeSidebar);
+document.querySelector('.sidebar').addEventListener('click',function(e){if(e.target.closest('.cat-item,.blessings-sidebar-btn'))closeSidebar();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeSidebar();});
+window.matchMedia('(min-width:901px)').addEventListener('change',closeSidebar);
+</script>
+<a class="pwa-home" href="index.html" aria-label="חזרה לתפריט">🏠</a>
+<script>
+if(navigator.standalone)document.documentElement.classList.add('standalone');
+if('serviceWorker' in navigator&&location.protocol!=='file:'){addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){});});}
+</script>
+</body>
+</html>

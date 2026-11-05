@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DVD Gematria | מחשבון גימטריה מודרני</title>
+    <style>
+        :root {
+            --matrix-neon: #00FF41;
+            --matrix-glow: rgba(0, 255, 65, 0.4);
+            --bg-black: #000000;
+        }
+
+        body {
+            background-color: var(--bg-black);
+            color: white;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        #matrix-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            opacity: 0.2;
+        }
+
+        .card {
+            background: rgba(0, 15, 0, 0.85);
+            border: 1px solid var(--matrix-neon);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 25px var(--matrix-glow);
+            text-align: center;
+            width: 400px;
+            backdrop-filter: blur(8px);
+        }
+
+        h1 {
+            color: var(--matrix-neon);
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+            font-size: 2rem;
+            text-shadow: 0 0 8px var(--matrix-neon);
+        }
+
+        .input-box {
+            width: 100%;
+            padding: 15px;
+            background: #050505;
+            border: 1px solid var(--matrix-neon);
+            color: #fff;
+            border-radius: 10px;
+            font-size: 1.3rem;
+            text-align: center;
+            outline: none;
+            box-sizing: border-box;
+            transition: box-shadow 0.3s;
+        }
+
+        .input-box:focus {
+            box-shadow: 0 0 15px var(--matrix-neon);
+        }
+
+        .result-container {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(0, 255, 65, 0.05);
+            border-radius: 10px;
+        }
+
+        .result-label {
+            display: block;
+            font-size: 0.9rem;
+            color: var(--matrix-neon);
+            margin-bottom: 10px;
+        }
+
+        #gematriaResult {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 0 0 15px var(--matrix-neon);
+        }
+
+        .footer {
+            margin-top: 25px;
+            font-size: 0.75rem;
+            color: var(--matrix-neon);
+            opacity: 0.6;
+            border-top: 1px solid rgba(0, 255, 65, 0.2);
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<canvas id="matrix-bg"></canvas>
+
+<div class="card">
+    <h1>DVD GEMATRIA</h1>
+    
+    <input type="text" id="userInput" class="input-box" placeholder="הקלד מילה או משפט..." oninput="calculate()">
+
+    <div class="result-container">
+        <span class="result-label">ערך הגימטריה:</span>
+        <div id="gematriaResult">0</div>
+    </div>
+
+    <div class="footer">
+        כל הזכויות שמורות לדוד יקותיאלי המתכנת בע"מ © <span id="year"></span>
+    </div>
+</div>
+
+<script>
+    // מילון ערכי האותיות
+    const gematriaMap = {
+        'א': 1, 'ב': 2, 'ג': 3, 'ד': 4, 'ה': 5, 'ו': 6, 'ז': 7, 'ח': 8, 'ט': 9,
+        'י': 10, 'כ': 20, 'ל': 30, 'מ': 40, 'נ': 50, 'ס': 60, 'ע': 70, 'פ': 80, 'צ': 90,
+        'ק': 100, 'ר': 200, 'ש': 300, 'ת': 400,
+        'ך': 20, 'ם': 40, 'ן': 50, 'ף': 80, 'ץ': 90 // אותיות סופיות
+    };
+
+    function calculate() {
+        const text = document.getElementById('userInput').value;
+        let sum = 0;
+
+        for (let char of text) {
+            if (gematriaMap[char]) {
+                sum += gematriaMap[char];
+            }
+        }
+
+        const resultDisplay = document.getElementById('gematriaResult');
+        resultDisplay.innerText = sum;
+        
+        // אפקט פעימה קטן כשהמספר משתנה
+        resultDisplay.style.transform = "scale(1.1)";
+        setTimeout(() => resultDisplay.style.transform = "scale(1)", 100);
+    }
+
+    // קוד רקע מטריקס
+    const canvas = document.getElementById('matrix-bg');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    const alphabet = "אבגדהוזחטיכלמנסעפצקרשת";
+    const fontSize = 16;
+    const columns = canvas.width / fontSize;
+    const drops = Array(Math.floor(columns)).fill(1);
+
+    function draw() {
+        ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = "#00FF41";
+        ctx.font = fontSize + "px monospace";
+        for (let i = 0; i < drops.length; i++) {
+            const text = alphabet[Math.floor(Math.random() * alphabet.length)];
+            ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+            if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
+            drops[i]++;
+        }
+    }
+    setInterval(draw, 35);
+    document.getElementById('year').innerText = new Date().getFullYear();
+</script>
+
+</body>
+</html>

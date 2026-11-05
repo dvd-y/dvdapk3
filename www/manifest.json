@@ -1,0 +1,26 @@
+{
+  "id": "./",
+  "name": "SDVD – תפריט האתרים",
+  "short_name": "SDVD",
+  "description": "מסייע המתכונים, ספר המתכונים, טריוויה תנ\"ך אנציקלופדיית סיומות קבצים, גימטריה וממיר מטבעות – במקום אחד.",
+  "lang": "he",
+  "dir": "rtl",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#eef3f8",
+  "theme_color": "#0b5f7a",
+  "categories": ["food", "education", "utilities"],
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "מסייע המתכונים", "url": "./dai_m2.html", "icons": [{ "src": "icon-192.png", "sizes": "192x192", "type": "image/png" }] },
+    { "name": "ספר המתכונים", "url": "./recipe-book.html", "icons": [{ "src": "icon-192.png", "sizes": "192x192", "type": "image/png" }] },
+    { "name": "טריוויה תנ\"ך", "url": "./bible_trivia.html", "icons": [{ "src": "icon-192.png", "sizes": "192x192", "type": "image/png" }] },
+    { "name": "אנציקלופדיית סיומות קבצים", "url": "./file-extension-encyclopedia.html", "icons": [{ "src": "icon-192.png", "sizes": "192x192", "type": "image/png" }] }
+  ]
+}

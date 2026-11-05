@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0b5f7a">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="SDVD">
+<title>אנציקלופדיית סיומות קבצים</title>
+<style>
+@font-face{font-family:'Dvdai2';src:url(data:font/ttf;base64,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BgcGFRQWFxYzMjc+ATU0JzYzMhYXHgEUBgcGIhUUFhcWFRQjIicuATU0NzY1JyLJFBgZKAcEEhYUBREaFwuABS0cGhQVCwwXIz5YExoPBAwsfBgTAQYBuBMqJRoGExIFBBAOFBsoRgkMFhYcPhsVIAcMVwcLCQcCCKo1GS4oAgEAAQAxAJEBUQH7ACcAABMmNTQzMhcWFxYVFCMiNTQmJy4BIyIVFBcWFRQGBwYjIicmNz4BNTSIAwoLMUsoEwgKHw0QPxIGAQIcIx0MBgULCjQhAc8SChAgMlwrWykGHYQdIUArGxEmD0FCExAFCwMUQVRaAAAAABAAxgABAAAAAAABAAYAAAABAAAAAAACAAcABgABAAAAAAADACkADQABAAAAAAAEAA4ANgABAAAAAAAFAA8ARAABAAAAAAAGAA4AUwABAAAAAAAKABwAYQADAAEECQABAAwAfQADAAEECQACAA4AiQADAAEECQADAFIAlwADAAEECQAEABwA6QADAAEECQAFAB4BBQADAAEECQAGABwBIwADAAEECQAKADgBPwADAAEECQAQAAwAfQADAAEECQARAA4AiUR2ZGFpMlJlZ3VsYXJDYWxsaWdyYXBociA6IER2ZGFpMiBSZWd1bGFyIDogMTMtMTAtMjAyNkR2ZGFpMiBSZWd1bGFyVmVyc2lvbiAwMDEuMDAyRHZkYWkyLVJlZ3VsYXJDcmVhdGVkIHdpdGggQ2FsbGlncmFwaHIuY29tAEQAdgBkAGEAaQAyAFIAZQBnAHUAbABhAHIAQwBhAGwAbABpAGcAcgBhAHAAaAByACAAOgAgAEQAdgBkAGEAaQAyACAAUgBlAGcAdQBsAGEAcgAgADoAIAAxADMALQAxADAALQAyADAAMgA2AEQAdgBkAGEAaQAyACAAUgBlAGcAdQBsAGEAcgBWAGUAcgBzAGkAbwBuACAAMAAwADEALgAwADAAMgBEAHYAZABhAGkAMgAtAFIAZQBnAHUAbABhAHIAQwByAGUAYQB0AGUAZAAgAHcAaQB0AGgAIABDAGEAbABsAGkAZwByAGEAcABoAHIALgBjAG8AbQAAAAACAAAAAAAA/7UAMgAAAAAAAAAAAAAAAAAAAAAAAAAAADwAAAABAAIBAgADAAQABQAIAAkACgALAAwADgAPABAAEQASABMAFAAVABYAFwAYABkAGgAbABwAHQAeACAAIgAjAQMBBAEFAQYBBwEIAQkBCgELAQwBDQEOAQ8BEAERARIBEwEUARUBFgEXARgBGQEaARsBHAEdAR4CQ1IEbmJzcAlhZmlpNTc2NjQJYWZpaTU3NjY1CWFmaWk1NzY2NglhZmlpNTc2NjcJYWZpaTU3NjY4CWFmaWk1NzY2OQlhZmlpNTc2NzAJYWZpaTU3NjcxCWFmaWk1NzY3MglhZmlpNTc2NzMJYWZpaTU3Njc0CWFmaWk1NzY3NQlhZmlpNTc2NzYJYWZpaTU3Njc3CWFmaWk1NzY3OAlhZmlpNTc2NzkJYWZpaTU3NjgwCWFmaWk1NzY4MQlhZmlpNTc2ODIJYWZpaTU3NjgzCWFmaWk1NzY4NAlhZmlpNTc2ODUJYWZpaTU3Njg2CWFmaWk1NzY4NwlhZmlpNTc2ODgJYWZpaTU3Njg5CWFmaWk1NzY5MAABAAH//wAP) format('truetype');font-weight:100 900;font-style:normal;font-display:block;}
+@font-face{font-family:'DvdaiLatin';src:local('Arial'),local('ArialMT'),local('Helvetica Neue'),local('Helvetica'),local('Roboto'),local('Liberation Sans'),local('Segoe UI');size-adjust:60%;unicode-range:U+0041-005A;}
+@font-face{font-family:'DvdaiLatin';src:local('Arial'),local('ArialMT'),local('Helvetica Neue'),local('Helvetica'),local('Roboto'),local('Liberation Sans'),local('Segoe UI');size-adjust:70%;unicode-range:U+0061-007A;}
+
+:root{--bg:#eef3f8;--bg2:#ffffff;--bg3:#ffffff;--green:#0b5f7a;--green-dim:#0a7a94;--green-glow:rgba(0,152,184,.16);--blue:#1738a8;--blue-dim:#1d4ed8;--blue-glow:rgba(29,78,216,.14);--text:#000000;--text-dim:#1c2530;--border:rgba(0,120,160,.3);--card-bg:rgba(255,255,255,.96)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background-color:var(--bg);background-image:linear-gradient(rgba(0,152,184,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,152,184,.04) 1px,transparent 1px);background-size:48px 48px;color:var(--text);font-family:'Rajdhani',sans-serif;min-height:100vh;overflow-x:hidden}
+.content{position:relative;z-index:1;max-width:1600px;margin:0 auto;padding:0 20px 60px}
+header{text-align:center;padding:50px 20px 30px;position:relative}
+.htitle{font-family:'Share Tech Mono',monospace;font-size:calc(clamp(1.6rem,4.5vw,3.2rem) * var(--fs-lg));color:var(--green);text-shadow:0 0 20px var(--green),0 0 60px rgba(0,152,184,.4);letter-spacing:4px;animation:flicker 6s infinite;display:inline-block}
+.hsub{font-size:calc(1rem * var(--fs-scale));color:var(--blue);margin-top:8px;letter-spacing:3px;text-transform:uppercase;text-shadow:0 0 10px var(--blue)}
+@keyframes flicker{0%,19%,21%,23%,25%,54%,56%,100%{opacity:1}20%,24%,55%{opacity:.6}}
+.scan{position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--green),transparent);animation:scan 3s linear infinite}
+@keyframes scan{0%{transform:scaleX(0);transform-origin:right}50%{transform:scaleX(1);transform-origin:right}50.001%{transform-origin:left}100%{transform:scaleX(0);transform-origin:left}}
+.controls{padding:25px 0;display:flex;flex-direction:column;gap:15px}
+.sw{position:relative}
+.si{position:absolute;right:16px;top:50%;transform:translateY(-50%);color:var(--green);font-family:'Share Tech Mono',monospace;font-size:calc(1.2rem * var(--fs-scale));pointer-events:none}
+#search{width:100%;background:var(--bg3);border:1px solid var(--green-dim);border-radius:4px;color:var(--green);font-family:'Share Tech Mono',monospace;font-size:calc(1.05rem * var(--fs-scale));padding:14px 50px 14px 20px;outline:none;transition:all .3s;direction:rtl}
+#search::placeholder{color:var(--text-dim)}
+#search:focus{border-color:var(--green);box-shadow:0 0 20px var(--green-glow),inset 0 0 10px rgba(0,152,184,.05)}
+.sbar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.sc{font-family:'Share Tech Mono',monospace;color:var(--blue);font-size:max(1rem, calc(.9rem * var(--fs-scale)));text-shadow:0 0 8px var(--blue);letter-spacing:1px}
+.sc span{color:var(--green);font-size:calc(1.15rem * var(--fs-scale));text-shadow:0 0 10px var(--green)}
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.fb{background:transparent;border:1px solid var(--border);color:var(--text-dim);padding:6px 14px;border-radius:3px;cursor:pointer;font-family:'Share Tech Mono',monospace;font-size:max(1rem, calc(.76rem * var(--fs-scale)));letter-spacing:1px;transition:all .25s;text-transform:uppercase;white-space:nowrap}
+.fb:hover,.fb.active{background:var(--green-glow);border-color:var(--green);color:var(--green);text-shadow:0 0 8px var(--green);box-shadow:0 0 12px var(--green-glow)}
+.fb.active{background:rgba(0,152,184,.12)}
+#grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:14px;margin-top:10px}
+.card{background:var(--card-bg);border:1px solid var(--border);border-radius:6px;padding:16px;position:relative;overflow:hidden;transition:all .3s ease;animation:fi .35s ease both}
+@keyframes fi{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--green),transparent);opacity:0;transition:opacity .3s}
+.card:hover{border-color:var(--green);box-shadow:0 0 22px var(--green-glow),0 0 50px rgba(0,152,184,.04);transform:translateY(-3px)}
+.card:hover::before{opacity:1}
+.ch{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:9px}
+.en{font-family:'Share Tech Mono',monospace;font-size:calc(1.4rem * var(--fs-scale));color:var(--green);text-shadow:0 0 10px rgba(0,152,184,.5);letter-spacing:2px;line-height:1}
+.ca{display:flex;gap:5px;align-items:center;flex-shrink:0}
+.cb{background:transparent;border:1px solid var(--blue-dim);color:var(--blue-dim);padding:3px 9px;border-radius:3px;cursor:pointer;font-family:'Share Tech Mono',monospace;font-size:max(1rem, calc(.68rem * var(--fs-scale)));transition:all .2s;letter-spacing:1px}
+.cb:hover{border-color:var(--blue);color:var(--blue);box-shadow:0 0 8px var(--blue-glow)}
+.cb.copied{border-color:var(--green);color:var(--green)}
+.ct{font-size:max(1rem, calc(.62rem * var(--fs-scale)));padding:3px 8px;border-radius:2px;letter-spacing:1px;text-transform:uppercase;font-family:'Share Tech Mono',monospace;border:1px solid;white-space:nowrap}
+.cd{font-size:max(1rem, calc(.9rem * var(--fs-scale)));color:var(--text);line-height:1.6;direction:rtl}
+.nr{text-align:center;padding:80px 20px;color:var(--text-dim);font-family:'Share Tech Mono',monospace;font-size:calc(1.1rem * var(--fs-scale));grid-column:1/-1}
+.nr::before{content:'// ';color:var(--green)}
+.cat-image{color:#c2185b;border-color:#c2185b;background:rgba(194,24,91,.09)}
+.cat-video{color:#b45309;border-color:#b45309;background:rgba(180,83,9,.09)}
+.cat-audio{color:#5b4bd6;border-color:#5b4bd6;background:rgba(91,75,214,.09)}
+.cat-code{color:#15803d;border-color:#15803d;background:rgba(21,128,61,.09)}
+.cat-system{color:#c81e2d;border-color:#c81e2d;background:rgba(200,30,45,.09)}
+.cat-archive{color:#8a6d00;border-color:#8a6d00;background:rgba(138,109,0,.09)}
+.cat-security{color:#0369a1;border-color:#0369a1;background:rgba(3,105,161,.09)}
+.cat-3d{color:#0f7a4a;border-color:#0f7a4a;background:rgba(15,122,74,.09)}
+.cat-data{color:#8a6a00;border-color:#8a6a00;background:rgba(138,106,0,.09)}
+.cat-gaming{color:#c2410c;border-color:#c2410c;background:rgba(194,65,12,.09)}
+.cat-doc{color:#1d4ed8;border-color:#1d4ed8;background:rgba(29,78,216,.09)}
+.cat-font{color:#be123c;border-color:#be123c;background:rgba(190,18,60,.09)}
+.cat-network{color:#0f766e;border-color:#0f766e;background:rgba(15,118,110,.09)}
+.cat-ai{color:#a21caf;border-color:#a21caf;background:rgba(162,28,175,.09)}
+.cat-db{color:#92600a;border-color:#92600a;background:rgba(146,96,10,.09)}
+::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:var(--bg2)}::-webkit-scrollbar-thumb{background:var(--green-dim);border-radius:3px}
+footer{text-align:center;padding:30px;color:var(--text-dim);font-family:'Share Tech Mono',monospace;font-size:max(1rem, calc(.73rem * var(--fs-scale)));letter-spacing:2px;border-top:1px solid var(--border);margin-top:40px}
+
+/* ===== גופן, גודל, קריאות ורספונסיביות ===== */
+:root{--fs-scale:1.7;--fs-lg:calc(1 + (var(--fs-scale) - 1) * 0.5);}
+*,*::before,*::after,input,button,textarea,select,option{font-family:'Dvdai2','DvdaiLatin','Arial Hebrew',Arial,sans-serif !important;}
+*,*::before,*::after,input::placeholder{-webkit-text-stroke:0.45px;text-shadow:none !important;}
+.__none{-webkit-text-stroke:0;}
+html{-webkit-text-size-adjust:100%%;}
+.scrollx,.chat-area,.fridge-area,.modal-overlay,.categories,.category-bar{-webkit-overflow-scrolling:touch;}
+@media(max-width:1100px){:root{--fs-scale:1.55;}}
+@media(max-width:640px){:root{--fs-scale:1.4;}*{letter-spacing:.5px !important;}}
+@media(prefers-reduced-motion:reduce){*{animation:none !important;}}
+
+.htitle{animation:none !important;letter-spacing:1px !important;}
+.hsub{letter-spacing:1px !important;}
+.scan{display:none;}
+.en{direction:ltr;unicode-bidi:isolate;}
+#grid{grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));}
+#search::placeholder{color:#3a4654;opacity:1;}
+.card{box-shadow:0 2px 12px rgba(0,152,184,.08);}
+.cd{overflow-wrap:anywhere;}
+.content{padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right));padding-bottom:max(60px,env(safe-area-inset-bottom));}
+@media(min-width:1101px){#grid{grid-template-columns:repeat(auto-fill,minmax(380px,1fr));}}
+@media(max-width:900px){.content{padding-left:14px;padding-right:14px;}}
+@media(max-width:640px){
+  .content{padding-left:10px;padding-right:10px;}
+  header{padding:30px 8px 18px;}
+  .controls{padding:16px 0;}
+  #search{padding:12px 44px 12px 12px;}
+  .sbar{justify-content:center;text-align:center;}
+  .card{padding:14px;}
+  .ch{flex-wrap:wrap;}
+  footer{padding:20px 10px;}
+}
+
+
+/* ===== PWA: כפתור חזרה לתפריט (רק כשהאתר מותקן כאפליקציה) ===== */
+.pwa-home{display:none;position:fixed;left:0;top:50%;transform:translateY(-50%);z-index:9000;width:calc(30px + env(safe-area-inset-left));height:64px;padding-left:env(safe-area-inset-left);border-radius:0 16px 16px 0;background:rgba(11,95,122,.88);color:#fff;font-size:18px;align-items:center;justify-content:center;text-decoration:none;box-shadow:2px 2px 12px rgba(0,0,0,.2);-webkit-text-stroke:0 !important;}
+@media (display-mode:standalone){.pwa-home{display:flex;}}
+html.standalone .pwa-home{display:flex;}
+</style>
+</head>
+<body>
+<div class="content">
+<header>
+  <div class="htitle">אנציקלופדיית סיומות קבצים</div>
+  <div class="hsub">סיומות קבצים מתועדות // מדריך מקיף</div>
+  <div class="scan"></div>
+</header>
+<div class="controls">
+  <div class="sw">
+    <input type="text" id="search" placeholder="חפש לפי שם סיומת, קטגוריה או תיאור..." autocomplete="off">
+    <span class="si">⌕</span>
+  </div>
+  <div class="sbar">
+    <div class="sc">מציג <span id="count">0</span> מתוך <span id="total">0</span> סיומות</div>
+    <button class="fb active" data-cat="all">הכל</button>
+  </div>
+  <div class="filters" id="filters"></div>
+</div>
+<div id="grid"></div>
+</div>
+<footer id="footer">// FILE EXTENSION ENCYCLOPEDIA // כל הזכויות שמורות //</footer>
+
+<script>
+
+/* ─── Data ─── */
+const data=[
+  /* ══ תמונות ══ */
+  {ext:'.JPG',cat:'image',desc:'פורמט תמונה נפוץ ביותר המשתמש בדחיסת JPEG עם אובדן נתונים. משמש לצילומים דיגיטליים ותמונות ברשת. תומך בעד 16.7 מיליון צבעים.'},
+  {ext:'.PNG',cat:'image',desc:'פורמט תמונה ללא אובדן נתונים עם תמיכה בשקיפות (אלפא). פותח כחלופה פתוחה ל-GIF. נפוץ מאוד לגרפיקת אינטרנט וצילומי מסך.'},
+  {ext:'.GIF',cat:'image',desc:'פורמט תמונה התומך באנימציות ובשקיפות עם פלטה של עד 256 צבעים. פותח על ידי CompuServe ב-1987. נפוץ לאנימציות קצרות וממים.'},
+  {ext:'.WEBP',cat:'image',desc:'פורמט תמונה מודרני של גוגל לאינטרנט. מספק דחיסה טובה יותר מ-JPEG ו-PNG. תומך בשקיפות ובאנימציה.'},
+  {ext:'.SVG',cat:'image',desc:'פורמט גרפיקה וקטורית מבוסס XML שניתן להגדיל ללא פגיעה באיכות. נפוץ לסמלי לוגו ואייקונים. ניתן לעריכה בעורכי טקסט.'},
+  {ext:'.TIFF',cat:'image',desc:'פורמט תמונה מקצועי ללא אובדן נתונים לעריכה ודפוס. תומך בתמונות רב-שכבתיות. Adobe Photoshop ו-GIMP תומכים בו.'},
+  {ext:'.RAW',cat:'image',desc:'פורמט נתוני צילום גולמיים ישירות מחיישן המצלמה. מכיל את מרב המידע שנלכד לעיבוד גמיש. Adobe Lightroom מיועד לעבוד איתו.'},
+  {ext:'.HEIC',cat:'image',desc:'פורמט תמונה חדיש של iPhone מאז iOS 11. מבוסס על קודק HEVC ומציע דחיסה טובה פי שניים מ-JPEG. תומך ב-Live Photos.'},
+  {ext:'.BMP',cat:'image',desc:'פורמט תמונה בסיסי של Windows המאחסן פיקסלים ללא דחיסה. תואם לכל תוכנות Windows אך יוצר קבצים גדולים. פותח על ידי מיקרוסופט עבור GDI.'},
+  {ext:'.ICO',cat:'image',desc:'פורמט סמל Windows המכיל מספר גדלים של תמונה בקובץ אחד. משמש לאייקונים של יישומים ו-favicon לאתרים. תומך בשקיפות.'},
+  {ext:'.AVIF',cat:'image',desc:'AV1 Image File Format - פורמט תמונה מודרני המבוסס על קודק AV1. מספק דחיסה עדיפה על WEBP ו-JPEG. Chrome ו-Firefox תומכים בו מלאה.'},
+  {ext:'.JXL',cat:'image',desc:'JPEG XL - פורמט תמונה חדשני עם דחיסה מעולה ואיכות גבוהה. תומך גם ב-lossless וגם ב-lossy. עדיין בשלבי אימוץ בדפדפנים.'},
+  {ext:'.PSD',cat:'image',desc:'Photoshop Document - פורמט הפרויקט הפנימי של Adobe Photoshop. מכיל שכבות, מסכות ואפקטים. GIMP ו-Affinity Photo מסוגלים לפתוח PSD.'},
+  {ext:'.AI',cat:'image',desc:'Adobe Illustrator - פורמט קובץ וקטורי קנייני של Adobe. מבוסס על PostScript ומכיל גרפיקה ניתנת להגדלה. נפוץ בסטודיאו עיצוב ומיתוג.'},
+  {ext:'.EPS',cat:'image',desc:'Encapsulated PostScript - פורמט וקטורי לגרפיקה מדפסת ולוגואים. תואם ל-Adobe Illustrator ו-CorelDRAW. נפוץ בתעשיית הדפוס המקצועית.'},
+  {ext:'.XCF',cat:'image',desc:'קובץ פרויקט GIMP עם שכבות, ערוצים ומסכות. פורמט הפנימי של GIMP השומר הכל לעריכה עתידית. ניתן לייצא לפורמטים אחרים.'},
+  {ext:'.CR2',cat:'image',desc:'Canon RAW Version 2 - פורמט RAW של מצלמות Canon. מכיל נתוני תמונה גולמיים לאיכות מקסימלית. Adobe Camera Raw ו-Lightroom עובדים איתו.'},
+  {ext:'.NEF',cat:'image',desc:'Nikon Electronic Format - פורמט RAW של מצלמות Nikon. שומר נתוני חיישן מלאים לעריכה מקסימלית. Capture NX-D ו-Lightroom תומכים בו.'},
+  {ext:'.DNG',cat:'image',desc:'Digital Negative - פורמט RAW פתוח של Adobe כתחליף לפורמטי RAW קנייניים. מאפשר ארכיון ארוך-טווח ללא תלות ביצרן. Lightroom ו-Photoshop תומכים בו.'},
+  {ext:'.TGA',cat:'image',desc:'Targa - פורמט תמונה ישן עם תמיכה בשקיפות 32-bit. נפוץ בתעשיית המשחקים לטקסטורות ותמונות. כיום פחות נפוץ אך עדיין בשימוש.'},
+
+  /* ══ וידאו ══ */
+  {ext:'.MP4',cat:'video',desc:'פורמט וידאו הנפוץ ביותר בעולם המבוסס על MPEG-4. תומך בקודקים H.264 ו-H.265 וניתן לניגון בכמעט כל מכשיר. YouTube ו-Netflix משתמשים בו.'},
+  {ext:'.MKV',cat:'video',desc:'מכולת מולטימדיה פתוחה התומכת בכמעט כל קודק. נפוצה לאחסון סרטים ב-HD עם כתוביות ורצועות אודיו מרובות. VLC ו-Kodi תומכים בו.'},
+  {ext:'.AVI',cat:'video',desc:'פורמט וידאו ישן של מיקרוסופט המשמש לאחסון סרטים. מכיל נתוני וידאו ואודיו בקובץ אחד. תומך בקודקים שונים אך יוצר קבצים גדולים.'},
+  {ext:'.MOV',cat:'video',desc:'פורמט וידאו של Apple למשמש ב-QuickTime ו-iMovie. נפוץ בצלמי וידאו מקצועיים עם תמיכה בריבוי רצועות. תומך בקודק ProRes.'},
+  {ext:'.WEBM',cat:'video',desc:'פורמט וידאו פתוח של גוגל לאינטרנט. תומך בקודק VP9 ו-AV1. נתמך על ידי Chrome ו-Firefox לסטרימינג יעיל.'},
+  {ext:'.FLV',cat:'video',desc:'פורמט Flash Video שהיה נפוץ ב-YouTube. משתמש בקודקי Sorenson Spark ו-H.264. הוחלף ב-MP4 אך עדיין בארכיונים ישנים.'},
+  {ext:'.WMV',cat:'video',desc:'פורמט וידאו של מיקרוסופט ל-Windows Media Player. מבוסס על קודק Windows Media Video. פחות נפוץ כיום מחוץ לסביבת Windows.'},
+  {ext:'.M4V',cat:'video',desc:'גרסה של MP4 המשמשת iTunes ו-Apple TV. יכול להכיל DRM לניהול זכויות. מבוסס על MPEG-4 עם הרחבות Apple.'},
+  {ext:'.TS',cat:'video',desc:'MPEG Transport Stream - פורמט שידור לטלוויזיה ולסטרימינג. מאפשר שידור עמיד לטעויות. נפוץ ב-HLS (HTTP Live Streaming) לאינטרנט.'},
+  {ext:'.3GP',cat:'video',desc:'3GPP - פורמט וידאו לטלפונים ניידים מהדור השלישי. מספק דחיסה גבוהה לרשתות סלולריות. עדיין בשימוש במכשירים ישנים.'},
+  {ext:'.VOB',cat:'video',desc:'Video Object - פורמט וידאו מ-DVD המכיל וידאו, אודיו וכתוביות. נמצא בתיקיית VIDEO_TS של DVD. VLC ו-HandBrake מריצים VOB.'},
+  {ext:'.MTS',cat:'video',desc:'AVCHD - פורמט וידאו HD ממצלמות Sony ו-Panasonic. מבוסס על H.264 ב-MPEG-2 Transport Stream. נפוץ בצילום ביתי ומקצועי.'},
+
+  /* ══ אודיו ══ */
+  {ext:'.MP3',cat:'audio',desc:'פורמט אודיו הנפוץ ביותר בעולם המבוסס על MPEG Layer III. משתמש בדחיסה עם אובדן נתונים. כמעט כל נגן מוזיקה תומך בו.'},
+  {ext:'.FLAC',cat:'audio',desc:'פורמט אודיו ללא אובדן נתונים המספק איכות שמע מקורית. ניתן לדחיסה ב-50-70% ביחס ל-WAV. נפוץ בקרב אוהבי HiFi.'},
+  {ext:'.WAV',cat:'audio',desc:'פורמט אודיו גלם ללא דחיסה של מיקרוסופט ו-IBM. שומר נתוני צליל גולמיים לאיכות מקסימלית. משמש בסטודיאו ב-Audacity ו-Pro Tools.'},
+  {ext:'.OGG',cat:'audio',desc:'פורמט מכולת פתוח של Xiph Foundation. בדרך כלל מכיל קודק Vorbis. משמש בפרויקטים קוד פתוח ומשחקי וידאו.'},
+  {ext:'.AAC',cat:'audio',desc:'פורמט דחיסת אודיו מתקדם מ-MP3. מספק איכות שמע גבוהה יותר בקצב סיביות נמוך. ברירת המחדל ב-iTunes ו-Apple Music.'},
+  {ext:'.MIDI',cat:'audio',desc:'פרוטוקול ופורמט לאחסון הוראות מוזיקליות. מאפשר תקשורת בין כלי נגינה אלקטרוניים. Sibelius ו-FL Studio עובדים עמו.'},
+  {ext:'.AIFF',cat:'audio',desc:'פורמט אודיו ללא דחיסה של Apple, מקביל ל-WAV. שמור בסטודיאו מקצועיים ב-Mac. Logic Pro ו-GarageBand משתמשים בו.'},
+  {ext:'.M4A',cat:'audio',desc:'פורמט אודיו של Apple המבוסס על MPEG-4 Audio. משמש ל-iTunes ול-Apple Music עם קודק AAC. מספק איכות גבוהה בגודל קטן.'},
+  {ext:'.OPUS',cat:'audio',desc:'קודק אודיו פתוח של IETF עם ביצועים מעולים לשיחות ומוזיקה. נפוץ ב-Discord, WhatsApp ו-WebRTC. מחליף Vorbis ו-Speex.'},
+  {ext:'.M3U',cat:'audio',desc:'MP3 URL - קובץ פלייליסט עם רשימת קישורים לקבצי מדיה. נפוץ לסטרימינג רדיו ב-IPTV. VLC ו-Winamp קוראים פלייליסטי M3U.'},
+  {ext:'.WMA',cat:'audio',desc:'Windows Media Audio - פורמט אודיו קנייני של מיקרוסופט. מספק דחיסה טובה עם תמיכה ב-DRM. Windows Media Player הוא הנגן הרשמי.'},
+  {ext:'.APE',cat:'audio',desc:'Monkey\'s Audio - פורמט אודיו ללא אובדן עם יחס דחיסה גבוה יותר מ-FLAC. נפוץ בקרב אוהבי מוזיקה בדרגה גבוהה. Foobar2000 ו-VLC תומכים בו.'},
+  {ext:'.DSF',cat:'audio',desc:'DSD Stream File - פורמט אודיו Super Audio CD בהגדרה עליונה. DSD (Direct Stream Digital) משמש לאחסון Super Audio CD. מיועד לציוד HiFi מקצועי.'},
+
+  /* ══ קוד ══ */
+  {ext:'.PY',cat:'code',desc:'קובץ קוד Python לניתוח נתונים, AI ופיתוח רשת. מריצים עם "python" בטרמינל. VS Code ו-PyCharm הם עורכים מובילים.'},
+  {ext:'.JS',cat:'code',desc:'קובץ JavaScript לפיתוח רשת בצד הלקוח ו-Node.js בצד השרת. שפת התכנות הרצה ישירות בדפדפנים. מופעל על ידי V8 engine.'},
+  {ext:'.TS',cat:'code',desc:'TypeScript הוא JavaScript עם טיפוסים סטטיים של מיקרוסופט. מתרגם ל-JavaScript רגיל לפני ריצה. מיועד לפרויקטים גדולים ב-Angular ו-React.'},
+  {ext:'.HTML',cat:'code',desc:'HyperText Markup Language - שפת הסימון לבניית דפי אינטרנט. מגדיר מבנה תוכן באמצעות תגים. כל דפדפן מפענח ומציג HTML.'},
+  {ext:'.CSS',cat:'code',desc:'Cascading Style Sheets - שפת עיצוב לשליטה במראה HTML. מאפשר הגדרת צבעים, פונטים ופריסות. משתמש בסלקטורים ומאפיינים.'},
+  {ext:'.PHP',cat:'code',desc:'שפת תכנות לצד שרת לפיתוח אתרים דינמיים. מריצה בשרת ומייצרת HTML. WordPress, Drupal ו-Laravel בנויים על PHP.'},
+  {ext:'.JAVA',cat:'code',desc:'קובץ קוד Java הרץ על Java Virtual Machine. עקרון "כתוב פעם, הרץ בכל מקום". Android, Spring ו-Hadoop הם פלטפורמות מרכזיות.'},
+  {ext:'.C',cat:'code',desc:'קובץ קוד C, אחת השפות הוותיקות והמשפיעות ביותר. בסיס לרוב מערכות ההפעלה. GCC ו-Clang הם מהדרי C המובילים.'},
+  {ext:'.CPP',cat:'code',desc:'C++ מוסיף תכנות מונחה-עצמים ל-C. נפוץ למנועי משחקים ותוכנות ביצועים גבוהים. Visual C++ ו-CLion הם כלי פיתוח מובילים.'},
+  {ext:'.RS',cat:'code',desc:'קובץ Rust לביצועים גבוהים ובטיחות זיכרון. מונעת באגי זיכרון בזמן קומפילציה. Mozilla, Discord ו-Cloudflare משתמשים בה.'},
+  {ext:'.GO',cat:'code',desc:'קובץ Go שפותחה על ידי גוגל לפיתוח שרתים. ביצועים גבוהים עם פשטות תחביר. Docker, Kubernetes ו-Terraform כתובים ב-Go.'},
+  {ext:'.RB',cat:'code',desc:'קובץ Ruby הידועה בתחביר ידידותי. הפך פופולרי עם Ruby on Rails. ניתן לפענוח ישיר על ידי פקודת "ruby".'},
+  {ext:'.SWIFT',cat:'code',desc:'שפת Apple לפיתוח iOS, macOS ו-watchOS. הוכרזה ב-2014 כחלופה מודרנית ל-Objective-C. Xcode הוא הסביבה הרשמית.'},
+  {ext:'.KT',cat:'code',desc:'קובץ Kotlin לפיתוח Android ו-JVM. מוכרת רשמית על ידי Google לאנדרואיד. תואמת ל-Java ומספקת תחביר בטוח יותר.'},
+  {ext:'.SQL',cat:'code',desc:'Structured Query Language לשאילתות בבסיסי נתונים. מאפשר יצירה, קריאה, עדכון ומחיקת נתונים. MySQL, PostgreSQL ו-SQLite משתמשים בו.'},
+  {ext:'.LUA',cat:'code',desc:'שפה קלה להטמעה ב-C/C++. נפוצה לסקריפטינג במשחקים כמו Roblox ו-World of Warcraft. תחביר פשוט ומהיר.'},
+  {ext:'.R',cat:'code',desc:'קובץ R לסטטיסטיקה וניתוח נתונים. מיועד לחוקרים ומדעני נתונים. RStudio הוא הסביבה הנפוצה ביותר לפיתוח ב-R.'},
+  {ext:'.DART',cat:'code',desc:'שפת Google לפיתוח Flutter לאפליקציות מרובות פלטפורמות. מאפשר קוד אחד ל-iOS, Android ו-Web. DartPad מספק סביבת ניסוי.'},
+  {ext:'.SCALA',cat:'code',desc:'שפה פונקציונלית-מונחית עצמים ל-JVM. Apache Spark כתוב ב-Scala. IntelliJ IDEA עם Scala plugin הוא הסביבה המועדפת.'},
+  {ext:'.EX',cat:'code',desc:'קובץ Elixir לבניית יישומים מבוזרים וסקיילביליים. מבוסס על BEAM VM של Erlang. Phoenix Framework הוא ה-Rails של Elixir.'},
+  {ext:'.VUE',cat:'code',desc:'קובץ רכיב Vue.js המכיל תבנית, לוגיקה וסגנון בקובץ אחד. מסגרת JavaScript פרוגרסיבית לבניית ממשקי משתמש. Vite מעבד קבצים אלה.'},
+  {ext:'.JSX',cat:'code',desc:'JavaScript עם תחביר JSX של React לשילוב HTML בקוד. מתרגם על ידי Babel לפני ריצה. Facebook פיתחה React לבניית ממשקי משתמש.'},
+  {ext:'.SCSS',cat:'code',desc:'Sassy CSS - הרחבה של CSS עם משתנים, פונקציות ולולאות. מתרגם ל-CSS רגיל לפני הדפדפן. נפוץ מאוד בפרויקטי React ו-Angular.'},
+  {ext:'.WASM',cat:'code',desc:'WebAssembly - פורמט בינארי לריצת קוד מהיר בדפדפן. מאפשר הרצת C++, Rust ו-Go קרוב למהירות native. Figma ו-AutoCAD Web משתמשים בו.'},
+  {ext:'.PROTO',cat:'code',desc:'הגדרת Protocol Buffers לסכמת נתונים ושירותים. מגדיר types ו-services ל-gRPC APIs. protoc מייצר קוד ב-Python, Go, Java ועוד.'},
+  {ext:'.GRAPHQL',cat:'code',desc:'סכמת GraphQL המגדירה types, queries ו-mutations. API query language של Facebook. Apollo ו-Hasura הם שרתי GraphQL פופולריים.'},
+  {ext:'.ZIG',cat:'code',desc:'שפה מודרנית ל-systems programming כחלופה ל-C. בטיחות זיכרון ללא GC. Bun.js נבנה ב-Zig.'},
+  {ext:'.NIM',cat:'code',desc:'שפה שמשלבת קריאות Python, ביצועי C ובטיחות Rust. מתרגמת ל-C לביצועים מקסימליים. nimble הוא מנהל החבילות.'},
+  {ext:'.HCL',cat:'code',desc:'HashiCorp Configuration Language לתשתית כקוד. משמשת ב-Terraform, Consul ו-Vault. עיצוב קריא-אדם עם תמיכה בביטויים.'},
+  {ext:'.ELM',cat:'code',desc:'שפה פונקציונלית לממשקי משתמש עם ערבות אפס runtime exceptions. מתרגמת ל-JavaScript. ידועה בהודעות שגיאה ברורות ואדריכלות TEA.'},
+  {ext:'.GLEAM',cat:'code',desc:'שפה פונקציונלית עם type safety על BEAM VM. ניתן לקמפל גם ל-JavaScript. gleam.run הוא האתר הרשמי.'},
+  {ext:'.PERL',cat:'code',desc:'קובץ Perl ל-scripting ועיבוד טקסט. היה נפוץ בשנות ה-90 לניהול מערכות ו-CGI. ידוע בגמישות גבוהה.'},
+  {ext:'.GROOVY',cat:'code',desc:'שפה דינמית ל-JVM עם תחביר פשוט מ-Java. נפוצה ב-Jenkins pipelines ו-Grails. מתרגמת ל-bytecode Java.'},
+  {ext:'.ERL',cat:'code',desc:'קובץ Erlang לבניית מערכות מבוזרות עמידות לכשלים. WhatsApp נבנה ב-Erlang. מיועד לטלקום ב-BEAM virtual machine.'},
+  {ext:'.HASKELL',cat:'code',desc:'שפה פונקציונלית טהורה עם מערכת טיפוסים חזקה. נפוצה באקדמיה ובמחקר. GHC (Glasgow Haskell Compiler) הוא המהדר המוביל.'},
+  {ext:'.F#',cat:'code',desc:'שפה פונקציונלית-מונחית עצמים ל-.NET. ניתוח נתונים ו-Machine Learning בנוחות. Microsoft פיתחה F# כחלק מ-Visual Studio.'},
+  {ext:'.V',cat:'code',desc:'שפת V - פשוטה ומהירה לקומפילציה. תחביר דומה ל-Go עם ביצועי C. v-lang.io הוא האתר הרשמי ו-vpm מנהל החבילות.'},
+  {ext:'.CR',cat:'code',desc:'Crystal - שפה עם תחביר Ruby אך עם ביצועי C. Static typing עם type inference מלא. Shards הוא מנהל החבילות.'},
+  {ext:'.PURS',cat:'code',desc:'PureScript - שפה פונקציונלית המתרגמת ל-JavaScript. Haskell-inspired עם אפסות side effects. Spago הוא build tool נפוץ.'},
+  {ext:'.MJS',cat:'code',desc:'JavaScript ES Module עם תמיכה ב-import/export. לבדל מ-CommonJS require. Node.js ודפדפנים מודרניים תומכים.'},
+  {ext:'.CJS',cat:'code',desc:'CommonJS Module - קובץ JavaScript עם פורמט Node.js קלאסי. משתמש ב-require() ו-module.exports. הפורמט המקורי של Node.js.'},
+  {ext:'.CLJS',cat:'code',desc:'ClojureScript - גרסת Clojure המתרגמת ל-JavaScript. מאפשרת תכנות פונקציונלי בדפדפן. Shadow-cljs הוא כלי פיתוח פופולרי.'},
+  {ext:'.ML',cat:'code',desc:'קובץ OCaml/ML - שפה פונקציונלית בעלת type inference חזק. משמשת ב-Facebook (Flow/Hack), Jane Street ומחקר אקדמי. דיאלקטים: OCaml, SML, F#.'},
+  {ext:'.EX',cat:'code',desc:'קובץ Elixir לבניית יישומים ריאל-טיים מבוזרים. Phoenix Channels מאפשר WebSockets בקלות. מריץ על BEAM VM של Erlang לסקיילביליות.'},
+  {ext:'.BICEP',cat:'code',desc:'Domain Specific Language של מיקרוסופט ל-Azure. חלופה פשוטה ל-ARM JSON templates. Azure CLI תומך ב-Bicep ישירות.'},
+  {ext:'.TERRAFORM',cat:'code',desc:'קובץ HCL של Terraform לתשתית כקוד. מגדיר משאבי ענן ב-AWS, Azure ו-GCP. HashiCorp מפתחת ומתחזקת Terraform.'},
+  {ext:'.SPEC',cat:'code',desc:'קובץ בדיקות בפרויקטי JavaScript. Jest ו-Mocha מריצים קבצי spec. TDD ו-BDD נוהגים לכתוב spec לכל פונקציה.'},
+
+  /* ══ מערכת ══ */
+  {ext:'.EXE',cat:'system',desc:'קובץ ביצוע Windows עם קוד מכונה להרצה ישירה. מציג PE (Portable Executable) header. יש להריץ רק ממקורות מהימנים.'},
+  {ext:'.DLL',cat:'system',desc:'Dynamic Link Library - ספריה משותפת Windows. מאפשרת שיתוף קוד בין תהליכים. בעיות DLL נקראות "DLL Hell".'},
+  {ext:'.BAT',cat:'system',desc:'Windows Batch Script עם פקודות CMD לאוטומציה. הוצג עם MS-DOS ועדיין פעיל. PowerShell הוא החלופה המודרנית.'},
+  {ext:'.SH',cat:'system',desc:'סקריפט Shell לאוטומציה ב-Unix/Linux. מכיל פקודות מערכת הניתנות להרצה רצופה. Bash, Zsh ו-Fish הם מעטפות מקובלות.'},
+  {ext:'.SYS',cat:'system',desc:'מנהל התקן מערכת Windows. נטען בזמן אתחול לשליטה בחומרה. עלול לגרום ל-BSOD אם פגום.'},
+  {ext:'.INI',cat:'system',desc:'קובץ אתחול Windows לאחסון הגדרות. מורכב מקטעים, מפתחות וערכים. הוחלף חלקית על ידי Windows Registry.'},
+  {ext:'.REG',cat:'system',desc:'קובץ Windows Registry עם ערכי רישום. ניתן ליבוא לרישום ישירות. מסוכן ממקורות לא ידועים.'},
+  {ext:'.DMG',cat:'system',desc:'Disk Image - קובץ תמונת דיסק macOS להפצת תוכנות. מותקן כ"דיסק וירטואלי". מאפשר חתימה דיגיטלית לאימות מקור.'},
+  {ext:'.APK',cat:'system',desc:'Android Package - קובץ התקנה לאפליקציות Android. מבוסס על ZIP עם קוד, משאבים ומניפסט. Google Play מפיץ APK.'},
+  {ext:'.IPA',cat:'system',desc:'iOS App Archive - קובץ אפליקציה ל-iPhone ו-iPad. מוצפן עם DRM של Apple. App Store מפיץ אחרי סינון Apple.'},
+  {ext:'.MSI',cat:'system',desc:'Windows Installer Package - פורמט התקנה של מיקרוסופט. מאפשר התקנה, הסרה ותיקון של תוכנות. Visual Studio יוצר MSI.'},
+  {ext:'.PS1',cat:'system',desc:'קובץ PowerShell לאוטומציה ממוחשבת. מספק יכולות תכנות עמוקות לניהול Windows. נדרש אישור מפורש להרצה.'},
+  {ext:'.ENV',cat:'system',desc:'קובץ משתני סביבה לתצורת יישומים. מאחסן סיסמאות ו-API keys. לעולם לא להעלות ל-Git ציבורי! dotenv טוען אותם.'},
+  {ext:'.CONF',cat:'system',desc:'קובץ תצורה לתוכנות Linux ו-Unix. טקסט קריא עם key=value. Apache, Nginx ו-SSH משתמשים בקבצי .conf.'},
+  {ext:'.SERVICE',cat:'system',desc:'קובץ שירות systemd ב-Linux. מתאר איך להפעיל ולנהל שירות. systemctl enable/start משתמש בקבצים אלה.'},
+  {ext:'.LOCK',cat:'system',desc:'קובץ נעילת גרסאות תלויות. package-lock.json ו-Cargo.lock הם דוגמאות. מבטיח אותן גרסאות בכל התקנה.'},
+  {ext:'.BASH',cat:'system',desc:'סקריפט Bash ל-Linux ו-macOS לאוטומציה וניהול שרתים. bash -x מאפשר ריצת debug. נפוץ ב-DevOps ו-CI/CD.'},
+  {ext:'.DOCKERFILE',cat:'system',desc:'הוראות לבניית Docker Image. מכיל FROM, RUN ו-CMD לבניית container. docker build בונה image מ-Dockerfile.'},
+  {ext:'.CRON',cat:'system',desc:'הגדרות משימות מתוזמנות ב-Unix/Linux. מאפשר הרצת פקודות בזמנים קבועים. crontab -e פותח עריכה.'},
+  {ext:'.PKGBUILD',cat:'system',desc:'סקריפט בניית חבילה ל-Arch Linux ו-Manjaro. מגדיר תלויות, בנייה והתקנה. makepkg מבצע את הבנייה מ-PKGBUILD.'},
+  {ext:'.EBUILD',cat:'system',desc:'סקריפט חבילת Portage ל-Gentoo Linux. מגדיר כיצד לבנות ולהתקין תוכנה. emerge משתמש ב-ebuilds לניהול חבילות.'},
+  {ext:'.SPEC',cat:'system',desc:'קובץ מפרטי RPM לבניית חבילה ל-Red Hat ו-Fedora. מגדיר מטא-נתונים, מקורות ושלבי בנייה. rpmbuild בונה RPM מ-SPEC.'},
+  {ext:'.VHD',cat:'system',desc:'Virtual Hard Disk - קובץ דיסק קשיח וירטואלי של מיקרוסופט. משמש ב-Hyper-V ו-Windows Backup. VirtualBox ו-VMware תומכים בו.'},
+  {ext:'.VMDK',cat:'system',desc:'Virtual Machine Disk - פורמט דיסק וירטואלי של VMware. מכיל מערכת הפעלה שלמה בקובץ. VirtualBox יכול לייבא VMDK.'},
+
+  /* ══ ארכיון ══ */
+  {ext:'.ZIP',cat:'archive',desc:'פורמט דחיסה נפוץ שפותח ב-1989 על ידי Phil Katz. תומך בקבצים מרובים. WinZip, 7-Zip ו-macOS תומכים בו מובנה.'},
+  {ext:'.RAR',cat:'archive',desc:'פורמט ארכיון פרטי עם דחיסה טובה יותר מ-ZIP. תומך בפיצול לכרכים ובהצפנה. WinRAR הוא הכלי הרשמי.'},
+  {ext:'.7Z',cat:'archive',desc:'פורמט ארכיון פתוח של 7-Zip עם יחס דחיסה גבוה. תומך בהצפנת AES-256. ממולץ לגיבויים גדולים.'},
+  {ext:'.TAR',cat:'archive',desc:'Tape Archive לאריזת קבצים ב-Unix ללא דחיסה. בדרך כלל משולב עם GZIP כ-.tar.gz. בסיס לחבילות ב-Linux.'},
+  {ext:'.GZ',cat:'archive',desc:'פורמט דחיסת GZIP פתוח ל-Unix/Linux. לרוב דוחס קבצי TAR. מבוסס על אלגוריתם DEFLATE.'},
+  {ext:'.BZ2',cat:'archive',desc:'פורמט bzip2 עם דחיסה טובה יותר מ-GZIP. נפוץ לחבילות Linux. איטי יותר מ-GZIP אך דוחס טוב יותר.'},
+  {ext:'.XZ',cat:'archive',desc:'פורמט LZMA2 עם יחס דחיסה גבוה. ברירת המחדל לחבילות בהפצות Linux רבות. מייצר קבצים קטנים.'},
+  {ext:'.ISO',cat:'archive',desc:'תמונת CD/DVD/Blu-ray עם גיבוי מלא של דיסק. משמש למערכות הפעלה. ניתן לעשות mount כדיסק וירטואלי ב-Windows 10+.'},
+  {ext:'.TORRENT',cat:'archive',desc:'מטא-נתונים BitTorrent לשיתוף P2P. מכיל שמות קבצים, גדלים ו-tracker URLs. qBittorrent ו-Transmission הם לקוחות פופולריים.'},
+  {ext:'.DEB',cat:'archive',desc:'Debian Package להתקנה ב-Debian ו-Ubuntu. מכיל קבצי הפצה ומטא-נתונים. apt ו-dpkg מנהלים חבילות DEB.'},
+  {ext:'.RPM',cat:'archive',desc:'Red Hat Package Manager ל-Fedora, CentOS ו-RHEL. מכיל קבצים בינאריים ומידע תלויות. yum ו-dnf מנהלים RPM.'},
+  {ext:'.CAB',cat:'archive',desc:'Cabinet - ארכיון ישן של מיקרוסופט. שמש בהתקנות Windows ו-Office. expand.exe ו-cabextract פותחים CAB.'},
+  {ext:'.SNAP',cat:'archive',desc:'חבילת Snap של Canonical ל-Ubuntu ולינוקס. כולל תלויות ומבודד מהמערכת. snapd מנהל חבילות Snap.'},
+  {ext:'.FLATPAK',cat:'archive',desc:'חבילה לינוקסית ניטראלית להפצה עם sandbox לאבטחה. Flathub הוא המאגר הנפוץ. מבטיח בידוד מהמערכת.'},
+  {ext:'.APPIMAGE',cat:'archive',desc:'פורמט הפצה לינוקסי ניידי הרץ ללא התקנה. מכיל הכל בקובץ אחד כולל תלויות. דומה ל-.app ב-macOS בגישה.'},
+  {ext:'.TAR.GZ',cat:'archive',desc:'תוצאת דחיסת TAR עם GZIP - הפורמט הנפוץ ביותר לחבילות תוכנה בלינוקס. משלב אריזה עם דחיסה לקובץ יחיד. נפוץ בהורדת קוד מקור.'},
+  {ext:'.TAR.BZ2',cat:'archive',desc:'TAR עם דחיסת bzip2 לגודל קובץ קטן יותר. נפוץ לחבילות קרנל לינוקס. איטי יותר ל-zip/unzip מ-.tar.gz.'},
+  {ext:'.WAR',cat:'archive',desc:'Web Application Archive - ארכיון Java לפרוס יישומי web. מכיל servlets, JSPs, HTML ו-web.xml. שרתי Tomcat ו-JBoss מריצים WAR.'},
+  {ext:'.JAR',cat:'archive',desc:'Java Archive - ארכיון קבצי class ומשאבים Java. מריצים עם "java -jar". ניתן להשתמש כספריה או כתוכנית עצמאית.'},
+
+  /* ══ אבטחה ══ */
+  {ext:'.PEM',cat:'security',desc:'Privacy Enhanced Mail - Base64 למפתחות ואישורים קריפטוגרפיים. נפוץ ל-SSL/TLS, SSH ו-HTTPS. Apache ו-Nginx משתמשים בו.'},
+  {ext:'.CRT',cat:'security',desc:'אישור דיגיטלי X.509 לאימות זהות שרתים. משמש ב-HTTPS, SSL/TLS ו-PKI. Certbot ו-OpenSSL יוצרים CRT.'},
+  {ext:'.GPG',cat:'security',desc:'GNU Privacy Guard - קובץ מוצפן או חתום. משמש להצפנת מיילים וקבצים. Kleopatra ו-GPG Suite הם ממשקים גרפיים.'},
+  {ext:'.KEY',cat:'security',desc:'מפתח פרטי קריפטוגרפי לאימות זהות והצפנה. נפוץ ב-SSH, SSL/TLS. יש לשמור בסודיות מוחלטת ולעולם לא לשתף.'},
+  {ext:'.CSR',cat:'security',desc:'Certificate Signing Request - בקשה לחתימת אישור SSL. נשלח ל-Certificate Authority. OpenSSL יוצר CSR.'},
+  {ext:'.P12',cat:'security',desc:'PKCS#12 - ארכיון מכיל אישור ומפתח פרטי מוגן בסיסמה. נפוץ לייבוא/ייצוא אישורים. משמש לאימות לקוח ב-TLS.'},
+  {ext:'.PCAP',cat:'security',desc:'Packet Capture - לכידת תעבורת רשת לניתוח. Wireshark ו-tcpdump יוצרים PCAP. מאפשר לנתח חבילות ולאתר איומי אבטחה.'},
+  {ext:'.JKS',cat:'security',desc:'Java KeyStore - מאגר מפתחות ואישורים לסביבת Java. מוצפן בסיסמה. keytool הוא הכלי לניהול JKS.'},
+  {ext:'.OVPN',cat:'security',desc:'תצורת OpenVPN לחיבור VPN. מכיל הגדרות, אישורים ומפתחות. OpenVPN ו-Tunnelblick משתמשים בקבצי .ovpn.'},
+  {ext:'.KEYSTORE',cat:'security',desc:'מאגר מפתחות Android לחתימה על אפליקציות. נדרש לפרסום ב-Google Play. Android Studio יוצר keystore.'},
+  {ext:'.VAULT',cat:'security',desc:'קובץ מוצפן Ansible Vault לאחסון מידע רגיש. מאפשר שמירת סיסמאות ו-API keys בקוד מקור. מוצפן ב-AES256.'},
+  {ext:'.CER',cat:'security',desc:'אישור X.509 בפורמט DER בינארי או PEM. משמש לאימות ב-TLS/SSL. Windows Certificate Manager מנהל CER.'},
+  {ext:'.P7B',cat:'security',desc:'PKCS#7 - שרשרת אישורים ב-Base64 ללא מפתח פרטי. Windows ו-Java נפוצים לשימוש בפורמט זה.'},
+  {ext:'.SHADOW',cat:'security',desc:'/etc/shadow ב-Linux עם hash של סיסמאות משתמשים. מוגן מקריאה חוץ מ-root. John the Ripper מנסה לפצח hash.'},
+  {ext:'.HTPASSWD',cat:'security',desc:'קובץ Apache לאחסון שמות משתמש וסיסמאות מוצפנות. מגן על תיקיות עם Basic Authentication. htpasswd utility מנהל אותם.'},
+  {ext:'.WIRE',cat:'security',desc:'תצורת WireGuard ל-VPN מודרני ומהיר. מבוסס על קריפטוגרפיה מודרנית ופשוטה. wg-quick מגדיר ממשקי WireGuard.'},
+  {ext:'.SSH',cat:'security',desc:'קובץ מפתח SSH פרטי או ציבורי. משמש לאימות ללא סיסמה לשרתים. ssh-keygen יוצר זוגות מפתחות RSA/Ed25519.'},
+  {ext:'.TOFU',cat:'security',desc:'Trust On First Use - קובץ לאחסון fingerprints של מפתחות ידועים. מנגנון אבטחה ב-SSH לזיהוי שינויים. מאחסן ב-~/.ssh/known_hosts.'},
+
+  /* ══ תלת-מימד ══ */
+  {ext:'.STL',cat:'3d',desc:'STereoLithography - הפורמט הנפוץ ביותר להדפסת תלת-מימד. מתאר משטחים עם משולשים. Cura, PrusaSlicer ו-Blender תומכים בו.'},
+  {ext:'.OBJ',cat:'3d',desc:'Wavefront OBJ - פורמט פתוח לגיאומטריה ומרקמים. תומך ב-UV mapping וחומרים. Blender, Maya ו-3ds Max מייבאים ומייצאים.'},
+  {ext:'.FBX',cat:'3d',desc:'Filmbox של Autodesk לנתוני אנימציה ומודלים. נפוץ ביותר לייצוא בין Unity, Unreal ו-Maya. תומך בשלדים ואנימציות.'},
+  {ext:'.STEP',cat:'3d',desc:'Standard Exchange of Product data - פורמט CAD בינלאומי ISO. להחלפת מודלים בין תוכנות CAD. SolidWorks, CATIA ו-Fusion 360 תומכים.'},
+  {ext:'.BLEND',cat:'3d',desc:'פורמט הפנימי של Blender עם מלוא נתוני הסצינה. מכיל מודלים, חומרים ואנימציות. ייחודי ל-Blender בלבד.'},
+  {ext:'.GLTF',cat:'3d',desc:'GL Transmission Format - פורמט JSON לתלת-מימד ב-WebGL. "JPEG של תלת-מימד" לאינטרנט ו-AR. Three.js ו-Babylon.js תומכים.'},
+  {ext:'.DXF',cat:'3d',desc:'Drawing Exchange Format של Autodesk לשרטוטי CAD. להחלפת שרטוטים בין AutoCAD ותוכנות אחרות. נפוץ בהנדסה ואדריכלות.'},
+  {ext:'.DAE',cat:'3d',desc:'COLLADA - XML פתוח להחלפת נכסים דיגיטליים. תומך באנימציה ופיזיקה. Blender, Maya ו-SketchUp תומכים.'},
+  {ext:'.PLY',cat:'3d',desc:'Polygon File Format לנקודות ענן ורשתות פוליגון. נפוץ בסריקה תלת-מימדית ובמחקר. MeshLab ו-CloudCompare עובדים עם PLY.'},
+  {ext:'.USDZ',cat:'3d',desc:'Universal Scene Description Zip של Apple ופיקסאר לAR. מאפשר הצגת תלת-מימד ב-AR על iPhone. Safari ו-Reality Composer תומכים.'},
+  {ext:'.3DS',cat:'3d',desc:'פורמט ישן של 3D Studio Max לפני FBX. תומך ב-meshes, חומרים ואנימציה בסיסית. עדיין נפוץ לנכסי משחקים ישנים.'},
+  {ext:'.C4D',cat:'3d',desc:'קובץ Cinema 4D של Maxon. נפוץ לאנימציות לטלוויזיה ולאפטר אפקטס. After Effects מתממשק ישירות עם Cinema 4D.'},
+  {ext:'.MAX',cat:'3d',desc:'קובץ פרויקט 3ds Max של Autodesk. מכיל מודלים, חומרים ואנימציות. ייחודי ל-3ds Max ואינו תואם ישירות לתוכנות אחרות.'},
+  {ext:'.IGES',cat:'3d',desc:'Initial Graphics Exchange Specification - פורמט CAD ישן להחלפת עיצובים. תומך בעקומות ומשטחים. עדיין נפוץ בתעשייה לאחר עשרות שנים.'},
+  {ext:'.SLDPRT',cat:'3d',desc:'SolidWorks Part - קובץ חלק תלת-מימדי של SolidWorks. מכיל גיאומטריה פרמטרית עם היסטוריית עריכה. STEP ו-IGES משמשים לייצוא.'},
+  {ext:'.F3D',cat:'3d',desc:'קובץ פרויקט Fusion 360 של Autodesk לעיצוב CAD/CAM. מבוסס ענן עם גרסאות ושיתוף. תומך בייצוא ל-STEP, STL ו-OBJ.'},
+
+  /* ══ נתונים ══ */
+  {ext:'.CSV',cat:'data',desc:'Comma-Separated Values - פורמט טבלאי פשוט. כל שורה רשומה, כל שדה מופרד בפסיק. Excel, Pandas ו-R קוראים CSV בקלות.'},
+  {ext:'.JSON',cat:'data',desc:'JavaScript Object Notation - נתונים קריאי-אדם לאחסון ושינוע. נפוץ ב-APIs וקבצי תצורה. ניתן לפענוח בכל שפת תכנות מודרנית.'},
+  {ext:'.XML',cat:'data',desc:'Extensible Markup Language - מסמכים גמישים לנתונים מובנים. משמש ל-SOAP APIs וקבצי תצורה. ניתן לניתוח בכל שפת תכנות.'},
+  {ext:'.YAML',cat:'data',desc:'פורמט תצורה קריא-אדם. נפוץ ב-Docker Compose, Kubernetes ו-GitHub Actions. קל יותר לקריאה מ-JSON ו-XML.'},
+  {ext:'.TOML',cat:'data',desc:'Tom\'s Obvious Minimal Language - תצורה פשוטה וקריאה. ברירת המחדל ב-Rust ו-Python. קל לעריכה ידנית.'},
+  {ext:'.HDF5',cat:'data',desc:'Hierarchical Data Format 5 - פורמט מדעי לנתונים גדולים. מאחסן מערכי נתונים רב-ממדיים. Python h5py ו-MATLAB תומכים.'},
+  {ext:'.MAT',cat:'data',desc:'קובץ נתוני MATLAB לאחסון מטריצות ומשתנים. ניתן לשמירה וטעינה מ-MATLAB. Python scipy.io קורא קבצי MAT.'},
+  {ext:'.PARQUET',cat:'data',desc:'פורמט אחסון עמודות פתוח לביג דאטה של Apache. דחיסה ויעילות מעולה. Apache Spark, Pandas ו-AWS Athena משתמשים בו.'},
+  {ext:'.IPYNB',cat:'data',desc:'Jupyter Notebook - קובץ JSON עם קוד, טקסט ופלטים. נפוץ מאוד במדע נתונים ו-AI. JupyterLab ו-Google Colab מריצים אותם.'},
+  {ext:'.PKL',cat:'data',desc:'Python Pickle לסידרת אובייקטי Python לדיסק. מאפשר שמירת מודלי ML לשימוש עתידי. Scikit-learn ו-PyTorch משתמשים.'},
+  {ext:'.GEOJSON',cat:'data',desc:'GeoJSON - JSON לנתונים גיאוגרפיים כמו נקודות וקווים. נפוץ ב-APIs ומפות. Leaflet ו-Mapbox תומכים.'},
+  {ext:'.FITS',cat:'data',desc:'Flexible Image Transport System - פורמט לנתוני אסטרונומיה. מאחסן תמונות ממצפות כוכבים. AstroPy ו-DS9 מעבדים FITS.'},
+  {ext:'.ARFF',cat:'data',desc:'Attribute-Relation File Format של Weka ללמידת מכונה. מכיל תיאור תכונות ונתוני אימון. משמש כבר עשרות שנים במחקר ML.'},
+  {ext:'.SHP',cat:'data',desc:'Shapefile GIS של Esri לנתוני גיאוגרפיה. מאחסן צורות גיאומטריות ונתונים. QGIS ו-ArcGIS לניתוח.'},
+  {ext:'.AVRO',cat:'data',desc:'פורמט סידרת נתונים Apache עם סכמה. נפוץ ב-Kafka ו-Hadoop. תומך בגרסוות סכמה לתאימות לאחור.'},
+  {ext:'.ORC',cat:'data',desc:'Optimized Row Columnar של Apache Hive לביג דאטה. דחיסה טובה וביצועי שאילתות מהירים. Apache Spark ו-Hive נפוצים.'},
+  {ext:'.PROTOBUF',cat:'data',desc:'Protocol Buffers - סידרת נתונים בינארי של גוגל. מהיר וקטן יותר מ-JSON. gRPC APIs משתמשים ב-protobuf.'},
+  {ext:'.ARROW',cat:'data',desc:'Apache Arrow - פורמט זיכרון עמודות לנתונים אנליטיים. מאפשר שיתוף יעיל בין תהליכים. Pandas 2.0 ו-Polars משתמשים פנימית.'},
+  {ext:'.DB',cat:'data',desc:'קובץ מסד נתונים SQLite - מסד נתונים מלא בקובץ אחד. נפוץ במכשירים ניידים ודפדפנים. Firefox, Chrome ו-WhatsApp משתמשים.'},
+  {ext:'.NETCDF',cat:'data',desc:'Network Common Data Form למדעי האטמוספרה. מאחסן נתוני מדידה עם ממדים גיאוגרפיים. NOAA ו-NASA משתמשים לנתוני מזג אוויר.'},
+
+  /* ══ גיימינג ══ */
+  {ext:'.ROM',cat:'gaming',desc:'Read-Only Memory - תמונת רום ממחשב ישן או קונסולת משחקים. משמש לאמולציה של משחקים קלאסיים. MAME ו-RetroArch הם אמולטורים.'},
+  {ext:'.SAV',cat:'gaming',desc:'קובץ שמירת משחק עם מצב התקדמות השחקן. כל משחק מגדיר פורמט ייחודי. ניתן לגיבוי ידני לשחזור מצב קודם.'},
+  {ext:'.WAD',cat:'gaming',desc:'Where\'s All the Data - ארכיון Doom ו-Quake לתוכן. מכיל מפות, טקסטורות וצלילים. Slade ו-Doom Builder הם עורכי WAD.'},
+  {ext:'.PAK',cat:'gaming',desc:'ארכיון למשחקי Quake ונגזרות לאחסון נכסים. דומה ל-ZIP ללא דחיסה לגישה מהירה. Half-Life ו-Source Engine משתמשים.'},
+  {ext:'.VPK',cat:'gaming',desc:'Valve Pack - ארכיון לנכסי משחקי Source. משמש ב-Steam Workshop. Counter-Strike ו-Team Fortress 2 משתמשים בו.'},
+  {ext:'.NDS',cat:'gaming',desc:'תמונת רום Nintendo DS. ניתן להרצה על DeSmuME ו-melonDS. מכיל קוד ARM9/ARM7 ונכסי משחק.'},
+  {ext:'.GBA',cat:'gaming',desc:'תמונת רום Game Boy Advance. ניתן להרצה ב-mGBA ו-VisualBoyAdvance. GBA היה קונסולת כף יד נפוצה בשנות ה-2000.'},
+  {ext:'.NSP',cat:'gaming',desc:'Nintendo Switch Package מ-eShop. דומה ל-XCI ללא נתוני קלטת. Yuzu ו-Atmosphere CFW מריצים NSP.'},
+  {ext:'.XCI',cat:'gaming',desc:'NX Card Image - תמונת קלטת Nintendo Switch. ניתן להרצה ב-Yuzu ו-Ryujinx. מכיל קוד ARM64 ונכסים.'},
+  {ext:'.PKG',cat:'gaming',desc:'Package של PlayStation 3, PS4 ו-PS5. מכיל משחקים, עדכונים ו-DLC. PKGi הוא כלי להתקנת PKG ב-PS3 CFW.'},
+  {ext:'.UNITY',cat:'gaming',desc:'קובץ סצינה של Unity Game Engine. מכיל אובייקטים, רכיבים ותצורה. Unity Editor שומר ומנהל קבצי .unity.'},
+  {ext:'.PREFAB',cat:'gaming',desc:'Unity Prefab - תבנית לאובייקט לשימוש חוזר. מאחסן GameObject עם כל הרכיבים. מאפשר שינויים גלובליים לכל המופעים.'},
+  {ext:'.UMAP',cat:'gaming',desc:'Unreal Engine Map - קובץ מפה ב-Unreal Engine. מכיל נכסים, הארה ולוגיקה. Unreal Editor שומר מפות כ-.umap.'},
+  {ext:'.GODOT',cat:'gaming',desc:'קובץ פרויקט Godot Game Engine. מגדיר הגדרות, plugins ותצורה. Godot הוא game engine קוד פתוח חינמי ופופולרי.'},
+  {ext:'.LUA',cat:'gaming',desc:'סקריפט Lua למשחקים - נפוץ מאוד ב-Roblox, WoW ו-Minecraft plugins. שפה קלה להטמעה בכל מנוע משחק. Corona SDK ו-Love2D משתמשים.'},
+  {ext:'.MDL',cat:'gaming',desc:'Model - פורמט מודל תלת-מימד של Source Engine ו-GoldSrc. מכיל גיאומטריה, אנימציות ו-LOD. Crowbar ו-HLMV הם כלי עריכה ל-MDL.'},
+  {ext:'.BSP',cat:'gaming',desc:'Binary Space Partitioning - פורמט מפה לקוואייק ו-Source Engine. מכיל גיאומטריה, ישויות ו-lightmaps. Hammer Editor בונה מפות BSP.'},
+
+  /* ══ מסמכים ══ */
+  {ext:'.PDF',cat:'doc',desc:'Portable Document Format של Adobe עם פריסה קבועה. תומך בטקסט, תמונות וטפסים. Adobe Reader ו-Foxit Reader פותחים PDF.'},
+  {ext:'.DOCX',cat:'doc',desc:'פורמט Word של מיקרוסופט מבוסס XML מאז Office 2007. LibreOffice ו-Google Docs פותחים ועורכים DOCX.'},
+  {ext:'.XLSX',cat:'doc',desc:'פורמט Excel של מיקרוסופט מבוסס XML. תומך בנוסחאות, גרפים ומאקרו. LibreOffice Calc ו-Google Sheets פותחים.'},
+  {ext:'.PPTX',cat:'doc',desc:'פורמט PowerPoint של מיקרוסופט מבוסס XML. כולל שקפים, אנימציות וטרנזישן. Google Slides ו-LibreOffice Impress תואמים.'},
+  {ext:'.ODT',cat:'doc',desc:'Open Document Text של OASIS. ברירת המחדל ב-LibreOffice Writer. פתוח לחלוטין לעריכה בכל תוכנה תואמת ODF.'},
+  {ext:'.RTF',cat:'doc',desc:'Rich Text Format של מיקרוסופט עם עיצוב בסיסי. תואם כמעט לכל עורך טקסט. פחות עשיר מ-DOCX אך תואם יותר.'},
+  {ext:'.MD',cat:'doc',desc:'Markdown - פורמט טקסט קל לתיעוד ו-README. תחביר פשוט לכותרות, קישורים ורשימות. GitHub ו-Notion מציגים Markdown יפה.'},
+  {ext:'.TXT',cat:'doc',desc:'קובץ טקסט פשוט ללא עיצוב. התואם ביותר - ניתן לפתוח בכל מחשב. Notepad ו-Vim הם עורכי טקסט נפוצים.'},
+  {ext:'.EPUB',cat:'doc',desc:'Electronic Publication - ספר אלקטרוני פתוח. מבוסס HTML ו-CSS בתוך ZIP. Calibre ו-Apple Books הם קוראים מובילים.'},
+  {ext:'.MOBI',cat:'doc',desc:'פורמט ספר אלקטרוני Amazon לקורא Kindle. תומך ב-DRM. Kindle ו-Calibre קוראים MOBI.'},
+  {ext:'.ICS',cat:'doc',desc:'iCalendar - פורמט לאירועי לוח שנה. מכיל תאריכים, כותרות ומידע. Google Calendar, Outlook ו-Apple Calendar תומכים.'},
+  {ext:'.VCARD',cat:'doc',desc:'vCard - כרטיס ביקור דיגיטלי. מכיל שם, טלפון וכתובת. Apple Contacts ו-Google Contacts מייצאים vCard.'},
+  {ext:'.NFO',cat:'doc',desc:'קובץ מידע טקסטואלי מקבוצות ה-Scene. לרוב עם ASCII art ייחודי. נלווה לארכיוני תוכנה ומדיה.'},
+  {ext:'.OPML',cat:'doc',desc:'Outline Processor Markup Language לפודקאסטים ו-RSS. מאפשר העברת מנויים בין אפליקציות. Pocket Casts ו-Overcast תומכים.'},
+  {ext:'.TEX',cat:'doc',desc:'LaTeX - מערכת הכנת מסמכים מדעיים ומתמטיים. מאפשר כתיבת נוסחאות מתמטיות מורכבות. Overleaf ו-TexStudio הם עורכים פופולריים.'},
+  {ext:'.RST',cat:'doc',desc:'reStructuredText - פורמט תיעוד Python. משמש לתיעוד Sphinx ו-Read the Docs. פופולרי בקהילת Python לתיעוד API.'},
+  {ext:'.ADOC',cat:'doc',desc:'AsciiDoc - פורמט תיעוד עשיר יותר מ-Markdown. תומך בטבלאות, כותרות ונספחים. Asciidoctor ו-AsciiDoc.py ממירים לHTML.'},
+
+  /* ══ גופנים ══ */
+  {ext:'.TTF',cat:'font',desc:'TrueType Font - פורמט גופן של Apple ו-Microsoft מ-1988. הנפוץ ביותר ב-Windows ו-macOS. מאחסן קווי מתאר בתצוגה חדה בכל גודל.'},
+  {ext:'.OTF',cat:'font',desc:'OpenType Font - גופן מתקדם של מיקרוסופט ו-Adobe. תומך בגופנים בינלאומיים ותכונות טיפוגרפיות. Google Fonts מפיץ OTF.'},
+  {ext:'.WOFF',cat:'font',desc:'Web Open Font Format - גופן דחוס לאינטרנט. מבוסס על TrueType/OpenType. @font-face ב-CSS מאפשר שימוש ב-WOFF.'},
+  {ext:'.WOFF2',cat:'font',desc:'Web Open Font Format 2 עם דחיסת Brotli. קובץ קטן ב-30% מ-WOFF. ברירת המחדל לגופני האינטרנט המודרניים.'},
+  {ext:'.EOT',cat:'font',desc:'Embedded OpenType - גופן ישן של מיקרוסופט ל-IE. כולל DRM. הוחלף לחלוטין על ידי WOFF ו-WOFF2.'},
+  {ext:'.PFB',cat:'font',desc:'PostScript Type 1 Font Binary - פורמט גופן ישן של Adobe. היה נפוץ בדפוס מקצועי. כיום נדיר אך עדיין נתמך ב-Adobe Acrobat.'},
+  {ext:'.AFM',cat:'font',desc:'Adobe Font Metrics - קובץ מטריקות גופן PostScript Type 1. מכיל מידע על רוחב תווים ומרווחים. משמש בשרתי PostScript ו-LaTeX.'},
+
+  /* ══ רשת ══ */
+  {ext:'.PCAPNG',cat:'network',desc:'Packet Capture Next Generation - גרסה מתקדמת של PCAP. תומך בממשקים מרובים ובמטא-נתונים. Wireshark 2.0+ ו-tcpdump 4.9+ תומכים.'},
+  {ext:'.HOSTS',cat:'network',desc:'קובץ /etc/hosts הממפה שמות מארח ל-IP addresses. משמש ל-DNS מקומי ולחסימת אתרים. נמצא ב-C:\\Windows\\System32\\drivers\\etc ב-Windows.'},
+  {ext:'.HAR',cat:'network',desc:'HTTP Archive - קובץ JSON לתיעוד תעבורת HTTP. מיוצא מ-Chrome DevTools ו-Fiddler. משמש לאבחון בעיות ביצועים ב-web.'},
+  {ext:'.WSDL',cat:'network',desc:'Web Services Description Language - XML המתאר שירות SOAP. מגדיר פעולות, הודעות ומיקום שירות. SoapUI ו-Postman עובדים עם WSDL.'},
+  {ext:'.RAML',cat:'network',desc:'RESTful API Modeling Language - YAML למפרט APIs. מגדיר endpoints, פרמטרים ותגובות. MuleSoft Anypoint ו-API Workbench תומכים.'},
+  {ext:'.SWAGGER',cat:'network',desc:'קובץ מפרט OpenAPI (לשעבר Swagger) ב-JSON/YAML. מתאר REST APIs לתיעוד ובדיקה. Swagger UI מייצר תיעוד אינטראקטיבי.'},
+  {ext:'.NGINX',cat:'network',desc:'קובץ תצורת Nginx - שרת Web ו-Reverse Proxy. מגדיר server blocks, locations ו-upstreams. נפוץ מאוד לפריסת אפליקציות web.'},
+  {ext:'.HTACCESS',cat:'network',desc:'קובץ תצורת Apache ברמת תיקייה. מאפשר הגדרות URL rewriting, אבטחה ומטמון. נפוץ ב-WordPress ו-PHP frameworks.'},
+
+  /* ══ בינה מלאכותית ══ */
+  {ext:'.H5',cat:'ai',desc:'קובץ מודל Keras/TensorFlow בפורמט HDF5. מאחסן ארכיטקטורה ומשקלות מודל. model.save() ו-load_model() ב-Keras משתמשים בו.'},
+  {ext:'.PT',cat:'ai',desc:'קובץ מודל PyTorch. מאחסן state dict של מודל. torch.save() ו-torch.load() מנהלים קבצי .pt לשמירה וטעינה.'},
+  {ext:'.CKPT',cat:'ai',desc:'Checkpoint - נקודת שמירה של מודל TensorFlow. מאפשר המשך אימון ממצב שמור. TensorFlow ו-Keras יוצרים checkpoints אוטומטית.'},
+  {ext:'.ONNX',cat:'ai',desc:'Open Neural Network Exchange - פורמט פתוח למודלי ML. מאפשר העברת מודלים בין PyTorch, TensorFlow ו-scikit-learn. ONNX Runtime מריץ.'},
+  {ext:'.SAFETENSORS',cat:'ai',desc:'פורמט בטוח ומהיר לאחסון tensors של Hugging Face. מהיר יותר מ-.pkl ובטוח מ-pickle. Stable Diffusion ו-LLMs מובילים משתמשים.'},
+  {ext:'.GGUF',cat:'ai',desc:'GGML Unified Format - פורמט חדש לאחסון LLMs לרצייה מקומית. מחליף GGML. llama.cpp ו-Ollama משתמשים ב-GGUF להרצת LLaMA ועוד.'},
+  {ext:'.BIN',cat:'ai',desc:'קובץ בינארי לאחסון משקלות מודל Hugging Face. בדרך כלל מלווה ב-config.json. Transformers library טוענת .bin ב-from_pretrained().'},
+  {ext:'.LORA',cat:'ai',desc:'Low-Rank Adaptation - קובץ fine-tuning קטן לדגמי שפה גדולים. מאפשר התאמה אישית של LLM בלי לאמן מחדש. A1111 ו-ComfyUI תומכים.'},
+
+  /* ══ בסיסי נתונים ══ */
+  {ext:'.MDB',cat:'db',desc:'Microsoft Access Database - מסד נתונים ישן של Access. מכיל טבלאות, שאילתות וטפסים. MDB Viewer Plus ו-LibreOffice Base פותחים.'},
+  {ext:'.ACCDB',cat:'db',desc:'Access Database - פורמט מסד הנתונים החדש של Microsoft Access. מחליף MDB מאז Access 2007. תומך בנתונים מורכבים ו-SharePoint.'},
+  {ext:'.SQLITE',cat:'db',desc:'SQLite Database - מסד נתונים רלציונלי בקובץ אחד. הנפוץ ביותר בעולם. Firefox, Chrome ומיליארדי אפליקציות ניידות משתמשים.'},
+  {ext:'.BAK',cat:'db',desc:'קובץ גיבוי מסד נתונים SQL Server. מכיל snapshot מלא של מסד נתונים. SSMS ו-Azure Data Studio מנהלים קבצי BAK.'},
+  {ext:'.MYD',cat:'db',desc:'MySQL Data - קובץ נתוני טבלת MyISAM של MySQL. מכיל שורות הנתונים עצמן. .MYI הוא קובץ האינדקס המקביל.'},
+  {ext:'.FDB',cat:'db',desc:'Firebird Database - קובץ מסד נתונים של Firebird RDBMS. מסד נתונים קוד פתוח בשימוש נרחב. FlameRobin ו-IBExpert הם כלי ניהול.'},
+  {ext:'.NSF',cat:'db',desc:'Notes Storage Facility - קובץ מסד נתונים IBM Lotus Notes. מאחסן מיילים, לוחות שנה ומסמכים. מיועד לסביבות ארגוניות עם Lotus Domino.'},
+  {ext:'.DMP',cat:'db',desc:'Database Dump - ייצוא מלא של מסד נתונים Oracle/MySQL. משמש לגיבוי ומיגרציה. exp/expdp ב-Oracle ו-mysqldump ב-MySQL יוצרים DMP.'},
+];
+
+const catMeta={
+  image:{label:'תמונות',cls:'cat-image'},
+  video:{label:'וידאו',cls:'cat-video'},
+  audio:{label:'אודיו',cls:'cat-audio'},
+  code:{label:'קוד',cls:'cat-code'},
+  system:{label:'מערכת',cls:'cat-system'},
+  archive:{label:'ארכיון',cls:'cat-archive'},
+  security:{label:'אבטחה',cls:'cat-security'},
+  '3d':{label:'תלת-מימד',cls:'cat-3d'},
+  data:{label:'נתונים',cls:'cat-data'},
+  gaming:{label:'גיימינג',cls:'cat-gaming'},
+  doc:{label:'מסמך',cls:'cat-doc'},
+  font:{label:'גופן',cls:'cat-font'},
+  network:{label:'רשת',cls:'cat-network'},
+  ai:{label:'בינה מלאכותית',cls:'cat-ai'},
+  db:{label:'בסיסי נתונים',cls:'cat-db'},
+};
+
+document.getElementById('total').textContent = data.length;
+document.getElementById('footer').textContent = `// FILE EXTENSION ENCYCLOPEDIA // ${data.length} סיומות מתועדות //`;
+
+const filtersEl=document.getElementById('filters');
+let activeFilter='all';
+
+Object.entries(catMeta).forEach(([key,meta])=>{
+  const btn=document.createElement('button');
+  btn.className='fb';btn.dataset.cat=key;btn.textContent=meta.label;
+  btn.addEventListener('click',()=>{
+    activeFilter=key;
+    document.querySelectorAll('.fb').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');render();
+  });
+  filtersEl.appendChild(btn);
+});
+
+document.querySelector('.fb[data-cat="all"]').addEventListener('click',()=>{
+  activeFilter='all';
+  document.querySelectorAll('.fb').forEach(b=>b.classList.remove('active'));
+  document.querySelector('.fb[data-cat="all"]').classList.add('active');
+  render();
+});
+
+document.getElementById('search').addEventListener('input',render);
+
+function render(){
+  const q=document.getElementById('search').value.toLowerCase();
+  const grid=document.getElementById('grid');
+  const countEl=document.getElementById('count');
+  const filtered=data.filter(item=>{
+    const mc=activeFilter==='all'||item.cat===activeFilter;
+    const mq=!q||item.ext.toLowerCase().includes(q)||item.desc.toLowerCase().includes(q)||(catMeta[item.cat]?.label||'').includes(q);
+    return mc&&mq;
+  });
+  countEl.textContent=filtered.length;
+  if(!filtered.length){grid.innerHTML='<div class="nr">לא נמצאו סיומות התואמות לחיפוש שלך</div>';return;}
+  grid.innerHTML=filtered.map((item,i)=>{
+    const m=catMeta[item.cat]||{label:item.cat,cls:'cat-code'};
+    return`<div class="card" style="animation-delay:${(i%40)*.025}s">
+      <div class="ch">
+        <div class="en">${item.ext}</div>
+        <div class="ca">
+          <span class="ct ${m.cls}">${m.label}</span>
+          <button class="cb" onclick="cp(this,'${item.ext}')">העתק</button>
+        </div>
+      </div>
+      <div class="cd">${item.desc}</div>
+    </div>`;
+  }).join('');
+}
+
+function cp(btn,ext){
+  navigator.clipboard.writeText(ext).then(()=>{
+    btn.textContent='✓ הועתק';btn.classList.add('copied');
+    setTimeout(()=>{btn.textContent='העתק';btn.classList.remove('copied');},1500);
+  });
+}
+
+render();
+</script>
+<a class="pwa-home" href="index.html" aria-label="חזרה לתפריט">🏠</a>
+<script>
+if(navigator.standalone)document.documentElement.classList.add('standalone');
+if('serviceWorker' in navigator&&location.protocol!=='file:'){addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){});});}
+</script>
+</body>
+</html>

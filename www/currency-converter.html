@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ממיר מטבעות</title>
+<style>
+:root{--bg:#eef2ef;--card:#fff;--ink:#12302b;--mute:#5d7570;--line:#d5e0db;--accent:#0f6b5c;--accent-ink:#fff;--soft:#e3efea}
+@media (prefers-color-scheme:dark){:root{--bg:#0d1a18;--card:#142623;--ink:#e6f1ed;--mute:#8fa8a2;--line:#27413c;--accent:#4cc9ae;--accent-ink:#06201b;--soft:#1b332f}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Heebo","Assistant",system-ui,Arial,sans-serif;line-height:1.5;padding:24px 16px 48px}
+main{max-width:640px;margin:0 auto}
+h1{font-size:1.6rem;margin:8px 0 20px;font-weight:800}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+label{display:block;font-size:.85rem;color:var(--mute);margin-bottom:6px}
+input,select{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:11px 12px}
+input:focus-visible,select:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:1px}
+.amount{margin-bottom:16px}
+.amount input{font-size:1.4rem;font-weight:700}
+.pair{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:end}
+.swap{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--soft);color:var(--ink);font-size:1.2rem;cursor:pointer}
+.swap:hover{background:var(--accent);color:var(--accent-ink)}
+.result{margin-top:22px;padding-top:20px;border-top:1px solid var(--line)}
+.result .from{color:var(--mute);font-size:.95rem}
+.result .to{font-size:clamp(2rem,9vw,3.2rem);font-weight:800;color:var(--accent);line-height:1.15;word-break:break-all}
+.result .rate{color:var(--mute);font-size:.9rem;margin-top:6px}
+.status{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:14px;font-size:.82rem;color:var(--mute)}
+.status button{font:inherit;font-size:.82rem;color:var(--accent);background:none;border:1px solid var(--line);border-radius:6px;padding:4px 10px;cursor:pointer}
+.err{color:#c0392b}
+h2{font-size:1.05rem;margin:28px 0 10px}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+td{padding:10px 14px;border-bottom:1px solid var(--line);font-size:.95rem}
+tr:last-child td{border-bottom:0}
+td:last-child{text-align:left;font-weight:700;font-variant-numeric:tabular-nums}
+tr{cursor:pointer}tr:hover{background:var(--soft)}
+@media (max-width:460px){.pair{grid-template-columns:1fr;}.swap{justify-self:center;transform:rotate(90deg)}}
+</style>
+</head>
+<body>
+<main>
+  <h1>ממיר מטבעות</h1>
+  <section class="card">
+    <div class="amount">
+      <label for="amount">סכום</label>
+      <input id="amount" type="number" inputmode="decimal" min="0" step="any" value="100">
+    </div>
+    <div class="pair">
+      <div><label for="from">מ־</label><select id="from"></select></div>
+      <button class="swap" id="swap" aria-label="החלף כיוון">⇄</button>
+      <div><label for="to">ל־</label><select id="to"></select></div>
+    </div>
+    <div class="result" aria-live="polite">
+      <div class="from" id="fromText"></div>
+      <div class="to" id="toText">—</div>
+      <div class="rate" id="rateText"></div>
+    </div>
+    <div class="status">
+      <span id="updated">טוען שערים…</span>
+      <button id="refresh">רענן עכשיו</button>
+    </div>
+  </section>
+
+  <h2>שערים מול <span id="baseName">שקל</span></h2>
+  <table><tbody id="board"></tbody></table>
+</main>
+
+<script>
+const API = "https://open.er-api.com/v6/latest/USD"; // שערים לכל המטבעות, מתעדכן פעם ביום, ללא מפתח
+const REFRESH_MS = 10 * 60 * 1000;
+const POPULAR = ["USD","EUR","GBP","JPY","CHF","CAD","AUD","CNY","RUB","TRY","AED","EGP","JOD"];
+const names = new Intl.DisplayNames(["he"], {type: "currency"});
+let rates = null;
+const $ = id => document.getElementById(id);
+
+function cname(c){ try { return names.of(c) || c; } catch { return c; } }
+function fmt(n){
+  const d = n >= 100 ? 2 : n >= 1 ? 3 : 6;
+  return new Intl.NumberFormat("he-IL", {maximumFractionDigits: d}).format(n);
+}
+function convert(amount, from, to){ return amount / rates[from] * rates[to]; }
+
+function fillSelects(){
+  const codes = Object.keys(rates);
+  const rest = codes.filter(c => !POPULAR.includes(c) && c !== "ILS").sort((a,b)=>cname(a).localeCompare(cname(b),"he"));
+  const ordered = ["ILS", ...POPULAR.filter(c => c !== "ILS" && rates[c]), ...rest];
+  const html = ordered.map(c => `<option value="${c}">${c} – ${cname(c)}</option>`).join("");
+  const f = $("from").value || load("from") || "USD";
+  const t = $("to").value || load("to") || "ILS";
+  $("from").innerHTML = html; $("to").innerHTML = html;
+  $("from").value = rates[f] ? f : "USD";
+  $("to").value = rates[t] ? t : "ILS";
+}
+
+function render(){
+  if (!rates) return;
+  const a = parseFloat($("amount").value) || 0;
+  const f = $("from").value, t = $("to").value;
+  $("fromText").textContent = `${fmt(a)} ${cname(f)} =`;
+  $("toText").textContent = `${fmt(convert(a, f, t))} ${t}`;
+  $("rateText").textContent = `1 ${f} = ${fmt(convert(1, f, t))} ${t}`;
+  $("baseName").textContent = cname("ILS");
+  $("board").innerHTML = POPULAR.filter(c => c !== "ILS" && rates[c]).map(c =>
+    `<tr data-c="${c}"><td>1 ${c} · ${cname(c)}</td><td>${fmt(convert(1, c, "ILS"))} ₪</td></tr>`).join("");
+  save("from", f); save("to", t);
+}
+
+function save(k, v){ try { localStorage.setItem("fx_" + k, v); } catch {} }
+function load(k){ try { return localStorage.getItem("fx_" + k); } catch { return null; } }
+
+async function update(){
+  $("updated").classList.remove("err");
+  try {
+    const res = await fetch(API, {cache: "no-store"});
+    const data = await res.json();
+    if (data.result !== "success") throw new Error("bad response");
+    rates = data.rates;
+    fillSelects(); render();
+    const when = new Date(data.time_last_update_unix * 1000);
+    $("updated").textContent = `השערים עודכנו: ${when.toLocaleString("he-IL")} · ${Object.keys(rates).length} מטבעות`;
+  } catch (e) {
+    $("updated").classList.add("err");
+    $("updated").textContent = rates ? "הרענון נכשל, מוצגים השערים האחרונים" : "לא הצלחנו לטעון שערים. בדקו חיבור לאינטרנט ונסו שוב.";
+  }
+}
+
+["amount","from","to"].forEach(id => $(id).addEventListener("input", render));
+$("swap").onclick = () => { const f = $("from").value; $("from").value = $("to").value; $("to").value = f; render(); };
+$("refresh").onclick = update;
+$("board").onclick = e => { const tr = e.target.closest("tr"); if (tr){ $("from").value = tr.dataset.c; $("to").value = "ILS"; render(); } };
+update();
+setInterval(update, REFRESH_MS);
+</script>
+</body>
+</html>

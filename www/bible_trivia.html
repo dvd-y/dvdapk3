@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0b5f7a">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="SDVD">
+<title>טריוויה תנ"ך</title>
+<style>
+@font-face{font-family:'Dvdai2';src:url(data:font/ttf;base64,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BgcGFRQWFxYzMjc+ATU0JzYzMhYXHgEUBgcGIhUUFhcWFRQjIicuATU0NzY1JyLJFBgZKAcEEhYUBREaFwuABS0cGhQVCwwXIz5YExoPBAwsfBgTAQYBuBMqJRoGExIFBBAOFBsoRgkMFhYcPhsVIAcMVwcLCQcCCKo1GS4oAgEAAQAxAJEBUQH7ACcAABMmNTQzMhcWFxYVFCMiNTQmJy4BIyIVFBcWFRQGBwYjIicmNz4BNTSIAwoLMUsoEwgKHw0QPxIGAQIcIx0MBgULCjQhAc8SChAgMlwrWykGHYQdIUArGxEmD0FCExAFCwMUQVRaAAAAABAAxgABAAAAAAABAAYAAAABAAAAAAACAAcABgABAAAAAAADACkADQABAAAAAAAEAA4ANgABAAAAAAAFAA8ARAABAAAAAAAGAA4AUwABAAAAAAAKABwAYQADAAEECQABAAwAfQADAAEECQACAA4AiQADAAEECQADAFIAlwADAAEECQAEABwA6QADAAEECQAFAB4BBQADAAEECQAGABwBIwADAAEECQAKADgBPwADAAEECQAQAAwAfQADAAEECQARAA4AiUR2ZGFpMlJlZ3VsYXJDYWxsaWdyYXBociA6IER2ZGFpMiBSZWd1bGFyIDogMTMtMTAtMjAyNkR2ZGFpMiBSZWd1bGFyVmVyc2lvbiAwMDEuMDAyRHZkYWkyLVJlZ3VsYXJDcmVhdGVkIHdpdGggQ2FsbGlncmFwaHIuY29tAEQAdgBkAGEAaQAyAFIAZQBnAHUAbABhAHIAQwBhAGwAbABpAGcAcgBhAHAAaAByACAAOgAgAEQAdgBkAGEAaQAyACAAUgBlAGcAdQBsAGEAcgAgADoAIAAxADMALQAxADAALQAyADAAMgA2AEQAdgBkAGEAaQAyACAAUgBlAGcAdQBsAGEAcgBWAGUAcgBzAGkAbwBuACAAMAAwADEALgAwADAAMgBEAHYAZABhAGkAMgAtAFIAZQBnAHUAbABhAHIAQwByAGUAYQB0AGUAZAAgAHcAaQB0AGgAIABDAGEAbABsAGkAZwByAGEAcABoAHIALgBjAG8AbQAAAAACAAAAAAAA/7UAMgAAAAAAAAAAAAAAAAAAAAAAAAAAADwAAAABAAIBAgADAAQABQAIAAkACgALAAwADgAPABAAEQASABMAFAAVABYAFwAYABkAGgAbABwAHQAeACAAIgAjAQMBBAEFAQYBBwEIAQkBCgELAQwBDQEOAQ8BEAERARIBEwEUARUBFgEXARgBGQEaARsBHAEdAR4CQ1IEbmJzcAlhZmlpNTc2NjQJYWZpaTU3NjY1CWFmaWk1NzY2NglhZmlpNTc2NjcJYWZpaTU3NjY4CWFmaWk1NzY2OQlhZmlpNTc2NzAJYWZpaTU3NjcxCWFmaWk1NzY3MglhZmlpNTc2NzMJYWZpaTU3Njc0CWFmaWk1NzY3NQlhZmlpNTc2NzYJYWZpaTU3Njc3CWFmaWk1NzY3OAlhZmlpNTc2NzkJYWZpaTU3NjgwCWFmaWk1NzY4MQlhZmlpNTc2ODIJYWZpaTU3NjgzCWFmaWk1NzY4NAlhZmlpNTc2ODUJYWZpaTU3Njg2CWFmaWk1NzY4NwlhZmlpNTc2ODgJYWZpaTU3Njg5CWFmaWk1NzY5MAABAAH//wAP) format('truetype');font-weight:100 900;font-style:normal;font-display:block;}
+@font-face{font-family:'DvdaiLatin';src:local('Arial'),local('ArialMT'),local('Helvetica Neue'),local('Helvetica'),local('Roboto'),local('Liberation Sans'),local('Segoe UI');size-adjust:60%;unicode-range:U+0041-005A;}
+@font-face{font-family:'DvdaiLatin';src:local('Arial'),local('ArialMT'),local('Helvetica Neue'),local('Helvetica'),local('Roboto'),local('Liberation Sans'),local('Segoe UI');size-adjust:70%;unicode-range:U+0061-007A;}
+
+  :root {
+    --matrix-green: #0b5f7a;
+    --matrix-dark: #b9cbdc;
+    --matrix-glow: rgba(0,152,184,0.28);
+    --bg: #eef3f8;
+    --surface: #ffffff;
+    --surface2: #f6f9fc;
+    --border: rgba(0,120,160,0.28);
+    --text: #000000;
+    --text-muted: #1c2530;
+    --user-bubble: #e3f3f8;
+    --ai-bubble: #ffffff;
+    --accent: #0b5f7a;
+    --correct: #0a6b34;
+    --wrong: #b3202a;
+    --input-bg: #ffffff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Heebo', sans-serif; background-color: var(--bg); background-image: linear-gradient(rgba(0,152,184,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,152,184,0.04) 1px,transparent 1px); background-size:48px 48px; color: var(--text); height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+  .app { position: relative; z-index: 1; display: flex; flex-direction: column; height: 100vh; }
+  .header { display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; background: rgba(255,255,255,0.94); border-bottom: 1px solid var(--border); backdrop-filter: blur(12px); flex-shrink: 0; }
+  .header-logo { display: flex; align-items: center; gap: 10px; }
+  .logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, #00b4d8, #1d4ed8); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: calc(18px * var(--fs-scale)); color:#fff; box-shadow: 0 2px 10px var(--matrix-glow); }
+  @keyframes pulse-glow { 0%,100% { box-shadow: 0 0 16px var(--matrix-glow); } 50% { box-shadow: 0 0 32px var(--matrix-green), 0 0 8px var(--matrix-green); } }
+  .logo-text { font-size: calc(18px * var(--fs-scale)); font-weight: 700; color: var(--matrix-green); text-shadow: 0 0 10px var(--matrix-glow); letter-spacing: 0.5px; }
+  .logo-sub { font-size: max(1rem, calc(11px * var(--fs-scale))); color: var(--text-muted); font-family: 'Share Tech Mono', monospace; }
+  .header-stats { display: flex; gap: 16px; align-items: center; }
+  .stat-badge { background: var(--surface2); border: 1px solid var(--border); border-radius: 20px; padding: 4px 12px; font-size: max(1rem, calc(12px * var(--fs-scale))); color: var(--text-muted); font-family: 'Share Tech Mono', monospace; }
+  .stat-badge span { color: var(--matrix-green); font-weight: 700; }
+  .category-bar { display: flex; gap: 8px; padding: 10px 16px; background: rgba(255,255,255,0.94); border-bottom: 1px solid var(--border); overflow-x: auto; flex-shrink: 0; scrollbar-width: thin; scrollbar-color: var(--matrix-dark) transparent; }
+  .cat-btn { flex-shrink: 0; padding: 6px 14px; border-radius: 20px; border: 1px solid var(--border); background: transparent; color: var(--text-muted); font-family: 'Heebo', sans-serif; font-size: max(1rem, calc(13px * var(--fs-scale))); cursor: pointer; transition: all 0.2s; white-space: nowrap; }
+  .cat-btn:hover { border-color: var(--matrix-green); color: var(--matrix-green); background: rgba(0,152,184,0.05); }
+  .cat-btn.active { border-color: var(--matrix-green); background: rgba(0,152,184,0.12); color: var(--matrix-green); box-shadow: 0 0 8px var(--matrix-glow); }
+  .chat-area { flex: 1; overflow-y: auto; padding: 20px 16px; scroll-behavior: smooth; scrollbar-width: thin; scrollbar-color: var(--matrix-dark) transparent; }
+  .chat-area::-webkit-scrollbar { width: 4px; }
+  .chat-area::-webkit-scrollbar-thumb { background: var(--matrix-dark); border-radius: 4px; }
+  .msg-row { display: flex; margin-bottom: 16px; animation: fadeUp 0.4s ease; max-width: 780px; margin-left: auto; margin-right: auto; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+  .msg-row.user { justify-content: flex-end; }
+  .msg-row.ai { justify-content: flex-start; }
+  .avatar { width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: calc(16px * var(--fs-scale)); margin-left: 10px; }
+  .avatar.ai-avatar { background: linear-gradient(135deg, #d9f1f7, #b6e0ec); border: 1px solid var(--matrix-green); }
+  .avatar.user-avatar { background: #e7eef7; border: 1px solid #b9cbdc; order: 1; margin-left: 0; margin-right: 10px; }
+  .bubble { max-width: 75%; padding: 14px 18px; border-radius: 18px; font-size: max(1rem, calc(15px * var(--fs-scale))); line-height: 1.6; }
+  .bubble.ai-bubble { background: var(--ai-bubble); border: 1px solid var(--border); border-top-right-radius: 4px; color: var(--text); }
+  .bubble.user-bubble { background: var(--user-bubble); border: 1px solid rgba(0,152,184,0.3); border-top-left-radius: 4px; color: var(--matrix-green); }
+  .question-card { background: var(--surface2); border: 1px solid var(--border); border-radius: 16px; padding: 20px; margin-top: 10px; }
+  .q-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+  .q-num { font-family: 'Share Tech Mono', monospace; font-size: max(1rem, calc(12px * var(--fs-scale))); color: var(--text-muted); }
+  .q-category { font-size: max(1rem, calc(11px * var(--fs-scale))); background: rgba(0,152,184,0.1); border: 1px solid rgba(0,152,184,0.3); color: var(--matrix-green); padding: 2px 10px; border-radius: 10px; }
+  .q-text { font-size: calc(16px * var(--fs-scale)); font-weight: 500; color: var(--text); margin-bottom: 18px; line-height: 1.7; }
+  .options-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .opt-btn { padding: 12px 16px; border-radius: 12px; border: 1px solid var(--border); background: rgba(0,40,70,0.03); color: var(--text); font-family: 'Heebo', sans-serif; font-size: max(1rem, calc(14px * var(--fs-scale))); cursor: pointer; text-align: right; transition: all 0.2s; line-height: 1.4; }
+  .opt-btn:hover:not(:disabled) { border-color: var(--matrix-green); background: rgba(0,152,184,0.07); color: var(--matrix-green); transform: translateY(-1px); }
+  .opt-btn.correct { border-color: var(--correct); background: rgba(10,122,59,0.12); color: var(--correct); animation: correctFlash 0.5s ease; }
+  .opt-btn.wrong { border-color: var(--wrong); background: rgba(192,38,45,0.1); color: var(--wrong); }
+  @keyframes correctFlash { 0% { transform: scale(1); } 50% { transform: scale(1.03); } 100% { transform: scale(1); } }
+  .result-msg { margin-top: 12px; padding: 12px 16px; border-radius: 12px; font-size: max(1rem, calc(14px * var(--fs-scale))); line-height: 1.6; }
+  .result-msg.correct-r { background: rgba(10,122,59,0.08); border: 1px solid rgba(10,122,59,0.3); color: var(--correct); }
+  .result-msg.wrong-r { background: rgba(192,38,45,0.08); border: 1px solid rgba(192,38,45,0.3); color: #b3202a; }
+  .input-area { background: rgba(255,255,255,0.94); border-top: 1px solid var(--border); padding: 12px 16px 16px; flex-shrink: 0; backdrop-filter: blur(12px); }
+  .input-inner { max-width: 780px; margin: 0 auto; display: flex; align-items: center; gap: 10px; background: var(--input-bg); border: 1px solid var(--border); border-radius: 26px; padding: 8px 8px 8px 16px; transition: border-color 0.2s; }
+  .input-inner:focus-within { border-color: rgba(0,152,184,0.4); box-shadow: 0 0 12px rgba(0,152,184,0.08); }
+  .chat-input { flex: 1; background: transparent; border: none; outline: none; color: var(--text); font-family: 'Heebo', sans-serif; font-size: max(1rem, calc(15px * var(--fs-scale))); direction: rtl; }
+  .chat-input::placeholder { color: #3a4654; }
+  .send-btn { width: 38px; height: 38px; border-radius: 50%; border: none; background: var(--matrix-green); color: #fff; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all 0.2s; font-size: calc(16px * var(--fs-scale)); }
+  .send-btn:hover { background: #08485d; box-shadow: 0 0 12px var(--matrix-glow); transform: scale(1.05); }
+  .next-btn { margin-top: 14px; padding: 10px 24px; border-radius: 22px; border: 1px solid var(--matrix-green); background: rgba(0,152,184,0.08); color: var(--matrix-green); font-family: 'Heebo', sans-serif; font-size: max(1rem, calc(14px * var(--fs-scale))); font-weight: 500; cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; gap: 6px; }
+  .next-btn:hover { background: rgba(0,152,184,0.18); box-shadow: 0 0 12px var(--matrix-glow); }
+  .score-card { background: var(--surface2); border: 1px solid var(--matrix-green); border-radius: 20px; padding: 28px; text-align: center; box-shadow: 0 0 30px rgba(0,152,184,0.12); }
+  .score-title { font-size: calc(22px * var(--fs-scale)); font-weight: 700; color: var(--matrix-green); margin-bottom: 8px; text-shadow: 0 0 10px var(--matrix-glow); }
+  .score-num { font-family: 'Share Tech Mono', monospace; font-size: calc(52px * var(--fs-lg)); color: var(--matrix-green); line-height: 1; margin: 12px 0; text-shadow: 0 0 20px var(--matrix-glow); }
+  .score-sub { font-size: max(1rem, calc(14px * var(--fs-scale))); color: var(--text-muted); margin-bottom: 20px; }
+  .restart-btn { padding: 12px 28px; border-radius: 24px; border: none; background: var(--matrix-green); color: #fff; font-family: 'Heebo', sans-serif; font-size: max(1rem, calc(15px * var(--fs-scale))); font-weight: 700; cursor: pointer; transition: all 0.2s; }
+  .restart-btn:hover { background: #08485d; box-shadow: 0 0 20px var(--matrix-glow); }
+  .typing { display: flex; gap: 5px; align-items: center; padding: 14px 18px; }
+  .typing span { width: 7px; height: 7px; border-radius: 50%; background: var(--matrix-green); animation: typing-dot 1.2s ease-in-out infinite; opacity: 0.4; }
+  .typing span:nth-child(2) { animation-delay: 0.2s; }
+  .typing span:nth-child(3) { animation-delay: 0.4s; }
+  @keyframes typing-dot { 0%,100% { transform: translateY(0); opacity: 0.4; } 50% { transform: translateY(-4px); opacity: 1; } }
+  .footer { text-align: center; font-size: max(1rem, calc(11px * var(--fs-scale))); color: #3a4654; padding: 6px 0 10px; font-family: 'Share Tech Mono', monospace; flex-shrink: 0; background: rgba(255,255,255,0.94); }
+  @media (max-width: 600px) { .options-grid { grid-template-columns: 1fr; } .bubble { max-width: 90%; } .stat-badge { display: none; } }
+
+/* ===== גופן, גודל, קריאות ורספונסיביות ===== */
+:root{--fs-scale:1.7;--fs-lg:calc(1 + (var(--fs-scale) - 1) * 0.5);}
+*,*::before,*::after,input,button,textarea,select,option{font-family:'Dvdai2','DvdaiLatin','Arial Hebrew',Arial,sans-serif !important;}
+*,*::before,*::after,input::placeholder{-webkit-text-stroke:0.45px;text-shadow:none !important;}
+.__none{-webkit-text-stroke:0;}
+html{-webkit-text-size-adjust:100%%;}
+.scrollx,.chat-area,.fridge-area,.modal-overlay,.categories,.category-bar{-webkit-overflow-scrolling:touch;}
+@media(max-width:1100px){:root{--fs-scale:1.55;}}
+@media(max-width:640px){:root{--fs-scale:1.4;}*{letter-spacing:.5px !important;}}
+@media(prefers-reduced-motion:reduce){*{animation:none !important;}}
+
+@supports(height:100dvh){body,.app{height:100dvh;}}
+.chat-input::placeholder{color:#3a4654;opacity:1;}
+.header{padding-top:max(12px,env(safe-area-inset-top));}
+.input-area{padding-bottom:max(16px,env(safe-area-inset-bottom));}
+.footer{padding-bottom:max(10px,env(safe-area-inset-bottom));}
+.category-bar{scrollbar-width:thin;}
+.bubble{overflow-wrap:anywhere;}
+@media(min-width:1101px){.msg-row,.input-inner{max-width:900px;}}
+@media(max-width:900px){.options-grid{grid-template-columns:1fr;}.bubble{max-width:88%;}}
+@media(max-width:640px){
+  .header{padding:10px 12px;}
+  .logo-sub{display:none;}
+  .stat-badge{display:block;padding:3px 9px;}
+  .category-bar{padding:8px 10px;}
+  .chat-area{padding:14px 10px;}
+  .bubble{max-width:94%;padding:11px 13px;}
+  .question-card{padding:14px;}
+  .input-area{padding:8px 10px max(12px,env(safe-area-inset-bottom));}
+  .score-card{padding:20px 14px;}
+  .footer{display:none;}
+}
+@media(max-width:380px){.stat-badge{display:none;}}
+@media(max-height:520px) and (orientation:landscape){.footer{display:none;}}
+
+
+/* ===== PWA: כפתור חזרה לתפריט (רק כשהאתר מותקן כאפליקציה) ===== */
+.pwa-home{display:none;position:fixed;left:0;top:50%;transform:translateY(-50%);z-index:9000;width:calc(30px + env(safe-area-inset-left));height:64px;padding-left:env(safe-area-inset-left);border-radius:0 16px 16px 0;background:rgba(11,95,122,.88);color:#fff;font-size:18px;align-items:center;justify-content:center;text-decoration:none;box-shadow:2px 2px 12px rgba(0,0,0,.2);-webkit-text-stroke:0 !important;}
+@media (display-mode:standalone){.pwa-home{display:flex;}}
+html.standalone .pwa-home{display:flex;}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="header">
+    <div class="header-logo">
+      <div class="logo-icon">✡</div>
+      <div>
+        <div class="logo-text">טריוויה תנ"ך</div>
+        <div class="logo-sub">BIBLE // TRIVIA // AI</div>
+      </div>
+    </div>
+    <div class="header-stats">
+      <div class="stat-badge">שאלה <span id="q-counter">0</span>/100</div>
+      <div class="stat-badge">ניקוד <span id="score-display">0</span></div>
+    </div>
+  </div>
+  <div class="category-bar">
+    <button class="cat-btn active" onclick="selectCategory('all',this)">🕍 הכל</button>
+    <button class="cat-btn" onclick="selectCategory('torah',this)">📜 תורה</button>
+    <button class="cat-btn" onclick="selectCategory('neviim',this)">🔥 נביאים</button>
+    <button class="cat-btn" onclick="selectCategory('ketuvim',this)">📖 כתובים</button>
+    <button class="cat-btn" onclick="selectCategory('pesach',this)">🍷 פסח</button>
+    <button class="cat-btn" onclick="selectCategory('shavuot',this)">🌾 שבועות</button>
+    <button class="cat-btn" onclick="selectCategory('sukkot',this)">🌿 סוכות</button>
+    <button class="cat-btn" onclick="selectCategory('rosh_hashana',this)">🍎 ראש השנה</button>
+    <button class="cat-btn" onclick="selectCategory('yom_kipur',this)">🕊️ יום כיפור</button>
+    <button class="cat-btn" onclick="selectCategory('purim',this)">🎭 פורים</button>
+    <button class="cat-btn" onclick="selectCategory('chanuka',this)">🕎 חנוכה</button>
+  </div>
+  <div class="chat-area" id="chat-area"></div>
+  <div class="input-area">
+    <div class="input-inner">
+      <input class="chat-input" id="chat-input" type="text" placeholder="הקלד 'התחל' לשאלה חדשה..." onkeydown="handleKey(event)">
+      <button class="send-btn" onclick="sendMessage()">&#10148;</button>
+    </div>
+  </div>
+  <div class="footer">&#169; כל הזכויות שמורות לדוד יקותיאלי המתכנת הגאון בע"מ</div>
+</div>
+
+<script>
+
+// QUESTIONS
+const allQuestions = [
+  // Torah - Bereshit
+  {q:"כמה ימים לקח הקב\"ה לברוא את העולם?",opts:["5 ימים","6 ימים","7 ימים","8 ימים"],ans:1,cat:"torah",ref:"בראשית א"},
+  {q:"מה היה שם האשה הראשונה שנבראה?",opts:["לאה","רחל","חוה","שרה"],ans:2,cat:"torah",ref:"בראשית ב"},
+  {q:"מה אכלו אדם וחוה שגרם לגירושם מגן עדן?",opts:["ענב","תאנה","פרי עץ הדעת","תפוח"],ans:2,cat:"torah",ref:"בראשית ג"},
+  {q:"מי הרג את הבל?",opts:["שת","קין","נח","אדם"],ans:1,cat:"torah",ref:"בראשית ד"},
+  {q:"כמה שנים חי מתושלח?",opts:["900","950","969","999"],ans:2,cat:"torah",ref:"בראשית ה"},
+  {q:"כמה זמן ירד הגשם בימי נח?",opts:["20 יום ולילה","40 יום ולילה","60 יום ולילה","7 ימים"],ans:1,cat:"torah",ref:"בראשית ז"},
+  {q:"איזה ציפור שלח נח ראשונה מן התיבה?",opts:["יונה","עורב","ציפור","נץ"],ans:1,cat:"torah",ref:"בראשית ח"},
+  {q:"מה שם העיר שבנו אנשים מגדל לשמים?",opts:["בבל","מצרים","אור כשדים","ירושלים"],ans:0,cat:"torah",ref:"בראשית יא"},
+  {q:"לאן ה' ציווה על אברהם ללכת?",opts:["מצרים","ירושלים","ארץ כנען","בבל"],ans:2,cat:"torah",ref:"בראשית יב"},
+  {q:"מי היה אחיינו של אברהם שנלכד בסדום?",opts:["ישמעאל","עשו","לוט","אליעזר"],ans:2,cat:"torah",ref:"בראשית יג"},
+  {q:"מה שם הבן שאברהם העלה לעקדה?",opts:["ישמעאל","יצחק","יעקב","עשו"],ans:1,cat:"torah",ref:"בראשית כב"},
+  {q:"כמה שנים עבד יעקב לבן עבור רחל?",opts:["5","7","10","14"],ans:1,cat:"torah",ref:"בראשית כט"},
+  {q:"מי מכר את יוסף לישמעאלים?",opts:["יהודה ואחיו","בנימין","שמעון","לוי"],ans:0,cat:"torah",ref:"בראשית לז"},
+  {q:"כמה חלומות חלם פרעה שיוסף פתר?",opts:["1","2","3","4"],ans:1,cat:"torah",ref:"בראשית מא"},
+  {q:"כמה שבטים היו לישראל?",opts:["10","11","12","13"],ans:2,cat:"torah",ref:"בראשית מט"},
+  // Torah - Shemot
+  {q:"מי דיבר אל משה מתוך הסנה הבוער?",opts:["אהרן","מלאך ה'","ה' עצמו","יתרו"],ans:2,cat:"torah",ref:"שמות ג"},
+  {q:"כמה מכות הביא ה' על מצרים?",opts:["7","9","10","12"],ans:2,cat:"torah",ref:"שמות ז-יב"},
+  {q:"מה הייתה המכה האחרונה במצרים?",opts:["חשך","ברד","מכת בכורות","ארבה"],ans:2,cat:"torah",ref:"שמות יב"},
+  {q:"מה שם הים שעברו בני ישראל ביציאת מצרים?",opts:["ים המלח","ים סוף","ים הכנרת","ים התיכון"],ans:1,cat:"torah",ref:"שמות יד"},
+  {q:"מה האוכל שירד לבני ישראל במדבר?",opts:["לחם","מן","עוגות","דגים"],ans:1,cat:"torah",ref:"שמות טז"},
+  {q:"כמה דיברות קיבל משה בהר סיני?",opts:["5","7","10","12"],ans:2,cat:"torah",ref:"שמות כ"},
+  {q:"מה עשה אהרן כשהעם ביקש ממנו אלוהים?",opts:["התפלל","עשה עגל זהב","שלח שליח","סירב"],ans:1,cat:"torah",ref:"שמות לב"},
+  // Torah - Bamidbar, Devarim
+  {q:"כמה שנים שוטטו בני ישראל במדבר?",opts:["20","30","40","50"],ans:2,cat:"torah",ref:"במדבר יד"},
+  {q:"מי דיבר עם חמורה שלו?",opts:["אברהם","משה","בלעם","שמשון"],ans:2,cat:"torah",ref:"במדבר כב"},
+  {q:"מי מת על הר נבו?",opts:["אהרן","יהושע","משה","כלב"],ans:2,cat:"torah",ref:"דברים לד"},
+  {q:"כמה מרגלים שלח משה לתור את הארץ?",opts:["7","10","12","14"],ans:2,cat:"torah",ref:"במדבר יג"},
+  // Neviim
+  {q:"מי הרג את גלית הפלשתי?",opts:["שמשון","שאול","דוד","יואב"],ans:2,cat:"neviim",ref:"שמואל א יז"},
+  {q:"כמה נשים היו לשלמה המלך?",opts:["300","500","700","1000"],ans:2,cat:"neviim",ref:"מלכים א יא"},
+  {q:"איזה נביא נבלע על ידי דג?",opts:["אליהו","ישעיה","יונה","עמוס"],ans:2,cat:"neviim",ref:"יונה ב"},
+  {q:"מי אמרה 'עד אשר המוות יפריד בינינו'?",opts:["לאה","רחל","רות","דינה"],ans:2,cat:"neviim",ref:"רות א"},
+  {q:"מי בנה את בית המקדש הראשון?",opts:["דוד","שלמה","אסא","חזקיהו"],ans:1,cat:"neviim",ref:"מלכים א ו"},
+  {q:"כמה שנים מלך דוד על ישראל?",opts:["30","40","50","20"],ans:1,cat:"neviim",ref:"שמואל ב ה"},
+  {q:"מי הרגה את סיסרא?",opts:["דבורה","יעל","ברק","עתניאל"],ans:1,cat:"neviim",ref:"שופטים ד"},
+  {q:"מה שם האבא של שמואל הנביא?",opts:["עלי","אלקנה","פנחס","שמשון"],ans:1,cat:"neviim",ref:"שמואל א א"},
+  {q:"מי היה המלך הראשון של ישראל?",opts:["דוד","שלמה","שאול","עלי"],ans:2,cat:"neviim",ref:"שמואל א י"},
+  {q:"לאן נשלח יונה?",opts:["בבל","שושן","ניניווה","ירושלים"],ans:2,cat:"neviim",ref:"יונה א"},
+  {q:"מה שם הנביאה ששפטה את ישראל?",opts:["חולדה","מרים","דבורה","חנה"],ans:2,cat:"neviim",ref:"שופטים ד"},
+  {q:"מי היה חזק ביותר בישראל ואיבד כוחו עם שערו?",opts:["שאול","גדעון","שמשון","יפתח"],ans:2,cat:"neviim",ref:"שופטים טז"},
+  {q:"מה שם הנהר שאליהו ואלישע חצו לפני עלייתו לשמים?",opts:["ירדן","כנרת","יבוק","ארנון"],ans:0,cat:"neviim",ref:"מלכים ב ב"},
+  // Ketuvim
+  {q:"כמה ספרי תהילים יש?",opts:["100","120","150","180"],ans:2,cat:"ketuvim",ref:"תהילים"},
+  {q:"מי כתב ספר משלי?",opts:["דוד","שלמה","קהלת","אסף"],ans:1,cat:"ketuvim",ref:"משלי א"},
+  {q:"מי אמר 'הַכֹּל הֶבֶל'?",opts:["שלמה/קהלת","דוד","ישעיה","ירמיה"],ans:0,cat:"ketuvim",ref:"קהלת א"},
+  {q:"כמה ספרים יש בתנ\"ך?",opts:["24","36","48","60"],ans:0,cat:"ketuvim",ref:"תנ\"ך"},
+  {q:"מי כתב את רוב ספר תהילים?",opts:["שלמה","אסף","דוד","קורח"],ans:2,cat:"ketuvim",ref:"תהילים"},
+  {q:"מה שמו של ספר שנקרא בשבועות?",opts:["איוב","רות","אסתר","קהלת"],ans:1,cat:"ketuvim",ref:"מגילת רות"},
+  // PESACH
+  {q:"כמה ימים אוכלים מצות בפסח?",opts:["5 ימים","7 ימים","10 ימים","8 ימים"],ans:1,cat:"pesach",ref:"שמות יב"},
+  {q:"כמה כוסות יין שותים בליל הסדר?",opts:["2","3","4","5"],ans:2,cat:"pesach",ref:"הגדה של פסח"},
+  {q:"מה הייתה המכה לפני מכת בכורות?",opts:["חשך","שחין","ברד","ארבה"],ans:0,cat:"pesach",ref:"שמות י"},
+  {q:"מה נצטווינו לעשות בדם הפסח?",opts:["לשתות","לשפוך","להניח על המשקוף","לזרוק"],ans:2,cat:"pesach",ref:"שמות יב"},
+  {q:"כמה זמן גרו בני ישראל במצרים?",opts:["200","210","430","500"],ans:2,cat:"pesach",ref:"שמות יב"},
+  {q:"מה שם הקרבן שמביאים בפסח?",opts:["עולה","שלמים","קרבן פסח","חטאת"],ans:2,cat:"pesach",ref:"שמות יב"},
+  {q:"מה אוכלים עם בשר הפסח לפי התורה?",opts:["לחם ויין","מצות ומרורים","בשר וחלב","ביצה"],ans:1,cat:"pesach",ref:"שמות יב"},
+  {q:"באיזה תאריך שוחטים את קרבן הפסח?",opts:["י' בניסן","יד' בניסן","טו' בניסן","כא' בניסן"],ans:1,cat:"pesach",ref:"שמות יב"},
+  {q:"מה שם הליל הראשון של פסח?",opts:["ליל שימורים","ליל הסדר","ליל הפסח","ליל כיפור"],ans:0,cat:"pesach",ref:"שמות יב"},
+  {q:"מה שמו של הפרק שאומרים בסוף הסדר?",opts:["הלל","קדיש","אשרי","לחסידה"],ans:0,cat:"pesach",ref:"הגדה של פסח"},
+  // SHAVUOT
+  {q:"מה חוגגים בשבועות?",opts:["קבלת התורה","יציאת מצרים","כניסה לארץ","בניין בית המקדש"],ans:0,cat:"shavuot",ref:"שמות יט"},
+  {q:"כמה ימים אחרי פסח חוגגים שבועות?",opts:["40","49","50","60"],ans:2,cat:"shavuot",ref:"ויקרא כג"},
+  {q:"כמה ימים היו בני ישראל בהר סיני לפני מתן תורה?",opts:["3","7","40","50"],ans:0,cat:"shavuot",ref:"שמות יט"},
+  {q:"מה שם הנביא שעמד לפני ה' בהר חורב 40 יום?",opts:["אהרן","יהושע","משה","אליהו"],ans:2,cat:"shavuot",ref:"שמות כד"},
+  {q:"מה מיוחד בשבועות לפי ספר ויקרא?",opts:["מועד הקציר","חג הביכורים","שניהם","חג הגפן"],ans:2,cat:"shavuot",ref:"ויקרא כג"},
+  // SUKKOT
+  {q:"כמה ימים חוגגים סוכות?",opts:["5","7","8","10"],ans:1,cat:"sukkot",ref:"ויקרא כג"},
+  {q:"מהם ארבעת המינים בסוכות?",opts:["לולב אתרוג הדס ערבה","לולב מרור אפיקומן חרוסת","לחם מלח מים שמן","שור שה כשב עז"],ans:0,cat:"sukkot",ref:"ויקרא כג"},
+  {q:"לכבוד מה יושבים בסוכה?",opts:["בניין המקדש","ארבעים שנה במדבר","כניסה לארץ","יציאת מצרים"],ans:1,cat:"sukkot",ref:"ויקרא כג"},
+  {q:"מה שם היום שאחרי שבעת ימי סוכות?",opts:["שמיני עצרת","ראש השנה","שמחת תורה","חנוכה"],ans:0,cat:"sukkot",ref:"ויקרא כג"},
+  {q:"כמה ימים ישנים בסוכה לפי המצווה?",opts:["1","3","7","14"],ans:2,cat:"sukkot",ref:"ויקרא כג"},
+  // ROSH HASHANA
+  {q:"באיזה כלי תוקעים בראש השנה?",opts:["חצוצרה","שופר","כינור","נבל"],ans:1,cat:"rosh_hashana",ref:"ויקרא כג"},
+  {q:"כמה תקיעות תוקעים בסדר מלא?",opts:["30","60","90","100"],ans:2,cat:"rosh_hashana",ref:"ראש השנה"},
+  {q:"מה אוכלים בסעודת ראש השנה כסימן טוב?",opts:["בשר ודגים","תפוח בדבש","מצה ומרור","לחם ומלח"],ans:1,cat:"rosh_hashana",ref:"מנהגי ראש השנה"},
+  {q:"ראש השנה הוא ב-?",opts:["א' תשרי","א' ניסן","א' אלול","טו' שבט"],ans:0,cat:"rosh_hashana",ref:"ויקרא כג"},
+  {q:"מה נקרא עשרת הימים בין ראש השנה ליום כיפור?",opts:["עשרת הדיברות","עשרת ימי תשובה","עשרת המכות","עשרת הניסים"],ans:1,cat:"rosh_hashana",ref:"ימי תשובה"},
+  // YOM KIPUR
+  {q:"יום כיפור הוא ב-?",opts:["א' תשרי","י' תשרי","טו' תשרי","כ' תשרי"],ans:1,cat:"yom_kipur",ref:"ויקרא טז"},
+  {q:"כמה שעות מתענים ביום כיפור?",opts:["12","18","25","24"],ans:2,cat:"yom_kipur",ref:"ויקרא טז"},
+  {q:"מה שם התפילה האחרונה של יום כיפור?",opts:["שחרית","מוסף","מנחה","נעילה"],ans:3,cat:"yom_kipur",ref:"סדר יום כיפור"},
+  {q:"מה עשה הכהן הגדול ביום כיפור?",opts:["התפלל בבית","נכנס לקודש הקדשים","שחט פרה אדומה","הקריב פסח"],ans:1,cat:"yom_kipur",ref:"ויקרא טז"},
+  {q:"כמה בגדים לבש הכהן הגדול ביום כיפור בשרת במקדש?",opts:["3","4","5","8"],ans:1,cat:"yom_kipur",ref:"ויקרא טז"},
+  // PURIM
+  {q:"מי כתב מגילת אסתר?",opts:["אסתר ומרדכי","שלמה","עזרא","אליהו"],ans:0,cat:"purim",ref:"אסתר ט"},
+  {q:"מי היה המן?",opts:["שר המלך אחשורוש","נביא","כהן גדול","מלך"],ans:0,cat:"purim",ref:"אסתר ג"},
+  {q:"על עץ כמה אמות נתלה המן?",opts:["20","30","50","60"],ans:2,cat:"purim",ref:"אסתר ז"},
+  {q:"כמה בנים היו למן?",opts:["5","7","10","12"],ans:2,cat:"purim",ref:"אסתר ט"},
+  {q:"מה שם מלך פרס בסיפור אסתר?",opts:["כורש","דריווש","אחשורוש","בלשאצר"],ans:2,cat:"purim",ref:"אסתר א"},
+  {q:"כמה ימים צמה אסתר לפני שנכנסה למלך?",opts:["1","2","3","7"],ans:2,cat:"purim",ref:"אסתר ד"},
+  {q:"מה שם עיר הבירה של אחשורוש?",opts:["בבל","שושן","ירושלים","ניניווה"],ans:1,cat:"purim",ref:"אסתר א"},
+  {q:"כמה כוסות שגנות עשה מלך אחשורוש בסעודתו?",opts:["120","180","220","360"],ans:1,cat:"purim",ref:"אסתר א"},
+  // CHANUKA
+  {q:"כמה ימים חוגגים חנוכה?",opts:["6","7","8","9"],ans:2,cat:"chanuka",ref:"מגילת תענית"},
+  {q:"מה הנס שקרה עם השמן בחנוכה?",opts:["שמן ליום אחד דלק 8 ימים","שמן ל-8 ימים נגמר ביום","שמן לא נגמר לעולם","שמן יצא מהסלע"],ans:0,cat:"chanuka",ref:"שבת כא"},
+  {q:"מי היו המכבים?",opts:["כהנים בני מתתיהו","לוחמי ישראל","נביאים","מלכים"],ans:0,cat:"chanuka",ref:"ספר מכבים"},
+  {q:"מה שם אבא של יהודה המכבי?",opts:["יוחנן","שמעון","מתתיהו","אלעזר"],ans:2,cat:"chanuka",ref:"ספר מכבים"},
+  {q:"כמה נרות מדליקים בלילה האחרון עם השמש?",opts:["6","7","8","9"],ans:3,cat:"chanuka",ref:"הלכות חנוכה"},
+  {q:"באיזה חודש חוגגים חנוכה?",opts:["תשרי","כסלו-טבת","ניסן","אדר"],ans:1,cat:"chanuka",ref:"מגילת תענית"},
+  {q:"מה שם הכד הקטן שמצאו המכבים?",opts:["כד שמן","כד מים","כד יין","כד דם"],ans:0,cat:"chanuka",ref:"שבת כא"},
+];
+
+// STATE
+let currentCategory = 'all';
+let sessionQuestions = [];
+let currentIndex = 0;
+let score = 0;
+let answered = false;
+let gameStarted = false;
+
+const catNames = {all:'הכל',torah:'תורה',neviim:'נביאים',ketuvim:'כתובים',pesach:'פסח',shavuot:'שבועות',sukkot:'סוכות',rosh_hashana:'ראש השנה',yom_kipur:'יום כיפור',purim:'פורים',chanuka:'חנוכה'};
+const catEmojis = {all:'🕍',torah:'📜',neviim:'🔥',ketuvim:'📖',pesach:'🍷',shavuot:'🌾',sukkot:'🌿',rosh_hashana:'🍎',yom_kipur:'🕊️',purim:'🎭',chanuka:'🕎'};
+
+function selectCategory(cat, btn) {
+  currentCategory = cat;
+  document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  sessionQuestions = []; currentIndex = 0; score = 0; answered = false; gameStarted = false;
+  updateStats();
+  clearChat();
+  addAiMsg('קטגוריה שונה ל<strong>' + (catEmojis[cat]||'') + ' ' + (catNames[cat]||cat) + '</strong>. הקלד <strong>התחל</strong> כדי להתחיל!');
+}
+
+function getFiltered() {
+  if (currentCategory === 'all') return [...allQuestions];
+  return allQuestions.filter(q => q.cat === currentCategory);
+}
+
+function shuffle(arr) {
+  const a=[...arr];
+  for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}
+  return a;
+}
+
+// CHAT
+function clearChat() { document.getElementById('chat-area').innerHTML = ''; }
+
+function addAiMsg(html, extraHtml) {
+  const area = document.getElementById('chat-area');
+  const row = document.createElement('div');
+  row.className = 'msg-row ai';
+  row.innerHTML = '<div class="avatar ai-avatar">✡</div><div class="bubble ai-bubble"><div>'+html+'</div>'+(extraHtml||'')+'</div>';
+  area.appendChild(row);
+  area.scrollTop = area.scrollHeight;
+}
+
+function addUserMsg(text) {
+  const area = document.getElementById('chat-area');
+  const row = document.createElement('div');
+  row.className = 'msg-row user';
+  row.innerHTML = '<div class="bubble user-bubble">'+text+'</div><div class="avatar user-avatar">👤</div>';
+  area.appendChild(row);
+  area.scrollTop = area.scrollHeight;
+}
+
+function showTyping() {
+  const area = document.getElementById('chat-area');
+  const row = document.createElement('div');
+  row.className = 'msg-row ai'; row.id = 'typing-indicator';
+  row.innerHTML = '<div class="avatar ai-avatar">✡</div><div class="bubble ai-bubble"><div class="typing"><span></span><span></span><span></span></div></div>';
+  area.appendChild(row);
+  area.scrollTop = area.scrollHeight;
+}
+
+function removeTyping() { const t=document.getElementById('typing-indicator'); if(t) t.remove(); }
+
+// GAME
+function startGame() {
+  let pool = getFiltered();
+  if (!pool.length) { addAiMsg('אין שאלות בקטגוריה זו. בחר קטגוריה אחרת.'); return; }
+  sessionQuestions = shuffle(pool).slice(0, Math.min(100, pool.length));
+  currentIndex = 0; score = 0; answered = false; gameStarted = true;
+  updateStats();
+  showTyping();
+  setTimeout(() => { removeTyping(); showNextQuestion(); }, 700);
+}
+
+function showNextQuestion() {
+  if (currentIndex >= sessionQuestions.length) { showFinalScore(); return; }
+  answered = false;
+  const q = sessionQuestions[currentIndex];
+  const card = buildCard(q, currentIndex);
+  showTyping();
+  setTimeout(() => { removeTyping(); addAiMsg('שאלה מספר '+(currentIndex+1)+' מתוך '+sessionQuestions.length+':', card); }, 600);
+}
+
+function buildCard(q, idx) {
+  const label = (catEmojis[q.cat]||'') + ' ' + (catNames[q.cat]||q.cat);
+  const opts = q.opts.map((o,i)=>'<button class="opt-btn" id="opt-'+idx+'-'+i+'" onclick="selectAnswer('+idx+','+i+')">'+['א','ב','ג','ד'][i]+'. '+o+'</button>').join('');
+  return '<div class="question-card" id="qcard-'+idx+'">'
+    +'<div class="q-meta"><span class="q-num">📍 '+q.ref+'</span><span class="q-category">'+label+'</span></div>'
+    +'<div class="q-text">'+q.q+'</div>'
+    +'<div class="options-grid">'+opts+'</div>'
+    +'<div id="result-'+idx+'"></div>'
+    +'</div>';
+}
+
+function selectAnswer(idx, chosen) {
+  if (answered) return;
+  answered = true;
+  const q = sessionQuestions[idx];
+  const correct = q.ans;
+  const isCorrect = chosen === correct;
+  for (let i=0;i<q.opts.length;i++) {
+    const btn = document.getElementById('opt-'+idx+'-'+i);
+    if (btn) { btn.disabled=true; if(i===correct) btn.classList.add('correct'); else if(i===chosen&&!isCorrect) btn.classList.add('wrong'); }
+  }
+  if (isCorrect) score++;
+  updateStats();
+  const rd = document.getElementById('result-'+idx);
+  if (rd) {
+    const resHtml = isCorrect
+      ? '<div class="result-msg correct-r">✅ <strong>נכון מאוד!</strong> "'+q.opts[correct]+'" — '+q.ref+'</div>'
+      : '<div class="result-msg wrong-r">❌ לא נכון. התשובה הנכונה: <strong>"'+q.opts[correct]+'"</strong> — '+q.ref+'</div>';
+    rd.innerHTML = resHtml + '<button class="next-btn" onclick="nextQuestion()">שאלה הבאה ›</button>';
+  }
+  document.getElementById('chat-area').scrollTop = 99999;
+}
+
+function nextQuestion() {
+  currentIndex++;
+  updateStats();
+  showNextQuestion();
+}
+
+function showFinalScore() {
+  const pct = Math.round((score/sessionQuestions.length)*100);
+  const emoji = pct>=80?'🏆':pct>=60?'⭐':pct>=40?'📚':'💪';
+  const msg = pct>=80?'מצוין! אתה מומחה תנ"ך!':pct>=60?'כל הכבוד! ידע טוב!':pct>=40?'לא רע, המשך ללמוד!':'כדאי לחזור על החומר!';
+  const card = '<div class="score-card">'
+    +'<div class="score-title">'+emoji+' סיימת את הטריוויה!</div>'
+    +'<div class="score-num">'+score+'/'+sessionQuestions.length+'</div>'
+    +'<div class="score-sub">'+pct+'% • '+msg+'</div>'
+    +'<button class="restart-btn" onclick="restartGame()">🔄 שחק שוב</button>'
+    +'</div>';
+  showTyping();
+  setTimeout(() => { removeTyping(); addAiMsg('', card); }, 800);
+}
+
+function restartGame() { clearChat(); startGame(); }
+
+function updateStats() {
+  document.getElementById('q-counter').textContent = gameStarted ? currentIndex : '0';
+  document.getElementById('score-display').textContent = score;
+}
+
+// INPUT
+function handleKey(e) { if(e.key==='Enter') { e.preventDefault(); sendMessage(); } }
+
+function sendMessage() {
+  const input = document.getElementById('chat-input');
+  const text = input.value.trim();
+  if (!text) return;
+  input.value = '';
+  addUserMsg(text);
+  const lower = text.toLowerCase();
+  if (lower.includes('התחל') || lower.includes('start') || lower.includes('חדש') || lower.includes('שחק') || lower.includes('המשך')) {
+    showTyping(); setTimeout(() => { removeTyping(); startGame(); }, 400);
+  } else if (lower.includes('ניקוד') || lower.includes('score')) {
+    addAiMsg('📊 הניקוד שלך: <strong>'+score+'</strong> נכונות מתוך <strong>'+currentIndex+'</strong> שאלות.');
+  } else if (lower.includes('עזרה') || lower.includes('help')) {
+    addAiMsg('ℹ️ <strong>הוראות:</strong><br>• הקלד <strong>"התחל"</strong> לשאלה חדשה<br>• בחר קטגוריה בסרגל למעלה<br>• לחץ על תשובה שנראית נכונה<br>• הניקוד מתעדכן אוטומטית');
+  } else {
+    addAiMsg('הקלד <strong>"התחל"</strong> להתחלת משחק, או לחץ על תשובה בשאלה.');
+  }
+}
+
+// INIT
+window.addEventListener('load', () => {
+  addAiMsg('שלום! ברוך הבא לטריוויה התנ"ך! 🕍<br><br>'
+    +'יש לנו <strong>'+allQuestions.length+' שאלות</strong> מכל חלקי התנ"ך, כולל שאלות על כל החגים.<br><br>'
+    +'בחר קטגוריה בסרגל למעלה, ואז הקלד <strong>"התחל"</strong> להתחלת המשחק!');
+});
+</script>
+<a class="pwa-home" href="index.html" aria-label="חזרה לתפריט">🏠</a>
+<script>
+if(navigator.standalone)document.documentElement.classList.add('standalone');
+if('serviceWorker' in navigator&&location.protocol!=='file:'){addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){});});}
+</script>
+</body>
+</html>

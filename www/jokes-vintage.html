@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0b5f7a">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="SDVD">
+    <title>אוצר הבדיחות העתיק</title>
+
+    
+    <style>
+@font-face{font-family:'Dvdai2';src:url(data:font/ttf;base64,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BgcGFRQWFxYzMjc+ATU0JzYzMhYXHgEUBgcGIhUUFhcWFRQjIicuATU0NzY1JyLJFBgZKAcEEhYUBREaFwuABS0cGhQVCwwXIz5YExoPBAwsfBgTAQYBuBMqJRoGExIFBBAOFBsoRgkMFhYcPhsVIAcMVwcLCQcCCKo1GS4oAgEAAQAxAJEBUQH7ACcAABMmNTQzMhcWFxYVFCMiNTQmJy4BIyIVFBcWFRQGBwYjIicmNz4BNTSIAwoLMUsoEwgKHw0QPxIGAQIcIx0MBgULCjQhAc8SChAgMlwrWykGHYQdIUArGxEmD0FCExAFCwMUQVRaAAAAABAAxgABAAAAAAABAAYAAAABAAAAAAACAAcABgABAAAAAAADACkADQABAAAAAAAEAA4ANgABAAAAAAAFAA8ARAABAAAAAAAGAA4AUwABAAAAAAAKABwAYQADAAEECQABAAwAfQADAAEECQACAA4AiQADAAEECQADAFIAlwADAAEECQAEABwA6QADAAEECQAFAB4BBQADAAEECQAGABwBIwADAAEECQAKADgBPwADAAEECQAQAAwAfQADAAEECQARAA4AiUR2ZGFpMlJlZ3VsYXJDYWxsaWdyYXBociA6IER2ZGFpMiBSZWd1bGFyIDogMTMtMTAtMjAyNkR2ZGFpMiBSZWd1bGFyVmVyc2lvbiAwMDEuMDAyRHZkYWkyLVJlZ3VsYXJDcmVhdGVkIHdpdGggQ2FsbGlncmFwaHIuY29tAEQAdgBkAGEAaQAyAFIAZQBnAHUAbABhAHIAQwBhAGwAbABpAGcAcgBhAHAAaAByACAAOgAgAEQAdgBkAGEAaQAyACAAUgBlAGcAdQBsAGEAcgAgADoAIAAxADMALQAxADAALQAyADAAMgA2AEQAdgBkAGEAaQAyACAAUgBlAGcAdQBsAGEAcgBWAGUAcgBzAGkAbwBuACAAMAAwADEALgAwADAAMgBEAHYAZABhAGkAMgAtAFIAZQBnAHUAbABhAHIAQwByAGUAYQB0AGUAZAAgAHcAaQB0AGgAIABDAGEAbABsAGkAZwByAGEAcABoAHIALgBjAG8AbQAAAAACAAAAAAAA/7UAMgAAAAAAAAAAAAAAAAAAAAAAAAAAADwAAAABAAIBAgADAAQABQAIAAkACgALAAwADgAPABAAEQASABMAFAAVABYAFwAYABkAGgAbABwAHQAeACAAIgAjAQMBBAEFAQYBBwEIAQkBCgELAQwBDQEOAQ8BEAERARIBEwEUARUBFgEXARgBGQEaARsBHAEdAR4CQ1IEbmJzcAlhZmlpNTc2NjQJYWZpaTU3NjY1CWFmaWk1NzY2NglhZmlpNTc2NjcJYWZpaTU3NjY4CWFmaWk1NzY2OQlhZmlpNTc2NzAJYWZpaTU3NjcxCWFmaWk1NzY3MglhZmlpNTc2NzMJYWZpaTU3Njc0CWFmaWk1NzY3NQlhZmlpNTc2NzYJYWZpaTU3Njc3CWFmaWk1NzY3OAlhZmlpNTc2NzkJYWZpaTU3NjgwCWFmaWk1NzY4MQlhZmlpNTc2ODIJYWZpaTU3NjgzCWFmaWk1NzY4NAlhZmlpNTc2ODUJYWZpaTU3Njg2CWFmaWk1NzY4NwlhZmlpNTc2ODgJYWZpaTU3Njg5CWFmaWk1NzY5MAABAAH//wAP) format('truetype');font-weight:100 900;font-style:normal;font-display:block;}
+@font-face{font-family:'DvdaiLatin';src:local('Arial'),local('ArialMT'),local('Helvetica Neue'),local('Helvetica'),local('Roboto'),local('Liberation Sans'),local('Segoe UI');size-adjust:60%;unicode-range:U+0041-005A;}
+@font-face{font-family:'DvdaiLatin';src:local('Arial'),local('ArialMT'),local('Helvetica Neue'),local('Helvetica'),local('Roboto'),local('Liberation Sans'),local('Segoe UI');size-adjust:70%;unicode-range:U+0061-007A;}
+
+        :root{
+            --wood-dark:#3a2415;
+            --wood-mid:#5c3a22;
+            --wood-light:#8a5a34;
+            --paper:#f2e2c4;
+            --paper-dark:#e6d0a3;
+            --ink:#3a2415;
+            --gold:#c99a3c;
+            --gold-light:#e0b96a;
+        }
+        *{ box-sizing: border-box; }
+        html,body{ height:100%; }
+        body {
+            font-family: 'Frank Ruhl Libre', serif;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background:
+                radial-gradient(ellipse at top left, rgba(255,255,255,0.05), transparent 60%),
+                repeating-linear-gradient(90deg, var(--wood-dark) 0px, var(--wood-mid) 3px, var(--wood-dark) 6px, var(--wood-mid) 40px, var(--wood-dark) 44px, var(--wood-mid) 90px),
+                linear-gradient(180deg, #4a2f1c, #2c1a0e);
+            background-blend-mode: overlay, normal, normal;
+            position: relative;
+        }
+        body::before{
+            content:"";
+            position:fixed;
+            inset:0;
+            background-image:
+                repeating-radial-gradient(ellipse at 20% 30%, rgba(0,0,0,0.15) 0px, transparent 2px),
+                repeating-radial-gradient(ellipse at 70% 60%, rgba(0,0,0,0.12) 0px, transparent 3px);
+            pointer-events:none;
+            opacity:0.5;
+        }
+
+        .frame {
+            position: relative;
+            max-width: 680px;
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(160deg, var(--wood-light), var(--wood-dark) 60%, #2a1a0d);
+            border-radius: 18px;
+            box-shadow:
+                0 0 0 2px rgba(0,0,0,0.4),
+                0 25px 50px rgba(0,0,0,0.55),
+                inset 0 2px 4px rgba(255,255,255,0.15),
+                inset 0 -6px 12px rgba(0,0,0,0.5);
+        }
+        .frame::before{
+            content:"❦";
+            position:absolute;
+            top:-16px; left:50%;
+            transform: translateX(-50%);
+            font-size: calc(30px * var(--fs-lg));
+            color: var(--gold);
+            background: var(--wood-dark);
+            width:40px; height:40px;
+            border-radius:50%;
+            display:flex; align-items:center; justify-content:center;
+            box-shadow: 0 0 0 3px var(--gold), 0 4px 10px rgba(0,0,0,0.5);
+        }
+
+        .container {
+            background:
+                radial-gradient(ellipse at 50% -10%, rgba(255,255,255,0.5), transparent 55%),
+                linear-gradient(160deg, var(--paper), var(--paper-dark));
+            border: 3px solid var(--gold);
+            border-radius: 10px;
+            padding: 40px 32px 34px;
+            text-align: center;
+            position: relative;
+            box-shadow:
+                inset 0 0 0 1px rgba(90,58,34,0.4),
+                inset 0 0 40px rgba(90,58,34,0.25);
+            overflow:hidden;
+        }
+        .container::after{
+            content:"";
+            position:absolute; inset:8px;
+            border: 1px solid rgba(90,58,34,0.35);
+            border-radius: 6px;
+            pointer-events:none;
+        }
+
+        .corner{
+            position:absolute;
+            width:34px; height:34px;
+            border: 2px solid var(--gold);
+            opacity:0.85;
+        }
+        .corner.tl{ top:6px; left:6px; border-right:none; border-bottom:none; border-radius:6px 0 0 0;}
+        .corner.tr{ top:6px; right:6px; border-left:none; border-bottom:none; border-radius:0 6px 0 0;}
+        .corner.bl{ bottom:6px; left:6px; border-right:none; border-top:none; border-radius:0 0 0 6px;}
+        .corner.br{ bottom:6px; right:6px; border-left:none; border-top:none; border-radius:0 0 6px 0;}
+
+        h1 {
+            font-family: 'Frank Ruhl Libre', serif;
+            font-weight: 900;
+            color: var(--wood-dark);
+            font-size: calc(2.1rem * var(--fs-lg));
+            margin: 0 0 6px;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 0 rgba(255,255,255,0.5), 2px 2px 3px rgba(90,58,34,0.3);
+        }
+        .subtitle{
+            color: var(--wood-mid);
+            font-size: max(1rem, calc(0.95rem * var(--fs-scale)));
+            margin: 0 0 22px;
+            font-style: italic;
+            letter-spacing: 0.5px;
+        }
+        .divider{
+            width: 140px;
+            height: 3px;
+            margin: 0 auto 26px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            position: relative;
+        }
+        .divider::before{
+            content:"✦";
+            position:absolute;
+            top:50%; left:50%;
+            transform: translate(-50%,-50%);
+            background: var(--paper);
+            color: var(--gold);
+            padding: 0 8px;
+            font-size: calc(1rem * var(--fs-scale));
+        }
+
+        .joke-box {
+            font-size: calc(1.25rem * var(--fs-scale));
+            color: var(--ink);
+            min-height: 130px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 26px;
+            padding: 26px 24px;
+            border: 2px solid rgba(90,58,34,0.35);
+            border-radius: 8px;
+            background:
+                linear-gradient(160deg, rgba(255,255,255,0.4), transparent 40%),
+                var(--paper-dark);
+            line-height: 1.7;
+            box-shadow: inset 0 2px 8px rgba(90,58,34,0.25);
+            font-weight: 500;
+            transition: opacity 0.25s ease;
+        }
+        .joke-box.quote::before{ content:"“"; }
+        .joke-box.quote::after{ content:"”"; }
+
+        .btn-group {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        button {
+            font-family: 'Frank Ruhl Libre', serif;
+            background: linear-gradient(160deg, var(--wood-light), var(--wood-mid));
+            color: var(--paper);
+            border: 2px solid var(--gold);
+            padding: 13px 30px;
+            font-size: calc(1.05rem * var(--fs-scale));
+            font-weight: 700;
+            border-radius: 30px;
+            cursor: pointer;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 0 rgba(0,0,0,0.35), 0 6px 12px rgba(0,0,0,0.3);
+            transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.2s ease;
+        }
+        button:hover {
+            background: linear-gradient(160deg, var(--gold-light), var(--gold));
+            color: var(--wood-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 0 rgba(0,0,0,0.35), 0 10px 16px rgba(0,0,0,0.35);
+        }
+        button:active{
+            transform: translateY(2px);
+            box-shadow: 0 2px 0 rgba(0,0,0,0.35), 0 3px 6px rgba(0,0,0,0.3);
+        }
+        #installBtn {
+            background: linear-gradient(160deg, #4f6b3a, #33471f);
+            display: none;
+        }
+        #installBtn:hover {
+            background: linear-gradient(160deg, #7ea35c, #4f6b3a);
+        }
+
+        @media (max-width: 480px){
+            h1{ font-size: calc(1.6rem * var(--fs-scale)); }
+            .container{ padding: 30px 18px 26px; }
+            .joke-box{ font-size: calc(1.05rem * var(--fs-scale)); padding: 20px 14px; }
+        }
+    
+/* ===== גופן, גודל, קריאות ורספונסיביות ===== */
+:root{--fs-scale:1.7;--fs-lg:calc(1 + (var(--fs-scale) - 1) * 0.5);}
+*,*::before,*::after,input,button,textarea,select,option{font-family:'Dvdai2','DvdaiLatin','Arial Hebrew',Arial,sans-serif !important;}
+*,*::before,*::after,input::placeholder{-webkit-text-stroke:0.45px;text-shadow:none !important;}
+.__none{-webkit-text-stroke:0;}
+html{-webkit-text-size-adjust:100%%;}
+.scrollx,.chat-area,.fridge-area,.modal-overlay,.categories,.category-bar{-webkit-overflow-scrolling:touch;}
+@media(max-width:1100px){:root{--fs-scale:1.55;}}
+@media(max-width:640px){:root{--fs-scale:1.4;}*{letter-spacing:.5px !important;}}
+@media(prefers-reduced-motion:reduce){*{animation:none !important;}}
+
+:root{--font-ink:#1d1008;}
+html,body{height:auto;}
+body{padding:max(16px,env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) max(16px,env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left));}
+.joke-box{overflow-wrap:anywhere;}
+@media(max-width:640px){
+  body{padding:10px;align-items:flex-start;}
+  .frame{padding:9px;border-radius:14px;}
+  .container{padding:26px 14px 22px !important;}
+  *{letter-spacing:.3px !important;}
+}
+@media(max-height:520px) and (orientation:landscape){body{align-items:flex-start;}}
+
+
+/* ===== PWA: כפתור חזרה לתפריט (רק כשהאתר מותקן כאפליקציה) ===== */
+.pwa-home{display:none;position:fixed;left:0;top:50%;transform:translateY(-50%);z-index:9000;width:calc(30px + env(safe-area-inset-left));height:64px;padding-left:env(safe-area-inset-left);border-radius:0 16px 16px 0;background:rgba(11,95,122,.88);color:#fff;font-size:18px;align-items:center;justify-content:center;text-decoration:none;box-shadow:2px 2px 12px rgba(0,0,0,.2);-webkit-text-stroke:0 !important;}
+@media (display-mode:standalone){.pwa-home{display:flex;}}
+html.standalone .pwa-home{display:flex;}
+</style>
+</head>
+<body>
+
+    <div class="frame">
+        <div class="container">
+            <div class="corner tl"></div>
+            <div class="corner tr"></div>
+            <div class="corner bl"></div>
+            <div class="corner br"></div>
+
+            <h1>אוצר הבדיחות העתיק</h1>
+            <p class="subtitle">אספה נדירה של חוכמה עממית וצחוק בין דפים ישנים</p>
+            <div class="divider"></div>
+
+            <div id="joke" class="joke-box quote">לחצו על הכפתור לגלות בדיחה מתוך הארכיון...</div>
+
+            <div class="btn-group">
+                <button onclick="getRandomJoke()">📜 בדיחה חדשה</button>
+                <button id="installBtn" onclick="installApp()">📲 הורד אפליקציה</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        const jokes = [
+            "שאלה: מישהו יודע איפה מקש הרווח במקלדת?",
+            "ילד נכנס לחנות נעליים ושאל: 'יש לכם נעליים שיכולות לרוץ ממש מהר?'. המוכר חייך ואמר: 'הנעליים לא רצות, מי שנועל אותן רץ.' הילד חשב רגע ואמר: 'אז תביא לי זוג שיודע לשכנע אותי לקום מהספה.'",
+            "דנה: 'המחשב שלי לא רוצה לעבוד.' אבא: 'מה כתוב על המסך?' דנה: 'כתוב לחץ על מקש כלשהו.' אבא: 'אז מה הבעיה?' דנה: 'חיפשתי בכל המקלדת ולא מצאתי מקש שכתוב עליו כלשהו.'",
+            "ילד נכנס לספרייה ושאל: 'יש לכם ספר שמלמד איך להיות סבלניים?'. ספרנית: 'כן, רק רגע.' ילד: 'עזבי, לא צריך.'",
+            "אמא: 'דני שטפת היטב את הכלים?' דני: 'כן, אפילו רואים את הסבון'.",
+            "ילד אחד בא לאבא שלו ושואל: 'אבא, איך זה מרגיש שיש לך ילד כזה חכם, יפה ומוצלח?' האבא מחייך ועונה: 'אני לא יודע חמוד, תשאל את סבא שלך.'",
+            "עשיר אחד בנה בניין עם 100 מדרגות. כל מדרגה שדורכים עליה - שומעים בדיחה. העשיר קרא ל-3 אנשים ואמר להם: 'מי שיגיע למדרגה ה-100 בלי לצחוק יקבל מליון שקל'. הראשון עלה ובמדרגה השלישית כבר צחק, השני עלה וצחק במדרגה החמישים, האחרון עלה וצחק במדרגה ה-99. שאל אותו העשיר: 'למה צחקת במדרגה ה-99?' ענה לו האיש: 'רק עכשיו הבנתי את הבדיחה מהמדרגה הראשונה'.",
+            "אבא אחד מבקש מהבן שלו לשתות. בן: 'מוגז או לא?' אבא: 'מוגז'. בן: 'קולה או ספרייט?' אבא: 'קולה'. בן: 'בפחית או בבקבוק?' אבא: 'עזוב, תביא כבר מים'. בן: 'מינרלים?'.",
+            "מה הדבר שהכי צריך ריכוז? 3 הביסים האחרונים של הארטיק.",
+            "דני: 'מה מתחיל ב-ק', נגמר ב-ה' ומתרחקים בגללו 2 מטר?' יוסי: 'קורונה!' דני: 'טעות... זו קלמנטינה'.",
+            "כשאתה הולך למסעדה עם חבר שלך והוא לא רוצה כלום כי הוא לא רעב... תדע שהוא הולך לגמור לך את הצ'יפס.",
+            "פעם היה איש שהיה לו סכין חד חד חד חד חד חד פעמי.",
+            "אמא: 'תסגרי את החלון, קר בחוץ!'. ילדה: 'ואם אני אסגור אותו אז יהיה חם בחוץ?'.",
+            "איש אחד שואל ילד: 'למי הכי מקשיבים אצלכם בבית?'. הילד: 'לאמא'. איש: 'ומתי לאבא?'. ילד: 'כשאמא לא רואה'.",
+            "אבא החליט לספר את בנו בבית. אחרי שסיים, שאל: 'נו, איך יצא?'. הילד הסתכל במראה ואמר: 'יש חדשות טובות וחדשות רעות.' אבא שאל: 'מה החדשות הטובות?' 'עכשיו אף אחד לא יזהה אותי.' 'ומה החדשות הרעות?' 'גם אני לא.'",
+            "אמא פתחה את הארון המבולגן של בנה ושאלה: 'איך אפשר למצוא כאן משהו?'. הילד ענה: 'זה מאוד פשוט. אני לא מוצא שום דבר, ואז את מגיעה ומוצאת.'",
+            "ילד נכנס לספרייה ושאל בקול רם: 'אפשר לקבל פיצה משפחתית וצ’יפס?'. הספרנית לחשה: 'ילד, זו ספרייה!'. הילד התקרב ולחש: 'סליחה… אפשר לקבל פיצה משפחתית וצ’יפס?'.",
+            "חידה: מה יש פעם ביום, פעמיים בשבועיים ואין אותו בעולם? תשובה: האות י'.",
+            "אבא: 'הבטחת לסדר את החדר.' ילד: 'סידרתי אותו לפי צבעים.' אבא נכנס וראה בלגן גדול. 'לפי צבעים?' ילד: 'כן. כל הצבעים מעורבבים בצורה שווה.'",
+            "אמא: 'למה לא קמת כשהשעון צלצל?'. ילד: 'קמתי.' אמא: 'אז למה אתה עדיין במיטה?'. ילד: 'קמתי כדי לכבות אותו.'",
+            "לא הכל בחיים זה כסף... יש זהב, יהלומים...",
+            "אישה אחת התקשרה לבעלה ואמרה: 'תזהר! יש משוגע אחד שנוסע לכיוון ההפוך בכביש.' הבעל: 'משוגע אחד? כולם פה משוגעים... כולם נוסעים בכיוון ההפוך!'.",
+            "גנב אחד נכנס לבית של קמצן. הקמצן התעורר ושאל את הגנב מה הוא רוצה. הגנב: 'כסף!'. מיד התלבש הקמצן והתלווה לגנב ואמר: 'גם אני רוצה, איפה יש?'.",
+            "אמא: 'למה לא סידרת את החדר כמו שביקשתי?'. יוסי: 'סידרתי!'. אמא נכנסה לחדר וראתה בלגן גדול. 'זה נקרא מסודר?' שאלה. יוסי: 'כן. סידרתי את הבלגן בצורה חדשה.'",
+            "חלון של אוטובוס - הרגע הזה שהוא על מצב רטט...",
+            "למה כמעט בכל הבדיחות כותבים רק את השם דני? דני: 'לא יודע...'.",
+            "עכשיו ראיתי חתול יושב במשך 20 דקות ובוהה בחלון, חשבתי לעצמי שהוא משועמם... ואז קלטתי שאני בוהה בחתול כבר 20 דקות...",
+            "איש אחד אומר לחבר שלו: 'אני חושב שאני עצלן'. החבר: 'למה אתה חושב כך?'. האיש: 'אהמממממ... אין לי כוח לבדוק'.",
+            "אבא שאל את מוישי: 'למה התיק שלך כל כך כבד?'. מוישי ענה: 'כי יש בו הרבה ידע.' אבא: 'ואתה משתמש בידע הזה?'. מוישי: 'לא, בינתיים אני רק סוחב אותו.'",
+            "אמא: 'סידרת את החדר?'. חיים: 'כן.' אמא: 'אז למה הכול עדיין על הרצפה?'. חיים: 'כי החלטתי שהרצפה היא המדף הכי גדול בבית.'",
+            "אמא נכנסה לחדר של מוישי ואמרה: 'אמרת שסידרת את החדר!'. מוישי ענה: 'נכון.' אמא: 'אבל הכול עדיין מפוזר!'. מוישי: 'לא מפוזר, אמא. סידרתי לפי אזורים: בגדים ליד המיטה, ספרים ליד הדלת, ומשחקים איפה שנשאר מקום.'",
+            "אמא: 'סידרת את החדר?'. יוסי: 'כן.' אמא: 'אז למה הכול עדיין על הרצפה?'. יוסי: 'כי סידרתי לפי גובה — הדברים הנמוכים למטה.'",
+            "איש אחד נתן לבן שלו סוכריה, שאל אותו: 'מה אומרים?'. הילד: 'אפשר עוד?'.",
+            "אמא: 'סידרת את החדר?'. יוסי: 'כן, סידרתי אותו לפי נושאים.' אמא: 'אילו נושאים?'. יוסי: 'דברים על הרצפה, דברים על הכיסא, ודברים שאני לא מוצא.'",
+            "אמא שאלה את יוסי: 'למה החדר שלך מבולגן?'. יוסי ענה: 'זה לא בלגן, זה מסלול מכשולים.'",
+            "אתה לא באמת מודע לכח שיש לך בידיים, עד שמשחת השיניים עומדת להיגמר...",
+            "'אתה יודע... התינוק שלנו בן שנתים והוא הולך כבר מגיל שנה'. 'וואו, אז הוא בטח ממש עייף!'.",
+            "ילדה אמרה לאמא שלה: 'היום הייתי מאוד מסודרת'. אמא שאלה: 'באמת? סידרת את החדר?'. הילדה ענתה: 'לא. סידרתי לעצמי תירוץ למה לא הספקתי.'",
+            "אבא שאל: 'למה אתה עומד ליד המקרר כבר עשר דקות?'. הבן ענה: 'אני מחכה שהוא יציע לי משהו.'",
+            "שני עפרונות נפגשו בקלמר. אחד אמר לשני: 'אתה נראה קצר היום'. השני ענה: 'כן, עבר עליי יום מחודד.'",
+            "ילד נכנס לחנות צעצועים ושואל: 'יש לכם רובוט שעושה שיעורי בית?'. המוכר עונה: 'לא'. הילד נאנח: 'אז בשביל מה המציאו רובוטים?'.",
+            "הרגע הזה שאתה שקוע בשיחת טלפון ופתאום אתה מוצא את עצמך מחפש גרביים במקרר...",
+            "ילד: 'אמא, אני רעב.' אמא: 'יש אוכל במקרר.' ילד: 'אני יודע, אבל הוא לא בא אליי.'",
+            "מה אמר כדור לחברו? תפסיק לקפוץ מדבר לדבר!",
+            "למה העוגייה בכתה? כי אכלו לה את כל החברים.",
+            "ילד אחד אומר לחבר שלו: 'יש לי זיכרון מעולה!'. החבר שואל: 'באמת?'. הילד: 'מה באמת?'.",
+            "מלצר אחד שפך רוטב פיטריות לכיסים של אנשים בחתונה. האחראי צעק עליו, אז המלצר אמר בתמימות: 'אמרת לי לשפוך רוטב פיטריות בכל מקום שאני רואה בורקס...'",
+            "מה אמר מיץ פטל לחבר שלו? 'היום אתה לא מרוכז...'",
+            "המדורה שלנו? קטנה, אבל עם אופי!",
+            "יוסי: 'אני יודע בדיוק כמה עצים צריך למדורה!'. מושיקו: 'כמה?'. יוסי: 'תמיד עוד אחד…'.",
+            "מה אמר תפוח האדמה כשהוציאו אותו מהאש? 'עברתי תהליך… אני כבר לא אותו אחד.'",
+            "'למה חיברת את הקוטג' לשקע?'. 'מה למה, אתה לא רואה? כתוב עליו שיש לו רק שני אחוז...'.",
+            "למה לא משחקים כדורגל בפסח? כדי שהשחקן לא יחמיץ את הגול!",
+            "אמרו לי לרוץ אחרי החלומות שלי, אז חזרתי לישון.",
+            "אם כסף עשוי מנייר ונייר עשוי מעץ, אז מי אמר שכסף לא גדל על עצים...?",
+            "יוסי מגיע ליום ההולדת של חברו. החבר: 'מה הבאת לי במתנה?'. יוסי: 'בוא נצא החוצה... רואה את הטסלה שם?'. החבר: 'וואי תודה!'. יוסי: 'קניתי לך גרביים בצבע הזה.'",
+            "איש מתקשר למשטרה: 'גנבו לי מהאוטו הכל! את ההגה, את הגז, את הברקס, את הדוושות... הכל!!!'. אחרי דקה מתקשר שוב ואומר: 'סליחה, ישבתי במושב האחורי.'",
+            "אדם אחד שואל את חברו: 'איך הולך עם קורס הזיכרון שנרשמת אליו?'. החבר עונה: 'איזה קורס?'.",
+            "פלוני: 'אני לא יכול להירדם אחרי כוס קפה'. אלמוני: 'אצלי זה בדיוק הפוך - אני לא יכול לשתות קפה אחרי שאני נרדם.'",
+            "כמה אנשים רבו באוטובוס אם לפתוח או לסגור את החלון. אחד האנשים התערב ואמר: 'הכי טוב להשאיר את החלונות תמיד פתוחים'. שאלו אותו: 'אתה רופא?'. ענה להם: 'לא, אני גנב.'",
+            "3 שיכורים נכנסים למונית ומתווכחים לאן לנסוע. הנהג אומר בסדר לכולם, נשאר באותו מקום ואחרי 5 דקות אומר: 'הגענו'. הראשון יוצא, השני משלם ויוצא והשלישי צועק על הנהג: 'זו פעם אחרונה שאתה נוסע כל כך מהר!'.",
+            "קמצן אחד נפל לבור. איש אחד שעבר שם, ראה אותו והחליט לעזור לו: 'תן יד!', אבל הקמצן לא הסכים. חשב מעט האיש ואמר לו: 'קח יד!'.",
+            "הגיע הזמן לשנות את השם של חדר המדרגות ל'חדר כושר'.",
+            "השמות של המלחמות: 2025 - עם כלביא, 2026 - שאגת הארי, 2027 - האריה שאהב תות.",
+            "שאלה: מיהו היצור המהיר בעולם? תשובה: קמצן ששכח שקל בחנות.",
+            "תלמיד: 'אבא שלי אמר לי שעדיף לתת במקום לקבל...' המורה: 'יפה! במה אבא שלך עובד?' התלמיד: 'הוא מתאגרף.'",
+            "'אמא, זה שאני חולה - זה לא אומר שאני לא יכול לשחק בגיימבוי...'",
+            "מה שייך לי, אבל אחרים משתמשים בו יותר ממני? תשובה: השם שלי.",
+            "אם נפל עליך תפוח על הראש - תברח מהר, העץ לא נופל רחוק מהתפוח.",
+            "היתה קבוצת חיילים שלא החליפה גרביים בערך חודש. יום אחד אמר להם המפקד: 'יש לי לבשר לכם בשורה רעה ובשורה טובה. הבשורה הטובה היא שסוף סוף תחליפו גרביים... הבשורה הרעה היא שתחליפו אחד עם השני...'.",
+            "אתמול הרגשתי שאני מתבגר... אכלתי ביסלי בצל בלי שסידרתי אותו קודם על האצבעות.",
+            "כסף יכול לקנות לך וילה, אבל לא בית חם. כסף יכול לקנות לך שעון, אבל לא זמן. כסף יכול לקנות לך אנציקלופדיה, אבל לא ידע. כסף זה לא הכל בחיים, הוא יכול לגרום לך גם הרבה כאב וסבל... אז כחבר שלא רוצה שיגרם לך חלילה סבל וכאב, אבקש שתעביר אליי את כל כספך, ואם אפשר במזומן ומיד...",
+            "איש אחד הלך לרב שלו ואמר לו: 'הרב, אני לא יכול ללכת לבית הכנסת!'. הרב שאל אותו: 'למה?'. ענה האיש: 'כי הוא פתוח בשבת...'.",
+            "משפחה קנו מגש פיצה ורותי קיבלה משולש קטן. אבא: 'רותי, למה את לא אוכלת?'. רותי: 'הוא קטן מדי, אחכה שיגדל קצת...'.",
+            "אנשים אומרים: 'תעבוד במה שאתה אוהב לעשות'... אבל מי ישלם לי על זה שאני ישן??",
+            "אמא: 'שימי, אתה יכול לשטוף כלים?'. שימי: 'כן, בשמחה'. אחרי 5 דקות... אמא: 'שימי, שטפת את הכלים טוב?'. שימי: 'בטח, רואים אפילו את הסבון...'.",
+            "כששואלים אותי: 'אתה בבית?'... קודם נשמע מה אתה רוצה, אחר כך נראה איפה אני.",
+            "ציפי: 'אמא! תביאי לי בבקשה מרכך'. אמא: 'אבל יש חדש'. ציפי: 'נכון, אבל כתוב שזה לשיער יבש וכבר הרטבתי את השיער.'",
+            "למה אוזן המן הלכה לבית הספר? כדי ללמוד להיות משולש שווה צלעות.",
+            "ילד אומר לאבא שלו הקמצן: 'אבא אני רוצה להתחפש לשוטר'. לאחר יומיים האבא הקמצן חוזר אל הילד שלו ומביא לו רק אקדח. הילד: 'מה זה, למה רק אקדח?'. האבא: 'אתה שוטר סמוי'.",
+            "מה אמר אחשוורוש כשראה את חשבון הבנק שלו אחרי המשתה? 'וואי וואי... בפעם הבאה מזמינים רק פיצה!'.",
+            "שמעון עלה כל בוקר לאוטובוס ובמושב הקדמי ישבה זקנה. כל בוקר היא נתנה לו 3 אגוזים. יום אחד הוא שאל אותה: 'סליחה, אבל למה את קונה אגוזים אם את לא אוכלת אותם?'. ענתה לו הזקנה: 'אני אוהבת רק את השוקולד שמסביב...'.",
+            "אמא: 'שימי, למה אתה אוכל עם הידיים?!'. שימי: 'כי אני לא רוצה ללכלך את המזלג.'",
+            "אמא: 'דני, למה ציירת על הקיר עם טושים?'. דני: 'כי הנייר לא היה מספיק גדול בשביל הכישרון שלי.'",
+            "למדתי גמרא כל הלילה... עד שהתעוררתי מהחלום.",
+            "איש אחד אמר לחברו: 'אני נוסע מצוין בכביש'. שאל אותו החבר: 'איך אתה יודע?'. ענה לו האיש: 'אחרת לא היו צופרים לי כל רגע ושואלים אותי מי לימד אותך לנהוג.'",
+            "פעם פגשתי קמצן ואמרתי לו: 'שתיקה שווה זהב'. מאז, לא שמעתי ממנו כלום...",
+            "שופט פונה לנאשם ואומר לו: 'אתה מואשם בהלבנת הון, הלוואות בשוק האפור ועבודה בשחור. יש לך משהו להגיד להגנתך?'. 'כן' עונה הנאשם, 'כבוד השופט, אני עיוור צבעים.'",
+            "אבא לשמוליק: 'שמוליק, שים חגורה.' שמוליק לאבא: 'אבל אבא... לא נופלות לי המכנסיים.'",
+            "אמא אחת טסה לחו\"ל והשאירה את בעלה עם הבן שלהם. בבוקר כשלקח האבא את בנו לגן אחד, אמרה לו הגננת: 'הבן שלך לא בגן הזה'. לקח האבא את הילד לגנים אחרים, וגם שם ענו לו הגננות את אותו הדבר, ואז הילד אמר לאבא: 'אבא, אם נלך לעוד גן אחד, אני אאחר לבית הספר.'",
+            "אם החיים נותנים לכם לימונים... תעשו מהם הכל... חוץ מוופלים.",
+            "גנב אומר לידידו: 'פעם, היית נכנס לחנות עם 10 שקלים, ויוצא עם כל טוב הארץ.' 'והיום?' מסתקרן ידידו. 'היום? היום יש מצלמות אבטחה' מתבאס הגנב.",
+            "למה כדורגל תמיד עצוב? כי כל הזמן בועטים בו.",
+            "ילדה מדברת בטלפון חצי שעה ומנתקת. שאל אותה אח שלה: 'מה קרה? בדרך כלל את מדברת שעתיים?'. ענתה לו: 'התקשרתי למספר שגוי!'.",
+            "איש אחד הלך לבית קברות בלילה כשהוא רועד מפחד, ופתאום הוא פוגש עוד איש... 'איזה נס שאתה פה, אני ממש מפחד להיות פה לבד בלילה'. ענה לו האיש: 'כן, גם כשאני הייתי בחיים פחדתי להיות פה לבד.'",
+            "אני חושבת שהגיע הזמן שספר החשבון יפתור את הבעיות שלו בעצמו.",
+            "ישנתי בלילה על מטען... יש לי סימן אדום בגב, אבל אני 100 אחוז.",
+            "אני אף פעם לא שיקרתי... חוץ מעכשיו.",
+            "מנהל החליט לתלות שלט חדש על דלת המשרד שלו כדי להפגין סמכות: 'אני הבוס!'. למחרת הוא מגיע ורואה שמישהו הדביק פתק קטן מתחת לשלט: 'אשתך התקשרה... היא רוצה את השלט שלה בחזרה.'",
+            "מתמטיקה יקרה! הגיעה הזמן שתתבגרי ותתחילי לפתור את הבעיות שלך בכוחות עצמך!",
+            "אם מישהו הולך בראש מורם... סימן שאין לו טלפון.",
+            "פעם חשבתי שאויר זה בחינם, עד שקניתי שקית צ'יפס.",
+            "דני: 'שמעון, מה אתה יכול להגיד על הספר הזה?'. שמעון: 'שהוא דק והאותיות גדולות ומסיימים אותו מהר...'.",
+            "קמצן אמר לבנו: 'לך תביא מהשכנים פטיש'. הלך הבן ולא מצא אצל השכנים, חזר לאביו וסיפר לו שלא מצא. אמר לו אביו: 'אז תביא את שלנו!'.",
+            "הרגע הזה שהמקרר מתנקם בך - פותח ת'דלת של החדר שלך כל כמה דקות, בוהה בך, והולך...",
+            "משוגע נכנס לפיצריה ושאל: 'יש לכם פיצה עם אבוקדו?'. ענה לו המוכר: 'לא, אין לנו'. אז התחיל המשוגע לבוא כל יום ובכל פעם ענה לו המוכר שאין להם פיצה עם אבוקדו ושיגיע ביום שישי. הגיע המשוגע ביום שישי ושאל שוב: 'יש לכם פיצה עם אבוקדו?'. ענה לו המוכר בשמחה: 'כן! יש לנו'. אמר לו המשוגע: 'איכס! מי אוכל את זה???'.",
+            "הדבר הכי טוב שצריך לעשות בכדי להתחיל את הבוקר עם חיוך זה פשוט לקום בצהרים.",
+            "יוסי ודני עשו קומזיץ ביער ולאחר מכן הקימו אוהל והלכו לישון. באמצע הלילה יוסי מעיר את דני ואומר לו: 'תסתכל בשמים, מה אתה רואה?'. דני: 'שמים, עננים כוכבים...'. יוסי: 'ואתה יודע מה זה אומר?'. דני משיב בביטחון: 'כן, זה אומר שאנחנו נמצאים במקום יפה!'. יוסי: 'לא, זה אומר שגנבו לנו את האוהל!'.",
+            "אבא אחד שכב בבית חולים. לפני מותו אמר לבנו הבכור: 'יהודה, אתה מקבל את רחוב המכבים'. אמר לבנו השני: 'דוד, אתה מקבל את רחוב אהבת ישראל'. אמר לבנו השלישי: 'שמואל, אתה מקבל את רחוב אבן גבירול'. שאל הרופא: 'במה אביכם עבד שהיה כזה עשיר?'. ענו הבנים: 'מחלק עיתונים.'",
+            "פעם אחת היה ילד ליד מעבר חציה. שאל אותו איש: 'רוצה לעבור את הכביש?'. הילד שתק. עוד איש ועוד איש שאלו אותו עד שהילד התחיל לבכות ואמר: 'אני רוצה לעבור את הכביש, אבל אמא לא מרשה לי לדבר עם זרים.'",
+            "'אמא תעשי לי פווו.' 'את יכולה לעשות פו בעצמך.' 'אבל אני קטנה... בפווו שלי אין מספיק פווו.'",
+            "משה ודני הלכו לבריכה. משה: 'דני, איך המים... קרים?'. דני: 'אחרי 5 דקות מתרגלים'. משה: 'אז אכנס עוד 5 דקות!'.",
+            "מה מאחלים לבן אדם שחוגג יום הולדת 120? שיהיה לך יום טוב!",
+            "סבתא מנסה ללמד את יעלי חשבון: 'אם אתן לך שתי סוכריות ועוד שלוש, כמה יהיו לך?'. 'לא יודעת, אבל זה יספיק לי, תודה.' עונה יעלי בנימוס.",
+            "איש אחד הלך לנהר ופגש דייג. שאל אותו האיש: 'תגיד לי, הנהר עמוק?'. ענה לו הדייג: 'לא'. נכנס האיש לנהר ויוצא כולו רטוב מכף רגל ועד ראש. צעק לדייג: 'אמרת שהנהר לא עמוק...'. 'מה אתה רוצה...', ענה לו הדייג, 'לפני כמה דקות עבר פה ברווז בלי בעיה.'",
+            "הרגע הזה שנתקעת לך הזרת ברגל השולחן ואז אתה מתחיל לקפץ ולצעוק כמו אינדיאני.",
+            "הרגע הזה בלילה שאתה לא יודע אם השמיכה לאורך או לרוחב ואתה מנסה לסדר אותה עם הידיים והרגליים ואתה נראה כמו חיפושית הפוכה.",
+            "סגור את החלון, קר בחוץ! ואם אסגור את החלון יהיה חם בחוץ?",
+            "שני קיסמים טיילו, קיסם אחד ראה קיפוד ואמר: 'הנה אוטובוס!'.",
+            "דודה: 'יוסי, תאכל הרבה גזר, זה טוב לראייה'. יוסי: 'אבל דודה, זה מלפפון'.",
+            "גוי ויהודי התווכחו למי יש יותר חגים. אמר הגוי: 'כל חג שיש לכם - תלוש לי שערה'. היהודי אמר: 'פסח, סוכות, שבועות, פורים, חנוכה ...' והמשיך 'שבת, שבת, שבת...', וכך נגמרו לגוי השערות. אמר לו הגוי: 'ניצחת, אבל עכשיו - כל רב שיש לכם - תלוש לי שערה מהזקן'. ענה לו היהודי: 'רבי עקיבא ו-24 אלף תלמידיו...'.",
+            "איש אחד עשה דיאטה והזמין פיצה. הפיצריה שאלה: 'לכמה לחתוך לך ת'פיצה? כדאי לך לשמונה... זה הכי טוב!'. ענה האיש: 'מה פתאום! אני בדיאטה, שיהיה חתיכה אחת!'.",
+            "לפעמים בא לי להיות בצק... רק בשביל שיניחו אותי בצד לנוח לכמה שעות...",
+            "ילד צייר בית פעם בצד ימין של הדף ופעם בצד השמאלי של הדף. שאלו אותו: 'חמוד, למה אתה לא מצייר את הבית במרכז?'. ענה הילד: 'ברור למה... מי יכול להרשות לעצמו היום בית במרכז?'.",
+            "המוח שלי יכול להיזכר פתאום באירוע שקרה לי לפני 10 שנים, אבל לא מסוגל לזכור למה נכנסתי למטבח לפני 10 שניות.",
+            "חוק הבורקסים: גבינה זה משולש, תפוח אדמה זה ריבוע, תרד זה לא טעים.",
+            "איש אחד הולך למסעדה. המלצר ניגש אליו ואומר לו: 'יש לי כבד קצוץ, רגל קרושה ולשון צלויה.' עונה לו האיש: 'את הבעיות שלך תספר למישהו אחר, אתה יכול להביא לי עוף בגריל?'.",
+            "זה הגיוני? אילם סיפר לחירש שעיור ראה חיגר שרץ אחרי קירח ומושך לו בשערות!",
+            "דני: 'אבא בוא נטוס לשמש!'. אבא: 'אי אפשר, מאוד מאוד חם שם'. דני: 'אז נטוס אליה בלילה!'.",
+            "אני לא עייף, אני רק מנסה להקשיב לשולחן.",
+            "ערבי, רוסי, סיני, יפני, תאילנדי וישראלי נכנסו למסעדה... המלצר: 'טוב נו, זה יותר מידי בשביל בדיחה...'.",
+            "ילד פתח את המקרר, ראה את הקוטג' וצעק: 'אמא, אני מטעין את הקוטג''. אמא שאלה: 'למה?'. והילד ענה: 'כי יש לו רק 5 אחוז.'",
+            "איש אחד אמר לרב שלו: 'אישתי כבר 30 שנה זורקת עלי צלחות!'. ענה לו הרב: 'אז למה רק עכשיו אתה מתלונן?'. ענה האיש: 'כי רק עכשיו היא הצליחה לקלוע.'",
+            "איש אחד שאל את אימו מה היא רוצה שהוא יקנה לה בחו\"ל. היא ענתה ששמעה שיש שיקוי פלא שמי ששותה ממנו הופך לצעיר יותר: 'אותו אני רוצה שתקנה לי'. קנה ושלח. כשחזר לביתו, ראה ילדה מחזיקה תינוק: 'מה זה? מי את?'. 'אני אמא שלך, אתה לא זוכר את השיקוי?'. 'ומי זה התינוק?'. 'זה אבא, הוא שתה את כל הבקבוק.'",
+            "שכן שלי ממש חוצפן, הוא דופק לי על הדלת ב-2 בלילה... מזל שהייתי באימון תופים...",
+            "ילד: 'אמא, בשוקולד יש ויטמינים?'. אמא: 'ממש קצת'. ילד: 'אז אין לי ברירה, אלא לאכול המון שוקולד.'",
+            "אבא שלח את בנו לקנות גפרורים. הבן חזר עם חבילה שרופה. אבא: 'למה כל הגפרורים שרופים?'. בן: 'רציתי לבדוק שהם בסדר.'",
+            "למי יש 10 רגליים? לחמישה אנשים.",
+            "'פעם היה נהוג לצבוע את השיער בצבע לבן'. 'איך אתה יודע?'. 'היום כל הזקנים ככה.'",
+            "ביצה א': 'וואוו, איך השתזפת וגם גדלו לך שערות!'. ביצה ב': 'אני קיווי.'",
+            "אנשים לא מגיעים לחתונה לשמח חתן וכלה... הם מגיעים לשמח כבד וקיבה.",
+            "מה ההר הכי גדול בעולם? הר הכביסה בביתנו!",
+            "פלוני: 'אני לא יכול להירדם אחרי כוס קפה'. אלמוני: 'אצלי זה בדיוק הפוך, אני לא יכול לשתות קפה אחרי שאני נרדם'.",
+            "לא הבנתי למה לשכנה שלי מותר לבקש ממני כוס סוכר, אבל לי אסור לבקש משולש מהפיצה שהגיעה אליה עכשיו.",
+            "שלושה משוגעים רצו לברוח מבית המשוגעים. אפשרות ראשונה היא לטפס מעל הגדר, אפשרות שניה היא לחפור מנהרה מתחת לגדר. הם שלחו את אחד המשוגעים שיבדוק את השטח. המשוגע הלך לבדוק וכשחזר אמר להם שיש בעיה ואי אפשר לברוח, שאלו אותו: 'מה הבעיה?'. והוא השיב: 'אין גדר.'",
+            "אין משחת שיניים שנגמרה... יש אדם שהתייאש מללחוץ.",
+            "ילד אחד ביקש מאבא שלו 100 שקל. האבא אמר לו: 'כמה אתה רוצה? 50? מה תעשה עם 40? קח 30', מוציא מהארנק 20 ומביא לו 10.",
+            "שלוש זקנות התווכחו מי זוכרת הכי פחות טוב. הראשונה אומרת: 'אני הולכת לשכנה לבקש משהו וכשאני מגיעה כבר שוכחת מה רציתי'. השנייה אומרת: 'אני הולכת להביא משהו מהארון ועד שאני מגיעה לארון כבר שוכחת מה רציתי'. השלישית באה לומר, אבל אז אומרת: 'שכחתי מה רציתי להגיד.'",
+            "גיגי: 'אני רוצה לקנות שעון'. דידי: 'בשביל מה אתה צריך שעון?'. גיגי: 'בשביל לדעת מה השעה'. דידי: 'אתה לא צריך שעון, תשאל אנשים ברחוב'. גיגי: 'ואם ארצה לדעת מה השעה בלילה?'. דידי: 'תעשה כמוני...' דידי לקח חצוצרה ותקע בה טוטוטוטו! 'מה אתה עושה??' צעק השכן, '2 בלילה!!!'.",
+            "פעם אחת... אני לא זוכרת את הבדיחה!",
+            "הלכתי עכשיו למכון כושר וחזרתי גמור. לא רוצה לחשוב מה היה קורה אילו גם הייתי נכנס אליו.",
+            "חיים: 'איך ישנת בלילה?'. אבי: 'כמו תינוק, כל 5 דקות קם ומתחיל לבכות.'",
+            "ילד: 'אבא, למה העננים בצבע כזה?'. אבא: 'לא יודע'. ילד: 'למה המטוסים בגובה כזה?'. אבא: 'לא יודע'. ילד: 'למה הדשא בצבע כזה?'. אבא: 'לא יודע'. ילד: 'אבא, זה לא מפריע לך שאני שואל כל כך הרבה שאלות?'. אבא: 'מה פתאום בני היקר, אם לא תשאל איך תדע?'.",
+            "איך קמצן עושה פן? רץ בירידה.",
+            "אני יודע כל כך טוב לישון שאני עושה את זה בעיניים עצומות.",
+            "אני ביישן. כשמדברים עלי - אני נעלם, אפשר להרגיש אותי, וכשמתקהלים אנשים - אני לא נמצא. כשהם הולכים - אני נמצא. מי אני? תשובה: שקט!",
+            "איש אחד נכנס למסעדה והזמין שלושה בקבוקי קולה, ארבעה המבורגרים, חמישה סוגי סלטים, שבע מנות פלאפל. בא המלצר ושאל אותו: 'אתה הולך לאכול את כל זה לבד?'. ענה האיש: 'מה פתאום, אני הולך לאכול את זה עם שמונה מנות צ'יפס.'",
+            "עשיתי את עצמי ישנה ובטעות נרדמתי. מחר אני הולכת לעשות את עצמי רזה...",
+            "ילד: 'אמא, את אוהבת אותי?'. אמא: 'בטח!'. הילד: 'אז למה את מבשלת דברים שאני לא אוהב?'.",
+            "איש אחד חלם שהוא אוכל את המרשמלו הכי גדול בעולם... בבוקר הוא גילה שאין לו כרית.",
+            "זקן אחד אמר לאשתו: 'כמה שאת יפה'. האישה ענתה: 'תודה, חבל שאני לא יכולה להגיד את זה גם עליך'. הזקן: 'מה הבעיה, תעשי כמוני'. האישה: 'מה אתה עושה?'. הזקן: 'פשוט תשקרי.'",
+            "היה איש אחד שכל יום היה הולך למסעדה, מזמין תה ולוקח אותו עם קרטון מתחת. יום אחד המלצר הביא לו תה בלי קרטון מתחת, אז האיש שאל: 'למה היום התה בלי ביסקוויט?'.",
+            "אישה אחת באה לרב עצבנית ואמרה לו: 'בעלי לא מחכה 6 שעות בין חלבי לבשרי.' שאל הרב את בעלה: 'האם זה נכון?'. ענה לו הבעל: 'זה נכון שביקשתי ממנה קפה עם חלב אחרי שאכלתי בשרי... אבל כל דבר שאני מבקש ממנה לוקח לה 6 שעות להכין לי!'.",
+            "קמצן הלך הלך הלך... נו מה, חשבתם שיזמין מונית?",
+            "לכל המתלוננים על הטעם בשווארמה ובהמבורגר - לא לדאוג, זה בגלל שהעובדים שוטפים ידיים. הטעם המקורי יחזור בקרוב.",
+            "בכניסה לאולם הרצאות הופיע השלט: 'ההרצאה על 'דיוק בזמן' שהייתה אמורה להיערך היום, תידחה ותיערך בעוד יומיים'."
+        ];
+
+        function getRandomJoke() {
+            const randomIndex = Math.floor(Math.random() * jokes.length);
+            const box = document.getElementById('joke');
+            box.style.opacity = 0;
+            setTimeout(() => {
+                box.innerText = jokes[randomIndex];
+                box.style.opacity = 1;
+            }, 150);
+        }
+
+        // מנגנון הצעת ההתקנה (PWA)
+        let deferredPrompt;
+        const installBtn = document.getElementById('installBtn');
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            installBtn.style.display = 'inline-block';
+        });
+
+        async function installApp() {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                const { outcome } = await deferredPrompt.userChoice;
+                if (outcome === 'accepted') {
+                    installBtn.style.display = 'none';
+                }
+                deferredPrompt = null;
+            }
+        }
+    </script>
+
+<a class="pwa-home" href="index.html" aria-label="חזרה לתפריט">🏠</a>
+<script>
+if(navigator.standalone)document.documentElement.classList.add('standalone');
+if('serviceWorker' in navigator&&location.protocol!=='file:'){addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){});});}
+</script>
+</body>
+</html>

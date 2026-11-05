@@ -1,0 +1,1766 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0b5f7a">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="SDVD">
+<title>מילון הארמית החזותי | גמרא לילדים ומתחילים</title>
+<style>
+@font-face{font-family:'Dvdai2';src:url(data:font/ttf;base64,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BgcGFRQWFxYzMjc+ATU0JzYzMhYXHgEUBgcGIhUUFhcWFRQjIicuATU0NzY1JyLJFBgZKAcEEhYUBREaFwuABS0cGhQVCwwXIz5YExoPBAwsfBgTAQYBuBMqJRoGExIFBBAOFBsoRgkMFhYcPhsVIAcMVwcLCQcCCKo1GS4oAgEAAQAxAJEBUQH7ACcAABMmNTQzMhcWFxYVFCMiNTQmJy4BIyIVFBcWFRQGBwYjIicmNz4BNTSIAwoLMUsoEwgKHw0QPxIGAQIcIx0MBgULCjQhAc8SChAgMlwrWykGHYQdIUArGxEmD0FCExAFCwMUQVRaAAAAABAAxgABAAAAAAABAAYAAAABAAAAAAACAAcABgABAAAAAAADACkADQABAAAAAAAEAA4ANgABAAAAAAAFAA8ARAABAAAAAAAGAA4AUwABAAAAAAAKABwAYQADAAEECQABAAwAfQADAAEECQACAA4AiQADAAEECQADAFIAlwADAAEECQAEABwA6QADAAEECQAFAB4BBQADAAEECQAGABwBIwADAAEECQAKADgBPwADAAEECQAQAAwAfQADAAEECQARAA4AiUR2ZGFpMlJlZ3VsYXJDYWxsaWdyYXBociA6IER2ZGFpMiBSZWd1bGFyIDogMTMtMTAtMjAyNkR2ZGFpMiBSZWd1bGFyVmVyc2lvbiAwMDEuMDAyRHZkYWkyLVJlZ3VsYXJDcmVhdGVkIHdpdGggQ2FsbGlncmFwaHIuY29tAEQAdgBkAGEAaQAyAFIAZQBnAHUAbABhAHIAQwBhAGwAbABpAGcAcgBhAHAAaAByACAAOgAgAEQAdgBkAGEAaQAyACAAUgBlAGcAdQBsAGEAcgAgADoAIAAxADMALQAxADAALQAyADAAMgA2AEQAdgBkAGEAaQAyACAAUgBlAGcAdQBsAGEAcgBWAGUAcgBzAGkAbwBuACAAMAAwADEALgAwADAAMgBEAHYAZABhAGkAMgAtAFIAZQBnAHUAbABhAHIAQwByAGUAYQB0AGUAZAAgAHcAaQB0AGgAIABDAGEAbABsAGkAZwByAGEAcABoAHIALgBjAG8AbQAAAAACAAAAAAAA/7UAMgAAAAAAAAAAAAAAAAAAAAAAAAAAADwAAAABAAIBAgADAAQABQAIAAkACgALAAwADgAPABAAEQASABMAFAAVABYAFwAYABkAGgAbABwAHQAeACAAIgAjAQMBBAEFAQYBBwEIAQkBCgELAQwBDQEOAQ8BEAERARIBEwEUARUBFgEXARgBGQEaARsBHAEdAR4CQ1IEbmJzcAlhZmlpNTc2NjQJYWZpaTU3NjY1CWFmaWk1NzY2NglhZmlpNTc2NjcJYWZpaTU3NjY4CWFmaWk1NzY2OQlhZmlpNTc2NzAJYWZpaTU3NjcxCWFmaWk1NzY3MglhZmlpNTc2NzMJYWZpaTU3Njc0CWFmaWk1NzY3NQlhZmlpNTc2NzYJYWZpaTU3Njc3CWFmaWk1NzY3OAlhZmlpNTc2NzkJYWZpaTU3NjgwCWFmaWk1NzY4MQlhZmlpNTc2ODIJYWZpaTU3NjgzCWFmaWk1NzY4NAlhZmlpNTc2ODUJYWZpaTU3Njg2CWFmaWk1NzY4NwlhZmlpNTc2ODgJYWZpaTU3Njg5CWFmaWk1NzY5MAABAAH//wAP) format('truetype');font-weight:100 900;font-style:normal;font-display:block;}
+@font-face{font-family:'DvdaiLatin';src:local('Arial'),local('ArialMT'),local('Helvetica Neue'),local('Helvetica'),local('Roboto'),local('Liberation Sans'),local('Segoe UI');size-adjust:60%;unicode-range:U+0041-005A;}
+@font-face{font-family:'DvdaiLatin';src:local('Arial'),local('ArialMT'),local('Helvetica Neue'),local('Helvetica'),local('Roboto'),local('Liberation Sans'),local('Segoe UI');size-adjust:70%;unicode-range:U+0061-007A;}
+
+  /* ===== משתני עיצוב ===== */
+  :root {
+    --צבע-רקע: #faf7f2;
+    --צבע-ראשי: #1a1a2e;
+    --צבע-משני: #16213e;
+    --צבע-זהב: #c9a84c;
+    --צבע-זהב-בהיר: #f0d080;
+    --צבע-בורדו: #7b2d42;
+    --צבע-תכלת: #2d6e8e;
+    --צבע-ירוק: #2d7d5a;
+    --צבע-כתום: #c05e2a;
+    --צבע-סגול: #5a3472;
+    --צבע-כרטיס: #ffffff;
+    --צבע-גבול: #e8dfc8;
+    --צבע-טקסט: #2c2c2c;
+    --צבע-טקסט-משני: #6b5e4e;
+    --צל-כרטיס: 0 4px 20px rgba(26,26,46,0.08);
+    --צל-כרטיס-hover: 0 12px 40px rgba(26,26,46,0.16);
+    --רדיוס: 16px;
+    --רדיוס-קטן: 8px;
+    --מעבר: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* ===== איפוס בסיסי ===== */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Heebo', 'Frank Ruhl Libre', serif;
+    background: var(--צבע-רקע);
+    color: var(--צבע-טקסט);
+    min-height: 100vh;
+    direction: rtl;
+    overflow-x: hidden;
+  }
+
+  /* ===== כותרת עליונה ===== */
+  header {
+    background: linear-gradient(135deg, var(--צבע-ראשי) 0%, var(--צבע-משני) 60%, #0f3460 100%);
+    color: white;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a84c' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+
+  .כותרת-פנימית {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 20px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .סמל-ראשי {
+    font-size: calc(3rem * var(--fs-lg));
+    margin-bottom: 8px;
+    filter: drop-shadow(0 2px 8px rgba(201,168,76,0.4));
+  }
+
+  .כותרת-ראשית {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: calc(clamp(1.8rem, 5vw, 3rem) * var(--fs-lg));
+    font-weight: 900;
+    color: white;
+    line-height: 1.2;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+  }
+
+  .כותרת-ראשית span {
+    color: var(--צבע-זהב);
+  }
+
+  .תת-כותרת {
+    font-family: 'Heebo', sans-serif;
+    font-size: calc(clamp(0.9rem, 2.5vw, 1.1rem) * var(--fs-lg));
+    color: rgba(255,255,255,0.75);
+    font-weight: 300;
+    margin-top: 8px;
+    letter-spacing: 0.02em;
+  }
+
+  /* ===== פס זהב דקורטיבי ===== */
+  .פס-זהב {
+    height: 4px;
+    background: linear-gradient(90deg, transparent, var(--צבע-זהב), var(--צבע-זהב-בהיר), var(--צבע-זהב), transparent);
+  }
+
+  /* ===== גוף ראשי ===== */
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 16px 60px;
+  }
+
+  /* ===== מילה של היום ===== */
+  .מילה-של-היום {
+    background: linear-gradient(135deg, var(--צבע-ראשי) 0%, var(--צבע-בורדו) 100%);
+    border-radius: var(--רדיוס);
+    padding: 24px;
+    margin-bottom: 28px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--צל-כרטיס);
+    cursor: pointer;
+    transition: var(--מעבר);
+  }
+
+  .מילה-של-היום:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--צל-כרטיס-hover);
+  }
+
+  .מילה-של-היום::after {
+    content: '✡';
+    position: absolute;
+    left: -10px;
+    bottom: -20px;
+    font-size: calc(8rem * var(--fs-lg));
+    opacity: 0.05;
+    pointer-events: none;
+  }
+
+  .תווית-יום {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(201,168,76,0.25);
+    border: 1px solid rgba(201,168,76,0.4);
+    color: var(--צבע-זהב-בהיר);
+    font-size: max(1rem, calc(0.75rem * var(--fs-scale)));
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    letter-spacing: 0.05em;
+  }
+
+  .מילה-של-היום-תוכן {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .מילה-ארמית-גדולה {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: calc(clamp(2.5rem, 8vw, 4rem) * var(--fs-lg));
+    font-weight: 900;
+    color: var(--צבע-זהב);
+    line-height: 1;
+    text-shadow: 0 2px 20px rgba(201,168,76,0.3);
+    flex-shrink: 0;
+  }
+
+  .מילה-של-היום-פרטים {
+    flex: 1;
+    min-width: 200px;
+  }
+
+  .מילה-של-היום-פרטים h3 {
+    font-size: calc(1.1rem * var(--fs-scale));
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: rgba(255,255,255,0.95);
+  }
+
+  .מילה-של-היום-פרטים p {
+    font-size: max(1rem, calc(0.9rem * var(--fs-scale)));
+    color: rgba(255,255,255,0.7);
+    line-height: 1.5;
+  }
+
+  .תגית-קטגוריה-יום {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: max(1rem, calc(0.75rem * var(--fs-scale)));
+    margin-top: 8px;
+    color: rgba(255,255,255,0.8);
+  }
+
+  /* ===== סרגל חיפוש ===== */
+  .אזור-חיפוש {
+    margin-bottom: 24px;
+  }
+
+  .מיכל-חיפוש {
+    position: relative;
+    display: flex;
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  .שדה-חיפוש {
+    flex: 1;
+    padding: 14px 20px 14px 50px;
+    font-family: 'Heebo', sans-serif;
+    font-size: calc(1rem * var(--fs-scale));
+    border: 2px solid var(--צבע-גבול);
+    border-radius: var(--רדיוס);
+    background: white;
+    color: var(--צבע-טקסט);
+    transition: var(--מעבר);
+    direction: rtl;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+
+  .שדה-חיפוש:focus {
+    outline: none;
+    border-color: var(--צבע-זהב);
+    box-shadow: 0 0 0 4px rgba(201,168,76,0.15);
+  }
+
+  .שדה-חיפוש::placeholder { color: #3a4654; }
+
+  .אייקון-חיפוש {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: calc(1.2rem * var(--fs-scale));
+    pointer-events: none;
+    color: #3a4654;
+  }
+
+  .כפתור-ניקוי {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: calc(1.1rem * var(--fs-scale));
+    color: #3a4654;
+    padding: 4px;
+    border-radius: 50%;
+    transition: var(--מעבר);
+    display: none;
+  }
+
+  .כפתור-ניקוי:hover { color: var(--צבע-בורדו); background: #f5f5f5; }
+  .כפתור-ניקוי.נראה { display: flex; align-items: center; }
+
+  /* ===== סינון קטגוריות ===== */
+  .פסי-קטגוריות {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+
+  .כפתור-קטגוריה {
+    padding: 7px 16px;
+    border-radius: 20px;
+    border: 2px solid var(--צבע-גבול);
+    background: white;
+    font-family: 'Heebo', sans-serif;
+    font-size: max(1rem, calc(0.85rem * var(--fs-scale)));
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--מעבר);
+    color: var(--צבע-טקסט-משני);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .כפתור-קטגוריה:hover {
+    border-color: var(--צבע-זהב);
+    color: var(--צבע-ראשי);
+    background: #fffdf5;
+  }
+
+  .כפתור-קטגוריה.פעיל {
+    background: var(--צבע-ראשי);
+    border-color: var(--צבע-ראשי);
+    color: white;
+  }
+
+  /* ===== תוצאות ===== */
+  .שורת-סטטוס {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    font-size: max(1rem, calc(0.85rem * var(--fs-scale)));
+    color: var(--צבע-טקסט-משני);
+  }
+
+  .מספר-תוצאות {
+    font-weight: 600;
+    color: var(--צבע-ראשי);
+  }
+
+  /* ===== רשת כרטיסים ===== */
+  .רשת-כרטיסים {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
+  /* ===== כרטיס מילה ===== */
+  .כרטיס-מילה {
+    background: var(--צבע-כרטיס);
+    border-radius: var(--רדיוס);
+    box-shadow: var(--צל-כרטיס);
+    border: 1px solid var(--צבע-גבול);
+    overflow: hidden;
+    transition: var(--מעבר);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    animation: כניסה 0.4s ease both;
+  }
+
+  @keyframes כניסה {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .כרטיס-מילה:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--צל-כרטיס-hover);
+    border-color: var(--צבע-זהב);
+  }
+
+  .כרטיס-תמונה {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    display: block;
+    background: linear-gradient(135deg, #f0ebe0 0%, #e8dfc8 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .placeholder-תמונה {
+    width: 100%;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: calc(2.8rem * var(--fs-lg));
+    color: rgba(0,0,0,0.15);
+    position: relative;
+  }
+
+  .placeholder-תמונה::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.4;
+  }
+
+  .כרטיס-גוף {
+    padding: 18px 18px 14px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .כרטיס-כותרת {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    gap: 8px;
+  }
+
+  .מילה-ארמית {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: calc(2rem * var(--fs-lg));
+    font-weight: 900;
+    color: var(--צבע-ראשי);
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  .תג-קטגוריה {
+    display: inline-block;
+    font-size: max(1rem, calc(0.7rem * var(--fs-scale)));
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 12px;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+    margin-top: 4px;
+  }
+
+  /* צבעי קטגוריות */
+  .קטגוריה-לוגיקה { background: #e8f0fe; color: #1a56db; }
+  .קטגוריה-בעלי-חיים { background: #e8f5e9; color: #1b7c3b; }
+  .קטגוריה-חפצים { background: #fff3e0; color: #c05e2a; }
+  .קטגוריה-מושגי-דין { background: #f3e8fd; color: #6d28d9; }
+  .קטגוריה-אנשים { background: #fee2e2; color: #b91c1c; }
+  .קטגוריה-זמן { background: #e0f2fe; color: #0369a1; }
+  .קטגוריה-פעולות { background: #fef9c3; color: #92400e; }
+
+  .שורת-תרגום {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+
+  .תרגום-שפה {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: max(1rem, calc(0.85rem * var(--fs-scale)));
+  }
+
+  .תווית-שפה {
+    font-size: max(1rem, calc(0.7rem * var(--fs-scale)));
+    font-weight: 700;
+    color: white;
+    padding: 1px 6px;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+
+  .תווית-עברית { background: var(--צבע-תכלת); }
+  .תווית-אנגלית { background: var(--צבע-ירוק); }
+
+  .תוכן-תרגום {
+    font-weight: 600;
+    color: var(--צבע-טקסט);
+  }
+
+  .כרטיס-הסבר {
+    font-size: max(1rem, calc(0.875rem * var(--fs-scale)));
+    color: var(--צבע-טקסט-משני);
+    line-height: 1.6;
+    flex: 1;
+    border-top: 1px solid var(--צבע-גבול);
+    padding-top: 10px;
+    margin-top: 4px;
+  }
+
+  .כרטיס-תחתון {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 18px 14px;
+    border-top: 1px solid var(--צבע-גבול);
+    background: #fafaf8;
+  }
+
+  .מילה-תעתיק {
+    font-size: max(1rem, calc(0.8rem * var(--fs-scale)));
+    color: var(--צבע-טקסט-משני);
+    font-style: italic;
+    direction: ltr;
+  }
+
+  .כפתור-הרחבה {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: max(1rem, calc(0.8rem * var(--fs-scale)));
+    color: var(--צבע-זהב);
+    font-weight: 600;
+    font-family: 'Heebo', sans-serif;
+    padding: 4px 8px;
+    border-radius: var(--רדיוס-קטן);
+    transition: var(--מעבר);
+  }
+
+  .כפתור-הרחבה:hover { background: rgba(201,168,76,0.12); }
+
+  /* ===== ריק ===== */
+  .מצב-ריק {
+    text-align: center;
+    padding: 60px 20px;
+    grid-column: 1 / -1;
+    color: var(--צבע-טקסט-משני);
+    display: none;
+  }
+
+  .מצב-ריק.נראה { display: block; }
+  .מצב-ריק-אייקון { font-size: calc(3.5rem * var(--fs-lg)); margin-bottom: 12px; }
+  .מצב-ריק h3 { font-size: calc(1.2rem * var(--fs-scale)); margin-bottom: 8px; color: var(--צבע-טקסט); }
+  .מצב-ריק p { font-size: max(1rem, calc(0.9rem * var(--fs-scale))); }
+
+  /* ===== מודאל ===== */
+  .מסך-מודאל {
+    position: fixed;
+    inset: 0;
+    background: rgba(26,26,46,0.7);
+    backdrop-filter: blur(6px);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--מעבר);
+  }
+
+  .מסך-מודאל.פתוח {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .מודאל-תוכן {
+    background: white;
+    border-radius: 20px;
+    max-width: 520px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    transform: scale(0.9) translateY(20px);
+    transition: var(--מעבר);
+    box-shadow: 0 24px 80px rgba(0,0,0,0.3);
+  }
+
+  .מסך-מודאל.פתוח .מודאל-תוכן {
+    transform: scale(1) translateY(0);
+  }
+
+  .מודאל-כותרת {
+    background: linear-gradient(135deg, var(--צבע-ראשי), var(--צבע-משני));
+    padding: 28px 28px 24px;
+    color: white;
+    border-radius: 20px 20px 0 0;
+    position: relative;
+  }
+
+  .מודאל-מילה {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: calc(3.5rem * var(--fs-lg));
+    font-weight: 900;
+    color: var(--צבע-זהב);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .מודאל-תעתיק {
+    font-size: calc(1rem * var(--fs-scale));
+    color: rgba(255,255,255,0.65);
+    font-style: italic;
+    direction: ltr;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .מודאל-סגירה {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: rgba(255,255,255,0.15);
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    font-size: calc(1.2rem * var(--fs-scale));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--מעבר);
+  }
+
+  .מודאל-סגירה:hover { background: rgba(255,255,255,0.3); }
+
+  .מודאל-גוף {
+    padding: 24px 28px 28px;
+  }
+
+  .מודאל-שורת-תרגומים {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .תא-תרגום {
+    padding: 14px;
+    border-radius: var(--רדיוס-קטן);
+    border: 1.5px solid var(--צבע-גבול);
+  }
+
+  .תא-תרגום h4 {
+    font-size: max(1rem, calc(0.7rem * var(--fs-scale)));
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+    color: var(--צבע-טקסט-משני);
+  }
+
+  .תא-תרגום p {
+    font-size: calc(1.1rem * var(--fs-scale));
+    font-weight: 700;
+    color: var(--צבע-ראשי);
+  }
+
+  .מודאל-הסבר {
+    margin-bottom: 18px;
+  }
+
+  .מודאל-הסבר h4 {
+    font-size: max(1rem, calc(0.8rem * var(--fs-scale)));
+    font-weight: 700;
+    color: var(--צבע-זהב);
+    margin-bottom: 8px;
+    letter-spacing: 0.04em;
+  }
+
+  .מודאל-הסבר p {
+    font-size: max(1rem, calc(0.95rem * var(--fs-scale)));
+    color: var(--צבע-טקסט-משני);
+    line-height: 1.7;
+  }
+
+  .מודאל-דוגמה {
+    background: #faf7f0;
+    border-right: 3px solid var(--צבע-זהב);
+    padding: 12px 16px;
+    border-radius: 0 var(--רדיוס-קטן) var(--רדיוס-קטן) 0;
+    margin-bottom: 18px;
+  }
+
+  .מודאל-דוגמה h4 {
+    font-size: max(1rem, calc(0.75rem * var(--fs-scale)));
+    font-weight: 700;
+    color: var(--צבע-זהב);
+    margin-bottom: 6px;
+  }
+
+  .מודאל-דוגמה p {
+    font-size: max(1rem, calc(0.9rem * var(--fs-scale)));
+    color: var(--צבע-טקסט-משני);
+    line-height: 1.6;
+  }
+
+  .מודאל-דוגמה .ארמית-מודאל {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: calc(1.1rem * var(--fs-scale));
+    font-weight: 700;
+    color: var(--צבע-ראשי);
+    margin-bottom: 4px;
+    display: block;
+  }
+
+  /* ===== כותרת תחתונה ===== */
+  footer {
+    background: var(--צבע-ראשי);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 20px;
+    font-size: max(1rem, calc(0.8rem * var(--fs-scale)));
+    margin-top: 40px;
+  }
+
+  footer span { color: var(--צבע-זהב); }
+
+  /* ===== רספונסיבי ===== */
+  @media (max-width: 600px) {
+    .רשת-כרטיסים {
+      grid-template-columns: 1fr;
+    }
+
+    .מילה-של-היום-תוכן {
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .מודאל-שורת-תרגומים {
+      grid-template-columns: 1fr;
+    }
+
+    .פסי-קטגוריות {
+      gap: 6px;
+    }
+  }
+
+  /* ===== הדגשת חיפוש ===== */
+  .הדגשה {
+    background: rgba(201,168,76,0.3);
+    border-radius: 3px;
+    padding: 0 2px;
+  }
+
+  /* ===== אנימציית טעינה ===== */
+  .טוען {
+    animation: פעימה 1.5s ease-in-out infinite;
+  }
+
+  @keyframes פעימה {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+
+/* ===== גופן, גודל, קריאות ורספונסיביות ===== */
+:root{--fs-scale:1.7;--fs-lg:calc(1 + (var(--fs-scale) - 1) * 0.5);}
+*,*::before,*::after,input,button,textarea,select,option{font-family:'Dvdai2','DvdaiLatin','Arial Hebrew',Arial,sans-serif !important;}
+*,*::before,*::after,input::placeholder{-webkit-text-stroke:0.45px;text-shadow:none !important;}
+.__none{-webkit-text-stroke:0;}
+html{-webkit-text-size-adjust:100%%;}
+.scrollx,.chat-area,.fridge-area,.modal-overlay,.categories,.category-bar{-webkit-overflow-scrolling:touch;}
+@media(max-width:1100px){:root{--fs-scale:1.55;}}
+@media(max-width:640px){:root{--fs-scale:1.4;}*{letter-spacing:.5px !important;}}
+@media(prefers-reduced-motion:reduce){*{animation:none !important;}}
+
+:root{--צבע-טקסט:#000000;--צבע-טקסט-משני:#1c2530;--צבע-זהב:#8a6508;--צבע-תכלת:#0a5a7a;--צבע-ירוק:#15693f;--צבע-כתום:#a24a14;--צבע-בורדו:#6a1d33;}
+header,header *{-webkit-text-stroke:0.45px;}
+.רשת-כרטיסים{grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));}
+input::placeholder{color:#3a4654;opacity:1;}
+body{padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right);}
+@media(min-width:1500px){.רשת-כרטיסים{grid-template-columns:repeat(4,1fr);}}
+@media(max-width:900px){.רשת-כרטיסים{grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));}}
+@media(max-width:640px){
+  *{letter-spacing:.3px !important;}
+  .רשת-כרטיסים{gap:12px;}
+  .מסך-מודאל{padding:0 !important;}
+}
+
+
+/* ===== PWA: כפתור חזרה לתפריט (רק כשהאתר מותקן כאפליקציה) ===== */
+.pwa-home{display:none;position:fixed;left:0;top:50%;transform:translateY(-50%);z-index:9000;width:calc(30px + env(safe-area-inset-left));height:64px;padding-left:env(safe-area-inset-left);border-radius:0 16px 16px 0;background:rgba(11,95,122,.88);color:#fff;font-size:18px;align-items:center;justify-content:center;text-decoration:none;box-shadow:2px 2px 12px rgba(0,0,0,.2);-webkit-text-stroke:0 !important;}
+@media (display-mode:standalone){.pwa-home{display:flex;}}
+html.standalone .pwa-home{display:flex;}
+</style>
+</head>
+<body>
+
+<!-- ===== כותרת ===== -->
+<header>
+  <div class="כותרת-פנימית">
+    <div class="סמל-ראשי">📖</div>
+    <h1 class="כותרת-ראשית">מילון <span>הארמית</span> החזותי</h1>
+    <p class="תת-כותרת">לומדים גמרא בקלות — ארמית, עברית, אנגלית 🌟</p>
+  </div>
+</header>
+<div class="פס-זהב"></div>
+
+<!-- ===== גוף ראשי ===== -->
+<main>
+
+  <!-- מילה של היום -->
+  <div class="מילה-של-היום" id="מילה-של-היום-כרטיס" onclick="פתחמודאלמילהשלהיום()">
+    <div class="תווית-יום">⭐ מילה של היום</div>
+    <div class="מילה-של-היום-תוכן">
+      <div class="מילה-ארמית-גדולה" id="יום-ארמית">טייקו</div>
+      <div class="מילה-של-היום-פרטים">
+        <h3 id="יום-עברית">תיקו / שאלה שנשארת ללא מענה</h3>
+        <p id="יום-הסבר">כאשר הגמרא לא מצליחה לפתור שאלה קשה, היא אומרת "טייקו" — והשאלה נשארת פתוחה עד לגאולה!</p>
+        <span class="תגית-קטגוריה-יום" id="יום-קטגוריה">💡 מושגי לוגיקה</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- חיפוש -->
+  <div class="אזור-חיפוש">
+    <div class="מיכל-חיפוש">
+      <span class="אייקון-חיפוש">🔍</span>
+      <input
+        type="text"
+        class="שדה-חיפוש"
+        id="שדה-חיפוש"
+        placeholder="חפש מילה בארמית, עברית או אנגלית..."
+        oninput="עדכןחיפוש(this.value)"
+        autocomplete="off"
+      />
+      <button class="כפתור-ניקוי" id="כפתור-ניקוי" onclick="נקהחיפוש()" title="נקה חיפוש">✕</button>
+    </div>
+  </div>
+
+  <!-- קטגוריות -->
+  <div class="פסי-קטגוריות" id="פסי-קטגוריות">
+    <button class="כפתור-קטגוריה פעיל" data-קטגוריה="הכל" onclick="סננקטגוריה(this)">🗂️ הכל</button>
+    <button class="כפתור-קטגוריה" data-קטגוריה="מושגי לוגיקה" onclick="סננקטגוריה(this)">💡 לוגיקה</button>
+    <button class="כפתור-קטגוריה" data-קטגוריה="בעלי חיים" onclick="סננקטגוריה(this)">🐄 בעלי חיים</button>
+    <button class="כפתור-קטגוריה" data-קטגוריה="חפצים" onclick="סננקטגוריה(this)">🏺 חפצים</button>
+    <button class="כפתור-קטגוריה" data-קטגוריה="מושגי דין" onclick="סננקטגוריה(this)">⚖️ מושגי דין</button>
+    <button class="כפתור-קטגוריה" data-קטגוריה="אנשים" onclick="סננקטגוריה(this)">👤 אנשים</button>
+    <button class="כפתור-קטגוריה" data-קטגוריה="פעולות" onclick="סננקטגוריה(this)">🔄 פעולות</button>
+    <button class="כפתור-קטגוריה" data-קטגוריה="זמן" onclick="סננקטגוריה(this)">🕰️ זמן</button>
+  </div>
+
+  <!-- סטטוס תוצאות -->
+  <div class="שורת-סטטוס">
+    <span>מוצגות <span class="מספר-תוצאות" id="מספר-תוצאות">0</span> מילים</span>
+    <span id="שם-סינון-פעיל" style="color: var(--צבע-זהב); font-weight:600;"></span>
+  </div>
+
+  <!-- רשת כרטיסים -->
+  <div class="רשת-כרטיסים" id="רשת-כרטיסים">
+    <!-- נוצר דינאמית -->
+    <div class="מצב-ריק" id="מצב-ריק">
+      <div class="מצב-ריק-אייקון">🔎</div>
+      <h3>לא נמצאו תוצאות</h3>
+      <p>נסה לחפש בצורה שונה, או עיין בכל הקטגוריות</p>
+    </div>
+  </div>
+
+</main>
+
+<!-- ===== מודאל ===== -->
+<div class="מסך-מודאל" id="מסך-מודאל" onclick="סגורמודאל(event)">
+  <div class="מודאל-תוכן" id="מודאל-תוכן">
+    <div class="מודאל-כותרת">
+      <button class="מודאל-סגירה" onclick="סגורמודאל()">✕</button>
+      <div class="מודאל-מילה" id="מודאל-מילה-ארמית">טייקו</div>
+      <span class="מודאל-תעתיק" id="מודאל-תעתיק">Teyku</span>
+    </div>
+    <div class="מודאל-גוף">
+      <div class="מודאל-שורת-תרגומים">
+        <div class="תא-תרגום">
+          <h4>🇮🇱 בעברית</h4>
+          <p id="מודאל-עברית">—</p>
+        </div>
+        <div class="תא-תרגום">
+          <h4>🇬🇧 English</h4>
+          <p id="מודאל-אנגלית">—</p>
+        </div>
+      </div>
+      <div class="מודאל-הסבר">
+        <h4>📚 הסבר</h4>
+        <p id="מודאל-הסבר">—</p>
+      </div>
+      <div class="מודאל-דוגמה" id="מודאל-דוגמה-מיכל">
+        <h4>✍️ דוגמה מהגמרא</h4>
+        <span class="ארמית-מודאל" id="מודאל-דוגמה-ארמית">—</span>
+        <p id="מודאל-דוגמה-תרגום">—</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== כותרת תחתונה ===== -->
+<footer>
+  <p>📖 מילון הארמית החזותי | נבנה באהבה <span>לתלמידי גמרא</span> 🌟</p>
+  <p style="margin-top:6px; font-size:max(1rem, calc(0.75rem * var(--fs-scale)));">כל הזכויות שמורות • Firebase Ready</p>
+</footer>
+
+<!-- ===== נתוני JSON + לוגיקה ===== -->
+<script>
+// =======================================
+// 📦 מסד הנתונים — 200 מילים ארמיות
+// =======================================
+const מסד_נתונים = [
+  {
+    id: 1, ארמית: "טַייקוּ", תעתיק: "Teyku",
+    עברית: "שאלה ללא מענה / תיקו",
+    אנגלית: "Unresolved question",
+    קטגוריה: "מושגי לוגיקה",
+    אייקון: "❓",
+    צבע_רקע: "linear-gradient(135deg,#e8f0fe,#c7d7f5)",
+    הסבר: "כאשר הגמרא נתקלת בשאלה קשה שאין עליה תשובה, היא אומרת 'טייקו'. פירוש המילה: תשבי יתרץ קושיות ובעיות — כלומר אליהו הנביא יפתור את השאלה בעתיד.",
+    דוגמה_ארמית: "טַייקוּ — לא נפשיט מינה",
+    דוגמה_תרגום: "שאלה זו נשארת פתוחה ולא נפתרה",
+    מילה_של_היום: true
+  },
+  {
+    id: 2, ארמית: "קָשְׁיָא", תעתיק: "Kashya",
+    עברית: "קשה / קושיה",
+    אנגלית: "Difficulty / Objection",
+    קטגוריה: "מושגי לוגיקה",
+    אייקון: "🤔",
+    צבע_רקע: "linear-gradient(135deg,#fef3c7,#fde68a)",
+    הסבר: "מילה שמשמשת כאשר הגמרא מעלה קושיה — כלומר שאלה קשה שסותרת דבר שנאמר קודם. זה כמו לשאול 'אבל רגע, הרי אמרת...'",
+    דוגמה_ארמית: "קָשְׁיָא דְּרַב אַדְּרַב",
+    דוגמה_תרגום: "דברי רב סותרים את דברי רב עצמו"
+  },
+  {
+    id: 3, ארמית: "מַאי טַעְמָא", תעתיק: "Mai Taama",
+    עברית: "מה הטעם? / מדוע?",
+    אנגלית: "What is the reason?",
+    קטגוריה: "מושגי לוגיקה",
+    אייקון: "💭",
+    צבע_רקע: "linear-gradient(135deg,#e0f2fe,#bae6fd)",
+    הסבר: "שאלה שפירושה 'מה הסיבה?' או 'למה?'. הגמרא שואלת שאלה זו כדי לחפש את הנימוק מאחורי כלל הלכתי.",
+    דוגמה_ארמית: "מַאי טַעְמָא אָמַר רַבִּי",
+    דוגמה_תרגום: "מה הסיבה שאמר הרב כך?"
+  },
+  {
+    id: 4, ארמית: "אִיבַּעְיָא לְהוּ", תעתיק: "Ibaya Lehu",
+    עברית: "נשאלה להם שאלה",
+    אנגלית: "A question was raised",
+    קטגוריה: "מושגי לוגיקה",
+    אייקון: "🙋",
+    צבע_רקע: "linear-gradient(135deg,#f3e8fd,#ddd6fe)",
+    הסבר: "ביטוי שפותח שאלה של הגמרא. פירושו: 'עלתה שאלה בין החכמים' — כלומר הם לא היו בטוחים בדבר מה ורצו לדון בו.",
+    דוגמה_ארמית: "אִיבַּעְיָא לְהוּ: מַהוּ?",
+    דוגמה_תרגום: "עלתה שאלה בינם: מה הדין?"
+  },
+  {
+    id: 5, ארמית: "תָּא שְׁמַע", תעתיק: "Ta Shma",
+    עברית: "בוא ושמע / הוכחה ממקור",
+    אנגלית: "Come and hear (proof)",
+    קטגוריה: "מושגי לוגיקה",
+    אייקון: "👂",
+    צבע_רקע: "linear-gradient(135deg,#d1fae5,#6ee7b7)",
+    הסבר: "כשהגמרא מביאה ראיה ממקור אחר לפתרון שאלה, היא אומרת 'תא שמע' — 'בוא ותשמע את הראיה הזו'. זה כמו להגיד: 'יש לי הוכחה!'",
+    דוגמה_ארמית: "תָּא שְׁמַע: דִּתְנַן...",
+    דוגמה_תרגום: "בוא ושמע ראיה: שכן שנינו במשנה..."
+  },
+  {
+    id: 6, ארמית: "שׁוֹר", תעתיק: "Shor",
+    עברית: "שור / פר",
+    אנגלית: "Ox / Bull",
+    קטגוריה: "בעלי חיים",
+    אייקון: "🐂",
+    צבע_רקע: "linear-gradient(135deg,#d1fae5,#a7f3d0)",
+    הסבר: "שור הוא בעל חיים גדול וחזק, מהחשובים בחיי החקלאי בתקופת הגמרא. פרק 'שור שנגח' בבבא קמא עוסק רבות בדיני נזקי שוורים.",
+    דוגמה_ארמית: "שׁוֹר שֶׁנָּגַח אֶת הַפָּרָה",
+    דוגמה_תרגום: "שור שנגח (פגע) בפרה — מי חייב לשלם?"
+  },
+  {
+    id: 7, ארמית: "חֲמָרָא", תעתיק: "Chamara",
+    עברית: "חמור",
+    אנגלית: "Donkey",
+    קטגוריה: "בעלי חיים",
+    אייקון: "🫏",
+    צבע_רקע: "linear-gradient(135deg,#fef9c3,#fde047)",
+    הסבר: "החמור היה כלי התחבורה הנפוץ ביותר בתקופת התלמוד. הגמרא מזכירה חמורים רבות בדיני שמירה, נזיקין ומסחר.",
+    דוגמה_ארמית: "חֲמָרָא דְּמָארֵי עָלְמָא",
+    דוגמה_תרגום: "חמורו של אדון העולם (ביטוי על ענווה)"
+  },
+  {
+    id: 8, ארמית: "כַּלְבָּא", תעתיק: "Kalba",
+    עברית: "כלב",
+    אנגלית: "Dog",
+    קטגוריה: "בעלי חיים",
+    אייקון: "🐕",
+    צבע_רקע: "linear-gradient(135deg,#fee2e2,#fca5a5)",
+    הסבר: "כלב בארמית. הגמרא דנה בנזקים שגורמים כלבים ובסטטוס שלהם. גם השם 'כלבא שבוע' — חמיו של רבי עקיבא — מגיע ממילה זו.",
+    דוגמה_ארמית: "כַּלְבָּא דְּנַשַׁךְ",
+    דוגמה_תרגום: "כלב שנשך — בעליו חייב בנזקים"
+  },
+  {
+    id: 9, ארמית: "כּוּזָא", תעתיק: "Kuza",
+    עברית: "כד / קנקן",
+    אנגלית: "Jug / Pitcher",
+    קטגוריה: "חפצים",
+    אייקון: "🏺",
+    צבע_רקע: "linear-gradient(135deg,#fed7aa,#fb923c)",
+    הסבר: "כד חרס לשמירת נוזלים כמו מים, יין ושמן. הגמרא עוסקת רבות בדיני טומאה וטהרה של כלי חרס, ובנזקים של כדים שנשברו.",
+    דוגמה_ארמית: "כּוּזָא דְּחַמְרָא",
+    דוגמה_תרגום: "קנקן של יין"
+  },
+  {
+    id: 10, ארמית: "סַכִּינָא", תעתיק: "Sakina",
+    עברית: "סכין",
+    אנגלית: "Knife",
+    קטגוריה: "חפצים",
+    אייקון: "🔪",
+    צבע_רקע: "linear-gradient(135deg,#e2e8f0,#cbd5e1)",
+    הסבר: "סכין בארמית — כלי חיוני לשחיטה, בישול ועבודה יומיומית. הגמרא דנה בדיני שחיטה עם סכין חלקה ובהלכות 'בדיקת הסכין'.",
+    דוגמה_ארמית: "בּוֹדֵק סַכִּינָא",
+    דוגמה_תרגום: "בודק את הסכין (לפני שחיטה)"
+  },
+  {
+    id: 11, ארמית: "בֵּי דִינָא", תעתיק: "Bei Dina",
+    עברית: "בית דין",
+    אנגלית: "Court of Law",
+    קטגוריה: "מושגי דין",
+    אייקון: "⚖️",
+    צבע_רקע: "linear-gradient(135deg,#f5f3ff,#c4b5fd)",
+    הסבר: "בית הדין היהודי — בית המשפט של ההלכה. שלושה דיינים לפחות נדרשים לדון בדיני ממונות. הגמרא מלאה בדיונים שמתקיימים 'בפני בית דין'.",
+    דוגמה_ארמית: "אֲתָא לְקַמֵּיה דְּבֵי דִינָא",
+    דוגמה_תרגום: "בא לפני בית הדין"
+  },
+  {
+    id: 12, ארמית: "רַבָּה", תעתיק: "Rabbah",
+    עברית: "רבה / הגדול",
+    אנגלית: "Rabbah (great sage)",
+    קטגוריה: "אנשים",
+    אייקון: "👨‍🏫",
+    צבע_רקע: "linear-gradient(135deg,#e0f2fe,#7dd3fc)",
+    הסבר: "רבה היה אמורא בבלי מפורסם מהדור השלישי. ידוע בחריפותו ובשנינותו. הוא ורב יוסף תלמידו ישבו בישיבת פומבדיתא.",
+    דוגמה_ארמית: "אָמַר רַבָּה",
+    דוגמה_תרגום: "אמר רבה..."
+  },
+  {
+    id: 13, ארמית: "אַמְרִינַן", תעתיק: "Amrinan",
+    עברית: "אנחנו אומרים",
+    אנגלית: "We say / We hold",
+    קטגוריה: "פעולות",
+    אייקון: "🗣️",
+    צבע_רקע: "linear-gradient(135deg,#fef3c7,#fbbf24)",
+    הסבר: "ביטוי בגוף ראשון רבים — 'אנחנו סוברים' או 'אנחנו פוסקים'. משמש כדי להציג את עמדת החכמים הדנים.",
+    דוגמה_ארמית: "אַמְרִינַן הָכִי",
+    דוגמה_תרגום: "אנו אומרים כך"
+  },
+  {
+    id: 14, ארמית: "הַשְׁתָּא", תעתיק: "Hashta",
+    עברית: "עכשיו / כעת",
+    אנגלית: "Now",
+    קטגוריה: "זמן",
+    אייקון: "⏰",
+    צבע_רקע: "linear-gradient(135deg,#e0f7fa,#80deea)",
+    הסבר: "מילת זמן שמשמעותה 'כעת' או 'עכשיו'. הגמרא משתמשת בה כשרוצה להצביע על זמן נוכחי או על מצב קיים.",
+    דוגמה_ארמית: "הַשְׁתָּא אָמַר לָן",
+    דוגמה_תרגום: "עכשיו אמר לנו..."
+  },
+  {
+    id: 15, ארמית: "תְּנַן", תעתיק: "Tenan",
+    עברית: "שנינו / כך שנויה במשנה",
+    אנגלית: "We learned (in the Mishna)",
+    קטגוריה: "מושגי לוגיקה",
+    אייקון: "📜",
+    צבע_רקע: "linear-gradient(135deg,#f0fdf4,#bbf7d0)",
+    הסבר: "כשהגמרא מצטטת ממשנה היא פותחת ב'תנן' — 'שנינו'. זה ביטוי של כבוד למשנה כמקור סמכות מרכזי.",
+    דוגמה_ארמית: "תְּנַן הָתָם",
+    דוגמה_תרגום: "שנינו שם במשנה..."
+  },
+  {
+    id: 16, ארמית: "מַנָּא הָנֵי מִילֵּי", תעתיק: "Mana Hanei Milei",
+    עברית: "מנין לנו הדברים האלה?",
+    אנגלית: "From where do we derive this?",
+    קטגוריה: "מושגי לוגיקה",
+    אייקון: "📖",
+    צבע_רקע: "linear-gradient(135deg,#fff7ed,#fed7aa)",
+    הסבר: "שאלה שמבקשת את המקור בתורה לכלל הלכתי. הגמרא שואלת מניין ידוע לנו הדין הזה — ממה לומדים אותו?",
+    דוגמה_ארמית: "מַנָּא הָנֵי מִילֵּי? אָמַר רַב...",
+    דוגמה_תרגום: "מנין לנו דברים אלו? אמר רב..."
+  },
+  {
+    id: 17, ארמית: "אַרְעָא", תעתיק: "Ara",
+    עברית: "ארץ / קרקע",
+    אנגלית: "Land / Ground",
+    קטגוריה: "חפצים",
+    אייקון: "🌍",
+    צבע_רקע: "linear-gradient(135deg,#f0fdf4,#86efac)",
+    הסבר: "קרקע, אדמה. הגמרא עוסקת רבות בדיני קרקעות — קנייה, מכירה, השכרה ונזקים. 'אין מטלטלין כקרקע' — עיקרון חשוב בדיני ממונות.",
+    דוגמה_ארמית: "זְבַן אַרְעָא",
+    דוגמה_תרגום: "קנה קרקע / שדה"
+  },
+  {
+    id: 18, ארמית: "מַיָּא", תעתיק: "Maya",
+    עברית: "מים",
+    אנגלית: "Water",
+    קטגוריה: "חפצים",
+    אייקון: "💧",
+    צבע_רקע: "linear-gradient(135deg,#e0f2fe,#38bdf8)",
+    הסבר: "מים בארמית. מופיע רבות בהקשרי טהרה, כמו טבילה במקווה, נטילת ידיים וחיוב שמירת מים. 'מים חיים' — מי מעיין.",
+    דוגמה_ארמית: "מַיָּא חַיֵּי",
+    דוגמה_תרגום: "מים חיים (מי מעיין)"
+  },
+  {
+    id: 19, ארמית: "נוּרָא", תעתיק: "Nura",
+    עברית: "אש / אור",
+    אנגלית: "Fire / Light",
+    קטגוריה: "חפצים",
+    אייקון: "🔥",
+    צבע_רקע: "linear-gradient(135deg,#fff7ed,#fb923c)",
+    הסבר: "אש. אחד מ'ארבעת האבות נזיקין' הוא 'האש'. הגמרא דנה בנזקי אש שמתפשטת ומבעירה שדות שכנים.",
+    דוגמה_ארמית: "נוּרָא דְּאַדְלַק",
+    דוגמה_תרגום: "אש שהצית (ביצת נזק)"
+  },
+  {
+    id: 20, ארמית: "כַּסְפָּא", תעתיק: "Kaspa",
+    עברית: "כסף / כסף מזומן",
+    אנגלית: "Silver / Money",
+    קטגוריה: "חפצים",
+    אייקון: "🪙",
+    צבע_רקע: "linear-gradient(135deg,#f8fafc,#e2e8f0)",
+    הסבר: "כסף בארמית. הגמרא עוסקת רבות בדיני ממון, הלוואות ותשלומים בכסף. 'כספא' מופיע בהקשר של דיני קניין, שכר ופיצויים.",
+    דוגמה_ארמית: "שַׁלֵּים כַּסְפָּא",
+    דוגמה_תרגום: "שילם כסף (פיצוי)"
+  },
+  {
+    id: 21, ארמית: "פִּיתָא", תעתיק: "Pita",
+    עברית: "לחם / פיתה",
+    אנגלית: "Bread",
+    קטגוריה: "חפצים",
+    אייקון: "🍞",
+    צבע_רקע: "linear-gradient(135deg,#fef9c3,#fde68a)",
+    הסבר: "לחם — המזון הבסיסי. הגמרא עוסקת בברכת 'המוציא לחם', בנטילת ידיים לפני הלחם ובדינים הקשורים לארוחות.",
+    דוגמה_ארמית: "פַּת פִּיתָא",
+    דוגמה_תרגום: "כיכר לחם"
+  },
+  {
+    id: 22, ארמית: "חַמְרָא", תעתיק: "Chamra",
+    עברית: "יין",
+    אנגלית: "Wine",
+    קטגוריה: "חפצים",
+    אייקון: "🍷",
+    צבע_רקע: "linear-gradient(135deg,#fdf2f8,#f9a8d4)",
+    הסבר: "יין בארמית. חשוב מאד בהלכה — קידוש, הבדלה, ד' כוסות בפסח. הגמרא דנה ביין שנגע בו נכרי ('יין נסך').",
+    דוגמה_ארמית: "חַמְרָא דְּקִידּוּשָׁא",
+    דוגמה_תרגום: "יין של קידוש"
+  },
+  {
+    id: 23, ארמית: "אִיתְּתָא", תעתיק: "Ita",
+    עברית: "אישה",
+    אנגלית: "Woman",
+    קטגוריה: "אנשים",
+    אייקון: "👩",
+    צבע_רקע: "linear-gradient(135deg,#fdf2f8,#fbcfe8)",
+    הסבר: "אישה בארמית. מופיע רבות בסוגיות כתובות, גיטין ויבמות. 'אִשָּׁה' בעברית היא 'אִיתְּתָא' בארמית.",
+    דוגמה_ארמית: "אִיתְּתָא דְּקַדִּישׁ",
+    דוגמה_תרגום: "אישה שקידשה אותה (נשא אותה)"
+  },
+  {
+    id: 24, ארמית: "גַּבְרָא", תעתיק: "Gavra",
+    עברית: "גבר / איש",
+    אנגלית: "Man",
+    קטגוריה: "אנשים",
+    אייקון: "👨",
+    צבע_רקע: "linear-gradient(135deg,#eff6ff,#bfdbfe)",
+    הסבר: "איש/גבר בארמית. הגמרא מדברת על 'גברא' כאחראי, כחייב, כבעל זכויות. 'גברא רבה' = אדם גדול/חשוב.",
+    דוגמה_ארמית: "גַּבְרָא רַבָּה",
+    דוגמה_תרגום: "אדם גדול וחשוב"
+  },
+  {
+    id: 25, ארמית: "יַנּוּקָא", תעתיק: "Yanuka",
+    עברית: "ינוקא / תינוק / ילד",
+    אנגלית: "Child / Baby",
+    קטגוריה: "אנשים",
+    אייקון: "👶",
+    צבע_רקע: "linear-gradient(135deg,#f0fdf4,#bbf7d0)",
+    הסבר: "ילד קטן בארמית. 'ינוקא' מופיע בהקשרים של חינוך, אחריות הורית וזכויות הילד. גם 'שאלת הינוקא' — שאלה מפי ילד שנחשבת כנבואה.",
+    דוגמה_ארמית: "אָמַר יַנּוּקָא",
+    דוגמה_תרגום: "אמר הילד (כנבואה מפי עוללים)"
+  },
+  {
+    id: 26, ארמית: "נָפַל", תעתיק: "Nafal",
+    עברית: "נפל",
+    אנגלית: "Fell / Fell down",
+    קטגוריה: "פעולות",
+    אייקון: "⬇️",
+    צבע_רקע: "linear-gradient(135deg,#fef3c7,#fde68a)",
+    הסבר: "לנפול. הגמרא עוסקת בנזקים שנגרמים כשדברים נופלים — כלים, חפצים, ואף בני אדם — ומי אחראי לנזק.",
+    דוגמה_ארמית: "נָפַל מִגַּגָּא",
+    דוגמה_תרגום: "נפל מן הגג"
+  },
+  {
+    id: 27, ארמית: "אָזַל", תעתיק: "Azal",
+    עברית: "הלך / עזב",
+    אנגלית: "Went / Left",
+    קטגוריה: "פעולות",
+    אייקון: "🚶",
+    צבע_רקע: "linear-gradient(135deg,#f0f9ff,#e0f2fe)",
+    הסבר: "ללכת בארמית. 'אזל לביתיה' — הלך לביתו. 'אזל לשוקא' — הלך לשוק. מילה נפוצה מאד בסיפורי הגמרא.",
+    דוגמה_ארמית: "אָזַל לְגַבֵּיה",
+    דוגמה_תרגום: "הלך אליו"
+  },
+  {
+    id: 28, ארמית: "אָתָא", תעתיק: "Ata",
+    עברית: "בא / הגיע",
+    אנגלית: "Came / Arrived",
+    קטגוריה: "פעולות",
+    אייקון: "🏃",
+    צבע_רקע: "linear-gradient(135deg,#fff7ed,#fed7aa)",
+    הסבר: "לבוא / להגיע. 'אתא לקמיה' — בא לפניו (לפני הדיין). מילה שכיחה בסיפורי הגמרא.",
+    דוגמה_ארמית: "אָתָא לְקַמֵּיה דְּרַב",
+    דוגמה_תרגום: "בא לפני רב (הרב)"
+  },
+  {
+    id: 29, ארמית: "אָמַר", תעתיק: "Amar",
+    עברית: "אמר",
+    אנגלית: "Said / Stated",
+    קטגוריה: "פעולות",
+    אייקון: "💬",
+    צבע_רקע: "linear-gradient(135deg,#f5f3ff,#ede9fe)",
+    הסבר: "אמר — הפועל הנפוץ ביותר בגמרא! 'אמר רב', 'אמר שמואל', 'אמר ליה' — כשחכם מביע דעה.",
+    דוגמה_ארמית: "אָמַר לֵיהּ",
+    דוגמה_תרגום: "אמר לו"
+  },
+  {
+    id: 30, ארמית: "שָׁמַע", תעתיק: "Shama",
+    עברית: "שמע",
+    אנגלית: "Heard / Listened",
+    קטגוריה: "פעולות",
+    אייקון: "👂",
+    צבע_רקע: "linear-gradient(135deg,#fdf4ff,#f0abfc)",
+    הסבר: "שמע. 'שמעיה' — שמע אותו. 'מאי שמעת מינה' — מה למדת מזה? 'שמע מינה' — מסקנה שנלמדת.",
+    דוגמה_ארמית: "שְׁמַע מִינַּהּ",
+    דוגמה_תרגום: "למד מכך (הסקנה)"
+  },
+  {
+    id: 31, ארמית: "יְדַע", תעתיק: "Yeda",
+    עברית: "ידע / מכיר",
+    אנגלית: "Knew / Understood",
+    קטגוריה: "פעולות",
+    אייקון: "🧠",
+    צבע_רקע: "linear-gradient(135deg,#ecfdf5,#a7f3d0)",
+    הסבר: "לדעת, להכיר. 'לא ידע' — לא ידע. 'מאן דלא ידע' — מי שאינו יודע. הגמרא מדגישה חשיבות הידע.",
+    דוגמה_ארמית: "לָא יְדַע מַאי קָאָמַר",
+    דוגמה_תרגום: "לא ידע מה הוא אומר"
+  },
+  {
+    id: 32, ארמית: "לֵילְיָא", תעתיק: "Leila",
+    עברית: "לילה",
+    אנגלית: "Night",
+    קטגוריה: "זמן",
+    אייקון: "🌙",
+    צבע_רקע: "linear-gradient(135deg,#1e1b4b,#312e81)",
+    הסבר: "לילה בארמית. חשוב להלכה — מצוות רבות תלויות בזמן הלילה, כמו קריאת שמע של ערבית, ואכילת פסח בלילה.",
+    דוגמה_ארמית: "בְּלֵילְיָא",
+    דוגמה_תרגום: "בלילה"
+  },
+  {
+    id: 33, ארמית: "יוֹמָא", תעתיק: "Yoma",
+    עברית: "יום",
+    אנגלית: "Day",
+    קטגוריה: "זמן",
+    אייקון: "☀️",
+    צבע_רקע: "linear-gradient(135deg,#fef9c3,#fbbf24)",
+    הסבר: "יום בארמית. 'יומא' הוא גם שם מסכת הגמרא העוסקת ביום הכיפורים. 'כל יומא ויומא' — כל יום ויום.",
+    דוגמה_ארמית: "כָּל יוֹמָא וְיוֹמָא",
+    דוגמה_תרגום: "כל יום ויום"
+  },
+  {
+    id: 34, ארמית: "שַׁבְּתָא", תעתיק: "Shabta",
+    עברית: "שבת",
+    אנגלית: "Sabbath",
+    קטגוריה: "זמן",
+    אייקון: "🕯️",
+    צבע_רקע: "linear-gradient(135deg,#fdf4ff,#e9d5ff)",
+    הסבר: "שבת בארמית. 'שבת' היא מסכת ענקית בגמרא. 'עיולי שבתא' — כניסת שבת. 'שבת שלמה' — שבת שלמה.",
+    דוגמה_ארמית: "כִּי עֵייֵּל שַׁבְּתָא",
+    דוגמה_תרגום: "כשנכנסת השבת"
+  },
+  {
+    id: 35, ארמית: "בֵּיתָא", תעתיק: "Beita",
+    עברית: "בית",
+    אנגלית: "House / Home",
+    קטגוריה: "חפצים",
+    אייקון: "🏠",
+    צבע_רקע: "linear-gradient(135deg,#fff7ed,#fed7aa)",
+    הסבר: "בית בארמית. הגמרא עוסקת רבות בדיני בתים — קנייה, מכירה, שכירות ומזוזה. 'ביתא' מופיע גם בשמות מקומות.",
+    דוגמה_ארמית: "בֵּיתָא שְׁלֵמָא",
+    דוגמה_תרגום: "בית שלם"
+  },
+  {
+    id: 36, ארמית: "שׁוּקָא", תעתיק: "Shuka",
+    עברית: "שוק / רחוב",
+    אנגלית: "Market / Street",
+    קטגוריה: "חפצים",
+    אייקון: "🏪",
+    צבע_רקע: "linear-gradient(135deg,#f0fdf4,#86efac)",
+    הסבר: "שוק, מקום מסחר. הגמרא דנה בנזקים שנגרמים ברשות הרבים (השוק), בשמירת חפצים בשוק ובמסחר הוגן.",
+    דוגמה_ארמית: "אָזַל לְשׁוּקָא",
+    דוגמה_תרגום: "הלך לשוק"
+  },
+  {
+    id: 37, ארמית: "מַלְכָּא", תעתיק: "Malka",
+    עברית: "מלך",
+    אנגלית: "King",
+    קטגוריה: "אנשים",
+    אייקון: "👑",
+    צבע_רקע: "linear-gradient(135deg,#fef9c3,#f59e0b)",
+    הסבר: "מלך בארמית. 'מלכותא' — המלכות/הממשלה. הגמרא מדברת על יחס לשלטון: 'דינא דמלכותא דינא' — חוק המלכות הוא חוק.",
+    דוגמה_ארמית: "דִּינָא דְּמַלְכוּתָא דִּינָא",
+    דוגמה_תרגום: "חוק המדינה הוא חוק (מחייב)"
+  },
+  {
+    id: 38, ארמית: "רַב", תעתיק: "Rav",
+    עברית: "רב / מורה",
+    אנגלית: "Rabbi / Teacher",
+    קטגוריה: "אנשים",
+    אייקון: "👨‍🎓",
+    צבע_רקע: "linear-gradient(135deg,#eff6ff,#dbeafe)",
+    הסבר: "רב — תואר לחכם גדול. 'רב' ו'שמואל' הם האמוראים הבבליים הראשונים. הם ייסדו את ישיבות סורא ונהרדעא.",
+    דוגמה_ארמית: "אָמַר רַב",
+    דוגמה_תרגום: "אמר רב (האמורא הגדול)"
+  },
+  {
+    id: 39, ארמית: "חָכִים", תעתיק: "Chacim",
+    עברית: "חכם",
+    אנגלית: "Wise / Scholar",
+    קטגוריה: "אנשים",
+    אייקון: "🧙",
+    צבע_רקע: "linear-gradient(135deg,#f5f3ff,#ddd6fe)",
+    הסבר: "חכם בארמית. 'חכימי' — חכמים. 'חכים טפי' — יותר חכם. הגמרא מכבדת מאד את החכמה ואת לומדי תורה.",
+    דוגמה_ארמית: "חָכִים טְפֵי מִינֵּיהּ",
+    דוגמה_תרגום: "חכם ממנו"
+  },
+  {
+    id: 40, ארמית: "פּוּמָּא", תעתיק: "Puma",
+    עברית: "פה / פי",
+    אנגלית: "Mouth",
+    קטגוריה: "חפצים",
+    אייקון: "👄",
+    צבע_רקע: "linear-gradient(135deg,#fee2e2,#fca5a5)",
+    הסבר: "פה בארמית. 'מפומיה' — מפיו. 'פומא דכולי עלמא' — פי כולם. חשוב בהלכות עדות — עדות ניתנת מהפה.",
+    דוגמה_ארמית: "מִפּוּמֵּיה שְׁמִיעַ לָן",
+    דוגמה_תרגום: "מפיו שמענו"
+  },
+  {
+    id: 41, ארמית: "אִידָּא", תעתיק: "Ida",
+    עברית: "יד",
+    אנגלית: "Hand",
+    קטגוריה: "חפצים",
+    אייקון: "✋",
+    צבע_רקע: "linear-gradient(135deg,#fff7ed,#fdba74)",
+    הסבר: "יד בארמית. 'ידיה' — ידיו. חשוב בהלכה: 'נטילת ידיים', קניין ב'משיכה' (ביד), ו'שטר' שנמסר ביד.",
+    דוגמה_ארמית: "בְּיָדֵיהּ",
+    דוגמה_תרגום: "בידיו"
+  },
+  {
+    id: 42, ארמית: "עֵינָא", תעתיק: "Eina",
+    עברית: "עין",
+    אנגלית: "Eye",
+    קטגוריה: "חפצים",
+    אייקון: "👁️",
+    צבע_רקע: "linear-gradient(135deg,#e0f2fe,#7dd3fc)",
+    הסבר: "עין בארמית. 'עינא בישא' — עין הרע. 'עין טובה' ו'עין רעה' הם מושגי מידות חשובים בגמרא. גם בדיני נזקי גוף.",
+    דוגמה_ארמית: "עֵינָא בִּישָׁא",
+    דוגמה_תרגום: "עין הרע"
+  },
+  {
+    id: 43, ארמית: "לִיבָּא", תעתיק: "Liba",
+    עברית: "לב",
+    אנגלית: "Heart",
+    קטגוריה: "חפצים",
+    אייקון: "❤️",
+    צבע_רקע: "linear-gradient(135deg,#fff1f2,#fecdd3)",
+    הסבר: "לב בארמית. 'כוונת הלב' חשובה בתפילה. 'לב טוב' — מידה טובה. 'כיוון שעלה בליבו' — כשהחליט בליבו.",
+    דוגמה_ארמית: "בְּלִיבֵּיהּ",
+    דוגמה_תרגום: "בלבו"
+  },
+  {
+    id: 44, ארמית: "פַּרְדֵּסָא", תעתיק: "Pardesa",
+    עברית: "פרדס / גן",
+    אנגלית: "Orchard / Garden",
+    קטגוריה: "חפצים",
+    אייקון: "🌳",
+    צבע_רקע: "linear-gradient(135deg,#f0fdf4,#bbf7d0)",
+    הסבר: "פרדס — גן פירות. מפורסם בסיפור 'ארבעה שנכנסו לפרדס' — ארבעה חכמים שנכנסו לסוד המיסטיקה.",
+    דוגמה_ארמית: "אַרְבָּעָה נִכְנְסוּ לְפַרְדֵּס",
+    דוגמה_תרגום: "ארבעה נכנסו לפרדס (המיסטיקה)"
+  },
+  {
+    id: 45, ארמית: "צְלוֹתָא", תעתיק: "Tzlota",
+    עברית: "תפילה",
+    אנגלית: "Prayer",
+    קטגוריה: "מושגי דין",
+    אייקון: "🙏",
+    צבע_רקע: "linear-gradient(135deg,#f5f3ff,#c4b5fd)",
+    הסבר: "תפילה בארמית. 'צלוי' — התפלל. הגמרא עוסקת רבות בהלכות תפילה — מתי, איך, וכמה פעמים. 'שלש פעמים ביום'.",
+    דוגמה_ארמית: "צְלֵי צְלוֹתֵיהּ",
+    דוגמה_תרגום: "התפלל את תפילתו"
+  },
+  {
+    id: 46, ארמית: "שְׁמַיָּא", תעתיק: "Shmaya",
+    עברית: "שמים",
+    אנגלית: "Heaven / Sky",
+    קטגוריה: "מושגי דין",
+    אייקון: "☁️",
+    צבע_רקע: "linear-gradient(135deg,#e0f2fe,#bae6fd)",
+    הסבר: "שמים בארמית. 'מן שמיא' — מן השמים. 'ייסורין מן שמיא' — ייסורים שבאים מהשמים. גם שם נפוץ יהודי.",
+    דוגמה_ארמית: "מִן שְׁמַיָּא",
+    דוגמה_תרגום: "מן השמים"
+  },
+  {
+    id: 47, ארמית: "זְמַן", תעתיק: "Zman",
+    עברית: "זמן",
+    אנגלית: "Time",
+    קטגוריה: "זמן",
+    אייקון: "⏳",
+    צבע_רקע: "linear-gradient(135deg,#fef3c7,#fcd34d)",
+    הסבר: "זמן — עיקרון יסודי בהלכה. 'מצוות עשה שהזמן גרמא' — מצוות שתלויות בזמן. 'זמן שחיטה' — זמן מתאים לשחיטה.",
+    דוגמה_ארמית: "בְּהַהוּא זִמְנָא",
+    דוגמה_תרגום: "באותו זמן"
+  },
+  {
+    id: 48, ארמית: "מַסְכְּתָא", תעתיק: "Masecta",
+    עברית: "מסכת",
+    אנגלית: "Tractate",
+    קטגוריה: "מושגי לוגיקה",
+    אייקון: "📚",
+    צבע_רקע: "linear-gradient(135deg,#fffbeb,#fef3c7)",
+    הסבר: "מסכת — חלק מהתלמוד. יש 63 מסכתות בתלמוד הבבלי. כל מסכת עוסקת בנושא מסוים כמו שבת, בבא קמא, גיטין.",
+    דוגמה_ארמית: "מַסְכְּתָא דְּשַׁבָּת",
+    דוגמה_תרגום: "מסכת שבת"
+  },
+  {
+    id: 49, ארמית: "אוֹרַיְיתָא", תעתיק: "Oraita",
+    עברית: "תורה / מהתורה",
+    אנגלית: "Torah / Biblical law",
+    קטגוריה: "מושגי דין",
+    אייקון: "📜",
+    צבע_רקע: "linear-gradient(135deg,#fffbeb,#fef08a)",
+    הסבר: "'דאורייתא' — מהתורה עצמה (חומרה גדולה). להבדיל מ'דרבנן' — מתקנת הרבנים. הבחנה יסודית בדיני ספק.",
+    דוגמה_ארמית: "דְּאוֹרַיְיתָא הוּא",
+    דוגמה_תרגום: "זהו דין מן התורה"
+  },
+  {
+    id: 50, ארמית: "רַבָּנַן", תעתיק: "Rabbanan",
+    עברית: "רבנן / החכמים",
+    אנגלית: "The Rabbis",
+    קטגוריה: "אנשים",
+    אייקון: "👥",
+    צבע_רקע: "linear-gradient(135deg,#eff6ff,#bfdbfe)",
+    הסבר: "'רבנן' — הרבנים, החכמים. 'דרבנן' — מתקנת הרבנים (קל יותר מ'דאורייתא'). 'מאי דרבנן' — מה אמרו הרבנים?",
+    דוגמה_ארמית: "אָמְרִי רַבָּנַן",
+    דוגמה_תרגום: "אמרו החכמים"
+  },
+
+  // === 51–100: עוד מילים ===
+  {id:51,ארמית:"אִיסּוּרָא",תעתיק:"Isura",עברית:"איסור",אנגלית:"Prohibition",קטגוריה:"מושגי דין",אייקון:"🚫",צבע_רקע:"linear-gradient(135deg,#fee2e2,#fca5a5)",הסבר:"איסור — דבר אסור בהלכה. 'איסורא דאורייתא' — איסור מן התורה. 'מקום איסור' — מקום שיש בו פגם הלכתי.",דוגמה_ארמית:"אִיסּוּרָא אִיכָּא",דוגמה_תרגום:"יש כאן איסור"},
+  {id:52,ארמית:"הֶיתֵּרָא",תעתיק:"Hetera",עברית:"היתר",אנגלית:"Permission / Leniency",קטגוריה:"מושגי דין",אייקון:"✅",צבע_רקע:"linear-gradient(135deg,#f0fdf4,#bbf7d0)",הסבר:"היתר — דבר מותר. ההיפך מ'איסורא'. החכמים מחפשים 'היתר' לפתרון בעיות מעשיות.",דוגמה_ארמית:"אִיכָּא הֶיתֵּרָא",דוגמה_תרגום:"יש כאן היתר"},
+  {id:53,ארמית:"חַיָּיב",תעתיק:"Chayav",עברית:"חייב",אנגלית:"Liable / Obligated",קטגוריה:"מושגי דין",אייקון:"⚖️",צבע_רקע:"linear-gradient(135deg,#fef3c7,#fcd34d)",הסבר:"חייב — אחראי לשלם נזק, לעשות מצווה, או לקבל עונש. 'חייב בתשלומין' — חייב לשלם.",דוגמה_ארמית:"חַיָּיב בְּתַשְׁלוּמִין",דוגמה_תרגום:"חייב לשלם פיצויים"},
+  {id:54,ארמית:"פָּטוּר",תעתיק:"Patur",עברית:"פטור",אנגלית:"Exempt",קטגוריה:"מושגי דין",אייקון:"🆓",צבע_רקע:"linear-gradient(135deg,#ecfdf5,#6ee7b7)",הסבר:"פטור — לא חייב. 'פטור מדיני אדם וחייב בדיני שמים' — פטור בבית דין אך אחראי לפני ה'.",דוגמה_ארמית:"פָּטוּר מִלְּשַׁלֵּם",דוגמה_תרגום:"פטור מלשלם"},
+  {id:55,ארמית:"כִּי הֵיכִי",תעתיק:"Ki Heichi",עברית:"כדי ש / בשביל",אנגלית:"In order to / So that",קטגוריה:"מושגי לוגיקה",אייקון:"🎯",צבע_רקע:"linear-gradient(135deg,#f5f3ff,#ede9fe)",הסבר:"ביטוי שמציין מטרה — 'בשביל ש...', 'כדי ש...'. מקביל ל'למען' בעברית.",דוגמה_ארמית:"כִּי הֵיכִי דְּתֵיקוּם",דוגמה_תרגום:"כדי שיעמוד / יתקיים"},
+  {id:56,ארמית:"הָכִי נַמִּי",תעתיק:"Hachi Nami",עברית:"כך גם / כן גם כן",אנגלית:"So too / Indeed",קטגוריה:"מושגי לוגיקה",אייקון:"✔️",צבע_רקע:"linear-gradient(135deg,#f0fdf4,#a7f3d0)",הסבר:"ביטוי שמסכים — 'כך גם הוא'. כשהגמרא מסכימה לטענה שהועלתה ואומרת: נכון, כך הדבר!",דוגמה_ארמית:"הָכִי נַמִּי מִסְתַּבְּרָא",דוגמה_תרגום:"כך גם מסתבר / נראה לומר"},
+  {id:57,ארמית:"שָׁאנֵי",תעתיק:"Shani",עברית:"שונה / אחרת",אנגלית:"Different / Exception",קטגוריה:"מושגי לוגיקה",אייקון:"🔀",צבע_רקע:"linear-gradient(135deg,#fff7ed,#fdba74)",הסבר:"כשהגמרא רוצה לדחות השוואה, היא אומרת 'שאני' — 'זה שונה!' כלומר: המקרה הזה מיוחד.",דוגמה_ארמית:"שָׁאנֵי הָתָם",דוגמה_תרגום:"שם שונה (יש הבדל)"},
+  {id:58,ארמית:"לָא קַשְׁיָא",תעתיק:"La Kashya",עברית:"לא קשה / אין סתירה",אנגלית:"No difficulty",קטגוריה:"מושגי לוגיקה",אייקון:"✅",צבע_רקע:"linear-gradient(135deg,#f0fdf4,#bbf7d0)",הסבר:"פתרון לסתירה — 'אין קושיה, כי...' הגמרא מציגה קושיה ואחר כך פותרת אותה עם 'לא קשיא'.",דוגמה_ארמית:"לָא קַשְׁיָא: הָא בְּהָא",דוגמה_תרגום:"אין קושיה: זה מדבר במקרה אחד וזה באחר"},
+  {id:59,ארמית:"אֶלָּא",תעתיק:"Ela",עברית:"אלא / אבל",אנגלית:"Rather / But",קטגוריה:"מושגי לוגיקה",אייקון:"↩️",צבע_רקע:"linear-gradient(135deg,#eff6ff,#dbeafe)",הסבר:"'אלא' — ביטוי שמציג פתרון חדש אחרי דחייה. 'אלא' מסמן: 'לא כפי שחשבנו, אלא כך!'",דוגמה_ארמית:"אֶלָּא אָמַר רַב",דוגמה_תרגום:"אלא אמר רב (פתרון חדש)"},
+  {id:60,ארמית:"מִידֵּי",תעתיק:"Midei",עברית:"משהו / כלום",אנגלית:"Anything / Something",קטגוריה:"מושגי לוגיקה",אייקון:"🔍",צבע_רקע:"linear-gradient(135deg,#fdf4ff,#e879f9)",הסבר:"'מידי' — 'כלום', 'משהו'. 'לא מידי' — לא כלום. 'מידי הוא טעמא' — האם יש סיבה לכך?",דוגמה_ארמית:"לָא מִידֵּי",דוגמה_תרגום:"לא כלום / לא שום דבר"},
+  {id:61,ארמית:"גּוּפָא",תעתיק:"Gufa",עברית:"גוף / עיקר הדבר",אנגלית:"The matter itself",קטגוריה:"מושגי לוגיקה",אייקון:"📌",צבע_רקע:"linear-gradient(135deg,#fef9c3,#fde68a)",הסבר:"'גופא' — 'הגוף', עיקר הדבר. כשהגמרא רוצה לבדוק לעומק משנה שצוטטה, היא אומרת 'גופא!'",דוגמה_ארמית:"גּוּפָא קָתָנֵי",דוגמה_תרגום:"עצם המשנה שנויה (בואו נבדוק אותה)"},
+  {id:62,ארמית:"כִּדְקָתָנֵי",תעתיק:"Kidkatani",עברית:"כפי ששנויה / כמו שנאמר",אנגלית:"As it was taught",קטגוריה:"מושגי לוגיקה",אייקון:"📖",צבע_רקע:"linear-gradient(135deg,#fff7ed,#fed7aa)",הסבר:"ביטוי שמפנה למשנה שנשנית. 'כדקתני' — כמו שמלמדת הברייתא/המשנה.",דוגמה_ארמית:"כִּדְקָתָנֵי בְּמַתְנִיתִין",דוגמה_תרגום:"כמו ששנינו במשנה"},
+  {id:63,ארמית:"בָּבָא",תעתיק:"Bava",עברית:"שער / פרק / חלק",אנגלית:"Gate / Section",קטגוריה:"מושגי לוגיקה",אייקון:"🚪",צבע_רקע:"linear-gradient(135deg,#fef3c7,#fbbf24)",הסבר:"בבא = שער. שלוש המסכתות הגדולות: בבא קמא, בבא מציעא, בבא בתרא — שלושה שערים של מסכת 'נזיקין'.",דוגמה_ארמית:"בָּבָא קַמָּא",דוגמה_תרגום:"השער הראשון (מסכת)"},
+  {id:64,ארמית:"תַּנָּא",תעתיק:"Tanna",עברית:"תנא / חכם מהמשנה",אנגלית:"Tanna (Mishnaic sage)",קטגוריה:"אנשים",אייקון:"🧓",צבע_רקע:"linear-gradient(135deg,#f0fdf4,#86efac)",הסבר:"תנא — חכם מתקופת המשנה (עד ~200 לספירה). להבדיל מ'אמורא' — חכם מתקופת הגמרא.",דוגמה_ארמית:"תַּנָּא הוּא",דוגמה_תרגום:"הוא תנא (חכם מהמשנה)"},
+  {id:65,ארמית:"אָמוֹרָא",תעתיק:"Amora",עברית:"אמורא / חכם תלמודי",אנגלית:"Amora (Talmudic sage)",קטגוריה:"אנשים",אייקון:"📚",צבע_רקע:"linear-gradient(135deg,#eff6ff,#bfdbfe)",הסבר:"אמורא — חכם מתקופת הגמרא (~200–500 לספירה). האמוראים מפרשים את דברי התנאים.",דוגמה_ארמית:"אָמוֹרָא הוּא",דוגמה_תרגום:"הוא אמורא (חכם מהתלמוד)"},
+  {id:66,ארמית:"מַה לִּי",תעתיק:"Ma Li",עברית:"מה לי / מה אכפת לי",אנגלית:"What does it matter to me?",קטגוריה:"מושגי לוגיקה",אייקון:"🤷",צבע_רקע:"linear-gradient(135deg,#fdf4ff,#f0abfc)",הסבר:"'מה לי' — 'מה ההבדל?' כשהגמרא שואלת: מה ההבדל בין מקרה א' למקרה ב'? אין הבדל!",דוגמה_ארמית:"מַה לִּי הָא, מַה לִּי הָא",דוגמה_תרגום:"מה ההבדל בין זה לזה?"},
+  {id:67,ארמית:"כּוּלֵּי עָלְמָא",תעתיק:"Kulei Alma",עברית:"כל העולם / הכל מסכימים",אנגלית:"Everyone agrees",קטגוריה:"מושגי לוגיקה",אייקון:"🌍",צבע_רקע:"linear-gradient(135deg,#e0f2fe,#7dd3fc)",הסבר:"'כולי עלמא' — 'כל העולם', כולם. 'כולי עלמא לא פליגי' — בזה אין מחלוקת.",דוגמה_ארמית:"כּוּלֵּי עָלְמָא לָא פְּלִיגֵי",דוגמה_תרגום:"כולם מסכימים (אין מחלוקת)"},
+  {id:68,ארמית:"פְּלִיגֵי",תעתיק:"Pligi",עברית:"חולקים / נחלקו",אנגלית:"They disagree",קטגוריה:"מושגי לוגיקה",אייקון:"⚔️",צבע_רקע:"linear-gradient(135deg,#fee2e2,#fca5a5)",הסבר:"'פליגי' — 'נחלקו'. כשיש מחלוקת בין חכמים. 'בהא פליגי' — בנקודה זו הם חלוקים.",דוגמה_ארמית:"בְּהָא פְּלִיגֵי",דוגמה_תרגום:"בנקודה זו נחלקו"},
+  {id:69,ארמית:"סָבַר",תעתיק:"Savar",עברית:"סבור / חשב / גורס",אנגלית:"Holds / Thinks",קטגוריה:"מושגי לוגיקה",אייקון:"💡",צבע_רקע:"linear-gradient(135deg,#fffbeb,#fde68a)",הסבר:"'סבר' — 'חשב', 'גורס', 'פוסק'. 'מאי סבר' — מה הוא חשב/פסק? 'סבירא ליה' — הוא סבור.",דוגמה_ארמית:"מַאי סָבַר",דוגמה_תרגום:"מה הוא סבור?"},
+  {id:70,ארמית:"תְּיוּבְתָּא",תעתיק:"Tiyuvta",עברית:"תשובה / הפרכה",אנגלית:"Refutation",קטגוריה:"מושגי לוגיקה",אייקון:"💥",צבע_רקע:"linear-gradient(135deg,#fee2e2,#fb7185)",הסבר:"'תיובתא' — הפרכה חמורה! כשמוכחים שדעת חכם שגויה. 'תיובתא דרב — תיובתא' — הפרכת רב מוכחת!",דוגמה_ארמית:"תְּיוּבְתָּא דְּרַב — תְּיוּבְתָּא",דוגמה_תרגום:"ההפרכה של רב — מוכחת!"},
+  {id:71,ארמית:"דְּחֵי",תעתיק:"Dechei",עברית:"דחה / דוחה",אנגלית:"Refutes / Pushes aside",קטגוריה:"מושגי לוגיקה",אייקון:"❌",צבע_רקע:"linear-gradient(135deg,#fef2f2,#fca5a5)",הסבר:"לדחות טענה — 'הגמרא דוחה את הראיה'. 'ודחינן' — ודחינו. 'לא דחינן' — לא ניתן לדחות.",דוגמה_ארמית:"וְדָחֵינַן לָהּ",דוגמה_תרגום:"ודחינו אותה (את הראיה)"},
+  {id:72,ארמית:"מְשַׁנֵּי",תעתיק:"Meshani",עברית:"מתרץ / עונה",אנגלית:"Answers / Resolves",קטגוריה:"מושגי לוגיקה",אייקון:"💬",צבע_רקע:"linear-gradient(135deg,#f0fdf4,#6ee7b7)",הסבר:"כשהגמרא עונה לשאלה היא 'מתרצת'. 'משני' — 'מתרץ'. הגמרא מנסה לתרץ סתירות.",דוגמה_ארמית:"מְשַׁנֵּי לָהּ",דוגמה_תרגום:"מתרץ אותה / עונה עליה"},
+  {id:73,ארמית:"אִי בָּעֵית אֵימָא",תעתיק:"I Baeit Eima",עברית:"אם תרצה אמור",אנגלית:"If you wish, say",קטגוריה:"מושגי לוגיקה",אייקון:"💭",צבע_רקע:"linear-gradient(135deg,#f5f3ff,#ddd6fe)",הסבר:"הצעה לפתרון חלופי. 'אם תרצה, תוכל לומר...' — הגמרא מציעה שתי דרכי פתרון.",דוגמה_ארמית:"אִי בָּעֵית אֵימָא: חָדָא",דוגמה_תרגום:"ואם תרצה, אמור את הפתרון הראשון"},
+  {id:74,ארמית:"מַשְׁכַּחַת לַהּ",תעתיק:"Mashkachat Lah",עברית:"תמצא אותה / מציאה",אנגלית:"You can find it",קטגוריה:"מושגי לוגיקה",אייקון:"🎯",צבע_רקע:"linear-gradient(135deg,#fff7ed,#fed7aa)",הסבר:"'תמצא את זה' — ניתן לישם את הכלל במקרה מסוים. הגמרא מראה היכן ניתן להשתמש בעיקרון.",דוגמה_ארמית:"הֵיכִי מַשְׁכַּחַת לַהּ",דוגמה_תרגום:"היכן תמצא אותה (את המקרה)?"},
+  {id:75,ארמית:"כְּלָלָא",תעתיק:"Klala",עברית:"כלל",אנגלית:"Rule / Principle",קטגוריה:"מושגי לוגיקה",אייקון:"📏",צבע_רקע:"linear-gradient(135deg,#eff6ff,#93c5fd)",הסבר:"כלל — עיקרון הלכתי כללי. 'כללא הוא' — זהו כלל. 'אין לנו כלל בלא יוצא מן הכלל'.",דוגמה_ארמית:"כְּלָלָא דְמִילְּתָא",דוגמה_תרגום:"הכלל של הדבר"},
+  {id:76,ארמית:"פְּרָט",תעתיק:"Prat",עברית:"פרט / מקרה ספציפי",אנגלית:"Specific case",קטגוריה:"מושגי לוגיקה",אייקון:"🔬",צבע_רקע:"linear-gradient(135deg,#fff1f2,#fecdd3)",הסבר:"פרט — מקרה ספציפי בניגוד לכלל. 'כלל ופרט' הם כלי פרשנות מרכזיים ב'13 מידות שהתורה נדרשת בהן'.",דוגמה_ארמית:"כְּלָל וּפְרָט",דוגמה_תרגום:"כלל ופרט (שיטת פרשנות)"},
+  {id:77,ארמית:"אֲבָל",תעתיק:"Aval",עברית:"אבל / ברם",אנגלית:"But / However",קטגוריה:"מושגי לוגיקה",אייקון:"↔️",צבע_רקע:"linear-gradient(135deg,#fef9c3,#fbbf24)",הסבר:"'אבל' — ביטוי ניגוד. 'אבל אם...' — הסתייגות חשובה. נפוץ מאד בגמרא.",דוגמה_ארמית:"אֲבָל הָכָא",דוגמה_תרגום:"אבל כאן (מקרה שונה)"},
+  {id:78,ארמית:"כֵּיוָן",תעתיק:"Keivan",עברית:"כיוון ש / מאחר ש",אנגלית:"Since / Because",קטגוריה:"מושגי לוגיקה",אייקון:"➡️",צבע_רקע:"linear-gradient(135deg,#f0fdf4,#a7f3d0)",הסבר:"'כיוון ש' — 'מאחר שכן'. ביטוי סיבתי נפוץ בגמרא. 'כיוון דעבד' — מאחר שעשה.",דוגמה_ארמית:"כֵּיוָן דְּאָמַר לֵיהּ",דוגמה_תרגום:"מאחר שאמר לו"},
+  {id:79,ארמית:"בְּרַם",תעתיק:"Bram",עברית:"ברם / אולם",אנגלית:"However / But",קטגוריה:"מושגי לוגיקה",אייקון:"🔄",צבע_רקע:"linear-gradient(135deg,#fdf4ff,#e879f9)",הסבר:"'ברם' — ניגוד חזק. 'ברם זכור אותו האיש לטוב' — ביטוי ידוע. שמשמש להסתייגות.",דוגמה_ארמית:"בְּרַם זְכוּר אוֹתוֹ הָאִישׁ לְטוֹב",דוגמה_תרגום:"אך יזכר אותו האיש לשבח"},
+  {id:80,ארמית:"הֵיכִי",תעתיק:"Heichi",עברית:"איך / כיצד",אנגלית:"How",קטגוריה:"מושגי לוגיקה",אייקון:"🤔",צבע_רקע:"linear-gradient(135deg,#eff6ff,#c7d2fe)",הסבר:"'היכי' — 'איך?', 'כיצד?' שאלה על אופן הדבר. 'היכי דמי' — 'כיצד בדיוק?', שאלה לפירוט המקרה.",דוגמה_ארמית:"הֵיכִי דָּמֵי",דוגמה_תרגום:"כיצד בדיוק? / באיזה מקרה?"},
+  {id:81,ארמית:"בְּמַאי",תעתיק:"Bemai",עברית:"במה / בדבר מה",אנגלית:"In what / With what",קטגוריה:"מושגי לוגיקה",אייקון:"❓",צבע_רקע:"linear-gradient(135deg,#fef9c3,#fde68a)",הסבר:"'במאי' — 'במה?', 'בדבר מה?' שאלה על האמצעי. 'במאי עסקינן' — 'באיזה מקרה אנחנו עוסקים?'",דוגמה_ארמית:"בְּמַאי עָסְקִינַן",דוגמה_תרגום:"באיזה מקרה אנו עוסקים?"},
+  {id:82,ארמית:"עָסְקִינַן",תעתיק:"Askinan",עברית:"עוסקים / מדברים",אנגלית:"We are dealing with",קטגוריה:"מושגי לוגיקה",אייקון:"💼",צבע_רקע:"linear-gradient(135deg,#fff7ed,#fdba74)",הסבר:"'עסקינן' — 'אנחנו עוסקים ב...'. מגדיר את תחום הדיון. 'בכגון זה עסקינן' — בזה אנחנו דנים.",דוגמה_ארמית:"בְּכַגַּוְונֵי עָסְקִינַן",דוגמה_תרגום:"בכגון זה אנו עוסקים"},
+  {id:83,ארמית:"שְׁוָוה",תעתיק:"Shava",עברית:"שווה / שווים",אנגלית:"Equal / Worth",קטגוריה:"מושגי דין",אייקון:"⚖️",צבע_רקע:"linear-gradient(135deg,#ecfdf5,#6ee7b7)",הסבר:"שווה — שווה ערך. 'שווה לכולם' — שווה בין כולם. חשוב בדיני שכר, מסחר וממון.",דוגמה_ארמית:"שָׁוֵה לְכֹל",דוגמה_תרגום:"שווה לכולם (ערך אחיד)"},
+  {id:84,ארמית:"אַפּוּמָּא",תעתיק:"Apuma",עברית:"על פי / לפי",אנגלית:"According to / Based on",קטגוריה:"מושגי לוגיקה",אייקון:"📋",צבע_רקע:"linear-gradient(135deg,#f0f9ff,#bae6fd)",הסבר:"על פי — לפי עדות, לפי דברים. 'אפומא דסהדי' — על פי עדים. יסוד בדיני עדות.",דוגמה_ארמית:"אַפּוּמָּא דְּסַהֲדֵי",דוגמה_תרגום:"על פי העדים"},
+  {id:85,ארמית:"סַהֲדֵי",תעתיק:"Sahadei",עברית:"עדים",אנגלית:"Witnesses",קטגוריה:"מושגי דין",אייקון:"👀",צבע_רקע:"linear-gradient(135deg,#fef3c7,#fcd34d)",הסבר:"עדים — יסוד בהוכחה הלכתית. 'תרי סהדי' — שני עדים. 'סהדותא' — עדות. 'כשרים לעדות'.",דוגמה_ארמית:"תְּרֵי סַהֲדֵי",דוגמה_תרגום:"שני עדים"},
+  {id:86,ארמית:"שְׁטָרָא",תעתיק:"Shatara",עברית:"שטר / מסמך",אנגלית:"Document / Deed",קטגוריה:"מושגי דין",אייקון:"📄",צבע_רקע:"linear-gradient(135deg,#faf5eb,#e7d5b3)",הסבר:"שטר — מסמך משפטי. 'שטר חוב', 'שטר כתובה', 'שטר מכירה'. קניין בשטר הוא אחד מדרכי הקניין.",דוגמה_ארמית:"כָּתַב שְׁטָרָא",דוגמה_תרגום:"כתב שטר (מסמך)"},
+  {id:87,ארמית:"קִנְיָן",תעתיק:"Kinyan",עברית:"קניין / רכישה",אנגלית:"Acquisition",קטגוריה:"מושגי דין",אייקון:"🤝",צבע_רקע:"linear-gradient(135deg,#f0fdf4,#a7f3d0)",הסבר:"קניין — הליך של רכישה ובעלות. 'קנין סודר', 'קנין משיכה', 'קנין כסף' — שיטות שונות לקנין.",דוגמה_ארמית:"קָנֵי לֵיהּ",דוגמה_תרגום:"קנה אותו (יש לו בעלות)"},
+  {id:88,ארמית:"שְׁאֵלָה",תעתיק:"Sheela",עברית:"שאלה",אנגלית:"Question",קטגוריה:"מושגי לוגיקה",אייקון:"❓",צבע_רקע:"linear-gradient(135deg,#fdf4ff,#f0abfc)",הסבר:"שאלה בארמית. הגמרא בנויה על שאלות ותשובות. 'בעיא' — שאלה פתוחה. 'שאלתא' — השאלה שנשאלה.",דוגמה_ארמית:"שְׁאֵלָה הִיא",דוגמה_תרגום:"זוהי שאלה"},
+  {id:89,ארמית:"תְּשׁוּבָה",תעתיק:"Teshuva",עברית:"תשובה",אנגלית:"Answer / Repentance",קטגוריה:"מושגי לוגיקה",אייקון:"💬",צבע_רקע:"linear-gradient(135deg,#ecfdf5,#a7f3d0)",הסבר:"תשובה — מענה לשאלה, או חזרה בתשובה. 'תשובה טובה' — מענה מספק. 'תשובה מעולה' — מענה מצוין.",דוגמה_ארמית:"תְּשׁוּבָה טוֹבָה",דוגמה_תרגום:"תשובה טובה / מספקת"},
+  {id:90,ארמית:"דְּחִיקָא",תעתיק:"Dechika",עברית:"דחוקה / בלחץ",אנגלית:"Forced / Strained",קטגוריה:"מושגי לוגיקה",אייקון:"😬",צבע_רקע:"linear-gradient(135deg,#fee2e2,#fca5a5)",הסבר:"'דחיקא' — 'דחוקה', פתרון לא טבעי. כשהגמרא אומרת 'דחיקא מילתא' — ההסבר מאולץ.",דוגמה_ארמית:"דְּחִיקָא מִילְּתָא",דוגמה_תרגום:"הדבר דחוק / ההסבר מאולץ"},
+  {id:91,ארמית:"פְּשִׁיטָא",תעתיק:"Peshita",עברית:"פשוט / ברור",אנגלית:"Obvious",קטגוריה:"מושגי לוגיקה",אייקון:"😂",צבע_רקע:"linear-gradient(135deg,#ecfdf5,#86efac)",הסבר:"'פשיטא!' — 'ברור!', 'מה השאלה?!' כשהגמרא שואלת מה החידוש בדבר מובן מאליו.",דוגמה_ארמית:"פְּשִׁיטָא!",דוגמה_תרגום:"הרי זה פשוט! (מה השאלה?)"},
+  {id:92,ארמית:"צְרִיכָא",תעתיק:"Tzricha",עברית:"צריכה / נצרכה",אנגלית:"Necessary",קטגוריה:"מושגי לוגיקה",אייקון:"✅",צבע_רקע:"linear-gradient(135deg,#eff6ff,#bfdbfe)",הסבר:"'צריכא' — 'נצרכת', יש צורך בכך. כשהגמרא שואלת 'למה צריך לכתוב זאת?' ועונה 'צריכא!' — כי יש חידוש.",דוגמה_ארמית:"צְרִיכָא",דוגמה_תרגום:"(הציטוט) נצרך (יש בו חידוש)"},
+  {id:93,ארמית:"רָמֵי",תעתיק:"Rami",עברית:"מקשה / מעמת",אנגלית:"Raises a contradiction",קטגוריה:"מושגי לוגיקה",אייקון:"⚡",צבע_רקע:"linear-gradient(135deg,#fef3c7,#f59e0b)",הסבר:"'רמי' — 'מעמת', 'מקשה'. כשאמורא מעמת שני מקורות סותרים. 'רמי רבה' — רבה הקשה סתירה.",דוגמה_ארמית:"רָמֵי רַבָּה",דוגמה_תרגום:"רבה העמיד סתירה"},
+  {id:94,ארמית:"מְקַשֵּׁי",תעתיק:"Mekashei",עברית:"מקשה / שואל",אנגלית:"Questions / Objects",קטגוריה:"מושגי לוגיקה",אייקון:"🤔",צבע_רקע:"linear-gradient(135deg,#fff7ed,#fed7aa)",הסבר:"מקשה — 'מעלה קושיה'. כשחכם שואל שאלה קשה. 'מקשי ליה' — הקשה לו קושיה.",דוגמה_ארמית:"מְקַשֵּׁי לֵיהּ",דוגמה_תרגום:"שאל לו שאלה קשה"},
+  {id:95,ארמית:"מְתָרֵץ",תעתיק:"Metaretz",עברית:"מתרץ / עונה",אנגלית:"Answers / Resolves",קטגוריה:"מושגי לוגיקה",אייקון:"💡",צבע_רקע:"linear-gradient(135deg,#f0fdf4,#bbf7d0)",הסבר:"מתרץ — 'פותר'. כשחכם עונה ומתרץ קושיה. 'מתרץ ליה' — ענה לו ופתר את הקושיה.",דוגמה_ארמית:"מְתָרֵץ לֵיהּ",דוגמה_תרגום:"מתרץ לו (פותר את הקושיה)"},
+  {id:96,ארמית:"שָׁנֵי",תעתיק:"Shani",עברית:"שנה / שינה",אנגלית:"Changed / Different",קטגוריה:"מושגי לוגיקה",אייקון:"🔄",צבע_רקע:"linear-gradient(135deg,#f5f3ff,#c4b5fd)",הסבר:"שונה — 'זה שונה'. ביטוי להצגת הבדל בין שני מקרים שנראו דומים.",דוגמה_ארמית:"שָׁנֵי הַתָּם",דוגמה_תרגום:"שם שונה"},
+  {id:97,ארמית:"עֲדִיפָא",תעתיק:"Adifa",עברית:"עדיף / עדיפה",אנגלית:"Preferable / Better",קטגוריה:"מושגי לוגיקה",אייקון:"⭐",צבע_רקע:"linear-gradient(135deg,#fef9c3,#fde68a)",הסבר:"עדיף — 'טוב יותר'. 'עדיפא ליה' — עדיף לו. 'הא עדיפא' — זו עדיפה.",דוגמה_ארמית:"הָא עֲדִיפָא",דוגמה_תרגום:"זוהי עדיפה"},
+  {id:98,ארמית:"אִי הָכִי",תעתיק:"I Hachi",עברית:"אם כך / אם כן",אנגלית:"If so",קטגוריה:"מושגי לוגיקה",אייקון:"🤔",צבע_רקע:"linear-gradient(135deg,#eff6ff,#c7d2fe)",הסבר:"'אם כך' — הגמרא שואלת: אם דבריך נכונים, מה יוצא מכך? 'אי הכי קשיא' — אם כן, קשה.",דוגמה_ארמית:"אִי הָכִי מַאי",דוגמה_תרגום:"אם כך, מה הדין?"},
+  {id:99,ארמית:"לְמַאי נָפְקָא מִינַּהּ",תעתיק:"Lemai Nafka Minah",עברית:"מה יוצא מזה? / מה ההבדל?",אנגלית:"What practical difference?",קטגוריה:"מושגי לוגיקה",אייקון:"🔍",צבע_רקע:"linear-gradient(135deg,#fdf4ff,#d8b4fe)",הסבר:"ביטוי מפורסם — 'מה ההשלכה המעשית?' כשהגמרא שואלת מה משתנה בפועל בין שתי גישות.",דוגמה_ארמית:"לְמַאי נָפְקָא מִינַּהּ",דוגמה_תרגום:"מה ההשלכה המעשית?"},
+  {id:100,ארמית:"לִבְרָא",תעתיק:"Livra",עברית:"לבן / בן",אנגלית:"Son",קטגוריה:"אנשים",אייקון:"👦",צבע_רקע:"linear-gradient(135deg,#e0f2fe,#7dd3fc)",הסבר:"'ברא' — בן. 'ברתא' — בת. 'בריה' — ילד. חשוב בדיני ירושה, יחוס ועדות.",דוגמה_ארמית:"בְּרֵיהּ",דוגמה_תרגום:"בנו / ילדו"},
+
+  // === 101–200: עוד מילים ===
+  {id:101,ארמית:"אֲבוּהּ",תעתיק:"Avuhu",עברית:"אביו",אנגלית:"His father",קטגוריה:"אנשים",אייקון:"👴",צבע_רקע:"linear-gradient(135deg,#fef9c3,#f59e0b)",הסבר:"אביו. 'אבוה דשמואל' — אביו של שמואל. חשוב בדיני כיבוד אב ואם.",דוגמה_ארמית:"אֲבוּהּ דִּשְׁמוּאֵל",דוגמה_תרגום:"אביו של שמואל"},
+  {id:102,ארמית:"אִימֵּיהּ",תעתיק:"Imei",עברית:"אמו",אנגלית:"His mother",קטגוריה:"אנשים",אייקון:"👵",צבע_רקע:"linear-gradient(135deg,#fdf2f8,#f9a8d4)",הסבר:"אמו. 'אימא שלום' — שמה של אחות רבן גמליאל. כיבוד אם שווה לכיבוד אב.",דוגמה_ארמית:"אִימֵּיהּ",דוגמה_תרגום:"אמו"},
+  {id:103,ארמית:"אַחוּהּ",תעתיק:"Achuhu",עברית:"אחיו",אנגלית:"His brother",קטגוריה:"אנשים",אייקון:"👬",צבע_רקע:"linear-gradient(135deg,#e0f2fe,#7dd3fc)",הסבר:"אחיו. 'אחיה' — אחיו. 'אחות' — אחות. חשוב בדיני יבום וחליצה.",דוגמה_ארמית:"אַחוּהּ",דוגמה_תרגום:"אחיו"},
+  {id:104,ארמית:"רְחִימוּתָא",תעתיק:"Rechimuta",עברית:"אהבה",אנגלית:"Love / Affection",קטגוריה:"מושגי דין",אייקון:"💝",צבע_רקע:"linear-gradient(135deg,#fdf2f8,#fce7f3)",הסבר:"אהבה. 'רחמנותא' — רחמים. 'אהבת חינם' — אהבה ללא סיבה. 'שנאת חינם' — ההיפך.",דוגמה_ארמית:"בְּרַחְמִים",דוגמה_תרגום:"ברחמים"},
+  {id:105,ארמית:"שָׁלָם",תעתיק:"Shalam",עברית:"שלום",אנגלית:"Peace / Hello",קטגוריה:"מושגי דין",אייקון:"🕊️",צבע_רקע:"linear-gradient(135deg,#f0fdf4,#bbf7d0)",הסבר:"שלום — ברכה ואיחול. 'שלמא' — שלום. 'שלום עליכם' — ברכת הפגישה. 'שם שלום' — שמו של הקב\"ה.",דוגמה_ארמית:"שְׁלָמָא עֲלַיְיכוּ",דוגמה_תרגום:"שלום עליכם"},
+  {id:106,ארמית:"טוֹב",תעתיק:"Tov",עברית:"טוב",אנגלית:"Good",קטגוריה:"מושגי דין",אייקון:"👍",צבע_רקע:"linear-gradient(135deg,#ecfdf5,#6ee7b7)",הסבר:"טוב — ביטוי הסכמה. 'טוב' בארמית שווה לעברית. 'שפיר' — גם פירושו טוב.",דוגמה_ארמית:"שַׁפִּיר קָאָמַר",דוגמה_תרגום:"אמר יפה / אמר נכון"},
+  {id:107,ארמית:"בִּישׁ",תעתיק:"Bish",עברית:"רע / רע",אנגלית:"Bad / Evil",קטגוריה:"מושגי דין",אייקון:"👎",צבע_רקע:"linear-gradient(135deg,#fee2e2,#fca5a5)",הסבר:"רע בארמית. 'בישא' — הרוע. 'עינא בישא' — עין הרע. 'לא ניחא ליה' — לא רצוי.",דוגמה_ארמית:"בִּישָׁא",דוגמה_תרגום:"הרע"},
+  {id:108,ארמית:"גְּדוֹלָה",תעתיק:"Gdola",עברית:"גדולה",אנגלית:"Great / Large",קטגוריה:"מושגי לוגיקה",אייקון:"⬆️",צבע_רקע:"linear-gradient(135deg,#eff6ff,#dbeafe)",הסבר:"גדולה. 'גדול' — חשוב, בכיר. 'מצווה גדולה' — מצוה חשובה. 'גדולה תשובה' — עיקרון גדול.",דוגמה_ארמית:"גְּדוֹלָה תְּשׁוּבָה",דוגמה_תרגום:"גדולה (=חשובה) התשובה"},
+  {id:109,ארמית:"זְעֵירָא",תעתיק:"Zeeira",עברית:"קטן / זעיר",אנגלית:"Small / Minor",קטגוריה:"מושגי לוגיקה",אייקון:"⬇️",צבע_רקע:"linear-gradient(135deg,#fef9c3,#fde68a)",הסבר:"קטן, זעיר. 'ריש לקיש' נקרא 'זעירא' לפעמים. 'זוטא' — גם פירושו קטן.",דוגמה_ארמית:"זְעֵירָא הוּא",דוגמה_תרגום:"הוא קטן"},
+  {id:110,ארמית:"אִינִישׁ",תעתיק:"Inish",עברית:"אנוש / אדם",אנגלית:"Person / Human",קטגוריה:"אנשים",אייקון:"🧑",צבע_רקע:"linear-gradient(135deg,#fff7ed,#fdba74)",הסבר:"אדם בארמית. 'איניש' — אדם. 'בני אינשי' — בני אדם. 'כי אינשי' — כאדם.",דוגמה_ארמית:"כָּל אִינִישׁ",דוגמה_תרגום:"כל אדם"},
+  {id:111,ארמית:"עָלְמָא",תעתיק:"Alma",עברית:"עולם / אנשים",אנגלית:"World / People",קטגוריה:"מושגי לוגיקה",אייקון:"🌍",צבע_רקע:"linear-gradient(135deg,#e0f2fe,#bae6fd)",הסבר:"עולם / הציבור. 'בני עלמא' — אנשים. 'כולי עלמא' — כולם. 'מארי דעלמא' — בעל העולם.",דוגמה_ארמית:"בְּנֵי עָלְמָא",דוגמה_תרגום:"בני העולם / אנשים"},
+  {id:112,ארמית:"שְׁמֵיהּ",תעתיק:"Shmeih",עברית:"שמו",אנגלית:"His name",קטגוריה:"מושגי לוגיקה",אייקון:"🏷️",צבע_רקע:"linear-gradient(135deg,#f5f3ff,#ede9fe)",הסבר:"שמו. 'מאי שמיה' — מה שמו? 'שמיה דרב' — שמו של רב.",דוגמה_ארמית:"מַאי שְׁמֵיהּ",דוגמה_תרגום:"מה שמו?"},
+  {id:113,ארמית:"הוּא הַדִּין",תעתיק:"Hu Hadin",עברית:"הוא הדין / כן הדין",אנגלית:"The same law applies",קטגוריה:"מושגי דין",אייקון:"⚖️",צבע_רקע:"linear-gradient(135deg,#f0fdf4,#a7f3d0)",הסבר:"'הוא הדין' — 'כך גם הדין'. כשאותו כלל חל גם על מקרה דומה.",דוגמה_ארמית:"הוּא הַדִּין לְכׇל",דוגמה_תרגום:"כן הדין לכולם"},
+  {id:114,ארמית:"כָּל שֶׁכֵּן",תעתיק:"Kal Sheken",עברית:"כל שכן / קל וחומר",אנגלית:"All the more so",קטגוריה:"מושגי לוגיקה",אייקון:"📈",צבע_רקע:"linear-gradient(135deg,#fef9c3,#fbbf24)",הסבר:"'כל שכן' — 'ודאי שכך'. ביטוי לקל וחומר — אם ב... אז בוודאי ב...",דוגמה_ארמית:"כָּל שֶׁכֵּן הוּא",דוגמה_תרגום:"וודאי שכך הוא"},
+  {id:115,ארמית:"מִן קַל",תעתיק:"Min Kal",עברית:"קל וחומר",אנגלית:"A fortiori",קטגוריה:"מושגי לוגיקה",אייקון:"🏗️",צבע_רקע:"linear-gradient(135deg,#fff1f2,#fecdd3)",הסבר:"קל וחומר — אחת מ'13 מידות'. אם הקל חייב, הרי החמור ודאי חייב.",דוגמה_ארמית:"קַל וָחֹמֶר",דוגמה_תרגום:"קל וחומר (הסקה הגיונית)"},
+  {id:116,ארמית:"גְּזֵירָה שָׁוָה",תעתיק:"Gezera Shava",עברית:"גזירה שוה",אנגלית:"Verbal analogy",קטגוריה:"מושגי לוגיקה",אייקון:"🔗",צבע_רקע:"linear-gradient(135deg,#eff6ff,#bfdbfe)",הסבר:"אחת מ'13 מידות'. כשאותה מילה מופיעה בשני מקומות בתורה, לומדים מקשר ביניהם.",דוגמה_ארמית:"גְּזֵירָה שָׁוָה הִיא",דוגמה_תרגום:"זוהי גזירה שוה (קשר מילולי)"},
+  {id:117,ארמית:"בַּר",תעתיק:"Bar",עברית:"בן / של",אנגלית:"Son of / Of",קטגוריה:"אנשים",אייקון:"👦",צבע_רקע:"linear-gradient(135deg,#e0f2fe,#7dd3fc)",הסבר:"'בר' — בן. 'בר מינן' — בן סוגנו. 'חד מינן' — אחד מאיתנו. 'בר אוריין' — בן תורה.",דוגמה_ארמית:"בַּר אוֹרַיְיתָא",דוגמה_תרגום:"בן תורה / לומד"},
+  {id:118,ארמית:"לֵית",תעתיק:"Leit",עברית:"אין / לא יש",אנגלית:"There is not",קטגוריה:"מושגי לוגיקה",אייקון:"❌",צבע_רקע:"linear-gradient(135deg,#fef2f2,#fca5a5)",הסבר:"'לית' — 'אין'. 'לית מאן דפליג' — אין מי שחולק. 'לית הכא' — אין כאן.",דוגמה_ארמית:"לֵית מַאן דְּפָלֵיג",דוגמה_תרגום:"אין מי שחולק"},
+  {id:119,ארמית:"אִיכָּא",תעתיק:"Ika",עברית:"יש",אנגלית:"There is",קטגוריה:"מושגי לוגיקה",אייקון:"✅",צבע_רקע:"linear-gradient(135deg,#f0fdf4,#bbf7d0)",הסבר:"'איכא' — 'יש'. 'איכא דאמרי' — יש הסוברים. 'איכא הכא' — יש כאן.",דוגמה_ארמית:"אִיכָּא דְּאָמְרֵי",דוגמה_תרגום:"יש הסוברים"},
+  {id:120,ארמית:"הָכָא",תעתיק:"Hacha",עברית:"כאן",אנגלית:"Here",קטגוריה:"מושגי לוגיקה",אייקון:"📍",צבע_רקע:"linear-gradient(135deg,#fef9c3,#fde68a)",הסבר:"כאן. 'הכא' — כאן. 'התם' — שם. 'הכא ב... התם ב...' — הבדל בין שני מקרים.",דוגמה_ארמית:"הָכָא בְּמַאי עָסְקִינַן",דוגמה_תרגום:"כאן במה אנו עוסקים?"},
+  {id:121,ארמית:"הָתָם",תעתיק:"Hatam",עברית:"שם",אנגלית:"There",קטגוריה:"מושגי לוגיקה",אייקון:"📌",צבע_רקע:"linear-gradient(135deg,#fff7ed,#fdba74)",הסבר:"שם — להבדיל מ'הכא' (כאן). 'שאני התם' — שם שונה. 'הכא-התם' — הנגדת שתי סיטואציות.",דוגמה_ארמית:"שָׁאנֵי הָתָם",דוגמה_תרגום:"שם שונה (יש הבדל)"},
+  {id:122,ארמית:"מֵעִיקָּרָא",תעתיק:"Meikara",עברית:"מעיקרא / מלכתחילה",אנגלית:"Originally / From the start",קטגוריה:"זמן",אייקון:"⏮️",צבע_רקע:"linear-gradient(135deg,#f5f3ff,#c4b5fd)",הסבר:"'מלכתחילה', 'בתחילה'. 'מעיקרא' — כפי שהיה בהתחלה. 'לכתחילה' — מלכתחילה.",דוגמה_ארמית:"מֵעִיקָּרָא",דוגמה_תרגום:"מלכתחילה / בתחילה"},
+  {id:123,ארמית:"לְבַסּוֹף",תעתיק:"Levasof",עברית:"לבסוף / בסוף",אנגלית:"Finally / In the end",קטגוריה:"זמן",אייקון:"⏭️",צבע_רקע:"linear-gradient(135deg,#ecfdf5,#a7f3d0)",הסבר:"בסוף. 'לבסוף' — בסיום. 'בדיעבד' — בדיעבד, אחר מעשה (לעומת לכתחילה).",דוגמה_ארמית:"לְבַסּוֹף",דוגמה_תרגום:"בסופו של דבר"},
+  {id:124,ארמית:"בִּדְיַעְבַּד",תעתיק:"Bidyavad",עברית:"בדיעבד",אנגלית:"After the fact",קטגוריה:"מושגי דין",אייקון:"🔙",צבע_רקע:"linear-gradient(135deg,#fef9c3,#fbbf24)",הסבר:"'בדיעבד' — מה הדין אחרי שנעשה. לעומת 'לכתחילה' — מה ראוי לעשות מראש.",דוגמה_ארמית:"בְּדִיעֲבַד כָּשֵׁר",דוגמה_תרגום:"בדיעבד — כשר"},
+  {id:125,ארמית:"לְכַתְּחִלָּה",תעתיק:"Lechatchila",עברית:"לכתחילה",אנגלית:"A priori / Ideally",קטגוריה:"מושגי דין",אייקון:"🔝",צבע_רקע:"linear-gradient(135deg,#f0fdf4,#bbf7d0)",הסבר:"'לכתחילה' — מה ראוי לעשות מראש, בצורה הטובה ביותר. גבוה יותר מ'בדיעבד'.",דוגמה_ארמית:"לְכַתְּחִלָּה לֹא",דוגמה_תרגום:"לכתחילה — אסור"},
+  {id:126,ארמית:"דַּוְקָא",תעתיק:"Davka",עברית:"דווקא",אנגלית:"Specifically / Precisely",קטגוריה:"מושגי לוגיקה",אייקון:"🎯",צבע_רקע:"linear-gradient(135deg,#fef3c7,#fcd34d)",הסבר:"'דווקא' — 'בדיוק כך', 'ולא אחרת'. 'דווקא קתני' — המשנה מדויקת ומתכוונת לזה בלבד.",דוגמה_ארמית:"דַּוְקָא קָתָנֵי",דוגמה_תרגום:"המשנה מדויקת בכך"},
+  {id:127,ארמית:"דְּלָמָא",תעתיק:"Delama",עברית:"שמא / אולי",אנגלית:"Perhaps / Maybe",קטגוריה:"מושגי לוגיקה",אייקון:"🤷",צבע_רקע:"linear-gradient(135deg,#fff7ed,#fdba74)",הסבר:"'שמא' — ביטוי ספק. 'דלמא' — 'שמא', 'אולי'. 'חיישינן לדלמא' — חוששים לאפשרות.",דוגמה_ארמית:"דִּלְמָא",דוגמה_תרגום:"שמא / אולי"},
+  {id:128,ארמית:"וַדַּאי",תעתיק:"Vadai",עברית:"ודאי",אנגלית:"Certainly / Definitely",קטגוריה:"מושגי לוגיקה",אייקון:"💯",צבע_רקע:"linear-gradient(135deg,#ecfdf5,#6ee7b7)",הסבר:"ודאי — בטוח. 'ספק ווידאי' — ספק מול וודאות. 'וודאי לחומרא' — בוודאות נחמיר.",דוגמה_ארמית:"וַדַּאי הוּא",דוגמה_תרגום:"זה ודאי"},
+  {id:129,ארמית:"סָפֵק",תעתיק:"Safek",עברית:"ספק",אנגלית:"Doubt",קטגוריה:"מושגי דין",אייקון:"❓",צבע_רקע:"linear-gradient(135deg,#fdf4ff,#e879f9)",הסבר:"ספק — אי ודאות. 'ספק דאורייתא לחומרא' — בספק מן התורה נחמיר. 'ספק ספקא' — ספק כפול.",דוגמה_ארמית:"סְפֵיקָא דְּאוֹרַיְיתָא",דוגמה_תרגום:"ספק מהתורה (לחומרא)"},
+  {id:130,ארמית:"חֲזָקָה",תעתיק:"Chazaka",עברית:"חזקה",אנגלית:"Presumption",קטגוריה:"מושגי דין",אייקון:"🏛️",צבע_רקע:"linear-gradient(135deg,#eff6ff,#bfdbfe)",הסבר:"חזקה — הנחת יסוד משפטית. 'חזקת כשרות' — מניחים שהאדם כשר. 'חזקת ממון' — כסף שבחזקת בעלים.",דוגמה_ארמית:"חֲזָקָה אֵין אָדָם",דוגמה_תרגום:"חזקה: אין אדם (עושה דבר מסוים)"},
+  {id:131,ארמית:"רוֹב",תעתיק:"Rov",עברית:"רוב",אנגלית:"Majority",קטגוריה:"מושגי דין",אייקון:"📊",צבע_רקע:"linear-gradient(135deg,#fef9c3,#fbbf24)",הסבר:"'רוב' — עיקרון: הולכים אחר הרוב. 'רובא דאיתא קמן' — רוב הנמצא לפנינו.",דוגמה_ארמית:"אַחַר הָרֹב",דוגמה_תרגום:"הולכים אחר הרוב"},
+  {id:132,ארמית:"מִיעוּט",תעתיק:"Miut",עברית:"מיעוט",אנגלית:"Minority",קטגוריה:"מושגי דין",אייקון:"📉",צבע_רקע:"linear-gradient(135deg,#fee2e2,#fca5a5)",הסבר:"מיעוט — המקרים המועטים. 'אין הולכין אחר המיעוט' — לרוב לא מחשיבים מיעוט.",דוגמה_ארמית:"מִיעוּטָא",דוגמה_תרגום:"המיעוט"},
+  {id:133,ארמית:"נֶאֱמַן",תעתיק:"Neeman",עברית:"נאמן / מהימן",אנגלית:"Trustworthy / Reliable",קטגוריה:"מושגי דין",אייקון:"🤝",צבע_רקע:"linear-gradient(135deg,#f0fdf4,#a7f3d0)",הסבר:"נאמן — ניתן לסמוך על עדותו. 'נאמנות' — אמינות. 'נאמן עלי' — אני סומך עליו.",דוגמה_ארמית:"נֶאֱמָן עָלַי",דוגמה_תרגום:"אני סומך עליו"},
+  {id:134,ארמית:"שְׁבוּעָה",תעתיק:"Shvua",עברית:"שבועה",אנגלית:"Oath",קטגוריה:"מושגי דין",אייקון:"✊",צבע_רקע:"linear-gradient(135deg,#fef3c7,#fcd34d)",הסבר:"שבועה — קיום דבר בשם ה'. 'שבועה דאורייתא' — שבועה מהתורה. 'שבועת שווא' — שבועה לשקר.",דוגמה_ארמית:"שְׁבוּעָה עָלָיו",דוגמה_תרגום:"שבועה חלה עליו"},
+  {id:135,ארמית:"גֵּרוּשִׁין",תעתיק:"Gerushin",עברית:"גירושין",אנגלית:"Divorce",קטגוריה:"מושגי דין",אייקון:"💔",צבע_רקע:"linear-gradient(135deg,#fee2e2,#fb7185)",הסבר:"גירושין — הפרדת נישואין. 'גט' — שטר הגירושין. מסכת 'גיטין' עוסקת בהלכות גירושין.",דוגמה_ארמית:"שְׁלִיחַ לְגֵרוּשִׁין",דוגמה_תרגום:"שליח לגירושין"},
+  {id:136,ארמית:"קִידּוּשִׁין",תעתיק:"Kidushin",עברית:"קידושין / נישואין",אנגלית:"Betrothal",קטגוריה:"מושגי דין",אייקון:"💍",צבע_רקע:"linear-gradient(135deg,#fdf4ff,#e879f9)",הסבר:"קידושין — השלב הראשון של הנישואין. 'מקדש' — מארס. מסכת קידושין עוסקת בהלכות אלו.",דוגמה_ארמית:"קִידְּשָׁהּ",דוגמה_תרגום:"ארש אותה (קידושין)"},
+  {id:137,ארמית:"כְּתוּבָּה",תעתיק:"Ketuba",עברית:"כתובה",אנגלית:"Marriage contract",קטגוריה:"מושגי דין",אייקון:"📜",צבע_רקע:"linear-gradient(135deg,#fdf2f8,#fbcfe8)",הסבר:"כתובה — החוזה הכספי שהחתן כותב לאשתו. מסכת כתובות מהגדולות בש\"ס.",דוגמה_ארמית:"כְּתוּבַּת אִשְׁתּוֹ",דוגמה_תרגום:"כתובת אשתו"},
+  {id:138,ארמית:"נֶדֶר",תעתיק:"Neder",עברית:"נדר",אנגלית:"Vow",קטגוריה:"מושגי דין",אייקון:"🗣️",צבע_רקע:"linear-gradient(135deg,#fff7ed,#fed7aa)",הסבר:"נדר — התחייבות דתית. 'נדר שנאמר' — נדר שהוגד. מסכת נדרים עוסקת בהתרת נדרים.",דוגמה_ארמית:"נֶדֶר הוּא",דוגמה_תרגום:"זהו נדר (חייב להתקיים)"},
+  {id:139,ארמית:"חֵרֶם",תעתיק:"Cheirem",עברית:"חרם / נידוי",אנגלית:"Excommunication",קטגוריה:"מושגי דין",אייקון:"⛔",צבע_רקע:"linear-gradient(135deg,#fee2e2,#fca5a5)",הסבר:"חרם — ענישה חברתית של הרחקה. 'נידוי' — שלב ראשון. 'שמתא' — חרם בארמית.",דוגמה_ארמית:"שְׁמַתֵּיהּ",דוגמה_תרגום:"נידה אותו"},
+  {id:140,ארמית:"שְׁחִיטָה",תעתיק:"Shchita",עברית:"שחיטה",אנגלית:"Ritual slaughter",קטגוריה:"מושגי דין",אייקון:"🔪",צבע_רקע:"linear-gradient(135deg,#fef9c3,#fde68a)",הסבר:"שחיטה — הריגת בהמה בצורה כשרה. 'שחיט' — השוחט. מסכת חולין עוסקת בהלכות שחיטה.",דוגמה_ארמית:"שְׁחַט בָּהּ",דוגמה_תרגום:"שחט אותה"},
+  {id:141,ארמית:"טְרֵפָה",תעתיק:"Treifa",עברית:"טריפה",אנגלית:"Non-Kosher / Torn",קטגוריה:"מושגי דין",אייקון:"❌",צבע_רקע:"linear-gradient(135deg,#fee2e2,#fca5a5)",הסבר:"טריפה — בשר שאינו כשר. 'טריפות' — פגמים שפוסלים את הבהמה. 18 הטריפות המנויות בגמרא.",דוגמה_ארמית:"טְרֵפָה הִיא",דוגמה_תרגום:"זו טריפה (לא כשרה)"},
+  {id:142,ארמית:"כָּשֵׁר",תעתיק:"Kasher",עברית:"כשר",אנגלית:"Kosher / Valid",קטגוריה:"מושגי דין",אייקון:"✅",צבע_רקע:"linear-gradient(135deg,#f0fdf4,#bbf7d0)",הסבר:"כשר — מתאים, ראוי. 'כשר לעדות' — ראוי לשמש עד. 'כשר לאכילה' — מותר לאכול.",דוגמה_ארמית:"כָּשֵׁר לָעֵדוּת",דוגמה_תרגום:"כשר לעדות"},
+  {id:143,ארמית:"טָמֵא",תעתיק:"Tame",עברית:"טמא",אנגלית:"Impure / Ritually unclean",קטגוריה:"מושגי דין",אייקון:"🚫",צבע_רקע:"linear-gradient(135deg,#fef2f2,#fca5a5)",הסבר:"טמא — אינו בטהרה. 'טומאת מת' — הטומאה הגדולה. מסכת כלים מונה 24 דרגות טומאה.",דוגמה_ארמית:"טָמֵא הוּא",דוגמה_תרגום:"הוא טמא"},
+  {id:144,ארמית:"טָהוֹר",תעתיק:"Tahor",עברית:"טהור",אנגלית:"Pure / Ritually clean",קטגוריה:"מושגי דין",אייקון:"✨",צבע_רקע:"linear-gradient(135deg,#ecfdf5,#6ee7b7)",הסבר:"טהור — בטהרה. 'טהרה' — מצב של טהרה. 'מקווה' — המקום שבו טובלים להיטהר.",דוגמה_ארמית:"טָהוֹר הוּא",דוגמה_תרגום:"הוא טהור"},
+  {id:145,ארמית:"שַׁבָּת",תעתיק:"Shabbat",עברית:"שבת",אנגלית:"Sabbath",קטגוריה:"זמן",אייקון:"🕯️",צבע_רקע:"linear-gradient(135deg,#fffbeb,#fde68a)",הסבר:"שבת — יום המנוחה. מסכת שבת היא הגדולה בש\"ס. 39 מלאכות אסורות בשבת.",דוגמה_ארמית:"חִלֵּל שַׁבָּת",דוגמה_תרגום:"חילל את השבת"},
+  {id:146,ארמית:"שְׁנַיִים",תעתיק:"Shnaim",עברית:"שניים",אנגלית:"Two",קטגוריה:"מושגי לוגיקה",אייקון:"2️⃣",צבע_רקע:"linear-gradient(135deg,#e0f2fe,#7dd3fc)",הסבר:"שניים. 'שנאמר לנו' — נאמר לנו. 'שני דינים' — שני פסקי דין. 'שניים אוחזין' — שניים מחזיקים.",דוגמה_ארמית:"שְׁנַיִם אוֹחֲזִין",דוגמה_תרגום:"שניים אוחזים (בטלית) — פתיחת מסכת בבא מציעא"},
+  {id:147,ארמית:"חַד",תעתיק:"Chad",עברית:"אחד",אנגלית:"One",קטגוריה:"מושגי לוגיקה",אייקון:"1️⃣",צבע_רקע:"linear-gradient(135deg,#f5f3ff,#ede9fe)",הסבר:"אחד בארמית. 'חד מינן' — אחד מאיתנו. 'כחד' — כאחד. 'חד — טעה' — אחד מהם טעה.",דוגמה_ארמית:"חַד מִינַּן",דוגמה_תרגום:"אחד מאיתנו"},
+  {id:148,ארמית:"תְּרֵין",תעתיק:"Trein",עברית:"שניים",אנגלית:"Two (Aramaic)",קטגוריה:"מושגי לוגיקה",אייקון:"2️⃣",צבע_רקע:"linear-gradient(135deg,#fef9c3,#fbbf24)",הסבר:"שניים בארמית. 'תרי' — שניים. 'תרי סהדי' — שני עדים. 'תרי ותרי' — שני זוגות עדים.",דוגמה_ארמית:"תְּרֵי וּתְרֵי",דוגמה_תרגום:"שניים ושניים (עדים שמעידים בסתירה)"},
+  {id:149,ארמית:"תְּלָתָא",תעתיק:"Tlata",עברית:"שלושה",אנגלית:"Three",קטגוריה:"מושגי לוגיקה",אייקון:"3️⃣",צבע_רקע:"linear-gradient(135deg,#fff7ed,#fed7aa)",הסבר:"שלושה בארמית. 'תלתא' — שלושה. 'תלת' — שלוש. 'בי תלתא' — בפני שלושה (בית דין).",דוגמה_ארמית:"בֵּי תְּלָתָא",דוגמה_תרגום:"בפני שלושה (בית דין של שלושה)"},
+  {id:150,ארמית:"אַרְבַּע",תעתיק:"Arba",עברית:"ארבעה",אנגלית:"Four",קטגוריה:"מושגי לוגיקה",אייקון:"4️⃣",צבע_רקע:"linear-gradient(135deg,#f0fdf4,#86efac)",הסבר:"ארבעה. 'ארבעה אבות נזיקין' — ארבעה מקורות עיקריים לנזק. 'ארבעה שנכנסו לפרדס'.",דוגמה_ארמית:"אַרְבָּעָה אֲבוֹת",דוגמה_תרגום:"ארבעה אבות (נזיקין)"},
+  {id:151,ארמית:"חֲמִשָּׁה",תעתיק:"Chamisha",עברית:"חמישה",אנגלית:"Five",קטגוריה:"מושגי לוגיקה",אייקון:"5️⃣",צבע_רקע:"linear-gradient(135deg,#eff6ff,#bfdbfe)",הסבר:"חמישה. 'חמישה חומשים' — חמשת ספרי התורה. 'חמשה דברים' — חמישה עניינים.",דוגמה_ארמית:"חֲמִשָּׁה חֻמְשֵׁי תוֹרָה",דוגמה_תרגום:"חמשת ספרי התורה"},
+  {id:152,ארמית:"עֲשָׂרָה",תעתיק:"Asara",עברית:"עשרה",אנגלית:"Ten",קטגוריה:"מושגי לוגיקה",אייקון:"🔟",צבע_רקע:"linear-gradient(135deg,#fdf4ff,#d8b4fe)",הסבר:"עשרה. 'מניין' — 10 אנשים. 'עשרה שהתפללו' — מניין לתפילה.",דוגמה_ארמית:"עֲשָׂרָה לְמִנְיָן",דוגמה_תרגום:"עשרה למניין"},
+  {id:153,ארמית:"מֵאָה",תעתיק:"Meah",עברית:"מאה",אנגלית:"Hundred",קטגוריה:"מושגי לוגיקה",אייקון:"💯",צבע_רקע:"linear-gradient(135deg,#fef9c3,#fde68a)",הסבר:"מאה — סכום כסף נפוץ בגמרא. 'מאה זוז' — מאה מטבעות. 'מאה ברכות' — מאה ברכות ביום.",דוגמה_ארמית:"מֵאָה זוּז",דוגמה_תרגום:"מאה מטבעות"},
+  {id:154,ארמית:"זוּזָא",תעתיק:"Zuza",עברית:"זוז / מטבע",אנגלית:"Zuz (coin)",קטגוריה:"חפצים",אייקון:"🪙",צבע_רקע:"linear-gradient(135deg,#fafaf8,#e2e8f0)",הסבר:"זוז — מטבע כסף בסיסי. 'כמה זוזי' — כמה כסף. 'פלגא זוזא' — חצי מטבע.",דוגמה_ארמית:"כַּמָּה זוּזֵי",דוגמה_תרגום:"כמה כסף / כמה מטבעות"},
+  {id:155,ארמית:"כּוֹר",תעתיק:"Kor",עברית:"כור / מידת גורן",אנגלית:"Cor (a measure)",קטגוריה:"חפצים",אייקון:"⚖️",צבע_רקע:"linear-gradient(135deg,#fff7ed,#fdba74)",הסבר:"כור — מידה גדולה לחיטה. 30 סאה = כור. 'כור חיטים' — כור של חיטים.",דוגמה_ארמית:"כּוֹר חִטִּין",דוגמה_תרגום:"כור של חיטים"},
+  {id:156,ארמית:"בֵּיצָה",תעתיק:"Beitza",עברית:"ביצה",אנגלית:"Egg",קטגוריה:"חפצים",אייקון:"🥚",צבע_רקע:"linear-gradient(135deg,#fef9c3,#fde68a)",הסבר:"ביצה — מידת נפח. 'שיעור ביצה' — כנפח ביצה. מסכת 'ביצה' עוסקת בהלכות יום טוב.",דוגמה_ארמית:"כְּבֵיצָה",דוגמה_תרגום:"כנפח ביצה"},
+  {id:157,ארמית:"כְּזַיִת",תעתיק:"Kezayit",עברית:"כזית",אנגלית:"Like an olive (measure)",קטגוריה:"חפצים",אייקון:"🫒",צבע_רקע:"linear-gradient(135deg,#f0fdf4,#a7f3d0)",הסבר:"כזית — שיעור מינימלי לאכילה בהלכה. 'אוכל כזית' — שיעור לחייבו. כנפח זית.",דוגמה_ארמית:"אָכַל כַּזַּיִת",דוגמה_תרגום:"אכל שיעור כזית"},
+  {id:158,ארמית:"שֶׁמֶן",תעתיק:"Shemen",עברית:"שמן",אנגלית:"Oil",קטגוריה:"חפצים",אייקון:"🫙",צבע_רקע:"linear-gradient(135deg,#fef9c3,#fbbf24)",הסבר:"שמן — שמן זית. 'שמן למנורה' — שמן לנר המנורה. 'שמן משחה' — שמן של קדושה.",דוגמה_ארמית:"שֶׁמֶן זַיִת",דוגמה_תרגום:"שמן זית"},
+  {id:159,ארמית:"דָּמָא",תעתיק:"Dama",עברית:"דם",אנגלית:"Blood",קטגוריה:"חפצים",אייקון:"🩸",צבע_רקע:"linear-gradient(135deg,#fee2e2,#fb7185)",הסבר:"דם — 'נפש הבשר בדם'. 'דם מכה' — דם מפצע. 'דמים' — גם פירושו 'כסף' בהקשרים מסוימים.",דוגמה_ארמית:"דְּמָא אָסוּר",דוגמה_תרגום:"הדם אסור (לאכילה)"},
+  {id:160,ארמית:"בְּשַׂר",תעתיק:"Besar",עברית:"בשר",אנגלית:"Meat / Flesh",קטגוריה:"חפצים",אייקון:"🥩",צבע_רקע:"linear-gradient(135deg,#fee2e2,#fca5a5)",הסבר:"בשר — 'בשר בחלב' אסור. 'בשר כשר' — בשר שנשחט כדין.",דוגמה_ארמית:"בְּשַׂר בְּחָלָב",דוגמה_תרגום:"בשר בחלב (אסור)"},
+  {id:161,ארמית:"חֲלָבָא",תעתיק:"Chalava",עברית:"חלב",אנגלית:"Milk",קטגוריה:"חפצים",אייקון:"🥛",צבע_רקע:"linear-gradient(135deg,#f8fafc,#e2e8f0)",הסבר:"חלב בארמית. 'חלב שנפל' — ספק חלב. 'חלב ובשר' — ההפרדה הכשרותית.",דוגמה_ארמית:"חֲלָבָא",דוגמה_תרגום:"חלב"},
+  {id:162,ארמית:"דַּגָּא",תעתיק:"Daga",עברית:"דג",אנגלית:"Fish",קטגוריה:"בעלי חיים",אייקון:"🐟",צבע_רקע:"linear-gradient(135deg,#e0f2fe,#38bdf8)",הסבר:"דג בארמית. 'דג טהור' — דג כשר (סנפיר וקשקשת). 'שמן דגים' — שמן של דגים.",דוגמה_ארמית:"דַּגָּא כְּשֵׁרָא",דוגמה_תרגום:"דג כשר"},
+  {id:163,ארמית:"עוֹפָא",תעתיק:"Ofa",עברית:"עוף / ציפור",אנגלית:"Bird / Fowl",קטגוריה:"בעלי חיים",אייקון:"🐦",צבע_רקע:"linear-gradient(135deg,#f0fdf4,#86efac)",הסבר:"עוף בארמית. 'בשר עוף' — בשר של עוף. 'עוף טהור' — עוף כשר.",דוגמה_ארמית:"בְּשַׂר עוֹפָא",דוגמה_תרגום:"בשר של עוף"},
+  {id:164,ארמית:"אַרְיֵה",תעתיק:"Arye",עברית:"אריה",אנגלית:"Lion",קטגוריה:"בעלי חיים",אייקון:"🦁",צבע_רקע:"linear-gradient(135deg,#fef3c7,#fbbf24)",הסבר:"אריה — אב הנזיקין 'שן'. 'כגון אריה' — כדוגמת אריה שתוקף.",דוגמה_ארמית:"כְּגוֹן אַרְיֵה",דוגמה_תרגום:"כגון אריה (שתוקף)"},
+  {id:165,ארמית:"נָחָשׁ",תעתיק:"Nachash",עברית:"נחש",אנגלית:"Snake",קטגוריה:"בעלי חיים",אייקון:"🐍",צבע_רקע:"linear-gradient(135deg,#ecfdf5,#6ee7b7)",הסבר:"נחש — 'כגון נחש' — בהקשר נזיקין. 'לשון הרע' נמשל לנחש. 'יסורי נחש'.",דוגמה_ארמית:"כְּגוֹן נָחָשׁ",דוגמה_תרגום:"כגון נחש (נושך)"},
+  {id:166,ארמית:"פִּיל",תעתיק:"Pil",עברית:"פיל",אנגלית:"Elephant",קטגוריה:"בעלי חיים",אייקון:"🐘",צבע_רקע:"linear-gradient(135deg,#f8fafc,#e2e8f0)",הסבר:"פיל — 'בא עליה פיל'. הגמרא דנה בנזקי פיל כדוגמה קיצונית.",דוגמה_ארמית:"כְּגוֹן פִּיל",דוגמה_תרגום:"כגון פיל (נזק גדול)"},
+  {id:167,ארמית:"צִפֳּרָא",תעתיק:"Tzipra",עברית:"ציפור",אנגלית:"Bird / Sparrow",קטגוריה:"בעלי חיים",אייקון:"🐦",צבע_רקע:"linear-gradient(135deg,#e0f2fe,#7dd3fc)",הסבר:"ציפור בארמית. 'ציפורין' — ציפורים. 'עצמות ציפורים' — בהקשר טהרה.",דוגמה_ארמית:"צִפֳּרָא",דוגמה_תרגום:"ציפור"},
+  {id:168,ארמית:"שָׁפַן",תעתיק:"Shafan",עברית:"ארנב שפן",אנגלית:"Hare",קטגוריה:"בעלי חיים",אייקון:"🐇",צבע_רקע:"linear-gradient(135deg,#fef9c3,#fde68a)",הסבר:"שפן — אחד מ'ארבעה מסרסים' — בעל חיים עם סימן אחד בלבד (גרה) — לא כשר.",דוגמה_ארמית:"שָׁפַן",דוגמה_תרגום:"שפן (לא כשר — מעלה גרה)"},
+  {id:169,ארמית:"חֲמוֹר",תעתיק:"Chamor",עברית:"חמור",אנגלית:"Donkey",קטגוריה:"בעלי חיים",אייקון:"🫏",צבע_רקע:"linear-gradient(135deg,#fdf4ff,#f0abfc)",הסבר:"חמור — בהמה גסה שאינה כשרה. 'כבוד יוצרו' — מצוות פריקה וטעינה על חמור.",דוגמה_ארמית:"פְּרִיקַת חֲמוֹר",דוגמה_תרגום:"פריקת חמור (מצוות עזרה)"},
+  {id:170,ארמית:"מִטָּה",תעתיק:"Mita",עברית:"מיטה / ספה",אנגלית:"Bed / Couch",קטגוריה:"חפצים",אייקון:"🛏️",צבע_רקע:"linear-gradient(135deg,#fff7ed,#fdba74)",הסבר:"מיטה — כלי קיבול. 'מיטה שנשברה' — בדיני טומאה. 'מיטת כסף' — מיטה יקרה.",דוגמה_ארמית:"מִטָּה",דוגמה_תרגום:"מיטה"},
+  {id:171,ארמית:"שֻׁלְחָן",תעתיק:"Shulchan",עברית:"שולחן",אנגלית:"Table",קטגוריה:"חפצים",אייקון:"🪑",צבע_רקע:"linear-gradient(135deg,#f5f3ff,#ede9fe)",הסבר:"שולחן — בתוכן 'כלים שיש להם בית קיבול'. 'שולחן הלחם הפנים' — בבית המקדש.",דוגמה_ארמית:"שֻׁלְחָן הַפָּנִים",דוגמה_תרגום:"שולחן לחם הפנים (בבית המקדש)"},
+  {id:172,ארמית:"נֵר",תעתיק:"Ner",עברית:"נר",אנגלית:"Candle / Lamp",קטגוריה:"חפצים",אייקון:"🕯️",צבע_רקע:"linear-gradient(135deg,#fef9c3,#fbbf24)",הסבר:"נר — אור בית. 'נר חנוכה', 'נר שבת'. 'נר לרגלי דבריך' — אור תורה.",דוגמה_ארמית:"נֵר חֲנֻכָּה",דוגמה_תרגום:"נר חנוכה"},
+  {id:173,ארמית:"מַפְתֵּחַ",תעתיק:"Mafteiach",עברית:"מפתח",אנגלית:"Key",קטגוריה:"חפצים",אייקון:"🔑",צבע_רקע:"linear-gradient(135deg,#ecfdf5,#a7f3d0)",הסבר:"מפתח — 'מסר לו מפתח'. מסמל בעלות ושמירה. 'מפתחות בית הגנזים'.",דוגמה_ארמית:"מָסַר לֵיהּ מַפְתְּחָא",דוגמה_תרגום:"מסר לו מפתח"},
+  {id:174,ארמית:"אַשָּׁה",תעתיק:"Asha",עברית:"אש",אנגלית:"Fire (direct)",קטגוריה:"חפצים",אייקון:"🔥",צבע_רקע:"linear-gradient(135deg,#fff7ed,#fb923c)",הסבר:"אש — אחד מארבעת אבות הנזיקין. 'הצת גדיש' — הדליק ערמת חיטים.",דוגמה_ארמית:"הִצִּית גָּדִישׁ",דוגמה_תרגום:"הדליק ערמת חיטים"},
+  {id:175,ארמית:"מְצֵרָא",תעתיק:"Metzera",עברית:"גבול / שטח",אנגלית:"Border / Area",קטגוריה:"חפצים",אייקון:"📐",צבע_רקע:"linear-gradient(135deg,#fef3c7,#fcd34d)",הסבר:"גבול שדה. 'מצרני' — בעל השדה הסמוך. 'דינא דבר מצרא' — זכות קדימה לשכן.",דוגמה_ארמית:"דִּינָא דְּבַר מְצֵרָא",דוגמה_תרגום:"דין בר מצרא (זכות שכן)"},
+  {id:176,ארמית:"גַּג",תעתיק:"Gag",עברית:"גג",אנגלית:"Roof",קטגוריה:"חפצים",אייקון:"🏠",צבע_רקע:"linear-gradient(135deg,#e0f2fe,#38bdf8)",הסבר:"גג — 'ועשית מעקה לגגך'. חיוב מן התורה לבנות מעקה בטיחותי. גם בהקשר נזיקין.",דוגמה_ארמית:"עֲשֵׂה מַעֲקֶה",דוגמה_תרגום:"עשה מעקה (לגג)"},
+  {id:177,ארמית:"בּוֹר",תעתיק:"Bor",עברית:"בור",אנגלית:"Pit",קטגוריה:"חפצים",אייקון:"🕳️",צבע_רקע:"linear-gradient(135deg,#fef2f2,#fca5a5)",הסבר:"בור — אחד מארבעת אבות הנזיקין. 'כרה בור ברשות הרבים' — חפר בור וחייב בנזקיו.",דוגמה_ארמית:"כָּרָה בּוֹר",דוגמה_תרגום:"חפר בור"},
+  {id:178,ארמית:"קֶרֶן",תעתיק:"Keren",עברית:"קרן / ניגיחה",אנגלית:"Horn / Goring",קטגוריה:"מושגי דין",אייקון:"🐄",צבע_רקע:"linear-gradient(135deg,#fef9c3,#fbbf24)",הסבר:"קרן — ניגוח. 'שן וקרן' — שני מקורות נזיקין. 'תם ומועד' — שור שלא הועד ושהועד.",דוגמה_ארמית:"קֶרֶן מוּעֶדֶת",דוגמה_תרגום:"קרן מועדת (שור שהועד)"},
+  {id:179,ארמית:"שֵׁן",תעתיק:"Shen",עברית:"שן",אנגלית:"Tooth (eating damage)",קטגוריה:"מושגי דין",אייקון:"🦷",צבע_רקע:"linear-gradient(135deg,#f8fafc,#e2e8f0)",הסבר:"שן — אב הנזיקין של אכילה. 'שן שאכלה' — בהמה שאכלה גידולי שדה.",דוגמה_ארמית:"שֵׁן שֶׁאָכְלָה",דוגמה_תרגום:"שן שאכלה (ניזק על ידי בהמה)"},
+  {id:180,ארמית:"רֶגֶל",תעתיק:"Regel",עברית:"רגל / דריסה",אנגלית:"Foot (trampling damage)",קטגוריה:"מושגי דין",אייקון:"🦶",צבע_רקע:"linear-gradient(135deg,#fff7ed,#fed7aa)",הסבר:"רגל — נזיקין על ידי דריסה. 'רגל שדרסה' — בהמה שדרסה. 'אב נזיקין' של דריסה.",דוגמה_ארמית:"רֶגֶל שֶׁדָּרְסָה",דוגמה_תרגום:"רגל שדרסה (נזק דריסה)"},
+  {id:181,ארמית:"אַב",תעתיק:"Av",עברית:"אב / מקור עיקרי",אנגלית:"Father / Primary source",קטגוריה:"מושגי לוגיקה",אייקון:"👨",צבע_רקע:"linear-gradient(135deg,#eff6ff,#c7d2fe)",הסבר:"'אב' — מקור ראשי. 'אב נזיקין' — הנזק הראשי. 'אבות מלאכה' — המלאכות העיקריות בשבת.",דוגמה_ארמית:"אַב מְלָאכָה",דוגמה_תרגום:"מלאכה עיקרית (משבת)"},
+  {id:182,ארמית:"תּוֹלָדָה",תעתיק:"Toldeda",עברית:"תולדה / ענף",אנגלית:"Derivative",קטגוריה:"מושגי לוגיקה",אייקון:"🌿",צבע_רקע:"linear-gradient(135deg,#f0fdf4,#bbf7d0)",הסבר:"תולדה — 'ולד' של אב. 'תולדת אב' — ענף הנגזר ממקור ראשי. כמו 'אב' ו'תולדה' במלאכות שבת.",דוגמה_ארמית:"תּוֹלָדָה הִיא",דוגמה_תרגום:"זוהי תולדה (ענף של אב)"},
+  {id:183,ארמית:"מְלָאכָה",תעתיק:"Melacha",עברית:"מלאכה",אנגלית:"Work / Labor",קטגוריה:"מושגי דין",אייקון:"⚙️",צבע_רקע:"linear-gradient(135deg,#fef3c7,#fcd34d)",הסבר:"מלאכה — עבודה אסורה בשבת. 39 מלאכות. 'מלאכת מחשבת' — מלאכה מכוונת.",דוגמה_ארמית:"מְלֶאכֶת מַחֲשֶׁבֶת",דוגמה_תרגום:"מלאכת מחשבת (מלאכה מכוונת)"},
+  {id:184,ארמית:"שְׁמִירָה",תעתיק:"Shmira",עברית:"שמירה",אנגלית:"Guarding",קטגוריה:"מושגי דין",אייקון:"🛡️",צבע_רקע:"linear-gradient(135deg,#ecfdf5,#6ee7b7)",הסבר:"שמירה — חיוב שמירה על רכוש. 'שומר חינם', 'שומר שכר' — דרגות שונות של שמירה.",דוגמה_ארמית:"שׁוֹמֵר חִינָּם",דוגמה_תרגום:"שומר ללא תשלום"},
+  {id:185,ארמית:"אֲרִיסוּת",תעתיק:"Arisut",עברית:"אריסות / חכירה",אנגלית:"Sharecropping",קטגוריה:"מושגי דין",אייקון:"🌾",צבע_רקע:"linear-gradient(135deg,#fef9c3,#fbbf24)",הסבר:"אריסות — שותפות בקרקע. 'אריס' — מי שעובד בשדה בתמורה לחלק מהיבול.",דוגמה_ארמית:"אָרִיס",דוגמה_תרגום:"אריס (עובד שדה לחלק)"},
+  {id:186,ארמית:"מַשְׁכּוֹן",תעתיק:"Mashkon",עברית:"משכון",אנגלית:"Pledge / Collateral",קטגוריה:"מושגי דין",אייקון:"🏦",צבע_רקע:"linear-gradient(135deg,#f5f3ff,#c4b5fd)",הסבר:"משכון — חפץ שניתן כערובה להלוואה. 'לא תחבול רחיים ורכב' — אסור למשכן כלי עבודה.",דוגמה_ארמית:"נָתַן מַשְׁכּוֹן",דוגמה_תרגום:"נתן משכון"},
+  {id:187,ארמית:"הַלְוָאָה",תעתיק:"Halvaa",עברית:"הלוואה",אנגלית:"Loan",קטגוריה:"מושגי דין",אייקון:"💰",צבע_רקע:"linear-gradient(135deg,#f0fdf4,#a7f3d0)",הסבר:"הלוואה — מתן כסף בהשאלה. 'מלוה ולוה' — המלווה והלווה. 'ריבית' — אסור לגבות ריבית.",דוגמה_ארמית:"מַלְוֶה וְלֹוֶה",דוגמה_תרגום:"המלווה והלווה"},
+  {id:188,ארמית:"רִבִּית",תעתיק:"Ribit",עברית:"ריבית",אנגלית:"Interest (usury)",קטגוריה:"מושגי דין",אייקון:"💸",צבע_רקע:"linear-gradient(135deg,#fee2e2,#fca5a5)",הסבר:"ריבית — תוספת על הלוואה. 'ריבית קצוצה' — ריבית מפורשת. 'אבק ריבית' — ריבית מרומזת.",דוגמה_ארמית:"רִבִּית קְצוּצָה",דוגמה_תרגום:"ריבית מפורשת"},
+  {id:189,ארמית:"מֶחֱצָה",תעתיק:"Mechetzah",עברית:"מחצה / חצי",אנגלית:"Half",קטגוריה:"מושגי לוגיקה",אייקון:"½",צבע_רקע:"linear-gradient(135deg,#e0f2fe,#7dd3fc)",הסבר:"חצי. 'מחצה על מחצה' — שקול. 'ספק שקול' — ספק שאין להכריעו.",דוגמה_ארמית:"מֶחֱצָה עַל מֶחֱצָה",דוגמה_תרגום:"חמישים-חמישים (ספק שקול)"},
+  {id:190,ארמית:"חֲצִי",תעתיק:"Chatzi",עברית:"חצי",אנגלית:"Half",קטגוריה:"מושגי לוגיקה",אייקון:"⬜",צבע_רקע:"linear-gradient(135deg,#fef9c3,#fde68a)",הסבר:"חצי — מחצית. 'חצי נזק' — תשלום חצי הנזק. 'חצי שיעור' — חצי מהשיעור המינימלי.",דוגמה_ארמית:"חֲצִי נֶזֶק",דוגמה_תרגום:"חצי נזק (תשלום מחצית)"},
+  {id:191,ארמית:"תַּשְׁלוּמִין",תעתיק:"Tashlumim",עברית:"תשלומים / פיצויים",אנגלית:"Payments / Compensation",קטגוריה:"מושגי דין",אייקון:"💵",צבע_רקע:"linear-gradient(135deg,#ecfdf5,#a7f3d0)",הסבר:"תשלומים — תשלום פיצוי לנזק. 'חייב בתשלומין' — חייב לשלם. 'תשלומי כפל' — פיצוי כפול.",דוגמה_ארמית:"תַּשְׁלוּמֵי כֶּפֶל",דוגמה_תרגום:"תשלום כפל (קנס כפול)"},
+  {id:192,ארמית:"כֶּפֶל",תעתיק:"Kefal",עברית:"כפל",אנגלית:"Double",קטגוריה:"מושגי דין",אייקון:"✖️",צבע_רקע:"linear-gradient(135deg,#fee2e2,#fca5a5)",הסבר:"כפל — קנס של תשלום כפול. 'גנב ישלם שנים' — גנב משלם כפל. רק בגנבה לא בגזלה.",דוגמה_ארמית:"גַּנָּב מְשַׁלֵּם כֶּפֶל",דוגמה_תרגום:"גנב משלם כפל"},
+  {id:193,ארמית:"אֶרֶץ יִשְׂרָאֵל",תעתיק:"Eretz Yisrael",עברית:"ארץ ישראל",אנגלית:"Land of Israel",קטגוריה:"חפצים",אייקון:"🇮🇱",צבע_רקע:"linear-gradient(135deg,#e0f2fe,#bae6fd)",הסבר:"ארץ ישראל — ארץ הקדש. מצוות רבות תלויות בארץ. 'דיני ארץ ישראל' שונים מבבל.",דוגמה_ארמית:"בְּאֶרֶץ יִשְׂרָאֵל",דוגמה_תרגום:"בארץ ישראל"},
+  {id:194,ארמית:"בָּבֶל",תעתיק:"Bavel",עברית:"בבל",אנגלית:"Babylon",קטגוריה:"חפצים",אייקון:"🏛️",צבע_רקע:"linear-gradient(135deg,#fef9c3,#f59e0b)",הסבר:"בבל — מרכז הגולה היהודית. בבבל נכתב התלמוד הבבלי. ישיבות סורא ופומבדיתא.",דוגמה_ארמית:"בְּבָבֶל",דוגמה_תרגום:"בבבל"},
+  {id:195,ארמית:"יְרוּשָׁלַיִם",תעתיק:"Yerushalaim",עברית:"ירושלים",אנגלית:"Jerusalem",קטגוריה:"חפצים",אייקון:"🕍",צבע_רקע:"linear-gradient(135deg,#fef9c3,#fbbf24)",הסבר:"ירושלים — עיר הקודש. בית המקדש שעמד בה. 'העולה לירושלים'.",דוגמה_ארמית:"בְּיְרוּשָׁלַיִם",דוגמה_תרגום:"בירושלים"},
+  {id:196,ארמית:"בֵּית הַמִּקְדָּשׁ",תעתיק:"Beit Hamikdash",עברית:"בית המקדש",אנגלית:"Holy Temple",קטגוריה:"מושגי דין",אייקון:"🕍",צבע_רקע:"linear-gradient(135deg,#fef3c7,#f59e0b)",הסבר:"בית המקדש — מקום הקרבנות וכינוי ה'. נחרב בשנת 70 לספירה. הגמרא מספרת רבות על סדריו.",דוגמה_ארמית:"בִּימֵי בֵּית הַמִּקְדָּשׁ",דוגמה_תרגום:"בימי בית המקדש"},
+  {id:197,ארמית:"כֹּהֵן",תעתיק:"Cohen",עברית:"כהן",אנגלית:"Priest",קטגוריה:"אנשים",אייקון:"⛪",צבע_רקע:"linear-gradient(135deg,#eff6ff,#bfdbfe)",הסבר:"כהן — מזרע אהרן, משרת בבית המקדש. 'כהן גדול' — ראש הכהנים. זכויות וחובות מיוחדות.",דוגמה_ארמית:"כֹּהֵן גָּדוֹל",דוגמה_תרגום:"כהן גדול"},
+  {id:198,ארמית:"לֵוִי",תעתיק:"Levi",עברית:"לוי",אנגלית:"Levite",קטגוריה:"אנשים",אייקון:"🎵",צבע_רקע:"linear-gradient(135deg,#f0fdf4,#86efac)",הסבר:"לוי — שבט הלוי. שרו בבית המקדש ועזרו לכהנים. 'מעשר ראשון' ניתן ללוויים.",דוגמה_ארמית:"לֵוִי",דוגמה_תרגום:"לוי (בן שבט לוי)"},
+  {id:199,ארמית:"יִשְׂרָאֵל",תעתיק:"Yisrael",עברית:"ישראל / יהודי",אנגלית:"Israelite / Jew",קטגוריה:"אנשים",אייקון:"✡️",צבע_רקע:"linear-gradient(135deg,#e0f2fe,#7dd3fc)",הסבר:"ישראל — יהודי שאינו כהן או לוי. 'כהן לוי ישראל' — שלוש הדרגות לעליה לתורה.",דוגמה_ארמית:"יִשְׂרָאֵל",דוגמה_תרגום:"ישראל (יהודי)"},
+  {id:200,ארמית:"תִּיקּוּן עוֹלָם",תעתיק:"Tikun Olam",עברית:"תיקון עולם",אנגלית:"Repair of the world",קטגוריה:"מושגי דין",אייקון:"🌍",צבע_רקע:"linear-gradient(135deg,#f0fdf4,#a7f3d0)",הסבר:"תיקון עולם — תקנות שנועדו לשפר את החברה. 'מפני תיקון העולם' — כדי לשמור על הסדר החברתי.",דוגמה_ארמית:"מִפְּנֵי תִּיקּוּן הָעוֹלָם",דוגמה_תרגום:"מפני תיקון העולם"}
+];
+
+// ===== מצב האפליקציה =====
+let מילים_מסוננות = [...מסד_נתונים];
+let קטגוריה_פעילה = 'הכל';
+let טקסט_חיפוש = '';
+
+// ===== אתחול =====
+document.addEventListener('DOMContentLoaded', () => {
+  הגדרמילהשלהיום();
+  עדכןתצוגה();
+});
+
+function הגדרמילהשלהיום() {
+  // בחר מילה לפי תאריך
+  const היום = new Date().getDate();
+  const מילה = מסד_נתונים[היום % מסד_נתונים.length];
+  document.getElementById('יום-ארמית').textContent = מילה.ארמית;
+  document.getElementById('יום-עברית').textContent = מילה.עברית;
+  document.getElementById('יום-הסבר').textContent = מילה.הסבר;
+  document.getElementById('יום-קטגוריה').textContent = קטגוריה_לאייקון(מילה.קטגוריה) + ' ' + מילה.קטגוריה;
+  document.getElementById('מילה-של-היום-כרטיס').dataset.מילהId = מילה.id;
+}
+
+function פתחמודאלמילהשלהיום() {
+  const id = parseInt(document.getElementById('מילה-של-היום-כרטיס').dataset.מילהId);
+  const מילה = מסד_נתונים.find(m => m.id === id);
+  if (מילה) פתחמודאל(מילה);
+}
+
+function קטגוריה_לאייקון(קטגוריה) {
+  const מיפוי = {
+    'מושגי לוגיקה': '💡', 'בעלי חיים': '🐄', 'חפצים': '🏺',
+    'מושגי דין': '⚖️', 'אנשים': '👤', 'פעולות': '🔄', 'זמן': '🕰️'
+  };
+  return מיפוי[קטגוריה] || '📖';
+}
+
+function קטגוריה_לקלאס(קטגוריה) {
+  const מיפוי = {
+    'מושגי לוגיקה': 'קטגוריה-לוגיקה',
+    'בעלי חיים': 'קטגוריה-בעלי-חיים',
+    'חפצים': 'קטגוריה-חפצים',
+    'מושגי דין': 'קטגוריה-מושגי-דין',
+    'אנשים': 'קטגוריה-אנשים',
+    'פעולות': 'קטגוריה-לוגיקה',
+    'זמן': 'קטגוריה-זמן'
+  };
+  return מיפוי[קטגוריה] || 'קטגוריה-לוגיקה';
+}
+
+function הדגשטקסט(טקסט, חיפוש) {
+  if (!חיפוש) return טקסט;
+  const regex = new RegExp(`(${חיפוש.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+  return טקסט.replace(regex, '<span class="הדגשה">$1</span>');
+}
+
+function עדכןחיפוש(ערך) {
+  טקסט_חיפוש = ערך;
+  document.getElementById('כפתור-ניקוי').classList.toggle('נראה', !!ערך);
+  עדכןתצוגה();
+}
+
+function נקהחיפוש() {
+  document.getElementById('שדה-חיפוש').value = '';
+  עדכןחיפוש('');
+}
+
+function סננקטגוריה(כפתור) {
+  document.querySelectorAll('.כפתור-קטגוריה').forEach(k => k.classList.remove('פעיל'));
+  כפתור.classList.add('פעיל');
+  קטגוריה_פעילה = כפתור.dataset.קטגוריה;
+  עדכןתצוגה();
+}
+
+function עדכןתצוגה() {
+  const חיפוש = טקסט_חיפוש.toLowerCase().trim();
+  מילים_מסוננות = מסד_נתונים.filter(מילה => {
+    const תואם_קטגוריה = קטגוריה_פעילה === 'הכל' || מילה.קטגוריה === קטגוריה_פעילה;
+    if (!תואם_קטגוריה) return false;
+    if (!חיפוש) return true;
+    return (
+      מילה.ארמית.includes(חיפוש) ||
+      מילה.תעתיק.toLowerCase().includes(חיפוש) ||
+      מילה.עברית.includes(חיפוש) ||
+      מילה.אנגלית.toLowerCase().includes(חיפוש) ||
+      מילה.הסבר.includes(חיפוש)
+    );
+  });
+  
+  document.getElementById('מספר-תוצאות').textContent = מילים_מסוננות.length;
+  document.getElementById('שם-סינון-פעיל').textContent =
+    קטגוריה_פעילה !== 'הכל' ? `| ${קטגוריה_לאייקון(קטגוריה_פעילה)} ${קטגוריה_פעילה}` : '';
+  
+  const רשת = document.getElementById('רשת-כרטיסים');
+  const ריק = document.getElementById('מצב-ריק');
+  
+  // נקה כרטיסים קיימים
+  Array.from(רשת.children).forEach(c => {
+    if (!c.classList.contains('מצב-ריק')) c.remove();
+  });
+
+  if (מילים_מסוננות.length === 0) {
+    ריק.classList.add('נראה');
+    return;
+  }
+  ריק.classList.remove('נראה');
+
+  מילים_מסוננות.forEach((מילה, אינדקס) => {
+    const כרטיס = document.createElement('div');
+    כרטיס.className = 'כרטיס-מילה';
+    כרטיס.style.animationDelay = `${Math.min(אינדקס * 0.04, 1)}s`;
+    כרטיס.onclick = () => פתחמודאל(מילה);
+    
+    const ארמית_מוגדשת = הדגשטקסט(מילה.ארמית, חיפוש);
+    const עברית_מוגדשת = הדגשטקסט(מילה.עברית, חיפוש);
+    
+    כרטיס.innerHTML = `
+      <div class="placeholder-תמונה" style="background: ${מילה.צבע_רקע};">
+        <span>${מילה.אייקון}</span>
+      </div>
+      <div class="כרטיס-גוף">
+        <div class="כרטיס-כותרת">
+          <div class="מילה-ארמית">${ארמית_מוגדשת}</div>
+          <span class="תג-קטגוריה ${קטגוריה_לקלאס(מילה.קטגוריה)}">${קטגוריה_לאייקון(מילה.קטגוריה)} ${מילה.קטגוריה}</span>
+        </div>
+        <div class="שורת-תרגום">
+          <div class="תרגום-שפה">
+            <span class="תווית-שפה תווית-עברית">עב׳</span>
+            <span class="תוכן-תרגום">${עברית_מוגדשת}</span>
+          </div>
+        </div>
+        <div class="שורת-תרגום">
+          <div class="תרגום-שפה">
+            <span class="תווית-שפה תווית-אנגלית">EN</span>
+            <span class="תוכן-תרגום" dir="ltr">${מילה.אנגלית}</span>
+          </div>
+        </div>
+        <p class="כרטיס-הסבר">${מילה.הסבר.slice(0, 90)}${מילה.הסבר.length > 90 ? '...' : ''}</p>
+      </div>
+      <div class="כרטיס-תחתון">
+        <span class="מילה-תעתיק">${מילה.תעתיק}</span>
+        <button class="כפתור-הרחבה" onclick="event.stopPropagation(); פתחמודאל(מסד_נתונים.find(m=>m.id===${מילה.id}))">
+          עוד ←
+        </button>
+      </div>
+    `;
+    רשת.insertBefore(כרטיס, ריק);
+  });
+}
+
+function פתחמודאל(מילה) {
+  document.getElementById('מודאל-מילה-ארמית').textContent = מילה.ארמית;
+  document.getElementById('מודאל-תעתיק').textContent = מילה.תעתיק;
+  document.getElementById('מודאל-עברית').textContent = מילה.עברית;
+  document.getElementById('מודאל-אנגלית').textContent = מילה.אנגלית;
+  document.getElementById('מודאל-הסבר').textContent = מילה.הסבר;
+  document.getElementById('מודאל-דוגמה-ארמית').textContent = מילה.דוגמה_ארמית || '—';
+  document.getElementById('מודאל-דוגמה-תרגום').textContent = מילה.דוגמה_תרגום || '—';
+  document.getElementById('מסך-מודאל').classList.add('פתוח');
+  document.body.style.overflow = 'hidden';
+}
+
+function סגורמודאל(event) {
+  if (!event || event.target === document.getElementById('מסך-מודאל')) {
+    document.getElementById('מסך-מודאל').classList.remove('פתוח');
+    document.body.style.overflow = '';
+  }
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') סגורמודאל({ target: document.getElementById('מסך-מודאל') });
+});
+</script>
+<a class="pwa-home" href="index.html" aria-label="חזרה לתפריט">🏠</a>
+<script>
+if(navigator.standalone)document.documentElement.classList.add('standalone');
+if('serviceWorker' in navigator&&location.protocol!=='file:'){addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){});});}
+</script>
+</body>
+</html>
